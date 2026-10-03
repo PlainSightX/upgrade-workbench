@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "package": "sqlalchemy",
+  "old_version": "1.4.49",
+  "new_version": "2.0.25",
+  "repository": "https://github.com/sqlalchemy/sqlalchemy",
+  "revision": "23f5f3350974d9452f3b844617c31eb5b41474ae",
+  "upstream_path": "doc/build/changelog/migration_20.rst",
+  "license_path": "evidence/LICENSE",
+  "entries": [
+    {
+      "evidence_key": "sqlalchemy-v2-autocommit",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Library-level (but not driver level) \"Autocommit\" removed from both Core and ORM",
+      "start_line": 560,
+      "end_line": 708
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-row-mapping",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Result rows act like named tuples",
+      "start_line": 974,
+      "end_line": 1028
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-connectionless",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "\"Implicit\" and \"Connectionless\" execution, \"bound metadata\" removed",
+      "start_line": 709,
+      "end_line": 898
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-execute-raw-versus-text",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "execute() method more strict, execution options are more prominent",
+      "start_line": 899,
+      "end_line": 970
+    }
+  ]
+}

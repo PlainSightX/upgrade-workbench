@@ -1,0 +1,124 @@
+{
+  "repository": "https://github.com/wireservice/csvkit",
+  "revision": "fa9e0db1cdd30757835912e48467d6ab2be02c14",
+  "archive_url": "https://codeload.github.com/wireservice/csvkit/tar.gz/fa9e0db1cdd30757835912e48467d6ab2be02c14",
+  "archive_sha256": "1716b6740f32fb33dc2a7fe6aa7cdfb2d458b38bd3828db9f2a389149d883ac6",
+  "license": "MIT",
+  "files": {
+    "source/COPYING": {
+      "upstream_path": "COPYING",
+      "sha256": "8e16cf985de9056e4e3883031a8714157a7572967916a047205c16ffd3992e9e"
+    },
+    "source/README.rst": {
+      "upstream_path": "README.rst",
+      "sha256": "5eab313efffff11294567fd0481d18bf6731480205941d4feb6828c75e33da4e"
+    },
+    "source/csvkit/__init__.py": {
+      "upstream_path": "csvkit/__init__.py",
+      "sha256": "b71691f66eaf70fc5b09eff5c1e80dc8f33457ddbc6d4b933b2c443c836383d9"
+    },
+    "source/csvkit/cleanup.py": {
+      "upstream_path": "csvkit/cleanup.py",
+      "sha256": "035a1378b8020f35d11b516c4604eb174f6dda74ca61d62ce1910412270dc21a"
+    },
+    "source/csvkit/cli.py": {
+      "upstream_path": "csvkit/cli.py",
+      "sha256": "9b1aeeffcd1a839221b6222a1faa73a4f6ed03eb0cb05eab98cb2e35fdf2c8b4"
+    },
+    "source/csvkit/convert/__init__.py": {
+      "upstream_path": "csvkit/convert/__init__.py",
+      "sha256": "52dfa5b4cc5a576fc8b05349f4594e063ac202fe9a270ded142b52ccc1f3675f"
+    },
+    "source/csvkit/convert/fixed.py": {
+      "upstream_path": "csvkit/convert/fixed.py",
+      "sha256": "ac1d8c3337b171d8f70f2ac271bb2aab931a2d20c214eb0aeffebb7941fee8ff"
+    },
+    "source/csvkit/convert/geojs.py": {
+      "upstream_path": "csvkit/convert/geojs.py",
+      "sha256": "15a85f4c41baa308e48dafca69b905c28ce253d9a7f0dd28c612506f09b97988"
+    },
+    "source/csvkit/exceptions.py": {
+      "upstream_path": "csvkit/exceptions.py",
+      "sha256": "f030daa06398383d4595229d3ee698f9f73eba06ad084822e635f9a69b76cca7"
+    },
+    "source/csvkit/grep.py": {
+      "upstream_path": "csvkit/grep.py",
+      "sha256": "40afd18c1484b2edab03ab71db911901f840241c996ee01cf9b1b812a3ed306b"
+    },
+    "source/csvkit/utilities/__init__.py": {
+      "upstream_path": "csvkit/utilities/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/csvkit/utilities/csvclean.py": {
+      "upstream_path": "csvkit/utilities/csvclean.py",
+      "sha256": "eb808778209abf101ee53b9d5084231e5df5f3023900fd1914e25dbc564388ee"
+    },
+    "source/csvkit/utilities/csvcut.py": {
+      "upstream_path": "csvkit/utilities/csvcut.py",
+      "sha256": "65a00051109e36152605cf66a78fb3be8cf406f1977ee57e08c4ee872c328f11"
+    },
+    "source/csvkit/utilities/csvformat.py": {
+      "upstream_path": "csvkit/utilities/csvformat.py",
+      "sha256": "c5834911bca6df961b9f4235d6d3ff83a53a3f99fcb5fd6c9b58d843a18d08d0"
+    },
+    "source/csvkit/utilities/csvgrep.py": {
+      "upstream_path": "csvkit/utilities/csvgrep.py",
+      "sha256": "5e2578d6e685a57633492ed1917fd25dbbb1dcae96111804e9f8e3f0b7a7101a"
+    },
+    "source/csvkit/utilities/csvjoin.py": {
+      "upstream_path": "csvkit/utilities/csvjoin.py",
+      "sha256": "7439d13844f93e9f9287b1affa1f7c06462b624da6af20a93ed20802449afb50"
+    },
+    "source/csvkit/utilities/csvjson.py": {
+      "upstream_path": "csvkit/utilities/csvjson.py",
+      "sha256": "de21df485dd424ee2cc5ff144bff922017e1b3a5fea28974f869dee631cc5a52"
+    },
+    "source/csvkit/utilities/csvlook.py": {
+      "upstream_path": "csvkit/utilities/csvlook.py",
+      "sha256": "3e75985627dd935298d2890e382339534d4b3abb43587d71859ce997d8907636"
+    },
+    "source/csvkit/utilities/csvpy.py": {
+      "upstream_path": "csvkit/utilities/csvpy.py",
+      "sha256": "65c219e40cbf0c5fac7b8ceac93bce10adb56893202917a3b1f75ab93ad3aefe"
+    },
+    "source/csvkit/utilities/csvsort.py": {
+      "upstream_path": "csvkit/utilities/csvsort.py",
+      "sha256": "2731745b583ec7aeacdd2c7890255c94c458a25775599b3c3240b165eb2bd34b"
+    },
+    "source/csvkit/utilities/csvsql.py": {
+      "upstream_path": "csvkit/utilities/csvsql.py",
+      "sha256": "be464df91b0554a30704ca8bd712a45b39145f15db7dffbbf6667b13636f78c1"
+    },
+    "source/csvkit/utilities/csvstack.py": {
+      "upstream_path": "csvkit/utilities/csvstack.py",
+      "sha256": "b6ba467effff17979f87d78473e5df410ee07a43a9a3c2bba2a05b76476c7db5"
+    },
+    "source/csvkit/utilities/csvstat.py": {
+      "upstream_path": "csvkit/utilities/csvstat.py",
+      "sha256": "7b9777a46f21c1ef14c3f5e88d594c31f0ca6bf27479cf3a56715f7de79788ca"
+    },
+    "source/csvkit/utilities/in2csv.py": {
+      "upstream_path": "csvkit/utilities/in2csv.py",
+      "sha256": "9298ae752f6f3f8fd4dd466656f314ccbcc4c6c27ffebef87901622c836fd944"
+    },
+    "source/csvkit/utilities/sql2csv.py": {
+      "upstream_path": "csvkit/utilities/sql2csv.py",
+      "sha256": "cad65d1884076c8c20eede51fa29ace603fa686347cf4abd7b2bacce61412edb"
+    },
+    "source/setup.py": {
+      "upstream_path": "setup.py",
+      "sha256": "c1f039998a6aca83e0a69ce2eba06a803d908b34d71fbf64492c1bccd74babb9"
+    },
+    "upstream/tests/test_utilities/test_csvsql.py": {
+      "upstream_path": "tests/test_utilities/test_csvsql.py",
+      "sha256": "57be5c187b0331fd32f1f1c47c97314449ad183606ba33fdbfc830b4f5e758e6"
+    },
+    "upstream/tests/utils.py": {
+      "upstream_path": "tests/utils.py",
+      "sha256": "5655bd3b2e72bd21d963543ffce66746a5d26361bbfb7a35985529e7760af8bd"
+    }
+  },
+  "target_code_executed_on_host": false,
+  "classification": "new_public_historical_task_not_used_to_tune_this_workbench",
+  "upstream_answer_patch_in_solver_input": false
+}

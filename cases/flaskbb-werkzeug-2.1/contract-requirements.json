@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "8701a942ddf51b7b6295c751051a1181146a59e1b0e67f5a16178d5e2a69eac5",
+  "requirements": [
+    {
+      "id": "http.single-user",
+      "statement": "Preserve non-JSON single-user delete, ban and unban POST redirects and persisted effects.",
+      "public_check_nodeids": [
+        "feedback/test_management_http.py::test_delete_user",
+        "feedback/test_management_http.py::test_ban_user",
+        "feedback/test_management_http.py::test_unban_user"
+      ]
+    },
+    {
+      "id": "http.single-group-report",
+      "statement": "Preserve non-JSON custom-group deletion, report mark-read and report deletion through real HTTP routes.",
+      "public_check_nodeids": [
+        "feedback/test_management_http.py::test_delete_group",
+        "feedback/test_management_http.py::test_mark_report_read",
+        "feedback/test_management_http.py::test_delete_report"
+      ]
+    },
+    {
+      "id": "http.batch-isolation",
+      "statement": "All six existing JSON ids batch operations retain response structure and leave nonselected objects unchanged.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "http.authorization",
+      "statement": "Preserve real permission decorators, self-delete/self-ban and standard-group deletion protections.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "http.invalid-input",
+      "statement": "Malformed JSON stays HTTP400; missing single objects stay HTTP404; empty JSON selection stays application404 without side effects.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "http.mark-all",
+      "statement": "The explicit non-JSON mark-all-reports route retains its existing behavior.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.boundary",
+      "statement": "Migrate the paired Flask/Werkzeug2.0.1 to2.1.2 within frozen Python3.9 SQLite environment and allowed source files; do not modify checks, locks, framework authentication or database schema.",
+      "public_check_nodeids": []
+    }
+  ]
+}

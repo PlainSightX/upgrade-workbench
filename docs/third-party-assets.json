@@ -1,0 +1,589 @@
+{
+  "schema_version": 1,
+  "scope": "Actual selected candidate case inputs and bundled wheel notices",
+  "cases": [
+    {
+      "case": "pydantic-field-contract",
+      "repository": "local:upgrade-workbench",
+      "revision": "calibration-v1",
+      "declared_source_license": "Local calibration fixture",
+      "retained_license_files": {},
+      "wheels": []
+    },
+    {
+      "case": "bump-my-version-0.5.0",
+      "repository": "https://github.com/callowayproject/bump-my-version",
+      "revision": "fc491fc50fa85b2b23c1eaf4980a30a17637b4f6",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "upstream/LICENSE": "fdc92c03668ab414083b84eca636863120058e848eb711cd2f8924243fd7464e"
+      },
+      "wheels": []
+    },
+    {
+      "case": "bump-my-version-0.5.0-r2",
+      "repository": "https://github.com/callowayproject/bump-my-version",
+      "revision": "fc491fc50fa85b2b23c1eaf4980a30a17637b4f6",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "upstream/LICENSE": "fdc92c03668ab414083b84eca636863120058e848eb711cd2f8924243fd7464e"
+      },
+      "wheels": []
+    },
+    {
+      "case": "copier-6.2.0",
+      "repository": "https://github.com/copier-org/copier",
+      "revision": "608654a03e748a3ed1b032c089e20b2811a0cfd3",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "upstream/LICENSE": "90649212457f6c256f545d8da6b0c5fd160bf694629270551e06fe7882e70a70"
+      },
+      "wheels": []
+    },
+    {
+      "case": "copier-6.2.0-r2",
+      "repository": "https://github.com/copier-org/copier",
+      "revision": "608654a03e748a3ed1b032c089e20b2811a0cfd3",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "upstream/LICENSE": "90649212457f6c256f545d8da6b0c5fd160bf694629270551e06fe7882e70a70"
+      },
+      "wheels": []
+    },
+    {
+      "case": "copier-6.2.0-r3",
+      "repository": "https://github.com/copier-org/copier",
+      "revision": "608654a03e748a3ed1b032c089e20b2811a0cfd3",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "upstream/LICENSE": "90649212457f6c256f545d8da6b0c5fd160bf694629270551e06fe7882e70a70"
+      },
+      "wheels": []
+    },
+    {
+      "case": "fastapi-jwt-auth-pydantic-2",
+      "repository": "https://github.com/IndominusByte/fastapi-jwt-auth",
+      "revision": "a6c06193319da0e4976c7472966f3a2891e0d50c",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "1e67e17ae357a47d5ae117f33aa89186f8396f621c8a6c3221b2826732b6f0e5",
+        "evidence/pydantic-LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+      },
+      "wheels": []
+    },
+    {
+      "case": "fastapi-jwt-auth-pydantic-2-r2",
+      "repository": "https://github.com/IndominusByte/fastapi-jwt-auth",
+      "revision": "a6c06193319da0e4976c7472966f3a2891e0d50c",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "1e67e17ae357a47d5ae117f33aa89186f8396f621c8a6c3221b2826732b6f0e5",
+        "evidence/pydantic-LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+      },
+      "wheels": []
+    },
+    {
+      "case": "flaskbb-sqlalchemy-1.4.21",
+      "repository": "https://github.com/flaskbb/flaskbb",
+      "revision": "be92f1dbc4747066f18456161976da6b59ed2249",
+      "declared_source_license": "BSD-3-Clause",
+      "retained_license_files": {
+        "evidence/LICENSE": "ffe0c22b926fb02d28bccb20a1cb9e2564eed66fcf49e4efeebf281c4fa97fa7",
+        "source/LICENSE": "f9705e9cb6f0d253d425e1b9d28f7f05fc40f26a06b2a6f48dff38031672e3b9",
+        "source/NOTICE": "85e0f51ed4eb7dbcc519e430884e026db90f64780af1739ae6ab5bd72d1640f0"
+      },
+      "wheels": [
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/blinker-1.4-py3-none-any.whl",
+          "sha256": "74b58c0d5e69803d6e57ac6bd5973c6ded3456492a601b0dbd16caad7f538317",
+          "embedded_license_members": {
+            "blinker-1.4.dist-info/licenses/LICENSE": "ee99a909e1b04f53f3d49383e6462ba268cf49388bb3a657455dac9e38cdf0ea"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/celery-5.1.2-py3-none-any.whl",
+          "sha256": "9dab2170b4038f7bf10ef2861dbf486ddf1d20592290a1040f7b7a1259705d42",
+          "embedded_license_members": {
+            "celery-5.1.2.dist-info/LICENSE": "38f7f269352a85ab6002a986a863c2ef7683936c576ed89e8edde0bca07ac8c7"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/click_didyoumean-0.0.3-py3-none-any.whl",
+          "sha256": "48c754176a2eec1067364e4fd2bb6011b6697d6fafcdbedaa4679c5a5218049f",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/click-didyoumean-0.0.3-LICENSE",
+            "sha256": "efc74f255dd6fd4289363b1bfe71cd0ed70b2926c8258d6152204e6a89041c0a",
+            "source": "https://raw.githubusercontent.com/click-contrib/click-didyoumean/80913ac6907d531346ce98e5902bf3a5707d5bda/LICENSE",
+            "sdist_sha256": "112229485c9704ff51362fe34b2d4f0b12fc71cc20f6d2b3afabed4b8bfa6aeb",
+            "module_sha256": {
+              "click_didyoumean/__init__.py": "a0616969cad7c339d60e8c7ddaa074fb9353a6b9f6ff548a9bca73c07800c027"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; PyPI BSD classifier conflicts with actual MIT text"
+          }
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/flask_allows-0.7.1-py3-none-any.whl",
+          "sha256": "239a500b03d5b16e02b91eecbb2c3fd11df32b947e15702444d6b85446a8bd6d",
+          "embedded_license_members": {
+            "flask_allows-0.7.1.dist-info/licenses/LICENSE": "5592b22d750016e0b14e5c24c45669f4e4268b1caa230b2cc63e98b48d40a0f1",
+            "flask_allows-0.7.1.dist-info/licenses/NOTICE": "196c6461b4a39b2a3ffa93467d78377cadb1b49355094298d63b9648ddb935bf"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/flask_mail-0.9.1-py3-none-any.whl",
+          "sha256": "8a5568f68ada92bf8a4eac1a0a8ae7da40ba176edc7e269b62e9407e6a3ebf79",
+          "embedded_license_members": {
+            "flask_mail-0.9.1.dist-info/licenses/LICENSE": "e119be7385b7c84a6c0803685aabe6cad3363d448577b6ed0cb77f4a955b1054"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/flask_themes2-0.1.5-py3-none-any.whl",
+          "sha256": "1ec47ea58e5d79288a1cc289e303b8b661b1b6169c6d2db021ef1b9d27f525bb",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/flask-themes2-0.1.5-LICENSE",
+            "sha256": "7b7a91d88f076131bb3bbf50de7879541d2202f490651b5c29767400308792f8",
+            "source": "https://raw.githubusercontent.com/sysr-q/flask-themes2/6f4b1ac79443ff1bbf96d5c88e64117ba61bdd6e/LICENSE",
+            "sdist_sha256": "aafabdf38ab4d4b39a1f9a5b38c2a81285e2b84615d1a1764b1752fb9ae671d2",
+            "module_sha256": {
+              "flask_themes2/__init__.py": "266b14214a42edf5f41002f4339125413b618c3d1b1ebb763b2db2ea53b0a861",
+              "flask_themes2/_compat.py": "a638a12e99c5a784749bc3648330071a04b4fc501c5d4832b4412c16bc0c9a62"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; wheel and sdist omitted the root LICENSE"
+          }
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/flask_whooshee-0.8.1-py2.py3-none-any.whl",
+          "sha256": "89c43a32fbb0b7bad5cb1db8c484f62d3fe27a2689c6632849a9bf449b6eae9e",
+          "embedded_license_members": {
+            "flask_whooshee-0.8.1.dist-info/licenses/LICENSE": "404c3bb8bb9fb7e21eaab67e4bf08f406c88ac43adaf7b65e0ed6e7702e5a0cc"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/future-0.18.2-py3-none-any.whl",
+          "sha256": "20b578685b5a9a2ba7dd34137c5e6de38cf6f46f4aa49ab01db7d74de39de1db",
+          "embedded_license_members": {
+            "future-0.18.2.dist-info/licenses/LICENSE.txt": "916e561392d48471b9c23437f56e2652f320cb3b119ceaa162edf41016f746b9"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/limits-1.5.1-py3-none-any.whl",
+          "sha256": "537a872a19a9532ae03e0d48f1bdbd135baa15edd0611d3f2f90065542094984",
+          "embedded_license_members": {
+            "limits-1.5.1.dist-info/licenses/LICENSE.txt": "6ed69e5f85961d5ba740d53d6f0f95d172185d08f8342128b433bcb63555ef29"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/olefile-0.46-py2.py3-none-any.whl",
+          "sha256": "e0f82e4c77954874da711e97ce0a8ed716938b8978b61ecc281e51bcbb447be4",
+          "embedded_license_members": {
+            "olefile-0.46.dist-info/licenses/LICENSE.txt": "04488d55ea9ac2a18400f61adc6421b5881705a943693bc7c0d9b3364dc10f39"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21/wheels/speaklater-1.3-py3-none-any.whl",
+          "sha256": "0fe814cdd6554bc43edda2bbcd95dad47c461ccf14044f9a3c6044f8d92112d3",
+          "embedded_license_members": {
+            "speaklater-1.3.dist-info/licenses/LICENSE": "c97d54bab4b989550f0a7fc79232685563c4524aa31ebaec7866ab68cd42bdb8"
+          },
+          "supplemental": null
+        }
+      ]
+    },
+    {
+      "case": "flaskbb-sqlalchemy-1.4.21-r2",
+      "repository": "https://github.com/flaskbb/flaskbb",
+      "revision": "be92f1dbc4747066f18456161976da6b59ed2249",
+      "declared_source_license": "BSD-3-Clause",
+      "retained_license_files": {
+        "evidence/LICENSE": "ffe0c22b926fb02d28bccb20a1cb9e2564eed66fcf49e4efeebf281c4fa97fa7",
+        "source/LICENSE": "f9705e9cb6f0d253d425e1b9d28f7f05fc40f26a06b2a6f48dff38031672e3b9",
+        "source/NOTICE": "85e0f51ed4eb7dbcc519e430884e026db90f64780af1739ae6ab5bd72d1640f0"
+      },
+      "wheels": [
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/blinker-1.4-py3-none-any.whl",
+          "sha256": "74b58c0d5e69803d6e57ac6bd5973c6ded3456492a601b0dbd16caad7f538317",
+          "embedded_license_members": {
+            "blinker-1.4.dist-info/licenses/LICENSE": "ee99a909e1b04f53f3d49383e6462ba268cf49388bb3a657455dac9e38cdf0ea"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/celery-5.1.2-py3-none-any.whl",
+          "sha256": "9dab2170b4038f7bf10ef2861dbf486ddf1d20592290a1040f7b7a1259705d42",
+          "embedded_license_members": {
+            "celery-5.1.2.dist-info/LICENSE": "38f7f269352a85ab6002a986a863c2ef7683936c576ed89e8edde0bca07ac8c7"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/click_didyoumean-0.0.3-py3-none-any.whl",
+          "sha256": "48c754176a2eec1067364e4fd2bb6011b6697d6fafcdbedaa4679c5a5218049f",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/click-didyoumean-0.0.3-LICENSE",
+            "sha256": "efc74f255dd6fd4289363b1bfe71cd0ed70b2926c8258d6152204e6a89041c0a",
+            "source": "https://raw.githubusercontent.com/click-contrib/click-didyoumean/80913ac6907d531346ce98e5902bf3a5707d5bda/LICENSE",
+            "sdist_sha256": "112229485c9704ff51362fe34b2d4f0b12fc71cc20f6d2b3afabed4b8bfa6aeb",
+            "module_sha256": {
+              "click_didyoumean/__init__.py": "a0616969cad7c339d60e8c7ddaa074fb9353a6b9f6ff548a9bca73c07800c027"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; PyPI BSD classifier conflicts with actual MIT text"
+          }
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/flask_allows-0.7.1-py3-none-any.whl",
+          "sha256": "239a500b03d5b16e02b91eecbb2c3fd11df32b947e15702444d6b85446a8bd6d",
+          "embedded_license_members": {
+            "flask_allows-0.7.1.dist-info/licenses/LICENSE": "5592b22d750016e0b14e5c24c45669f4e4268b1caa230b2cc63e98b48d40a0f1",
+            "flask_allows-0.7.1.dist-info/licenses/NOTICE": "196c6461b4a39b2a3ffa93467d78377cadb1b49355094298d63b9648ddb935bf"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/flask_mail-0.9.1-py3-none-any.whl",
+          "sha256": "8a5568f68ada92bf8a4eac1a0a8ae7da40ba176edc7e269b62e9407e6a3ebf79",
+          "embedded_license_members": {
+            "flask_mail-0.9.1.dist-info/licenses/LICENSE": "e119be7385b7c84a6c0803685aabe6cad3363d448577b6ed0cb77f4a955b1054"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/flask_themes2-0.1.5-py3-none-any.whl",
+          "sha256": "1ec47ea58e5d79288a1cc289e303b8b661b1b6169c6d2db021ef1b9d27f525bb",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/flask-themes2-0.1.5-LICENSE",
+            "sha256": "7b7a91d88f076131bb3bbf50de7879541d2202f490651b5c29767400308792f8",
+            "source": "https://raw.githubusercontent.com/sysr-q/flask-themes2/6f4b1ac79443ff1bbf96d5c88e64117ba61bdd6e/LICENSE",
+            "sdist_sha256": "aafabdf38ab4d4b39a1f9a5b38c2a81285e2b84615d1a1764b1752fb9ae671d2",
+            "module_sha256": {
+              "flask_themes2/__init__.py": "266b14214a42edf5f41002f4339125413b618c3d1b1ebb763b2db2ea53b0a861",
+              "flask_themes2/_compat.py": "a638a12e99c5a784749bc3648330071a04b4fc501c5d4832b4412c16bc0c9a62"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; wheel and sdist omitted the root LICENSE"
+          }
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/flask_whooshee-0.8.1-py2.py3-none-any.whl",
+          "sha256": "89c43a32fbb0b7bad5cb1db8c484f62d3fe27a2689c6632849a9bf449b6eae9e",
+          "embedded_license_members": {
+            "flask_whooshee-0.8.1.dist-info/licenses/LICENSE": "404c3bb8bb9fb7e21eaab67e4bf08f406c88ac43adaf7b65e0ed6e7702e5a0cc"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/future-0.18.2-py3-none-any.whl",
+          "sha256": "20b578685b5a9a2ba7dd34137c5e6de38cf6f46f4aa49ab01db7d74de39de1db",
+          "embedded_license_members": {
+            "future-0.18.2.dist-info/licenses/LICENSE.txt": "916e561392d48471b9c23437f56e2652f320cb3b119ceaa162edf41016f746b9"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/limits-1.5.1-py3-none-any.whl",
+          "sha256": "537a872a19a9532ae03e0d48f1bdbd135baa15edd0611d3f2f90065542094984",
+          "embedded_license_members": {
+            "limits-1.5.1.dist-info/licenses/LICENSE.txt": "6ed69e5f85961d5ba740d53d6f0f95d172185d08f8342128b433bcb63555ef29"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/olefile-0.46-py2.py3-none-any.whl",
+          "sha256": "e0f82e4c77954874da711e97ce0a8ed716938b8978b61ecc281e51bcbb447be4",
+          "embedded_license_members": {
+            "olefile-0.46.dist-info/licenses/LICENSE.txt": "04488d55ea9ac2a18400f61adc6421b5881705a943693bc7c0d9b3364dc10f39"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-sqlalchemy-1.4.21-r2/wheels/speaklater-1.3-py3-none-any.whl",
+          "sha256": "0fe814cdd6554bc43edda2bbcd95dad47c461ccf14044f9a3c6044f8d92112d3",
+          "embedded_license_members": {
+            "speaklater-1.3.dist-info/licenses/LICENSE": "c97d54bab4b989550f0a7fc79232685563c4524aa31ebaec7866ab68cd42bdb8"
+          },
+          "supplemental": null
+        }
+      ]
+    },
+    {
+      "case": "flaskbb-werkzeug-2.1",
+      "repository": "https://github.com/flaskbb/flaskbb",
+      "revision": "cc083eb5f6fee7e7d0da633e327cee69ffd1838d",
+      "declared_source_license": "BSD-3-Clause",
+      "retained_license_files": {
+        "evidence/LICENSE.rst": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+        "source/LICENSE": "f9705e9cb6f0d253d425e1b9d28f7f05fc40f26a06b2a6f48dff38031672e3b9",
+        "source/NOTICE": "85e0f51ed4eb7dbcc519e430884e026db90f64780af1739ae6ab5bd72d1640f0"
+      },
+      "wheels": [
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/Babel-2.9.1-py2.py3-none-any.whl",
+          "sha256": "ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9",
+          "embedded_license_members": {
+            "Babel-2.9.1.dist-info/LICENSE": "28c97bf33e7506e277487bdaa3a69b70f170d6af5a82785ac0a74c8428042e40"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/blinker-1.4-py3-none-any.whl",
+          "sha256": "74b58c0d5e69803d6e57ac6bd5973c6ded3456492a601b0dbd16caad7f538317",
+          "embedded_license_members": {
+            "blinker-1.4.dist-info/licenses/LICENSE": "ee99a909e1b04f53f3d49383e6462ba268cf49388bb3a657455dac9e38cdf0ea"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/celery-5.1.2-py3-none-any.whl",
+          "sha256": "9dab2170b4038f7bf10ef2861dbf486ddf1d20592290a1040f7b7a1259705d42",
+          "embedded_license_members": {
+            "celery-5.1.2.dist-info/LICENSE": "38f7f269352a85ab6002a986a863c2ef7683936c576ed89e8edde0bca07ac8c7"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/click_didyoumean-0.0.3-py3-none-any.whl",
+          "sha256": "48c754176a2eec1067364e4fd2bb6011b6697d6fafcdbedaa4679c5a5218049f",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/click-didyoumean-0.0.3-LICENSE",
+            "sha256": "efc74f255dd6fd4289363b1bfe71cd0ed70b2926c8258d6152204e6a89041c0a",
+            "source": "https://raw.githubusercontent.com/click-contrib/click-didyoumean/80913ac6907d531346ce98e5902bf3a5707d5bda/LICENSE",
+            "sdist_sha256": "112229485c9704ff51362fe34b2d4f0b12fc71cc20f6d2b3afabed4b8bfa6aeb",
+            "module_sha256": {
+              "click_didyoumean/__init__.py": "a0616969cad7c339d60e8c7ddaa074fb9353a6b9f6ff548a9bca73c07800c027"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; PyPI BSD classifier conflicts with actual MIT text"
+          }
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/flask_allows-0.7.1-py3-none-any.whl",
+          "sha256": "239a500b03d5b16e02b91eecbb2c3fd11df32b947e15702444d6b85446a8bd6d",
+          "embedded_license_members": {
+            "flask_allows-0.7.1.dist-info/licenses/LICENSE": "5592b22d750016e0b14e5c24c45669f4e4268b1caa230b2cc63e98b48d40a0f1",
+            "flask_allows-0.7.1.dist-info/licenses/NOTICE": "196c6461b4a39b2a3ffa93467d78377cadb1b49355094298d63b9648ddb935bf"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/Flask_Login-0.6.0-py3-none-any.whl",
+          "sha256": "5cb01ce4dc253967b6ac722a11e46de83b6272ef7a19cc7b5725ae636916d04d",
+          "embedded_license_members": {
+            "Flask_Login-0.6.0.dist-info/LICENSE": "7a9dfb9c5da204ed1370f3b62c13e2992a12da1da707f47e156897eeb4344e5b"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/flask_mail-0.9.1-py3-none-any.whl",
+          "sha256": "8a5568f68ada92bf8a4eac1a0a8ae7da40ba176edc7e269b62e9407e6a3ebf79",
+          "embedded_license_members": {
+            "flask_mail-0.9.1.dist-info/licenses/LICENSE": "e119be7385b7c84a6c0803685aabe6cad3363d448577b6ed0cb77f4a955b1054"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/flask_themes2-0.1.5-py3-none-any.whl",
+          "sha256": "1ec47ea58e5d79288a1cc289e303b8b661b1b6169c6d2db021ef1b9d27f525bb",
+          "embedded_license_members": {},
+          "supplemental": {
+            "license": "MIT",
+            "file": "docs/licenses/flask-themes2-0.1.5-LICENSE",
+            "sha256": "7b7a91d88f076131bb3bbf50de7879541d2202f490651b5c29767400308792f8",
+            "source": "https://raw.githubusercontent.com/sysr-q/flask-themes2/6f4b1ac79443ff1bbf96d5c88e64117ba61bdd6e/LICENSE",
+            "sdist_sha256": "aafabdf38ab4d4b39a1f9a5b38c2a81285e2b84615d1a1764b1752fb9ae671d2",
+            "module_sha256": {
+              "flask_themes2/__init__.py": "266b14214a42edf5f41002f4339125413b618c3d1b1ebb763b2db2ea53b0a861",
+              "flask_themes2/_compat.py": "a638a12e99c5a784749bc3648330071a04b4fc501c5d4832b4412c16bc0c9a62"
+            },
+            "note": "Fixed source/sdist/wheel module bytes agree; wheel and sdist omitted the root LICENSE"
+          }
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/flask_whooshee-0.8.1-py2.py3-none-any.whl",
+          "sha256": "89c43a32fbb0b7bad5cb1db8c484f62d3fe27a2689c6632849a9bf449b6eae9e",
+          "embedded_license_members": {
+            "flask_whooshee-0.8.1.dist-info/licenses/LICENSE": "404c3bb8bb9fb7e21eaab67e4bf08f406c88ac43adaf7b65e0ed6e7702e5a0cc"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/future-0.18.2-py3-none-any.whl",
+          "sha256": "20b578685b5a9a2ba7dd34137c5e6de38cf6f46f4aa49ab01db7d74de39de1db",
+          "embedded_license_members": {
+            "future-0.18.2.dist-info/licenses/LICENSE.txt": "916e561392d48471b9c23437f56e2652f320cb3b119ceaa162edf41016f746b9"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/greenlet-3.2.5-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "bdd67619cefe1cc9fcab57c8853d2bb36eca9f166c0058cc0d428d471f7c785c",
+          "embedded_license_members": {
+            "greenlet-3.2.5.dist-info/licenses/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "greenlet-3.2.5.dist-info/licenses/LICENSE": "769831d6e5dfaf2c20802faccff1fafb4c2025dd8f6253dfa47fcad59d4d0979",
+            "greenlet-3.2.5.dist-info/licenses/LICENSE.PSF": "e5ff3c23c110e494cd7d736c10fd96d462457bafeca310840db6527298c7d46b"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/limits-1.5.1-py3-none-any.whl",
+          "sha256": "537a872a19a9532ae03e0d48f1bdbd135baa15edd0611d3f2f90065542094984",
+          "embedded_license_members": {
+            "limits-1.5.1.dist-info/licenses/LICENSE.txt": "6ed69e5f85961d5ba740d53d6f0f95d172185d08f8342128b433bcb63555ef29"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/olefile-0.46-py2.py3-none-any.whl",
+          "sha256": "e0f82e4c77954874da711e97ce0a8ed716938b8978b61ecc281e51bcbb447be4",
+          "embedded_license_members": {
+            "olefile-0.46.dist-info/licenses/LICENSE.txt": "04488d55ea9ac2a18400f61adc6421b5881705a943693bc7c0d9b3364dc10f39"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/Pillow-8.3.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
+          "sha256": "cc866706d56bd3a7dbf8bac8660c6f6462f2f2b8a49add2ba617bc0c54473d83",
+          "embedded_license_members": {
+            "Pillow-8.3.1.dist-info/LICENSE": "018798b6a72b72366b7d3c3c8a68249ee2a4a4f61ebb4214ca7bf8e41634d0f5"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/setuptools-80.9.0-py3-none-any.whl",
+          "sha256": "062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922",
+          "embedded_license_members": {
+            "setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+            "setuptools/_vendor/wheel/vendored/packaging/LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+            "setuptools/_vendor/wheel/vendored/packaging/LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+            "setuptools/_vendor/wheel/vendored/packaging/LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+            "setuptools/config/NOTICE": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8",
+            "setuptools/config/_validate_pyproject/NOTICE": "5d300dbfa643138b013b75ac9caeee591f951b8b0ee24288c34ccd926c4780c8",
+            "setuptools-80.9.0.dist-info/licenses/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+            "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+            "setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/jaraco.collections-5.1.0.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+            "setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+            "setuptools/_vendor/packaging-24.2.dist-info/LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+            "setuptools/_vendor/packaging-24.2.dist-info/LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+            "setuptools/_vendor/packaging-24.2.dist-info/LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+            "setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+            "setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758",
+            "setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+            "setuptools/_vendor/wheel-0.45.1.dist-info/LICENSE.txt": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+            "setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/speaklater-1.3-py3-none-any.whl",
+          "sha256": "0fe814cdd6554bc43edda2bbcd95dad47c461ccf14044f9a3c6044f8d92112d3",
+          "embedded_license_members": {
+            "speaklater-1.3.dist-info/licenses/LICENSE": "c97d54bab4b989550f0a7fc79232685563c4524aa31ebaec7866ab68cd42bdb8"
+          },
+          "supplemental": null
+        },
+        {
+          "path": "cases/flaskbb-werkzeug-2.1/wheels/SQLAlchemy-1.4.21-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "sha256": "6bc28702213988c96e394685ad4103a4e347305cf90569693bef8e3d12f233ae",
+          "embedded_license_members": {
+            "SQLAlchemy-1.4.21.dist-info/LICENSE": "ffe0c22b926fb02d28bccb20a1cb9e2564eed66fcf49e4efeebf281c4fa97fa7"
+          },
+          "supplemental": null
+        }
+      ]
+    },
+    {
+      "case": "encode-databases-sqlalchemy-2",
+      "repository": "https://github.com/encode/databases",
+      "revision": "c2e4c5ba9ba84e30d0b4676dee90cfb998b72a1d",
+      "declared_source_license": "BSD-3-Clause",
+      "retained_license_files": {
+        "evidence/LICENSE": "9821720b58d4a565b61321007a8ad43ab6991a3959e66cd5db4dd9eae69c7dfc",
+        "source/LICENSE.md": "ad1a8fd69f2a30207790a4e850c97c6be4708cdd84f449e863b64c52ae84bb47"
+      },
+      "wheels": []
+    },
+    {
+      "case": "apscheduler-3.9.1-pg-r2",
+      "repository": "https://github.com/agronholm/apscheduler",
+      "revision": "a5e2cadb8a60ded5b57169e0c080782e976dc99b",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "9821720b58d4a565b61321007a8ad43ab6991a3959e66cd5db4dd9eae69c7dfc",
+        "upstream/LICENSE.txt": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758"
+      },
+      "wheels": []
+    },
+    {
+      "case": "optuna-3.1.0-pg",
+      "repository": "https://github.com/optuna/optuna",
+      "revision": "6adfe8cd953b3b8d85aad3a6c0b0991cbdc6ad40",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "9821720b58d4a565b61321007a8ad43ab6991a3959e66cd5db4dd9eae69c7dfc",
+        "upstream/LICENSE": "fa330973fbb4fb201052dcf7fa1a48d49bd6e4805785256777c77a4f1ba09a27"
+      },
+      "wheels": []
+    },
+    {
+      "case": "openapi-python-client-0.10.0",
+      "repository": "https://github.com/openapi-generators/openapi-python-client",
+      "revision": "289787a8b6c50eca4d36399e16a74e1683611507",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "source/openapi_python_client/schema/openapi_schema_pydantic/license.py": "073497e68a75de42703e8f867f6adb071d9b47687526f98032ee2ac2636a251b",
+        "upstream/LICENSE": "e1da71418a98d030776936ae46ba9846ebba05536c3d225d61e513dec1faa506",
+        "source/openapi_python_client/schema/openapi_schema_pydantic/LICENSE": "ca8cbaa3027b6c0ad54958e908da14d33b8688ddcb031a8d550d7f640ba639ff"
+      },
+      "wheels": []
+    },
+    {
+      "case": "csvkit-csvsql-sqlalchemy-2-r2",
+      "repository": "https://github.com/wireservice/csvkit",
+      "revision": "fa9e0db1cdd30757835912e48467d6ab2be02c14",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "9821720b58d4a565b61321007a8ad43ab6991a3959e66cd5db4dd9eae69c7dfc",
+        "source/COPYING": "8e16cf985de9056e4e3883031a8714157a7572967916a047205c16ffd3992e9e"
+      },
+      "wheels": []
+    },
+    {
+      "case": "csvkit-csvsql-sqlalchemy-2-a3",
+      "repository": "https://github.com/wireservice/csvkit",
+      "revision": "fa9e0db1cdd30757835912e48467d6ab2be02c14",
+      "declared_source_license": "MIT",
+      "retained_license_files": {
+        "evidence/LICENSE": "9821720b58d4a565b61321007a8ad43ab6991a3959e66cd5db4dd9eae69c7dfc",
+        "source/COPYING": "8e16cf985de9056e4e3883031a8714157a7572967916a047205c16ffd3992e9e"
+      },
+      "wheels": []
+    }
+  ]
+}

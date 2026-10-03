@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "package": "sqlalchemy",
+  "old_version": "1.4.54",
+  "new_version": "2.0.38",
+  "repository": "https://github.com/sqlalchemy/sqlalchemy",
+  "revision": "23f5f3350974d9452f3b844617c31eb5b41474ae",
+  "upstream_path": "doc/build/changelog/migration_20.rst",
+  "license_path": "evidence/LICENSE",
+  "entries": [
+    {
+      "evidence_key": "sqlalchemy-v2-autocommit",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Library-level (but not driver level) \"Autocommit\" removed from both Core and ORM",
+      "start_line": 560,
+      "end_line": 708
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-connectionless",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "\"Implicit\" and \"Connectionless\" execution, \"bound metadata\" removed",
+      "start_line": 709,
+      "end_line": 898
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-execute",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "execute() method more strict, execution options are more prominent",
+      "start_line": 899,
+      "end_line": 973
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-select",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "select() no longer accepts varied constructor arguments, columns are passed positionally",
+      "start_line": 1050,
+      "end_line": 1134
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-query",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "ORM Query Unified with Core Select",
+      "start_line": 1539,
+      "end_line": 1699
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-session-autocommit",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Autocommit mode removed from Session; autobegin support added",
+      "start_line": 2258,
+      "end_line": 2308
+    }
+  ]
+}

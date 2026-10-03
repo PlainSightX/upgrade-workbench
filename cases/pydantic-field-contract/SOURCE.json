@@ -1,0 +1,7 @@
+{
+  "classification": "synthetic_calibration_not_real_application",
+  "basis": "Official Pydantic migration examples of required nullable fields and union input type preservation",
+  "upstream": "https://docs.pydantic.dev/2.11/migration/",
+  "intent": "Validate runner using fixed old behavior; user business decision and Agent performance not established",
+  "expected_cases": 5
+}

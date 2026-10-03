@@ -1,0 +1,175 @@
+{
+  "repository": "https://github.com/callowayproject/bump-my-version",
+  "revision": "fc491fc50fa85b2b23c1eaf4980a30a17637b4f6",
+  "tag": "0.5.0",
+  "commit_date": "2023-06-12T14:02:30Z",
+  "retrieved_on": "2026-09-16",
+  "license": "MIT",
+  "archive_url": "https://codeload.github.com/callowayproject/bump-my-version/zip/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6",
+  "archive_sha256": "745dfe32f2771c6382b596063bdc41e8697570422aff4b184a1a0862a0d5edee",
+  "classification": "historical_real_cli_application_selected_domain_and_file_pipeline",
+  "copy_policy": "complete_application_modules_and_selected_unchanged_upstream_tests_no_execution",
+  "upstream_application_modules": 14,
+  "files": {
+    "source/bumpversion/__init__.py": {
+      "upstream_path": "bumpversion/__init__.py",
+      "sha256": "4bb1fcab3220318ae0539f0c3b7e106241cc341efb32bc094300d42a5483f653",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/__init__.py"
+    },
+    "source/bumpversion/__main__.py": {
+      "upstream_path": "bumpversion/__main__.py",
+      "sha256": "69c134b768eec5da16caf7e43d1ed1d723bbfb6c04b5429a3e758a0beda9f752",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/__main__.py"
+    },
+    "source/bumpversion/aliases.py": {
+      "upstream_path": "bumpversion/aliases.py",
+      "sha256": "f8ac3ce6161d22ca35f9bea8d45acbcc42f97435e38aa07a86eecbffe14dfbf4",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/aliases.py"
+    },
+    "source/bumpversion/autocast.py": {
+      "upstream_path": "bumpversion/autocast.py",
+      "sha256": "b50c103a2578dc1c36d8e0db318fdd3fc1ef500e213f140bf125542dc44f6fb5",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/autocast.py"
+    },
+    "source/bumpversion/bump.py": {
+      "upstream_path": "bumpversion/bump.py",
+      "sha256": "d98ac3c370ae7a3fd4db9b7236d036e1409b747e55f853ff44404ccf2bdaf65c",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/bump.py"
+    },
+    "source/bumpversion/cli.py": {
+      "upstream_path": "bumpversion/cli.py",
+      "sha256": "ba7a8fdad11e12dac4077866f5d03bc241e2bf7f52761d1c896177e3de1610b2",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/cli.py"
+    },
+    "source/bumpversion/config.py": {
+      "upstream_path": "bumpversion/config.py",
+      "sha256": "3974e6e175ce944b0335c573a6ccd367b862e53e02e02d4c858674aadb5cacb8",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/config.py"
+    },
+    "source/bumpversion/exceptions.py": {
+      "upstream_path": "bumpversion/exceptions.py",
+      "sha256": "7e304bc976b62b6efca1d4615eb2e585f735260331ed39b0ff6f265b004804fb",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/exceptions.py"
+    },
+    "source/bumpversion/files.py": {
+      "upstream_path": "bumpversion/files.py",
+      "sha256": "76bccb84dd4ca80e97af614b90909a2c8242111638886ad8ba1de8ba1c97c300",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/files.py"
+    },
+    "source/bumpversion/functions.py": {
+      "upstream_path": "bumpversion/functions.py",
+      "sha256": "f3313ac11e497c8f482dc297ff5f5f94d44d4dfccf97d7546f73fca15ab48420",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/functions.py"
+    },
+    "source/bumpversion/logging.py": {
+      "upstream_path": "bumpversion/logging.py",
+      "sha256": "27eebde4858e93228855e278d9c15e1f9154a4092467c4b97c63cd13871e3910",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/logging.py"
+    },
+    "source/bumpversion/scm.py": {
+      "upstream_path": "bumpversion/scm.py",
+      "sha256": "800cc99b4d4ad35e62d0b7935582978d71a55d3b3e509bdff3d509f458c3a49e",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/scm.py"
+    },
+    "source/bumpversion/utils.py": {
+      "upstream_path": "bumpversion/utils.py",
+      "sha256": "66463654d3f8d4bb55f26ec3ee1de51126df4e8c3c72cd8be0df28a6d58bda9d",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/utils.py"
+    },
+    "source/bumpversion/version_part.py": {
+      "upstream_path": "bumpversion/version_part.py",
+      "sha256": "e26ee1079b735175f75ff2ca2a8077186fbd8c7caad9c76cad8913b463b37ca2",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/bumpversion/version_part.py"
+    },
+    "source/tests/__init__.py": {
+      "upstream_path": "tests/__init__.py",
+      "sha256": "a6bc12ca9b54c29c18c4f6bbad0cef08f0829e8c0467d56a717019435ba45bbb",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/__init__.py"
+    },
+    "source/tests/conftest.py": {
+      "upstream_path": "tests/conftest.py",
+      "sha256": "f2511fc32592edbcf06577d1c970a8898fd0b5ef6b50311724bfb774808bde74",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/conftest.py"
+    },
+    "source/tests/fixtures/basic_cfg.cfg": {
+      "upstream_path": "tests/fixtures/basic_cfg.cfg",
+      "sha256": "d3eff11abc80f5a5403f799def46f4a0ac072d212c53ebd087f61cdeb836169b",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/basic_cfg.cfg"
+    },
+    "source/tests/fixtures/basic_cfg.toml": {
+      "upstream_path": "tests/fixtures/basic_cfg.toml",
+      "sha256": "61f2ab39f457583bbca1fe3d4e90a868cc749139bd99121b304cbd61c04207bd",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/basic_cfg.toml"
+    },
+    "source/tests/fixtures/basic_cfg_expected.json": {
+      "upstream_path": "tests/fixtures/basic_cfg_expected.json",
+      "sha256": "35242264fb406e498a55b313e186e683be5620c687ffe41f18c05d8fe569fb64",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/basic_cfg_expected.json"
+    },
+    "source/tests/fixtures/glob/directory/file3.txt": {
+      "upstream_path": "tests/fixtures/glob/directory/file3.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/glob/directory/file3.txt"
+    },
+    "source/tests/fixtures/glob/file1.txt": {
+      "upstream_path": "tests/fixtures/glob/file1.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/glob/file1.txt"
+    },
+    "source/tests/fixtures/glob/file2.txt": {
+      "upstream_path": "tests/fixtures/glob/file2.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/glob/file2.txt"
+    },
+    "source/tests/fixtures/glob/not-text.md": {
+      "upstream_path": "tests/fixtures/glob/not-text.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/glob/not-text.md"
+    },
+    "source/tests/fixtures/interpolation/.bumpversion.cfg": {
+      "upstream_path": "tests/fixtures/interpolation/.bumpversion.cfg",
+      "sha256": "121219c4cb7ca1302cce51642a20717b93ab84ea2be9248ff714b9a805c1066e",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/interpolation/.bumpversion.cfg"
+    },
+    "source/tests/fixtures/interpolation/pyproject.toml": {
+      "upstream_path": "tests/fixtures/interpolation/pyproject.toml",
+      "sha256": "03bef400413fff6b60bc132d1f5868f47f3baee8659e692b79ea5ffde7fb44ef",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/interpolation/pyproject.toml"
+    },
+    "source/tests/fixtures/interpolation/setup.cfg": {
+      "upstream_path": "tests/fixtures/interpolation/setup.cfg",
+      "sha256": "aa82dc39a1b5440fac1fd2b99376be4a486434b906644485c2b728dd9dc793d4",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/fixtures/interpolation/setup.cfg"
+    },
+    "source/tests/test_config.py": {
+      "upstream_path": "tests/test_config.py",
+      "sha256": "95bdee5f246bca484d6bb6123b5e9ace09b75b3f867bd34182f55dbf8319b752",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/test_config.py"
+    },
+    "source/tests/test_files.py": {
+      "upstream_path": "tests/test_files.py",
+      "sha256": "080f513e4322748eeaf25cd57068ece463e333aeb26b6e495de36ca676b35fc6",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/test_files.py"
+    },
+    "source/tests/test_version_part.py": {
+      "upstream_path": "tests/test_version_part.py",
+      "sha256": "a99f95546cfff0608ef5ae166ac42574f593aae3740bb6f00c63250b7f074e17",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/tests/test_version_part.py"
+    },
+    "upstream/LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "fdc92c03668ab414083b84eca636863120058e848eb711cd2f8924243fd7464e",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/LICENSE"
+    },
+    "upstream/README.md": {
+      "upstream_path": "README.md",
+      "sha256": "efc35040f22bbc6715a3c6851e8cbaa829030529a76ad7a02263d87d67459e16",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/README.md"
+    },
+    "upstream/pyproject.toml": {
+      "upstream_path": "pyproject.toml",
+      "sha256": "2aadfd7eefc6f7ae0cc6aa04dd7b1ee7b52967e898847f5ddcb1d60b1378c6fe",
+      "raw_url": "https://raw.githubusercontent.com/callowayproject/bump-my-version/fc491fc50fa85b2b23c1eaf4980a30a17637b4f6/pyproject.toml"
+    }
+  }
+}

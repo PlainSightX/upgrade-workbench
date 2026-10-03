@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "copier-6-2-0",
+  "split": "development",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_copy_flow.py"
+      ],
+      "nodeids": [
+        "feedback/test_copy_flow.py::test_local_template_renders_default_answers",
+        "feedback/test_copy_flow.py::test_explicit_answers_drive_typed_rendering",
+        "feedback/test_copy_flow.py::test_missing_template_is_rejected",
+        "feedback/test_copy_flow.py::test_answer_file_must_be_relative"
+      ],
+      "expected_count": 4
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_render_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_render_contract.py::test_filename_content_and_answer_record_agree",
+        "acceptance/test_render_contract.py::test_pretend_makes_no_output_directory",
+        "acceptance/test_render_contract.py::test_skip_if_exists_preserves_user_file",
+        "acceptance/test_render_contract.py::test_exclusion_leaves_other_rendered_files"
+      ],
+      "expected_count": 4
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "9a1964e2f507e8deac960ee7e7391e44c1eb50211734b6e7a6d7dd13e52e72d7",
+  "requirements": [
+    {
+      "id": "config.empty-defaults",
+      "statement": "An empty generation configuration remains usable and preserves the existing field prefix, empty class overrides, and unset project/package overrides.",
+      "public_check_nodeids": [
+        "feedback/test_generation.py::test_empty_configuration_keeps_default_options"
+      ]
+    },
+    {
+      "id": "generation.local-document",
+      "statement": "A supported local OpenAPI document produces the corresponding model, endpoint, and client Python files, and those generated files remain syntactically compilable.",
+      "public_check_nodeids": [
+        "feedback/test_generation.py::test_local_document_generates_model_and_endpoint"
+      ]
+    },
+    {
+      "id": "input.invalid-rejected",
+      "statement": "An invalid local OpenAPI document returns an explicit parsing error without leaving an apparently successful generated package.",
+      "public_check_nodeids": [
+        "feedback/test_generation.py::test_invalid_document_returns_error_without_generated_package"
+      ]
+    },
+    {
+      "id": "input.unsupported-version",
+      "statement": "Unsupported OpenAPI major versions remain explicitly rejected without leaving an apparently successful generated project.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "config.document-and-overrides",
+      "statement": "The input document and optional generation configuration retain their existing control over project name, package name, and generated version.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "schema.required-fields",
+      "statement": "Required input schema fields retain their required meaning in generated models.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "schema.omittable-fields",
+      "statement": "Omittable input schema fields retain the existing distinction between an omitted value and a supplied value in generated models.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "schema.nullable-fields",
+      "statement": "Nullable input schema fields retain their existing allowance for null without conflating null with an omitted value.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "schema.original-names",
+      "statement": "Generated model dictionary input and output preserve the original schema field names even when their Python identifiers differ.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "schema.component-references",
+      "statement": "Cross-component schema references and references used by endpoints resolve to the corresponding generated model rather than an unrelated or missing type.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "generated.model-runtime",
+      "statement": "Generated model code remains importable and its existing from_dict and to_dict protocol can execute on supported document inputs while preserving the corresponding field values.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "generated.endpoint-runtime",
+      "statement": "Generated endpoint code remains importable and preserves the existing path assembly and response parsing behavior without requiring a request to a remote service for validation.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "generation.project-metadata",
+      "statement": "Generation modes that produce project metadata continue rendering the complete corresponding project metadata alongside models, client, and endpoints.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "generation.formatting-commands",
+      "statement": "The generation workflow continues invoking the existing formatting commands for the generated project, without replacing them with a no-op.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.native-pydantic",
+      "statement": "The application runs in the registered new dependency environment through native Pydantic v2 APIs; routing the migrated application through pydantic.v1 or retaining the old Pydantic runtime is not an accepted migration.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.change-boundary",
+      "statement": "The migration changes only registered application Python files and preserves the original templates, checks, dependency locks, and business contract.",
+      "public_check_nodeids": []
+    }
+  ]
+}

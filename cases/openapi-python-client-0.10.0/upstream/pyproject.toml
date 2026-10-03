@@ -1,0 +1,99 @@
+[tool.poetry]
+name = "openapi-python-client"
+version = "0.10.0"
+description = "Generate modern Python clients from OpenAPI"
+repository = "https://github.com/triaxtec/openapi-python-client"
+license = "MIT"
+keywords=["OpenAPI", "Client", "Generator"]
+authors = ["Dylan Anthony <danthony@triaxtec.com>"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Code Generators",
+    "Typing :: Typed",
+]
+readme = "README.md"
+packages = [
+    {include = "openapi_python_client"},
+]
+include = ["CHANGELOG.md", "openapi_python_client/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+jinja2 = "^3.0.0"
+typer = "^0.3"
+colorama = {version = "^0.4.3", markers = "sys_platform == 'win32'"}
+shellingham = "^1.3.2"
+black = "*"
+isort = "^5.0.5"
+pyyaml = "^5.3.1"
+importlib_metadata = {version = "^2.0.0", python = "<3.8"}
+pydantic = "^1.6.1"
+attrs = "^21.0.0"
+python-dateutil = "^2.8.1"
+httpx = ">=0.15.4,<0.19.0"
+autoflake = "^1.4"
+
+[tool.poetry.scripts]
+openapi-python-client = "openapi_python_client.cli:app"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-mock = "*"
+mypy = "*"
+taskipy = "*"
+safety = "*"
+pytest-cov = "*"
+python-multipart = "*"
+flake8 = "*"
+typer-cli = "^0.0.12"
+types-PyYAML = "^5.4.3"
+types-certifi = "^0.1.4"
+types-python-dateutil = "^0.1.4"
+types-dataclasses = { version = "^0.1.5", python = "<3.7" }
+
+[tool.taskipy.tasks]
+check = """
+isort .\
+ && black .\
+ && flake8 openapi_python_client\
+ && safety check --bare\
+ && mypy openapi_python_client\
+ && pytest --cov openapi_python_client tests --cov-report=term-missing\
+"""
+regen = "python -m end_to_end_tests.regen_golden_record"
+e2e = "pytest openapi_python_client end_to_end_tests/test_end_to_end.py"
+re = """
+task regen\
+&& task e2e\
+"""
+docs = "typer openapi_python_client/cli.py utils docs > usage.md"
+
+[tool.black]
+line-length = 120
+target_version = ['py36', 'py37', 'py38']
+exclude = '''
+(
+  /(
+    | \.git
+    | \.venv
+    | \.mypy_cache
+    | openapi_python_client/templates
+    | tests/test_templates
+    | end_to_end_tests/test_custom_templates
+    | end_to_end_tests/golden-record-custom
+  )/
+)
+'''
+
+[tool.isort]
+line_length = 120
+profile = "black"
+skip = [".venv", "tests/test_templates"]
+
+[tool.coverage.run]
+omit = ["openapi_python_client/templates/*"]
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"

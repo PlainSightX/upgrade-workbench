@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "package": "werkzeug",
+  "old_version": "2.0.1",
+  "new_version": "2.1.2",
+  "companion": {
+    "package": "flask",
+    "old_version": "2.0.1",
+    "new_version": "2.1.2"
+  },
+  "repository": "https://github.com/pallets/werkzeug",
+  "revision": "810cd659153a7c9923e2557a00c587c8bc77d74a",
+  "upstream_path": "CHANGES.rst",
+  "license_path": "evidence/LICENSE.rst",
+  "entries": [
+    {
+      "evidence_key": "werkzeug-v21-request-json",
+      "path": "evidence/CHANGES.rst",
+      "sha256": "6c8fd8828af2740c10cc4f3baf6652146adfe50339a0fd35ab95f5ed75468a61",
+      "heading": "Version 2.1.0",
+      "start_line": 28,
+      "end_line": 132
+    }
+  ]
+}

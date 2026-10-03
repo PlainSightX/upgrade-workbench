@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "7c1159f185e6339af068ec76f4f6ae06ae76fbec7dbeeb3fb206cf973824a6ac",
+  "requirements": [
+    {
+      "id": "csvsql.query",
+      "statement": "CSV input is queryable through csvsql and selected rows and headers are returned as CSV.",
+      "public_check_nodeids": ["feedback/test_csvsql_flow.py::test_query_filters_csv_rows"]
+    },
+    {
+      "id": "csvsql.persistence",
+      "statement": "A fresh SQLite connection sees imported rows after csvsql exits.",
+      "public_check_nodeids": ["feedback/test_csvsql_flow.py::test_file_database_query_and_commit"]
+    },
+    {
+      "id": "csvsql.hooks",
+      "statement": "Before- and after-insert SQL statements run and commit in the same workflow.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.sqlalchemy2",
+      "statement": "The same csvsql workflow works with pinned SQLAlchemy 2.0.25 without lock or check edits.",
+      "public_check_nodeids": []
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "case_id": "fastapi-jwt-auth-pydantic-2-r2",
+  "title": "FastAPI JWT Auth Pydantic 1 to 2 Protocol 5 development revision",
+  "source": {
+    "kind": "upstream_snapshot",
+    "repository": "https://github.com/IndominusByte/fastapi-jwt-auth",
+    "revision": "a6c06193319da0e4976c7472966f3a2891e0d50c",
+    "license": "MIT",
+    "description": "Complete five-module authentication library snapshot; no upstream answer patch."
+  },
+  "review": {
+    "status": "reviewed",
+    "note": "Public code and tests reviewed; only isolated Docker execution, no host secrets or target network."
+  },
+  "snapshot_dir": "source",
+  "checks_dir": "checks",
+  "old_lock": "requirements/old.txt",
+  "new_lock": "requirements/new.txt",
+  "allowed_changes": [
+    "fastapi_jwt_auth/config.py",
+    "fastapi_jwt_auth/auth_config.py",
+    "fastapi_jwt_auth/auth_jwt.py"
+  ],
+  "file_hashes": {
+    "business-contract.md": "62b3b677df655e5dfd90aa82facf92c4b38436d258fe7a6af31b3eadd9f0b6e6",
+    "contract-requirements.json": "55e0389395dfb8fce95d2740baaa96651004cfee6469aa67bbb06f6738f0da4d",
+    "checks/acceptance/test_private.py": "29c427159ea3a4fc6b40cd2b346aa921095e1c3632249cc96d8f83784e9a0113",
+    "checks/feedback/test_public.py": "28873efc7775b5fe26a4e1c7131c32ab77dba13ea69b242f5628147e8fbd3e53",
+    "environment.json": "5b5276091c28599298ef8ee122b25b84813a8d6623b73266a02bf9e5b1764934",
+    "evaluation.json": "32701c329347e175d7349fdd82eacb5a1673fc71fa296e2361ecd5af54b17e38",
+    "evidence/bundle.json": "ed9a4d474fc6a1d7ae6c2bf8bfc89dc89cd3f27e969fbdbf8bde348236f36a89",
+    "evidence/LICENSE": "1e67e17ae357a47d5ae117f33aa89186f8396f621c8a6c3221b2826732b6f0e5",
+    "evidence/migration.md": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+    "evidence/pydantic-LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+    "requirements/new.in": "ce065202af5ed82a63ba4cee08a992feb5b5f410c710672406a200e16e9e99ee",
+    "requirements/new.txt": "6e3e472c4dac23b179f1f1745d5952a3eb966ead23720305409c17ffe83b466f",
+    "requirements/old.in": "63415d82b5ebc4b9f8b94dcd85c4f9a63e0734cd81eec29372d4894c3041a80c",
+    "requirements/old.txt": "0276489aff34372c77755e10786be7850e37bf48d0d3d955ab2dd276ae5a779f",
+    "source/fastapi_jwt_auth/__init__.py": "c20f6f36b5c59fba66c5a31ed995521e8f5d1df4b215da27b2825305061a0a91",
+    "source/fastapi_jwt_auth/auth_config.py": "9a8c5d7af4563679c375c87ac0e0d39577433a3fbb4101f93fc4d3482ca2c646",
+    "source/fastapi_jwt_auth/auth_jwt.py": "45636cbdceed05276f9a13a2be398d3aac87ac45cd1076730751d48a59ef6ee8",
+    "source/fastapi_jwt_auth/config.py": "ff5fe9180459e7e13f0fdd1deb73fc228ada5dd6e015970b7ea28bd7eade04c7",
+    "source/fastapi_jwt_auth/exceptions.py": "0e8a9446b3467f42340c053f57f5ef800613cad3080ed72986cd50d012b32906",
+    "SOURCE.json": "a2fd1d489340c06eda33b9b6ba9af09327f28c46f8093886a1709d150ad0bc65"
+  },
+  "expected_new_original": "failed",
+  "schema_version": 2,
+  "requirements_path": "contract-requirements.json"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "62b3b677df655e5dfd90aa82facf92c4b38436d258fe7a6af31b3eadd9f0b6e6",
+  "requirements": [
+    {"id": "config.defaults", "statement": "Default token location, access expiry, and cookie CSRF setting remain unchanged.", "public_check_nodeids": ["feedback/test_public.py::test_defaults"]},
+    {"id": "location.list-valid", "statement": "A list containing a supported token location remains accepted.", "public_check_nodeids": ["feedback/test_public.py::test_location_validation"]},
+    {"id": "location.invalid-rejected", "statement": "A list containing an unsupported token location is rejected with ValidationError.", "public_check_nodeids": ["feedback/test_public.py::test_location_validation"]},
+    {"id": "location.set-tuple-valid", "statement": "Set and tuple inputs containing supported token locations remain accepted.", "public_check_nodeids": []},
+    {"id": "sequence.all-items-validated", "statement": "Every item in configured token locations, denylist checks, and CSRF methods is validated.", "public_check_nodeids": []},
+    {"id": "config.strict-scalars", "statement": "Strict boolean, integer, and string configuration fields do not accept unrelated coercions.", "public_check_nodeids": []},
+    {"id": "config.strings-trimmed-nonempty", "statement": "Configured strings are trimmed and fields that require content reject empty or whitespace-only values.", "public_check_nodeids": []},
+    {"id": "config.optional-none", "statement": "Optional configuration fields preserve their existing explicit None behavior.", "public_check_nodeids": []},
+    {"id": "expiry.true-rejected", "statement": "Boolean True is rejected for access and refresh expiry configuration.", "public_check_nodeids": ["feedback/test_public.py::test_expiry_true_rejected"]},
+    {"id": "expiry.false-no-exp", "statement": "Boolean False disables the exp claim for access and refresh tokens.", "public_check_nodeids": []},
+    {"id": "expiry.seconds-timedelta", "statement": "Integer seconds and timedelta values preserve token expiry duration.", "public_check_nodeids": []},
+    {"id": "csrf.methods-normalized", "statement": "Supported CSRF method names supplied as a list are normalized to uppercase.", "public_check_nodeids": ["feedback/test_public.py::test_csrf_method_normalized"]},
+    {"id": "callback.invalid-rejected", "statement": "Invalid configuration values raise ValidationError and an invalid callback return type raises TypeError.", "public_check_nodeids": ["feedback/test_public.py::test_callback_validation"]},
+    {"id": "callback.model-valid", "statement": "A Pydantic model returned by the configuration callback remains accepted.", "public_check_nodeids": []},
+    {"id": "auth.access-valid", "statement": "A valid access token authorizes the protected route and preserves the subject.", "public_check_nodeids": ["feedback/test_public.py::test_valid_access"]},
+    {"id": "auth.header-required", "statement": "A protected header-auth route rejects a request with no authorization header.", "public_check_nodeids": ["feedback/test_public.py::test_missing_header"]},
+    {"id": "auth.refresh-not-access", "statement": "A refresh token cannot authorize a route requiring an access token.", "public_check_nodeids": ["feedback/test_public.py::test_refresh_not_access"]},
+    {"id": "auth.bad-signature-rejected", "statement": "A token signed with a different secret is rejected.", "public_check_nodeids": []},
+    {"id": "auth.denylist-enforced", "statement": "An enabled denylist rejects matching access tokens and permits nonmatching tokens.", "public_check_nodeids": []},
+    {"id": "auth.custom-header", "statement": "A trimmed custom header name with no header prefix remains usable for authentication.", "public_check_nodeids": []},
+    {"id": "auth.cookie-csrf", "statement": "Cookie authentication on protected methods enforces a matching CSRF double-submit token.", "public_check_nodeids": []},
+    {"id": "migration.native-pydantic-v2", "statement": "The migration uses native Pydantic v2 configuration and validation APIs without pydantic.v1 or skipped validation.", "public_check_nodeids": []}
+  ]
+}

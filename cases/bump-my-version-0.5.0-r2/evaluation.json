@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "case_id": "bump-my-version-0-5-0-r2",
+  "split": "development",
+  "purpose": "retrospective_behavior_coverage_and_oracle_diagnostics",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "test_application_pipeline.py",
+        "test_upstream_contract.py"
+      ],
+      "nodeids": [
+        "test_application_pipeline.py::test_dry_run_preserves_all_project_bytes",
+        "test_application_pipeline.py::test_failed_preflight_does_not_partially_update_earlier_file_or_config",
+        "test_application_pipeline.py::test_release_updates_both_files_and_config_without_touching_unrelated_package",
+        "test_upstream_contract.py::test_configuration_file_precedence",
+        "test_upstream_contract.py::test_configuration_interpolation",
+        "test_upstream_contract.py::test_false_independent_flag_remains_false",
+        "test_upstream_contract.py::test_independent_build_number_survives_major_reset",
+        "test_upstream_contract.py::test_ini_configuration_matches_upstream_fixture",
+        "test_upstream_contract.py::test_invalid_parse_regex_is_rejected",
+        "test_upstream_contract.py::test_missing_search_does_not_modify_file",
+        "test_upstream_contract.py::test_multi_file_release_and_following_patch",
+        "test_upstream_contract.py::test_non_numeric_release_sequence[1.5-minor-1.6.dev]",
+        "test_upstream_contract.py::test_non_numeric_release_sequence[1.5.dev-release-1.5]",
+        "test_upstream_contract.py::test_nonzero_first_value_is_used_on_reset",
+        "test_upstream_contract.py::test_optional_version_parts_serialize_as_upstream[major-1]",
+        "test_upstream_contract.py::test_optional_version_parts_serialize_as_upstream[minor-0.10]",
+        "test_upstream_contract.py::test_optional_version_parts_serialize_as_upstream[patch-0.9.1]",
+        "test_upstream_contract.py::test_same_file_can_use_two_replacement_formats",
+        "test_upstream_contract.py::test_toml_configuration_matches_upstream_fixture",
+        "test_upstream_contract.py::test_unknown_version_part_is_rejected",
+        "test_upstream_contract.py::test_update_only_current_version_in_config[.bumpversion.cfg]",
+        "test_upstream_contract.py::test_update_only_current_version_in_config[pyproject.toml]",
+        "test_upstream_contract.py::test_update_only_current_version_in_config[setup.cfg]",
+        "test_upstream_contract.py::test_utf8_content_survives_version_replacement"
+      ],
+      "expected_count": 24
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_revision_behaviors.py"
+      ],
+      "nodeids": [
+        "acceptance/test_revision_behaviors.py::test_configuration_optional_values[null]",
+        "acceptance/test_revision_behaviors.py::test_configuration_optional_values[omitted]",
+        "acceptance/test_revision_behaviors.py::test_configuration_optional_values[valid]",
+        "acceptance/test_revision_behaviors.py::test_file_optional_values[null]",
+        "acceptance/test_revision_behaviors.py::test_file_optional_values[omitted]",
+        "acceptance/test_revision_behaviors.py::test_file_optional_values[valid]",
+        "acceptance/test_revision_behaviors.py::test_glob_preflight_rejects_before_any_write",
+        "acceptance/test_revision_behaviors.py::test_glob_release_updates_only_matching_targets[dry-run]",
+        "acceptance/test_revision_behaviors.py::test_glob_release_updates_only_matching_targets[write]",
+        "acceptance/test_revision_behaviors.py::test_glob_resolution_preserves_caller_configuration",
+        "acceptance/test_revision_behaviors.py::test_glob_without_matches_preserves_rule_and_files",
+        "acceptance/test_revision_behaviors.py::test_serialize_preserves_nonempty_format_order[multiple]",
+        "acceptance/test_revision_behaviors.py::test_serialize_preserves_nonempty_format_order[single]",
+        "acceptance/test_revision_behaviors.py::test_serialize_rejects_missing_null_and_empty[empty]",
+        "acceptance/test_revision_behaviors.py::test_serialize_rejects_missing_null_and_empty[null]",
+        "acceptance/test_revision_behaviors.py::test_serialize_rejects_missing_null_and_empty[omitted]",
+        "acceptance/test_revision_behaviors.py::test_version_part_optional_values[null]",
+        "acceptance/test_revision_behaviors.py::test_version_part_optional_values[omitted]",
+        "acceptance/test_revision_behaviors.py::test_version_part_optional_values[valid]"
+      ],
+      "expected_count": 19
+    }
+  },
+  "note": "默认执行全部43项。分组按checks根目录寻址；最终检查及日志不投影给生成者。"
+}

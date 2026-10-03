@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+export PREFIX=""
+if [ -d 'venv' ] ; then
+    export PREFIX="venv/bin/"
+fi
+
+set -x
+
+${PREFIX}autoflake --in-place --recursive databases tests
+${PREFIX}isort --project=databases databases tests
+${PREFIX}black databases tests
+${PREFIX}mypy databases

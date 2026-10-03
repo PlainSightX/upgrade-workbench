@@ -1,0 +1,7 @@
+{
+  "parent": "copier-6-2-0-r2",
+  "parent_fingerprint": "92bfa6d7c42c5a8a877aaf21d563e11336bfe4e7851f496087c21c42a4559eef",
+  "source_and_locks": "byte_identical",
+  "change": "added_behavior_checks_and_explicit_contract",
+  "historical_results": "immutable_not_rescored_in_place"
+}

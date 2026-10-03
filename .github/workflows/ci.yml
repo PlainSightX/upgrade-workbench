@@ -1,0 +1,56 @@
+name: Reviewed workbench checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      run_docker:
+        description: Replay reviewed Pydantic and csvsql candidates in Docker (no model calls)
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --locked --extra service
+      - run: uv run --no-sync ruff check src tests
+      - run: uv run --no-sync pytest tests/unit
+      - run: git diff --exit-code -- uv.lock
+
+  reviewed-snapshot:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_docker && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --locked
+      - run: uv run --no-sync upgrade-workbench inspect cases/pydantic-field-contract
+      - run: uv run --no-sync upgrade-workbench verify cases/pydantic-field-contract --prepare-timeout 600 --test-timeout 60
+      - name: Fixed csvsql behavior replay (zero model calls)
+        run: |
+          uv run --no-sync upgrade-workbench --work-root .local/csvsql-replay verify cases/csvkit-csvsql-sqlalchemy-2-a3 --candidate docs/examples/csvsql/candidate.patch --candidate-origin agent_candidate --check-group all --prepare-timeout 600 --test-timeout 240 > csvsql-result.json
+          python -c "import json; r=json.load(open('csvsql-result.json')); assert r['status']=='candidate_verified'; assert [r['stages'][s]['tests']['passed'] for s in ('old_original','new_original','new_candidate')]==[6,0,6]"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reviewed-snapshot-comparisons
+          path: |
+            .local/comparisons/*/report.json
+            .local/comparisons/*/report.md
+            .local/csvsql-replay/comparisons/*/report.json
+            .local/csvsql-replay/comparisons/*/report.md
+          retention-days: 14
+          if-no-files-found: ignore

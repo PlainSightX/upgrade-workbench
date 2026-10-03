@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "case_id": "encode-databases-sqlalchemy-2",
+  "split": "holdout",
+  "purpose": "unseen_real_library_segment_c_delivery",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_sqlite_public.py"
+      ],
+      "nodeids": [
+        "feedback/test_sqlite_public.py::test_core_crud_preserves_named_and_positional_access",
+        "feedback/test_sqlite_public.py::test_custom_type_processor_is_applied",
+        "feedback/test_sqlite_public.py::test_fetch_val_accepts_position_and_name",
+        "feedback/test_sqlite_public.py::test_force_rollback_does_not_persist",
+        "feedback/test_sqlite_public.py::test_iterate_preserves_record_interface",
+        "feedback/test_sqlite_public.py::test_raw_query_exposes_mapping"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_sqlite_final.py"
+      ],
+      "nodeids": [
+        "acceptance/test_sqlite_final.py::test_candidate_stays_native_and_bounded",
+        "acceptance/test_sqlite_final.py::test_column_objects_address_joined_results",
+        "acceptance/test_sqlite_final.py::test_execute_many_preserves_boolean_values_and_order",
+        "acceptance/test_sqlite_final.py::test_failed_statement_leaves_connection_reusable",
+        "acceptance/test_sqlite_final.py::test_labels_and_textual_columns_remain_named",
+        "acceptance/test_sqlite_final.py::test_mapping_shape_matches_sequence",
+        "acceptance/test_sqlite_final.py::test_missing_key_is_rejected_without_corrupting_sequence",
+        "acceptance/test_sqlite_final.py::test_nested_transaction_rolls_back_inner_only"
+      ],
+      "expected_count": 8
+    }
+  },
+  "note": "Checks were frozen before solver execution. Acceptance checks are evaluator-only and are not copied from the upstream migration patch."
+}

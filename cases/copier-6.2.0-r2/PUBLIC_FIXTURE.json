@@ -1,0 +1,18 @@
+{
+  "scope": "Portable product-test fixture; not the original frozen evaluation input",
+  "original_manifests": {
+    "manifest.json": {
+      "sha256": "f0fd9427257079105688d58e5ca2555f80aa5952c68cf623647a562b87657581",
+      "case_fingerprint": "92bfa6d7c42c5a8a877aaf21d563e11336bfe4e7851f496087c21c42a4559eef"
+    }
+  },
+  "omitted": {
+    "historical-baseline/report.json": "2e3219a00ec99bfccc37cc482faa40002dd49e2921920d628e95a313461efd5c",
+    "historical-baseline/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "historical-baseline/stdout.log": "10df3965856e3e4c38bdb7da662f0d38b10786e5d4ea81f9cc4c24db8f8e55df",
+    "revision.json": "11b3a9eb576e40317bbaa6661ce54dd901009dc815d911fe278793481640b6ba"
+  },
+  "altered": {},
+  "source_bytes": "Every retained source and check file preserves its original bytes",
+  "limits": "FlaskBB static/docs assets omitted; these fixtures do not reproduce full site rendering. Original cases remain privately recoverable."
+}

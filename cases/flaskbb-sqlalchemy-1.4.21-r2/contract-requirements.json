@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "b401bb1778a24188ce0f72e8c26997b1bcffe79f5d9c206bca3d31cc33a3f3f2",
+  "requirements": [
+    {"id": "forum.initial-state", "statement": "Creating a topic and first post preserves author identity, first/last post references, forum last post and topic/post counts.", "public_check_nodeids": ["feedback/test_upstream_forum_behavior.py::test_topic_save"]},
+    {"id": "forum.reply-edit", "statement": "Replies update topic/forum last post and counts while keeping the first post; editing preserves content and author semantics.", "public_check_nodeids": ["feedback/test_upstream_forum_behavior.py::test_post_save", "feedback/test_upstream_forum_behavior.py::test_forum_update_last_post"]},
+    {"id": "forum.persistence", "statement": "Saved author, first/last post references and counters survive Session refresh and reload from the database.", "public_check_nodeids": []},
+    {"id": "forum.hide-counts", "statement": "Hiding and restoring posts or topics maintains the existing user/topic/forum counts and last-post behavior.", "public_check_nodeids": ["feedback/test_upstream_forum_behavior.py::test_hiding_post_updates_counts", "feedback/test_upstream_forum_behavior.py::test_hiding_topic_updates_counts"]},
+    {"id": "forum.hidden-query", "statement": "Hidden Topic and Post objects are excluded from default queries and remain retrievable through explicit with_hidden() queries.", "public_check_nodeids": []},
+    {"id": "orm.relationship-setup", "statement": "Establishing Forum, Topic, Post, User and Group relationships must not prematurely autoflush incomplete objects.", "public_check_nodeids": []},
+    {"id": "plugins.initial-hooks", "statement": "Initial topic/post creation invokes each applicable before/after save hook once, on the same object, in its existing order, with correct is_new.", "public_check_nodeids": ["feedback/test_upstream_forum_behavior.py::test_initial_topic_preserves_post_and_topic_hooks"]},
+    {"id": "plugins.reply-edit-hooks", "statement": "Replies and edits preserve applicable post/topic before/after save hooks, object identity, invocation count, existing order and correct is_new.", "public_check_nodeids": []},
+    {"id": "plugins.before-save-changes", "statement": "Legal object changes made by before-save plugins survive persistence.", "public_check_nodeids": ["feedback/test_upstream_forum_behavior.py::test_initial_topic_preserves_post_and_topic_hooks"]},
+    {"id": "migration.frozen-boundary", "statement": "Migrate SQLAlchemy 1.3.24 to pinned 1.4.21 in the fixed Python 3.9/SQLite environment; preserve native ORM persistence and modify only the six allowed Python files, leaving checks, locks and environment unchanged.", "public_check_nodeids": []}
+  ]
+}

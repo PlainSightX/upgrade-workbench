@@ -1,0 +1,8 @@
+{
+  "parent_case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+  "parent_fingerprint": "e8119621119bb65d8b210000f67a6f10a63e6c0c2e951f74d72ebe294a65d1f4",
+  "added_hidden_check": "checks/acceptance/test_sql_literal.py",
+  "added_official_evidence_key": "sqlalchemy-v2-execute-raw-versus-text",
+  "source_and_locks_unchanged": true,
+  "prior_a2_results_unchanged": true
+}

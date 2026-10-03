@@ -1,0 +1,11 @@
+--- a/profile_model.py
++++ b/profile_model.py
+@@ -8,6 +8,6 @@
+ class Profile(BaseModel):
+     # 旧版允许省略nickname；required_note则必须出现，但值可以是None。
+-    nickname: Optional[str]
++    nickname: Optional[str] = None
+     required_note: Optional[str] = Field(...)
+     # 校准合同固定旧版优先转为int的行为；并非所有应用都应选这一策略。
+-    priority: Union[int, str]
++    priority: Union[int, str] = Field(union_mode="left_to_right")

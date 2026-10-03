@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "openapi-python-client-0-10-0",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_generation.py"
+      ],
+      "nodeids": [
+        "feedback/test_generation.py::test_empty_configuration_keeps_default_options",
+        "feedback/test_generation.py::test_local_document_generates_model_and_endpoint",
+        "feedback/test_generation.py::test_invalid_document_returns_error_without_generated_package"
+      ],
+      "expected_count": 3
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_generated_client_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_generated_client_contract.py::test_generated_model_preserves_alias_optional_and_extra_values",
+        "acceptance/test_generated_client_contract.py::test_generated_endpoint_builds_path_and_parses_model_response",
+        "acceptance/test_generated_client_contract.py::test_project_metadata_uses_requested_name_and_version",
+        "acceptance/test_generated_client_contract.py::test_unsupported_major_version_is_rejected"
+      ],
+      "expected_count": 4
+    }
+  }
+}

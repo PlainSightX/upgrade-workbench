@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "method": "fixed_historical_candidate_verification",
+  "status": "candidate_verified",
+  "model_calls": 0,
+  "case_id": "csvkit-csvsql-sqlalchemy-2-a3",
+  "case_fingerprint": "353eb4b92795313b2db2326bcf5a62ee001b620ba3d1d4008492dcfd7fe1dd24",
+  "candidate_sha256": "d3d5311cb51e33b18b63a9fb027c22bd2d9de8c76e8f78a60074a88d9679d16e",
+  "implementation_sha256": "c9f7b43a04c1e9471ea59324caffe8f6124398240cfbc70e92c57cddcb88eae8",
+  "uv_lock_sha256": "ffdab56c237cbc681a2c5e14365a4625cf8706e3cd3b750aa06b5f80e87242b5",
+  "raw_report_sha256": "bb0f84cfbaa5308e7060182907f2577f5cccc3e03d442c317a707b6ef14cceca",
+  "wheel_sha256": "e93286dcd437dd40edf12919212f3062e2e30bb9e9aa151f3ab55b5bac9e8b61",
+  "stages": {
+    "old_original": {
+      "status": "passed",
+      "tests": {
+        "collected": 6,
+        "passed": 6,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_original": {
+      "status": "failed",
+      "tests": {
+        "collected": 6,
+        "passed": 0,
+        "failed": 6,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_candidate": {
+      "status": "passed",
+      "tests": {
+        "collected": 6,
+        "passed": 6,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "nodeids": [
+    "acceptance/test_csvsql_behavior.py::test_before_after_insert_effects_are_committed",
+    "acceptance/test_csvsql_behavior.py::test_query_joins_distinct_csv_sources",
+    "acceptance/test_sql_literal.py::test_after_insert_preserves_colon_literal",
+    "acceptance/test_sql_literal.py::test_query_preserves_colon_literal",
+    "feedback/test_csvsql_flow.py::test_file_database_query_and_commit",
+    "feedback/test_csvsql_flow.py::test_query_filters_csv_rows"
+  ],
+  "limits": [
+    "SQLite only",
+    "Seen development case",
+    "No new model-generated patch",
+    "Reviewed cached Docker dependency images; no cold network build claim"
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "comparison": "Optional Solver semantic-risk-v1 versus unchanged policy",
+  "implementation_sha256": "f38cd969af26082e7694da724907495081c7531f424527bad329b0e9ec822f76",
+  "protocol": {
+    "protocol_revision": 4,
+    "seed_strategy": "none",
+    "max_calls": 16,
+    "generation": {
+      "model": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com/chat/completions",
+      "thinking_mode": "enabled",
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300,
+      "max_source_bytes": 1600000,
+      "max_request_bytes": 850000
+    },
+    "execution": {
+      "prepare_timeout": 600,
+      "test_timeout": 240
+    },
+    "source_policy": {
+      "mode": "focused",
+      "body_bytes": 96000,
+      "inventory_bytes": 64000
+    }
+  },
+  "sampling": "Provider default; API exposes no random seed. seed_strategy none means no codemod seed.",
+  "review": "Full patch/probe safety review only; no answer hints, manual edits, hidden results or behavioral correction.",
+  "independent_acceptance": "Independent checks never sent; freeze both first terminal subjects before all-check evaluation.",
+  "transfer_trigger": "Candidate score improvement only; invalid probe excluded",
+  "cases": {
+    "csvsql": {
+      "scope": "One first-terminal pair on a known development task",
+      "actual_initial_contexts_equal_except_treatment_and_task": true,
+      "first_terminal_subjects_sha256": "225d4b0a873f726cb9527976fd8993680204ab47cba376a63c6c37329059bde6",
+      "arms": {
+        "current": {
+          "task_id": "b668571c5b2340c6b42056bda962472a",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-a3",
+          "case_fingerprint": "353eb4b92795313b2db2326bcf5a62ee001b620ba3d1d4008492dcfd7fe1dd24",
+          "status": "submitted",
+          "result": "candidate_not_accepted",
+          "candidate_sha256": "68bad056f36d0bdbdada5b64f963b24aa016ed29af29792490624daad9728a23",
+          "candidate_revision": "7e94c078436fe7e1d7666dc7dd272d3bffef6f6090833f2dec5c421c21f5990c",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 6,
+                "passed": 6,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 6,
+                "passed": 0,
+                "failed": 6,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "failed",
+              "tests": {
+                "collected": 6,
+                "passed": 4,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 4,
+            "reported_input_tokens": 146925,
+            "reported_output_tokens": 36772,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 152.625
+          },
+          "estimated_cost_usd": 0.088206,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "safety_reviews": {
+            "patch": 1,
+            "diagnostic": 2
+          },
+          "source_report_sha256": "51b0dde39b830f3899548cdf6f37295310395071808902c63bc1736976815301"
+        },
+        "modified": {
+          "task_id": "a788367a206a489f95ea5c35fc6fe787",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-a3",
+          "case_fingerprint": "353eb4b92795313b2db2326bcf5a62ee001b620ba3d1d4008492dcfd7fe1dd24",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "candidate_sha256": "fb7945420d637bc7a5f619cfe0eda910e76a4453dde613db267c40e74205ac97",
+          "candidate_revision": "6a9257c48559c8a0e0f5c2c463ee319cf1742fd9ce14760b693d3fe000baa9fb",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 6,
+                "passed": 6,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 6,
+                "passed": 0,
+                "failed": 6,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 6,
+                "passed": 6,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 285843,
+            "reported_output_tokens": 115188,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 482.608
+          },
+          "estimated_cost_usd": 0.223981,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "safety_reviews": {
+            "patch": 2,
+            "diagnostic": 3
+          },
+          "source_report_sha256": "ff6be59fe8d366cd28a369d29885854c3afb71cf1456c6684cda41ecbbc05e64"
+        }
+      }
+    },
+    "transfer": {
+      "scope": "One first-terminal pair on a known development task",
+      "actual_initial_contexts_equal_except_treatment_and_task": true,
+      "first_terminal_subjects_sha256": "9f2fff0462b4dfc38b11348fb51c1d0727af7ced46224a6ab299960e9a410cf2",
+      "arms": {
+        "current": {
+          "task_id": "bc7a33c201404e6f8cdd1bd552179696",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "candidate_sha256": "dbddf5ba4e89aabdefbf25822ae138d322073693b57209d262962ebf819a7f4b",
+          "candidate_revision": "d4d1d4cd2d14e13e170907134399442f0728add84f9a0c4cbfa2fd50aeb71840",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 12,
+            "reported_input_tokens": 750240,
+            "reported_output_tokens": 178901,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 738.266
+          },
+          "estimated_cost_usd": 0.439757,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "safety_reviews": {
+            "patch": 1,
+            "diagnostic": 3
+          },
+          "source_report_sha256": "89db7dae86124ec510821afdf57d098647199bb15a41a033307a526a2450f393"
+        },
+        "modified": {
+          "task_id": "535c6381368141679523d2137db4242e",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "candidate_sha256": "f118b5b93d66bf4d0ca2bb648956c98d49b3507678af7acca2f129874218e186",
+          "candidate_revision": "47747b6beebfc334fb1e926271b0a8a570bf6447d1f4d15186701b0e3760875a",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 16,
+            "reported_input_tokens": 1009487,
+            "reported_output_tokens": 258861,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 1030.654
+          },
+          "estimated_cost_usd": 0.613486,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "safety_reviews": {
+            "patch": 1,
+            "diagnostic": 3
+          },
+          "source_report_sha256": "c47164cbaaa6e427219a131406e723bd62eee1ed3703a784cf4df481f82e5dba"
+        }
+      }
+    }
+  },
+  "probe_quality": {
+    "discrimination_claim": "false",
+    "library": "SQLAlchemy 2.0.25",
+    "observations": [
+      {
+        "sql": "SELECT 'ready:ok' AS tag",
+        "parsed_binds": [],
+        "text": {
+          "value": "ready:ok"
+        },
+        "driver": {
+          "value": "ready:ok"
+        }
+      },
+      {
+        "sql": "SELECT '2024-01-02 10:30:00' AS note",
+        "parsed_binds": [],
+        "text": {
+          "value": "2024-01-02 10:30:00"
+        },
+        "driver": {
+          "value": "2024-01-02 10:30:00"
+        }
+      },
+      {
+        "sql": "SELECT ':marker' AS tag",
+        "parsed_binds": [
+          "marker"
+        ],
+        "text": {
+          "error_type": "StatementError"
+        },
+        "driver": {
+          "value": ":marker"
+        }
+      }
+    ],
+    "source_receipt_sha256": "639987c054925cf3ccf7ecfe5889e1d931b4c54e04ccccf1b890a10168b46a4c",
+    "scope": "Post-terminal library check; no model feedback or candidate correction"
+  },
+  "adoption": {
+    "decision": "limited_opt_in",
+    "default_enabled": false,
+    "scope": "Optional Solver guidance for explicit API semantic-risk investigation, with independent acceptance and human safety review retained",
+    "observed_benefit": "One known csvsql development pair improved first candidate from 4/6 to 6/6; the modified Solver selected driver execution before independent results",
+    "transfer_result": "One preregistered FastAPI transfer pair: both first terminals submitted and candidate_verified 4/4; no incremental acceptance gain",
+    "cost_tradeoff": "csvsql calls4->7 and ledger estimateUSD0.088206->0.223981; FastAPI calls12->16 and estimateUSD0.439757->0.613486",
+    "residual": "Modified csvsql probe inputs do not discriminate text from driver execution; its final explanation overclaims probe coverage",
+    "reason": "Retain the generic opt-in because a bounded candidate-quality improvement was observed without failure on the fixed transfer checks; do not promote it to a general default or claim robust causal improvement",
+    "limits": [
+      "One run per arm on two already-known development tasks; sampling randomness and order remain possible explanations",
+      "No automatic mode selection, multi-role benefit, unseen-repository generalization or overall success-rate claim",
+      "Both transfer candidates meet four frozen checks; this is not a complete regression proof",
+      "Input-partition guidance cannot establish that a generated probe really distinguishes implementations",
+      "No manual business hint or candidate correction; human intervention was execution safety review only",
+      "Costs use per-call rounded ledger estimates, not actual billing; provider duration excludes human waits and full task execution"
+    ],
+    "next_action": "End this comparison batch; finish public documentation and candidate identity/retirement checks, then prepare publication under the existing plan"
+  },
+  "limits": [
+    "One run per arm and provider randomness; no general causal or success-rate claim",
+    "Provider duration is request time only; no human time-saving measurement",
+    "Ledger price estimate, not billed cost; no efficiency improvement inferred from csvsql",
+    "Transfer inputs are not bundled here; csvsql fixed-candidate replay is the public runnable example",
+    "No remote CI or GitHub publication in this round"
+  ]
+}
