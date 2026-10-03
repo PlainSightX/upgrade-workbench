@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "paths": [
+    "source/openapi_python_client/templates/.gitignore.jinja",
+    "source/openapi_python_client/templates/README.md.jinja",
+    "source/openapi_python_client/templates/api_init.py.jinja",
+    "source/openapi_python_client/templates/client.py.jinja",
+    "source/openapi_python_client/templates/endpoint_init.py.jinja",
+    "source/openapi_python_client/templates/endpoint_macros.py.jinja",
+    "source/openapi_python_client/templates/endpoint_module.py.jinja",
+    "source/openapi_python_client/templates/int_enum.py.jinja",
+    "source/openapi_python_client/templates/model.py.jinja",
+    "source/openapi_python_client/templates/models_init.py.jinja",
+    "source/openapi_python_client/templates/package_init.py.jinja",
+    "source/openapi_python_client/templates/property_templates/any_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/date_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/datetime_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/enum_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/file_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/list_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/model_property.py.jinja",
+    "source/openapi_python_client/templates/property_templates/property_macros.py.jinja",
+    "source/openapi_python_client/templates/property_templates/union_property.py.jinja",
+    "source/openapi_python_client/templates/pyproject.toml.jinja",
+    "source/openapi_python_client/templates/pyproject_no_poetry.toml.jinja",
+    "source/openapi_python_client/templates/setup.py.jinja",
+    "source/openapi_python_client/templates/str_enum.py.jinja",
+    "source/openapi_python_client/templates/types.py.jinja"
+  ]
+}

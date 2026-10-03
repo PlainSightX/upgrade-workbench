@@ -1,0 +1,11 @@
+--- a/bumpversion/config.py
++++ b/bumpversion/config.py
+@@ -47,7 +47,7 @@
+ 
+     current_version: Optional[str]
+     parse: str
+-    serialize: List[str] = Field(min_items=1)
++    serialize: List[str] = Field()
+     search: str
+     replace: str
+     tag: bool

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case_id": "fastapi-jwt-auth-pydantic-2",
+  "split": "holdout",
+  "purpose": "paired_new_repository_behavior_preservation",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_public.py"
+      ],
+      "nodeids": [
+        "feedback/test_public.py::test_defaults",
+        "feedback/test_public.py::test_location_validation",
+        "feedback/test_public.py::test_expiry_true_rejected",
+        "feedback/test_public.py::test_csrf_method_normalized",
+        "feedback/test_public.py::test_valid_access",
+        "feedback/test_public.py::test_missing_header",
+        "feedback/test_public.py::test_refresh_not_access",
+        "feedback/test_public.py::test_callback_validation"
+      ],
+      "expected_count": 8
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_private.py"
+      ],
+      "nodeids": [
+        "acceptance/test_private.py::test_strict_bool_and_integer_inputs",
+        "acceptance/test_private.py::test_string_trim_and_minimum",
+        "acceptance/test_private.py::test_all_sequence_items_validated",
+        "acceptance/test_private.py::test_set_and_tuple_input",
+        "acceptance/test_private.py::test_optional_none_remains_accepted",
+        "acceptance/test_private.py::test_expiry_false_keeps_no_exp",
+        "acceptance/test_private.py::test_seconds_and_timedelta",
+        "acceptance/test_private.py::test_bad_signature_rejected",
+        "acceptance/test_private.py::test_cookie_csrf",
+        "acceptance/test_private.py::test_denylist_reject",
+        "acceptance/test_private.py::test_custom_header",
+        "acceptance/test_private.py::test_model_callback"
+      ],
+      "expected_count": 12
+    }
+  },
+  "note": "Frozen before either solver task; constructed from original config, docs and upstream test behavior; not third-party-authored acceptance."
+}

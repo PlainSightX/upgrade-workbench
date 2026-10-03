@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "package": "sqlalchemy",
+  "old_version": "1.4.42",
+  "new_version": "2.0.7",
+  "repository": "https://github.com/sqlalchemy/sqlalchemy",
+  "revision": "23f5f3350974d9452f3b844617c31eb5b41474ae",
+  "upstream_path": "doc/build/changelog/migration_20.rst",
+  "license_path": "evidence/LICENSE",
+  "entries": [
+    {
+      "evidence_key": "sqlalchemy-v2-row-mapping",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Result rows act like named tuples",
+      "start_line": 974,
+      "end_line": 1049
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-select",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "select() no longer accepts varied constructor arguments, columns are passed positionally",
+      "start_line": 1050,
+      "end_line": 1134
+    }
+  ]
+}

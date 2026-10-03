@@ -1,0 +1,516 @@
+{
+  "repository": "https://github.com/openapi-generators/openapi-python-client",
+  "revision": "289787a8b6c50eca4d36399e16a74e1683611507",
+  "tag": "v.0.10.0",
+  "package": "openapi_python_client",
+  "license": "MIT",
+  "modules": 47,
+  "split": "holdout",
+  "retrieved_on": "2026-09-16",
+  "archive_url": "https://codeload.github.com/openapi-generators/openapi-python-client/zip/289787a8b6c50eca4d36399e16a74e1683611507",
+  "archive_sha256": "620926c8389ce6f6827d7a5874a91e7040cf5251e3bbba32895b524f93de0da8",
+  "classification": "historical_real_application_selected_offline_workflow",
+  "target_code_executed": false,
+  "files": {
+    "source/openapi_python_client/__init__.py": {
+      "upstream_path": "openapi_python_client/__init__.py",
+      "sha256": "73547d52b7520d2b435385c6356bba14e6df363372449a60d67bd785317e9991",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/__init__.py"
+    },
+    "source/openapi_python_client/__main__.py": {
+      "upstream_path": "openapi_python_client/__main__.py",
+      "sha256": "c1c0ab2f83e31b9d6be7054aa8985ca093d32df1d6d3035b0f7d43ad43743162",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/__main__.py"
+    },
+    "source/openapi_python_client/cli.py": {
+      "upstream_path": "openapi_python_client/cli.py",
+      "sha256": "6510046f0c2caba39d2a8af145ab2c6a07462c89cb0814e836b010c90e6923bb",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/cli.py"
+    },
+    "source/openapi_python_client/config.py": {
+      "upstream_path": "openapi_python_client/config.py",
+      "sha256": "7821c28f1632a9d3a92418dc328268d331881c750fbd38290ef8688888d46195",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/config.py"
+    },
+    "source/openapi_python_client/parser/__init__.py": {
+      "upstream_path": "openapi_python_client/parser/__init__.py",
+      "sha256": "9ddd37b68dc2e7928338bdec83add561ce4efc7380eceb987f3f0e938ef56fac",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/__init__.py"
+    },
+    "source/openapi_python_client/parser/errors.py": {
+      "upstream_path": "openapi_python_client/parser/errors.py",
+      "sha256": "03d2f10162903f6d05a260c00b2fa0d2f535036336ebb57d6b1a399db91492b5",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/errors.py"
+    },
+    "source/openapi_python_client/parser/openapi.py": {
+      "upstream_path": "openapi_python_client/parser/openapi.py",
+      "sha256": "5f46171ba31b217603c91831e58ab6f686245e9aa612d90bab00297868f586e2",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/openapi.py"
+    },
+    "source/openapi_python_client/parser/properties/__init__.py": {
+      "upstream_path": "openapi_python_client/parser/properties/__init__.py",
+      "sha256": "23c94f1b6372378d7708d41d5fa093bf190421b0ca76086f793bf87599086b35",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/__init__.py"
+    },
+    "source/openapi_python_client/parser/properties/converter.py": {
+      "upstream_path": "openapi_python_client/parser/properties/converter.py",
+      "sha256": "46ed5f33b6bfb236f09de5c4bc5ead23190549e39e23207c5517af0b6a253fdc",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/converter.py"
+    },
+    "source/openapi_python_client/parser/properties/enum_property.py": {
+      "upstream_path": "openapi_python_client/parser/properties/enum_property.py",
+      "sha256": "eeafcda09edfe05dff2ec26d457e05b3b2de2f93057085e5d574077bba669006",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/enum_property.py"
+    },
+    "source/openapi_python_client/parser/properties/model_property.py": {
+      "upstream_path": "openapi_python_client/parser/properties/model_property.py",
+      "sha256": "fb65ac26a73e24f727829c08191f5004992769834e92b4da824f498145aba24f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/model_property.py"
+    },
+    "source/openapi_python_client/parser/properties/property.py": {
+      "upstream_path": "openapi_python_client/parser/properties/property.py",
+      "sha256": "ff9b50ed7fb579f25f7aaa3a2aa8983491b4cd86a5722c2bbc8d8f67337d1252",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/property.py"
+    },
+    "source/openapi_python_client/parser/properties/schemas.py": {
+      "upstream_path": "openapi_python_client/parser/properties/schemas.py",
+      "sha256": "16c2429a1fc211347ff2209d9d3be0e167c85f9023ad258e78467be86d449032",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/properties/schemas.py"
+    },
+    "source/openapi_python_client/parser/responses.py": {
+      "upstream_path": "openapi_python_client/parser/responses.py",
+      "sha256": "6355708ba0a24063ed5631e271f224639b83ad69120ed3ae7687946851ef7fcb",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/parser/responses.py"
+    },
+    "source/openapi_python_client/py.typed": {
+      "upstream_path": "openapi_python_client/py.typed",
+      "sha256": "f0f8f2675695a10a5156fb7bd66bafbaae6a13e8d315990af862c792175e6e67",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/py.typed"
+    },
+    "source/openapi_python_client/schema/__init__.py": {
+      "upstream_path": "openapi_python_client/schema/__init__.py",
+      "sha256": "95e5f80eec4344ef04d17a6186360dfd0cb93c90ef107ee1b677d5befb485f96",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/__init__.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/LICENSE": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/LICENSE",
+      "sha256": "ca8cbaa3027b6c0ad54958e908da14d33b8688ddcb031a8d550d7f640ba639ff",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/LICENSE"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/README.md": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/README.md",
+      "sha256": "742384ffdb7b317cc0652c2d637afe01c8adbf1589158f8d3ea4c741aa8c5a34",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/README.md"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/__init__.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/__init__.py",
+      "sha256": "56e9d375831702df9aa6c5c2e832f1ae23ff30b464e469088ffae8a0a6e0f94d",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/__init__.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/components.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/components.py",
+      "sha256": "63664c40a7430a8f1039089f6c64e505897a187531b8e9d570c16b573e9101dc",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/components.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/contact.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/contact.py",
+      "sha256": "55485b3fe9215f8b218d49e9cd784e9f011ab1b45b4118650750a42ab1fc068b",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/contact.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/discriminator.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/discriminator.py",
+      "sha256": "6c46824dabc362a87cc3a45a3ec43d7effd11dfb75ac2572f7a6e9ba092d50a3",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/discriminator.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/encoding.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/encoding.py",
+      "sha256": "0b7a50c006163e4e198e918a7a300ffe33c0c42b8a86aa5dc23a6ea8e5c1f6a0",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/encoding.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/example.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/example.py",
+      "sha256": "0390d2eed4642aef24f62272430fd4897b51a7910c544205365abf2afe2a7370",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/example.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/external_documentation.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/external_documentation.py",
+      "sha256": "5882bfa025308f7a1608d23abd9704007d6e2005e9f889ca950a3a52d4790784",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/external_documentation.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/header.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/header.py",
+      "sha256": "612e71a0c530f57b9df4f6d4cecc3fce5ee715bd92f4d2b878ee674609153ff2",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/header.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/info.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/info.py",
+      "sha256": "26746b7b8a951b659e109551d17feebe9af4610e2b141046e993496c8eb7d26d",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/info.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/license.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/license.py",
+      "sha256": "073497e68a75de42703e8f867f6adb071d9b47687526f98032ee2ac2636a251b",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/license.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/link.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/link.py",
+      "sha256": "3bc75188e3239bd6d9f0e20716612c8792bdbe3eaac88a0da601392870350e0f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/link.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/media_type.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/media_type.py",
+      "sha256": "2531d7c0853dfb785c68ed224c4f23dea83fcdc66bd74eb82ac44dba8481e078",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/media_type.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/oauth_flow.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/oauth_flow.py",
+      "sha256": "60d80d6d5c77b4204dd27f78e9b5d93d8b88a145ce995dc4f74428a51e62211e",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/oauth_flow.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/oauth_flows.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/oauth_flows.py",
+      "sha256": "1d9e812eecc78328d5dbace202740a1710d0d2b4c3eea5c117b2856e3df3916a",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/oauth_flows.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/open_api.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/open_api.py",
+      "sha256": "a44cb377cbbfbf0f2b39730566f696cd5e06504d6284f1d364dab323c322037c",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/open_api.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/operation.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/operation.py",
+      "sha256": "e3d2f09466e7793cd5d86f0e873ece85d6c2e6d77c24f1dbbb8fd8559e1f1158",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/operation.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/parameter.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/parameter.py",
+      "sha256": "559b42ba806dc6d7e2e383fa2e748594af4171ab4c3b21eea1b916423fce7fd9",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/parameter.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/path_item.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/path_item.py",
+      "sha256": "debb332bf4e2f08fce527d4c66ffbb8d42c52b73d58ac0bb2945653a034fdfc7",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/path_item.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/paths.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/paths.py",
+      "sha256": "06ff6eaa7662192b9ccb48cd69435dabd16ee90e1c163765067ef6aae4eed299",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/paths.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/reference.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/reference.py",
+      "sha256": "55f6ef1083a3f8bf2d2cf60c5ae4b60d7b86110a67b24c987a2690659e8825cf",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/reference.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/request_body.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/request_body.py",
+      "sha256": "0f001bb48918913e45a958cae9379f1a760093c6d29ec9e7c936f8f9b6f1fc68",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/request_body.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/response.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/response.py",
+      "sha256": "7a8c47c4314a5db178f980e1e6b405dc42212bb033dc4dafe12c53de9e31770c",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/response.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/responses.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/responses.py",
+      "sha256": "c957132d22a5ee4565c3f162fa1fe9e31d62a5f1c03745962ccb93bf987cc249",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/responses.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/schema.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/schema.py",
+      "sha256": "3e5a8060ed88d03eea4100745dea9a4f2d3b7f42230ac81c9a6619ad318cd0d7",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/schema.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/security_requirement.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/security_requirement.py",
+      "sha256": "e0fad8fb11093c410cea57fc923bd6697ce8e77c1cb16b0a9b6b21e100deab66",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/security_requirement.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/security_scheme.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/security_scheme.py",
+      "sha256": "a2f316c7e1f0757b87ebca6d09d5044d0ea92946c1d13b0b0c4dd2d852c97c54",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/security_scheme.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/server.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/server.py",
+      "sha256": "246d43fbe16597d2452b6d9cf3af6ea3d25a96318dfe7b53d80059a1d0fbc761",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/server.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/server_variable.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/server_variable.py",
+      "sha256": "61955023502316b3aec5ce9f5936aed7df1c3020272ff5a8351d7c88a2b5f695",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/server_variable.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/tag.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/tag.py",
+      "sha256": "c5f3417b642557ba20c227423d4a5cbd558133b80573aff23658c98f7451aa7d",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/tag.py"
+    },
+    "source/openapi_python_client/schema/openapi_schema_pydantic/xml.py": {
+      "upstream_path": "openapi_python_client/schema/openapi_schema_pydantic/xml.py",
+      "sha256": "cf346cdd33897f0da7b87a02324b07c2d6fb68b7be802b339aec3be15199e973",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/openapi_schema_pydantic/xml.py"
+    },
+    "source/openapi_python_client/schema/parameter_location.py": {
+      "upstream_path": "openapi_python_client/schema/parameter_location.py",
+      "sha256": "3a63fc2e13291a2c05b0b6c2a1b98fd1a21b234bcb4bc3dbd5b6c789534a1971",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/schema/parameter_location.py"
+    },
+    "source/openapi_python_client/templates/.gitignore.jinja": {
+      "upstream_path": "openapi_python_client/templates/.gitignore.jinja",
+      "sha256": "4b066f97dab229a1cdf588f0690ac1b26a40725375d6eb1ff46a21cf5485560f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/.gitignore.jinja"
+    },
+    "source/openapi_python_client/templates/README.md.jinja": {
+      "upstream_path": "openapi_python_client/templates/README.md.jinja",
+      "sha256": "5ea61584a3a15af751ad0dbd28cb65902ca7b41b941a5ed628bbaae6dd6e7a90",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/README.md.jinja"
+    },
+    "source/openapi_python_client/templates/api_init.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/api_init.py.jinja",
+      "sha256": "f3b0290732b219be73b204cc3a44170eab0b64299a485a093306c6cc20d064cc",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/api_init.py.jinja"
+    },
+    "source/openapi_python_client/templates/client.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/client.py.jinja",
+      "sha256": "49c21fdcad17d6eb9118862be85e9d0c784020b00d3e9d062882d18a61ab1bb6",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/client.py.jinja"
+    },
+    "source/openapi_python_client/templates/endpoint_init.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/endpoint_init.py.jinja",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/endpoint_init.py.jinja"
+    },
+    "source/openapi_python_client/templates/endpoint_macros.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/endpoint_macros.py.jinja",
+      "sha256": "71f721928aadac0e56c339170307d75a9fe1a53c5040ebdbbf9bddec15dcc53f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/endpoint_macros.py.jinja"
+    },
+    "source/openapi_python_client/templates/endpoint_module.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/endpoint_module.py.jinja",
+      "sha256": "30d8c8c8f151f1dcd680ad2d30cbe7ad7d933caa1aad2c8dea505e0443c83f7a",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/endpoint_module.py.jinja"
+    },
+    "source/openapi_python_client/templates/int_enum.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/int_enum.py.jinja",
+      "sha256": "cf8776855b1d826971501d5f6d5b38c3cb496aad9276684b8ece268db67918bc",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/int_enum.py.jinja"
+    },
+    "source/openapi_python_client/templates/model.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/model.py.jinja",
+      "sha256": "f759eba0ad5a57a125884f637a79420ad4ee76a08aa13ff2d4e921cc631a0ba9",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/model.py.jinja"
+    },
+    "source/openapi_python_client/templates/models_init.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/models_init.py.jinja",
+      "sha256": "a1c3a938f0fd717565e8067f93156d34a30bbcb2b8e0f7bcba23f6af4b292167",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/models_init.py.jinja"
+    },
+    "source/openapi_python_client/templates/package_init.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/package_init.py.jinja",
+      "sha256": "51387198c637c8045557fb8950b0d55a6e0d06b59edeeb210f24bb54c8f7b8f1",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/package_init.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/any_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/any_property.py.jinja",
+      "sha256": "3263fa2902f3184e4271aeb841c64900380c5ac7ab47b83ec2bbb8757e4eaf9a",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/any_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/date_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/date_property.py.jinja",
+      "sha256": "f3398c6792feb979a81c4c648a21a3e5c3ed819ec381d035a68d3a45f9d1942f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/date_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/datetime_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/datetime_property.py.jinja",
+      "sha256": "c1ab08f24197be630dd867f97fd2b6aecb9567d099c2ce65b5a9e9bffb727f35",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/datetime_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/enum_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/enum_property.py.jinja",
+      "sha256": "089c77dbd22828ba59c0ece8749c3db758c7b56670fa74cc681d70a2d49a10ea",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/enum_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/file_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/file_property.py.jinja",
+      "sha256": "d7b039a1b70d644d98b5e855472bcf4df9141c57c00dafcffba973d09a5aaf22",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/file_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/list_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/list_property.py.jinja",
+      "sha256": "f9bda9d0d333467d209aea27ea0cc07517c937863a90edbd5d4e4846499f08bb",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/list_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/model_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/model_property.py.jinja",
+      "sha256": "f5d87dd87b948c0bd01068cd0609f619e0b0c7f1eb72559a071abe2b20b708ae",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/model_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/property_macros.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/property_macros.py.jinja",
+      "sha256": "4b23b5b7bdab7d6499f3e1e5437af90a6342d7871e036ae96f1299c0d5a15d55",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/property_macros.py.jinja"
+    },
+    "source/openapi_python_client/templates/property_templates/union_property.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/property_templates/union_property.py.jinja",
+      "sha256": "7b672ec6e6593be0786b9bfe89661a21ad60b3089d50f160ea5ad8cb34cfb3bd",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/property_templates/union_property.py.jinja"
+    },
+    "source/openapi_python_client/templates/pyproject.toml.jinja": {
+      "upstream_path": "openapi_python_client/templates/pyproject.toml.jinja",
+      "sha256": "b8e393e9c15ad6bfb0b0f6d9850d3ac3f6ac82178866dbdeadc60f3969fddbf0",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/pyproject.toml.jinja"
+    },
+    "source/openapi_python_client/templates/pyproject_no_poetry.toml.jinja": {
+      "upstream_path": "openapi_python_client/templates/pyproject_no_poetry.toml.jinja",
+      "sha256": "170534b01acca4ed40829a5f11d1bcd011bc0c321266f998164975b0383a0c62",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/pyproject_no_poetry.toml.jinja"
+    },
+    "source/openapi_python_client/templates/setup.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/setup.py.jinja",
+      "sha256": "6002f59fd69fd7a2b902c0dc5f8a63efd412c2f5bb0accdbb04123fc232d613e",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/setup.py.jinja"
+    },
+    "source/openapi_python_client/templates/str_enum.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/str_enum.py.jinja",
+      "sha256": "0569f5c10d788260883a149551063f99b7c0db95f3d70670c5407a66a6ac8dab",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/str_enum.py.jinja"
+    },
+    "source/openapi_python_client/templates/types.py.jinja": {
+      "upstream_path": "openapi_python_client/templates/types.py.jinja",
+      "sha256": "4f5b7441a24c5ee77137c7fd00fbdd84b770dc029ec53756e5a1cfbc70f0c0f6",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/templates/types.py.jinja"
+    },
+    "source/openapi_python_client/utils.py": {
+      "upstream_path": "openapi_python_client/utils.py",
+      "sha256": "aa18b78c33ec6f1b2bbd32bff2fabebcfa2ae5e8c9ea3b023f489781980b6aaa",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/openapi_python_client/utils.py"
+    },
+    "upstream/LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "e1da71418a98d030776936ae46ba9846ebba05536c3d225d61e513dec1faa506",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/LICENSE"
+    },
+    "upstream/README.md": {
+      "upstream_path": "README.md",
+      "sha256": "18b15174244b03945cc51cee040783d3ea33b93f5f7aa0f13bf475d787bc52fd",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/README.md"
+    },
+    "upstream/pyproject.toml": {
+      "upstream_path": "pyproject.toml",
+      "sha256": "3fbeb6d6c67b85b1d8a7ce97004095f9bfd765d5d7393131f8ee157cdc10ff71",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/pyproject.toml"
+    },
+    "upstream/tests/__init__.py": {
+      "upstream_path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/__init__.py"
+    },
+    "upstream/tests/conftest.py": {
+      "upstream_path": "tests/conftest.py",
+      "sha256": "0331a377ae44fa40c07d7ed4629cdcf195c567a852286c82c2fe162d77cb6be3",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/conftest.py"
+    },
+    "upstream/tests/test___init__.py": {
+      "upstream_path": "tests/test___init__.py",
+      "sha256": "49b56696dabcced04adb8a86fdb5cac57312df0cd1b4ccaee2b720278c28bff0",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test___init__.py"
+    },
+    "upstream/tests/test___main__.py": {
+      "upstream_path": "tests/test___main__.py",
+      "sha256": "3b8f82c455bbd5a49183932ba9ef753e0e0047cb582265e5b0a5a99a6e59e132",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test___main__.py"
+    },
+    "upstream/tests/test_cli.py": {
+      "upstream_path": "tests/test_cli.py",
+      "sha256": "e6637a0737c7464b9073f22e118479530264077ea6c6d2f939d9b23b01817119",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_cli.py"
+    },
+    "upstream/tests/test_config.py": {
+      "upstream_path": "tests/test_config.py",
+      "sha256": "d1b7d753ce799e47d6e52fcd96b9c037f5fb273931a85b0ce8224c9d2784f260",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_config.py"
+    },
+    "upstream/tests/test_parser/test_openapi.py": {
+      "upstream_path": "tests/test_parser/test_openapi.py",
+      "sha256": "0347f749910d304cf55afde353e3c2c79b12d6fc19a54bc494a74fceeb73ce6d",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_openapi.py"
+    },
+    "upstream/tests/test_parser/test_properties/test_converter.py": {
+      "upstream_path": "tests/test_parser/test_properties/test_converter.py",
+      "sha256": "add0a6e8afea1b931de02a1daac4ea94d828b309aeeaf71bd219aa66e6b386d0",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_properties/test_converter.py"
+    },
+    "upstream/tests/test_parser/test_properties/test_init.py": {
+      "upstream_path": "tests/test_parser/test_properties/test_init.py",
+      "sha256": "21076a3181a00ad5b8e714f0523f3a7405a069928ea65d6ae32b0e8ed68922f1",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_properties/test_init.py"
+    },
+    "upstream/tests/test_parser/test_properties/test_model_property.py": {
+      "upstream_path": "tests/test_parser/test_properties/test_model_property.py",
+      "sha256": "3b67fe2bf2f52db86ccee0c804cd53a6735a5098b61c5437d380aceed1895e34",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_properties/test_model_property.py"
+    },
+    "upstream/tests/test_parser/test_properties/test_property.py": {
+      "upstream_path": "tests/test_parser/test_properties/test_property.py",
+      "sha256": "a08cec71d5a76be4eb9f38650319131a5eec112245534215067f8c9d486fdbcd",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_properties/test_property.py"
+    },
+    "upstream/tests/test_parser/test_properties/test_schemas.py": {
+      "upstream_path": "tests/test_parser/test_properties/test_schemas.py",
+      "sha256": "f0a4036c3407e2a958e4e42544f4dfc05ba29058c0ae3d82f932f196c9c3e30d",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_properties/test_schemas.py"
+    },
+    "upstream/tests/test_parser/test_responses.py": {
+      "upstream_path": "tests/test_parser/test_responses.py",
+      "sha256": "b1a59d5bb475d3b844647d68cbe040a9d7c1bd673562cc5207f6a986bf6bdd9a",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_parser/test_responses.py"
+    },
+    "upstream/tests/test_schema/test_open_api.py": {
+      "upstream_path": "tests/test_schema/test_open_api.py",
+      "sha256": "0e4b4480f021c012609f55f5b7cb4e49cd74aca40352441a4cd7db8452bcae3f",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_schema/test_open_api.py"
+    },
+    "upstream/tests/test_templates/__init__.py": {
+      "upstream_path": "tests/test_templates/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/__init__.py"
+    },
+    "upstream/tests/test_templates/conftest.py": {
+      "upstream_path": "tests/test_templates/conftest.py",
+      "sha256": "28e2061c74661b7856d7485be317f3b2275d24aacb236954206243144229e876",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/conftest.py"
+    },
+    "upstream/tests/test_templates/test_property_templates/test_date_property/date_property_template.py": {
+      "upstream_path": "tests/test_templates/test_property_templates/test_date_property/date_property_template.py",
+      "sha256": "9c24173a17cf43e25e08339e51ebb137120b8957bf74b0daf7aae3ccc5099914",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/test_property_templates/test_date_property/date_property_template.py"
+    },
+    "upstream/tests/test_templates/test_property_templates/test_date_property/optional_nullable.py": {
+      "upstream_path": "tests/test_templates/test_property_templates/test_date_property/optional_nullable.py",
+      "sha256": "911e2fe4652149f65b81c701f2a8329d7ce183ce91871a9ea12c663108580759",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/test_property_templates/test_date_property/optional_nullable.py"
+    },
+    "upstream/tests/test_templates/test_property_templates/test_date_property/required_not_null.py": {
+      "upstream_path": "tests/test_templates/test_property_templates/test_date_property/required_not_null.py",
+      "sha256": "198ccd0f5773bba97ccc05d43159cb615f3330d957e4591f8f08c6f45166703b",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/test_property_templates/test_date_property/required_not_null.py"
+    },
+    "upstream/tests/test_templates/test_property_templates/test_date_property/required_nullable.py": {
+      "upstream_path": "tests/test_templates/test_property_templates/test_date_property/required_nullable.py",
+      "sha256": "8150dab645ff839d5bbbf0f1ca8bd8c4e2ab5c10e477e6327f37f4b0e8030586",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/test_property_templates/test_date_property/required_nullable.py"
+    },
+    "upstream/tests/test_templates/test_property_templates/test_date_property/test_date_property.py": {
+      "upstream_path": "tests/test_templates/test_property_templates/test_date_property/test_date_property.py",
+      "sha256": "fa09e4bce7cb64e2537441d087b4cea3167b2f1bf599337a8aeb5773322a5651",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_templates/test_property_templates/test_date_property/test_date_property.py"
+    },
+    "upstream/tests/test_utils.py": {
+      "upstream_path": "tests/test_utils.py",
+      "sha256": "086595e76537f0f842da0c165a13a46b50b2e6f4e1606eac4c85de6e06d85434",
+      "raw_url": "https://raw.githubusercontent.com/openapi-generators/openapi-python-client/289787a8b6c50eca4d36399e16a74e1683611507/tests/test_utils.py"
+    }
+  }
+}

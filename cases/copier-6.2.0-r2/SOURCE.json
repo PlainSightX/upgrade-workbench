@@ -1,0 +1,226 @@
+{
+  "repository": "https://github.com/copier-org/copier",
+  "revision": "608654a03e748a3ed1b032c089e20b2811a0cfd3",
+  "tag": "v6.2.0",
+  "package": "copier",
+  "license": "MIT",
+  "modules": 11,
+  "split": "development",
+  "retrieved_on": "2026-09-16",
+  "archive_url": "https://codeload.github.com/copier-org/copier/zip/608654a03e748a3ed1b032c089e20b2811a0cfd3",
+  "archive_sha256": "e850b8223f0abc4d2ec44551c09f7f43f4023a1a74f3e1e09b4aeda1bc59ab5a",
+  "classification": "historical_real_application_selected_offline_workflow",
+  "target_code_executed": false,
+  "files": {
+    "source/copier/__init__.py": {
+      "upstream_path": "copier/__init__.py",
+      "sha256": "b3c8b2be10120775184f2977187595780dcecfd4a07a91a29c0a667616f5a7e9",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/__init__.py"
+    },
+    "source/copier/__main__.py": {
+      "upstream_path": "copier/__main__.py",
+      "sha256": "08876fe7729b61ee3a5919d3479da491eb70c3e388294a914cc5d2556804128f",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/__main__.py"
+    },
+    "source/copier/cli.py": {
+      "upstream_path": "copier/cli.py",
+      "sha256": "dff4f65cb80c4ff59446b7f6c8703e8983e7881898cb73f2fddf5cfdf7fd74a9",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/cli.py"
+    },
+    "source/copier/errors.py": {
+      "upstream_path": "copier/errors.py",
+      "sha256": "be41784405711671047a5d9daef1dc112dd1bb2bb25469c0def469ff9b9a45dd",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/errors.py"
+    },
+    "source/copier/main.py": {
+      "upstream_path": "copier/main.py",
+      "sha256": "d86762c6b94fda41d1052b33d4b02ac0f831bb5f80b8b386e78482b79853f931",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/main.py"
+    },
+    "source/copier/subproject.py": {
+      "upstream_path": "copier/subproject.py",
+      "sha256": "c3a3d20ae0cd96cde2715e73a6d2178b9d178c61b355f18a65037fdb4fe05fc4",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/subproject.py"
+    },
+    "source/copier/template.py": {
+      "upstream_path": "copier/template.py",
+      "sha256": "894217837bb1f0ba74e8081d268b6627655c4de06dd4dff9fc79111352201dbe",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/template.py"
+    },
+    "source/copier/tools.py": {
+      "upstream_path": "copier/tools.py",
+      "sha256": "dee6acb3dd7eb8cfa498238bcfe3bbd1c1f4dab16175686558c74b73dcb4fa71",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/tools.py"
+    },
+    "source/copier/types.py": {
+      "upstream_path": "copier/types.py",
+      "sha256": "044c0dc61db2df504ef77a67d7969dd3c9e42b7f1a31496e27cdf34752c9b835",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/types.py"
+    },
+    "source/copier/user_data.py": {
+      "upstream_path": "copier/user_data.py",
+      "sha256": "3124551abb3a7ae63dfa59de27c39f669dd0f8255b8bd7ee881f1e45ffe5ba96",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/user_data.py"
+    },
+    "source/copier/vcs.py": {
+      "upstream_path": "copier/vcs.py",
+      "sha256": "d1fa3676fa210d5ed56344e08f258c43c3484cd2ddb3b348ba179b1d407f8b58",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/copier/vcs.py"
+    },
+    "upstream/LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "90649212457f6c256f545d8da6b0c5fd160bf694629270551e06fe7882e70a70",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/LICENSE"
+    },
+    "upstream/README.md": {
+      "upstream_path": "README.md",
+      "sha256": "ae77914fba7691e9adef6e3941545e39f0cd62bbe4d0180044df117f36549a0a",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/README.md"
+    },
+    "upstream/pyproject.toml": {
+      "upstream_path": "pyproject.toml",
+      "sha256": "a8116a0d26decdb462b7f5ddbfcb960407a5bc10d4a31340babbf87f562e3527",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/pyproject.toml"
+    },
+    "upstream/tests/__init__.py": {
+      "upstream_path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/__init__.py"
+    },
+    "upstream/tests/conftest.py": {
+      "upstream_path": "tests/conftest.py",
+      "sha256": "ccd42d36a16f7b72638afe4d8381d02eb5f2c68034675f062b19262be7fda431",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/conftest.py"
+    },
+    "upstream/tests/demo_migrations/migrations.py": {
+      "upstream_path": "tests/demo_migrations/migrations.py",
+      "sha256": "151b323887237101ed629a17ca6cbec45ae9cecf2a8b7e4b23d42eb336606e4b",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/demo_migrations/migrations.py"
+    },
+    "upstream/tests/demo_migrations/tasks.py": {
+      "upstream_path": "tests/demo_migrations/tasks.py",
+      "sha256": "684a79840b58d2c5c41d87187239715c8f76b938b6701565bfeb3da6a3bf3823",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/demo_migrations/tasks.py"
+    },
+    "upstream/tests/helpers.py": {
+      "upstream_path": "tests/helpers.py",
+      "sha256": "985cef3514c4399bc2d15322c166b7e1fa9ca333c96dab35e458ea34c06cb7d8",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/helpers.py"
+    },
+    "upstream/tests/test_answersfile.py": {
+      "upstream_path": "tests/test_answersfile.py",
+      "sha256": "f6b016f6be5249e4e4f45c24798d6ed36a20f34a5862ff3fa6e6d9d3e8bf293b",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_answersfile.py"
+    },
+    "upstream/tests/test_cleanup.py": {
+      "upstream_path": "tests/test_cleanup.py",
+      "sha256": "d76eb639e5d07c1760c9a9d6b4aec6ff708c3fdef451bda6b10f57913c1ff7ec",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_cleanup.py"
+    },
+    "upstream/tests/test_cli.py": {
+      "upstream_path": "tests/test_cli.py",
+      "sha256": "ca00986fd22e2f71a4f5262610c721b29ee21e39fc3c075b965866fee35d2984",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_cli.py"
+    },
+    "upstream/tests/test_complex_questions.py": {
+      "upstream_path": "tests/test_complex_questions.py",
+      "sha256": "7d466cb7d8197a65d438e2410530787b5af51e5c168631eb387b571e65627194",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_complex_questions.py"
+    },
+    "upstream/tests/test_config.py": {
+      "upstream_path": "tests/test_config.py",
+      "sha256": "48cc4bba15e51bdcd8fc9007928ff6f58998b7cd49732ae8a32c045fa76a4ed8",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_config.py"
+    },
+    "upstream/tests/test_copy.py": {
+      "upstream_path": "tests/test_copy.py",
+      "sha256": "fdcd11d1185ead11133c814e36c114b0546f11c5a7f04270a3f7dff74d9ff108",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_copy.py"
+    },
+    "upstream/tests/test_demo_update_tasks.py": {
+      "upstream_path": "tests/test_demo_update_tasks.py",
+      "sha256": "4b016175af76c90943f30df4a01c99ab1d6e888f0e785451e2783bb94d333a2d",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_demo_update_tasks.py"
+    },
+    "upstream/tests/test_dirty_local.py": {
+      "upstream_path": "tests/test_dirty_local.py",
+      "sha256": "dba224677a64ff7da015942b18beb223d951f15456ef27898ac45af01a72314c",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_dirty_local.py"
+    },
+    "upstream/tests/test_empty_suffix.py": {
+      "upstream_path": "tests/test_empty_suffix.py",
+      "sha256": "4b8fb002ec06f45308bc38d3c92ab263eea8bc0d9eb92654dbdee45db64c9b42",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_empty_suffix.py"
+    },
+    "upstream/tests/test_exclude.py": {
+      "upstream_path": "tests/test_exclude.py",
+      "sha256": "c705db6d237f5c2985e4a71ffb54495af205e4db9cfb52fb4312c4dd69dae67b",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_exclude.py"
+    },
+    "upstream/tests/test_interrupts.py": {
+      "upstream_path": "tests/test_interrupts.py",
+      "sha256": "990910dd5bc71f3dedb68cd3fd395e66fde22269f63a16f47ec3446909c44994",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_interrupts.py"
+    },
+    "upstream/tests/test_jinja2_extensions.py": {
+      "upstream_path": "tests/test_jinja2_extensions.py",
+      "sha256": "fcf4cc4b2b63653a1466cc4ff0a3b56adc416569b532d968f8fe12bae9f8442e",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_jinja2_extensions.py"
+    },
+    "upstream/tests/test_migrations.py": {
+      "upstream_path": "tests/test_migrations.py",
+      "sha256": "13f242e90b9dae479438dfb87034e4ad7a6a6f7b39caa579ca50065978298d27",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_migrations.py"
+    },
+    "upstream/tests/test_minimum_version.py": {
+      "upstream_path": "tests/test_minimum_version.py",
+      "sha256": "c7842ad2eafca8e5f6948517d22f0cf6c1ecca94f610f5ea64e8b737c451d44a",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_minimum_version.py"
+    },
+    "upstream/tests/test_normal_jinja2.py": {
+      "upstream_path": "tests/test_normal_jinja2.py",
+      "sha256": "583da82c00c57ddea079de5c2e149f5b3d4ebcc946cbafeba4eba97125fce013",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_normal_jinja2.py"
+    },
+    "upstream/tests/test_output.py": {
+      "upstream_path": "tests/test_output.py",
+      "sha256": "0768ae084f9285adcc91a9fdb84781b57c4da1ddbcc844347fb63cea096ec71d",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_output.py"
+    },
+    "upstream/tests/test_prompt.py": {
+      "upstream_path": "tests/test_prompt.py",
+      "sha256": "e47cd8be2e693879668cc3b4b2ab758042b55f7cd154caa151dd612ecceffa86",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_prompt.py"
+    },
+    "upstream/tests/test_subdirectory.py": {
+      "upstream_path": "tests/test_subdirectory.py",
+      "sha256": "2c8cc4ce4b8197e6cbbf106b496784c8defe9eb187100516b51ab612f0d90fd6",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_subdirectory.py"
+    },
+    "upstream/tests/test_tasks.py": {
+      "upstream_path": "tests/test_tasks.py",
+      "sha256": "4454ce2356a829ac90a9de0c8d4d6d224852aeac32aa2ad2b0d03779e23b3e3c",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_tasks.py"
+    },
+    "upstream/tests/test_templated_prompt.py": {
+      "upstream_path": "tests/test_templated_prompt.py",
+      "sha256": "64728b50af4f5f3a00df09d7d45846360a5edff4b62a2ab43af6cdada15e0f50",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_templated_prompt.py"
+    },
+    "upstream/tests/test_tools.py": {
+      "upstream_path": "tests/test_tools.py",
+      "sha256": "d876af9698b8767cf06cf7e480497def4f7b518619edf8609a573c37af02f2e6",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_tools.py"
+    },
+    "upstream/tests/test_updatediff.py": {
+      "upstream_path": "tests/test_updatediff.py",
+      "sha256": "85793f82b573f9c790ede39746971d71729d703b9fbb7acda2111ea063a1eb5a",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_updatediff.py"
+    },
+    "upstream/tests/test_vcs.py": {
+      "upstream_path": "tests/test_vcs.py",
+      "sha256": "78d10b1874016a0f30b3426d56a2087dcca48b6e41c707d3c43d11d0ffe46fed",
+      "raw_url": "https://raw.githubusercontent.com/copier-org/copier/608654a03e748a3ed1b032c089e20b2811a0cfd3/tests/test_vcs.py"
+    }
+  }
+}

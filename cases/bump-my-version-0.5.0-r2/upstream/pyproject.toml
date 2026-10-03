@@ -1,0 +1,239 @@
+[build-system]
+
+requires = [
+    "setuptools >= 40.9.0",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bump-my-version"
+description = "Version bump your Python project"
+authors = [
+    { name = "Corey Oordt", email = "coreyoordt@gmail.com" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: System :: Software Distribution",
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+keywords = ["bumpversion", "version", "release"]
+dynamic = ["version"]
+dependencies = [
+    "click",
+    "pydantic",
+    "rich-click",
+    "rich",
+    "tomlkit",
+]
+
+[project.scripts]
+bump-my-version = "bumpversion.cli:cli"
+bumpversion = "bumpversion.cli:cli"
+
+
+[project.urls]
+homepage = "https://github.com/callowayproject/bump-my-version"
+repository = "https://github.com/callowayproject/bump-my-version.git"
+documentation = "https://callowayproject.github.io/bump-my-version/"
+
+[project.optional-dependencies]
+dev = [
+    "git-fame>=1.12.2",
+    "generate-changelog>=0.7.6",
+    "pip-tools",
+    "pre-commit",
+]
+docs = [
+    "ghp-import",
+    "linkify-it-py",
+    "myst-parser",
+    "furo",
+    "Sphinx>=4.3.0",
+    "sphinx-autodoc-typehints",
+    "sphinx-click",
+    "sphinx-copybutton",
+]
+test = [
+    "coverage",
+    "pre-commit",
+    "pytest-cov",
+    "pytest",
+    "pytest-mock",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "bumpversion.__version__"}
+
+[tool.setuptools.packages.find]
+exclude = ["example*", "tests*", "docs*", "build"]
+
+[tool.coverage.run]
+branch = true
+omit = ["**/test_*.py", "**/__main__.py", "**/aliases.py"]
+
+[tool.coverage.report]
+omit = [
+    "*site-packages*",
+    "*tests*",
+    "*.tox*",
+]
+show_missing = true
+exclude_lines = [
+    "raise NotImplementedError",
+    "pragma: no-coverage",
+    "pragma: no-cov",
+]
+
+[tool.coverage.html]
+directory = "test-reports/htmlcov"
+
+[tool.coverage.xml]
+output = "test-reports/coverage.xml"
+
+[tool.pytest.ini_options]
+norecursedirs = [
+    ".*",
+    "build",
+    "dist",
+    "{arch}",
+    "*.egg",
+    "venv",
+    "requirements*",
+    "lib",
+]
+python_files = "test*.py"
+addopts = [
+    "--cov=bumpversion",
+    "--cov-branch",
+    "--cov-report=term",
+    "--cov-report=html",
+]
+
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = false
+ignore-magic = true
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = false
+ignore-nested-functions = true
+ignore-nested-classes = true
+ignore-setters = false
+fail-under = 95
+exclude = ["setup.py", "docs", "build"]
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+verbose = 0
+quiet = false
+whitelist-regex = []
+color = true
+
+[tool.black]
+line-length = 119
+
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+# "UP" "TRY" "PLR"
+select = ["E", "W", "F", "I", "N", "B", "BLE", "C", "D", "E", "F", "I", "N", "S", "T", "W", "RUF", "NPY", "PD", "PGH", "ANN", "C90", "PLC", "PLE", "PLW", "TCH"]
+ignore = [
+    "ANN002", "ANN003", "ANN101", "ANN102", "ANN204", "ANN401",
+    "S101", "S104",
+    "D105", "D106", "D107", "D200", "D212",
+    "PD011",
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["E", "W", "F", "I", "N", "B", "BLE", "C", "D", "E", "F", "I", "N", "S", "T", "W", "RUF", "NPY", "PD", "PGH", "ANN", "C90", "PL", "PLC", "PLE", "PLW", "TCH"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 119
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+typing-modules = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101", "PLR0913", "PLR0915", "PGH003", "ANN001", "ANN202", "ANN201", "PLR0912", "TRY301", "PLW0603", "PLR2004", "ANN101", "S106", "TRY201", "ANN003", "ANN002", "S105", "TRY003"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[tool.ruff.isort]
+order-by-type = true
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.bumpversion]
+current_version = "0.5.0"
+commit = true
+commit_args = "--no-verify"
+tag = true
+tag_name = "{new_version}"
+allow_dirty = true
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)(\\.(?P<dev>dev\\d+))?"
+serialize = [
+    "{major}.{minor}.{patch}.{dev}{distance_to_latest_tag}",
+    "{major}.{minor}.{patch}"
+]
+message = "Version updated from {current_version} to {new_version}"
+
+[tool.bumpversion.parts.dev]
+values = ["release", "dev"]
+
+[[tool.bumpversion.files]]
+filename = "bumpversion/__init__.py"
+
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+search = "Unreleased"
+
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+search = "{current_version}...HEAD"
+replace = "{current_version}...{new_version}"

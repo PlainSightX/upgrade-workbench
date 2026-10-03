@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/IndominusByte/fastapi-jwt-auth",
+  "revision": "a6c06193319da0e4976c7472966f3a2891e0d50c",
+  "archive_sha256": "79438e57d2a33e69116f44b44948456401db5182ad5bdb1c28c5d311a22d775d",
+  "license": "MIT",
+  "source_bytes": "all five package modules unchanged",
+  "upstream_answer_patch_read": false
+}

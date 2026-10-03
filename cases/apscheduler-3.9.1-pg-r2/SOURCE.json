@@ -1,0 +1,187 @@
+{
+  "repository": "https://github.com/agronholm/apscheduler",
+  "revision": "a5e2cadb8a60ded5b57169e0c080782e976dc99b",
+  "license": "MIT",
+  "archive_url": "https://codeload.github.com/agronholm/apscheduler/zip/a5e2cadb8a60ded5b57169e0c080782e976dc99b",
+  "archive_sha256": "7060f24c361ecee11e9bc6b7a72f5c0b8816be950d27fe747f49481327a4a98b",
+  "files": {
+    "upstream/LICENSE.txt": {
+      "upstream_path": "LICENSE.txt",
+      "sha256": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758"
+    },
+    "upstream/README.rst": {
+      "upstream_path": "README.rst",
+      "sha256": "eecaacd5182ee1e0ba9d1528704acc905e93d7c19473e05fd36188e131de1df7"
+    },
+    "source/apscheduler/__init__.py": {
+      "upstream_path": "apscheduler/__init__.py",
+      "sha256": "a8510adb2b1105c2e26269b775ec892756af50eba068cfe70861cc0f8d96301c"
+    },
+    "source/apscheduler/events.py": {
+      "upstream_path": "apscheduler/events.py",
+      "sha256": "2913130d0512e9ddae567ad0bcfa33dd93d5e55f572ac08064bb20c7dd77145a"
+    },
+    "source/apscheduler/executors/__init__.py": {
+      "upstream_path": "apscheduler/executors/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/apscheduler/executors/asyncio.py": {
+      "upstream_path": "apscheduler/executors/asyncio.py",
+      "sha256": "8e2e5fe909b6b86868bfedf0e760971d98bc8dce54fe04b9ea58ac43294a4c14"
+    },
+    "source/apscheduler/executors/base.py": {
+      "upstream_path": "apscheduler/executors/base.py",
+      "sha256": "86882231cfedfa1bb0e813287741c4798d8585136600053234db811ef217df53"
+    },
+    "source/apscheduler/executors/base_py3.py": {
+      "upstream_path": "apscheduler/executors/base_py3.py",
+      "sha256": "f163a94de5f5340faca5d6c4435a09321e53d8efedd9476c6929c087e88459ed"
+    },
+    "source/apscheduler/executors/debug.py": {
+      "upstream_path": "apscheduler/executors/debug.py",
+      "sha256": "d79fe881207397c45109f0580e7908576b8c1fc70b9352889989816bf3551a97"
+    },
+    "source/apscheduler/executors/gevent.py": {
+      "upstream_path": "apscheduler/executors/gevent.py",
+      "sha256": "6ae96b366a1e7f2060ace907f5ac118458972039d20a7678534a34fc95c85e07"
+    },
+    "source/apscheduler/executors/pool.py": {
+      "upstream_path": "apscheduler/executors/pool.py",
+      "sha256": "87871880a311863a4d1e69219688072db993e0efeae8778f5d52e68892070b77"
+    },
+    "source/apscheduler/executors/tornado.py": {
+      "upstream_path": "apscheduler/executors/tornado.py",
+      "sha256": "0d4ef955a43d47a9c1bb2f256cf52f0ca520b2e25c66ac00bd4442e6f837afac"
+    },
+    "source/apscheduler/executors/twisted.py": {
+      "upstream_path": "apscheduler/executors/twisted.py",
+      "sha256": "6d1a14d02e01a15712ebf063283e707d4b34209a469262ec44070c1f6ac926cb"
+    },
+    "source/apscheduler/job.py": {
+      "upstream_path": "apscheduler/job.py",
+      "sha256": "242444441a5f58bba898f88d3475fe8eb96e1307c791db1c126cf88b463cadaa"
+    },
+    "source/apscheduler/jobstores/__init__.py": {
+      "upstream_path": "apscheduler/jobstores/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/apscheduler/jobstores/base.py": {
+      "upstream_path": "apscheduler/jobstores/base.py",
+      "sha256": "0d7cd25bd5ec72e78764732fcb5a85886faf62a525fcc32fd27d2e0526565c6a"
+    },
+    "source/apscheduler/jobstores/memory.py": {
+      "upstream_path": "apscheduler/jobstores/memory.py",
+      "sha256": "6715a22aca9fb021c5bda73ee97f41cedba19ee4b194e622d5d853ea0fa98d0a"
+    },
+    "source/apscheduler/jobstores/mongodb.py": {
+      "upstream_path": "apscheduler/jobstores/mongodb.py",
+      "sha256": "afdb769de36ecdf3ee7ffa260e6d0a7642c63d95cb92c887f94de3d773080653"
+    },
+    "source/apscheduler/jobstores/redis.py": {
+      "upstream_path": "apscheduler/jobstores/redis.py",
+      "sha256": "9234032333d7cfe62af7be94f472b768c91c088fd044b2a04c00d058a7b0b629"
+    },
+    "source/apscheduler/jobstores/rethinkdb.py": {
+      "upstream_path": "apscheduler/jobstores/rethinkdb.py",
+      "sha256": "935ad22d826a7a3ba1431258de95f01c041872967540526ca10f27d2812ee4c3"
+    },
+    "source/apscheduler/jobstores/sqlalchemy.py": {
+      "upstream_path": "apscheduler/jobstores/sqlalchemy.py",
+      "sha256": "6a57e4004233c1224a6d861719ce06f034de06c2dd1a1b5a73c79b8d8be8553d"
+    },
+    "source/apscheduler/jobstores/zookeeper.py": {
+      "upstream_path": "apscheduler/jobstores/zookeeper.py",
+      "sha256": "6af18b5da2468c70f417bb86eab2c9da083f4d736a5c310ce0fa8ebb9e9ff978"
+    },
+    "source/apscheduler/schedulers/__init__.py": {
+      "upstream_path": "apscheduler/schedulers/__init__.py",
+      "sha256": "8cceb7c40fcaec6493a017a786ccfe48272a7e1935a5d1156fa6a3c283b92aa8"
+    },
+    "source/apscheduler/schedulers/asyncio.py": {
+      "upstream_path": "apscheduler/schedulers/asyncio.py",
+      "sha256": "06e484f2b7bad72b50b54351c35f7b88976139ea5a21ec6bdfe598103023851d"
+    },
+    "source/apscheduler/schedulers/background.py": {
+      "upstream_path": "apscheduler/schedulers/background.py",
+      "sha256": "ef9d69f9fe438baa58e31e945e5660829c50e64d8e6c9fd0e7049e5a62874bca"
+    },
+    "source/apscheduler/schedulers/base.py": {
+      "upstream_path": "apscheduler/schedulers/base.py",
+      "sha256": "33c59610a8c6f957f22ff505d5681b8e4d35cb16b8e6dfc65df2b2bed63444cb"
+    },
+    "source/apscheduler/schedulers/blocking.py": {
+      "upstream_path": "apscheduler/schedulers/blocking.py",
+      "sha256": "f27b9b7c9e0fa149c090463a591406e023b31b84b11b25bd3e3b953e10c06ec9"
+    },
+    "source/apscheduler/schedulers/gevent.py": {
+      "upstream_path": "apscheduler/schedulers/gevent.py",
+      "sha256": "72c3c1bd5ef914671ba175ec75ec7a7c20fb279e1080175d60d7568fad993bd8"
+    },
+    "source/apscheduler/schedulers/qt.py": {
+      "upstream_path": "apscheduler/schedulers/qt.py",
+      "sha256": "5ed2b3f81c916354f30e30f171d9373e0590f1e3b8be3134bbdb36a44a8be0bd"
+    },
+    "source/apscheduler/schedulers/tornado.py": {
+      "upstream_path": "apscheduler/schedulers/tornado.py",
+      "sha256": "0fd55aab711ef441625dad630f2f6d79d234e3c811fd84ff2c01545aa3bfb84c"
+    },
+    "source/apscheduler/schedulers/twisted.py": {
+      "upstream_path": "apscheduler/schedulers/twisted.py",
+      "sha256": "0f91018e3311b4c071cb4fda01445c50b008f0acb622f093afdb4af6c3b5ad89"
+    },
+    "source/apscheduler/triggers/__init__.py": {
+      "upstream_path": "apscheduler/triggers/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/apscheduler/triggers/base.py": {
+      "upstream_path": "apscheduler/triggers/base.py",
+      "sha256": "06f04974e9c87950a55cf5de227cd82b6e5c37ae2301ce1af4888442e7128959"
+    },
+    "source/apscheduler/triggers/combining.py": {
+      "upstream_path": "apscheduler/triggers/combining.py",
+      "sha256": "925692a01a75932acf5f90f7801a4d4e5b062a392ce5078a3d6e4937f315b37d"
+    },
+    "source/apscheduler/triggers/cron/__init__.py": {
+      "upstream_path": "apscheduler/triggers/cron/__init__.py",
+      "sha256": "0f7f4143adea5b293a5d9712b96b61e3a10b43754816962350787b2a3eb967d3"
+    },
+    "source/apscheduler/triggers/cron/expressions.py": {
+      "upstream_path": "apscheduler/triggers/cron/expressions.py",
+      "sha256": "86ed64ab498abe2bc8c3b5340f4367adbba4dead35742ba167b48744fc3aaa12"
+    },
+    "source/apscheduler/triggers/cron/fields.py": {
+      "upstream_path": "apscheduler/triggers/cron/fields.py",
+      "sha256": "3563c2961d4d8123a94e5277b26d535ccfd5882daa24629691dfef834c6cc3ba"
+    },
+    "source/apscheduler/triggers/date.py": {
+      "upstream_path": "apscheduler/triggers/date.py",
+      "sha256": "46b7c1d4f34ef46f5ef75a7504e7fecbf4ec7951d0411f8a24f84d74fa401dc5"
+    },
+    "source/apscheduler/triggers/interval.py": {
+      "upstream_path": "apscheduler/triggers/interval.py",
+      "sha256": "0018dc645686600020740694408b8bafdfdd2eccc889fbbcf2a697ac999dc50e"
+    },
+    "source/apscheduler/util.py": {
+      "upstream_path": "apscheduler/util.py",
+      "sha256": "8ca4d62c64fa155da90ca159ee5b40f69d189d22ccfe678b599de07e053a50ed"
+    },
+    "upstream/setup.cfg": {
+      "upstream_path": "setup.cfg",
+      "sha256": "85133ccf9e4358df6ea874e833077e924bb698c259869981704ea5f5bd8c748d"
+    },
+    "upstream/setup.py": {
+      "upstream_path": "setup.py",
+      "sha256": "6d567691edd95f39659dce8da79f783b98a30343e0e6fc34b757ce16969fa703"
+    },
+    "upstream/tests/conftest.py": {
+      "upstream_path": "tests/conftest.py",
+      "sha256": "7f18ca4178c75560acaae45dea7e33c16a022699890f1acc19a25782707d2bc7"
+    },
+    "upstream/tests/test_jobstores.py": {
+      "upstream_path": "tests/test_jobstores.py",
+      "sha256": "d871a18843ca292d485f9ecc441d326f3a5e6ed839a29936e3ef3e070bd44506"
+    }
+  },
+  "classification": "real_scheduler_persistence_workflow_development_case",
+  "target_code_executed": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "package": "sqlalchemy",
+  "old_version": "1.3.24",
+  "new_version": "1.4.21",
+  "repository": "https://github.com/sqlalchemy/sqlalchemy",
+  "revision": "7ed27d8245d6b4cf98e67fe80ae3903680aa1453",
+  "upstream_path": "doc/build/changelog/migration_14.rst",
+  "license_path": "evidence/LICENSE",
+  "entries": [
+    {
+      "evidence_key": "sqlalchemy-v14-cascade-backrefs",
+      "path": "evidence/migration.rst",
+      "sha256": "fea04287caa2ac1f5b1a34825db5c72d85cec015e887cc40774cf5625395249d",
+      "heading": "cascade_backrefs behavior deprecated for removal in 2.0",
+      "start_line": 2168,
+      "end_line": 2213
+    }
+  ]
+}

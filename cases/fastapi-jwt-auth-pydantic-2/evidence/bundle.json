@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "package": "pydantic",
+  "old_version": "1.10.15",
+  "new_version": "2.6.4",
+  "repository": "https://github.com/pydantic/pydantic",
+  "revision": "5f033e46c54fea1b59b6894d6527daf49475e690",
+  "upstream_path": "docs/migration.md",
+  "license_path": "evidence/pydantic-LICENSE",
+  "entries": [
+    {
+      "evidence_key": "pydantic-v2-base-model",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 129,
+      "end_line": 255,
+      "heading": "### Changes to `pydantic.BaseModel`"
+    },
+    {
+      "evidence_key": "pydantic-v2-config",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 320,
+      "end_line": 358,
+      "heading": "### Changes to config"
+    },
+    {
+      "evidence_key": "pydantic-v2-validators",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 361,
+      "end_line": 405,
+      "heading": "#### `@validator` and `@root_validator` are deprecated"
+    },
+    {
+      "evidence_key": "pydantic-v2-validator-signatures",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 406,
+      "end_line": 437,
+      "heading": "#### Changes to `@validator`'s allowed signatures"
+    },
+    {
+      "evidence_key": "pydantic-v2-validator-type-errors",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 438,
+      "end_line": 467,
+      "heading": "#### `TypeError` is no longer converted to `ValidationError` in validators"
+    },
+    {
+      "evidence_key": "pydantic-v2-validator-behavior",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 468,
+      "end_line": 477,
+      "heading": "#### Validator behavior changes"
+    },
+    {
+      "evidence_key": "pydantic-v2-dicts",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 617,
+      "end_line": 620,
+      "heading": "#### Dicts"
+    },
+    {
+      "evidence_key": "pydantic-v2-required-nullable-fields",
+      "path": "evidence/migration.md",
+      "sha256": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+      "start_line": 647,
+      "end_line": 697,
+      "heading": "#### Required, optional, and nullable fields"
+    }
+  ]
+}

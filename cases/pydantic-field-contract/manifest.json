@@ -1,0 +1,34 @@
+{
+  "case_id": "pydantic-field-contract",
+  "title": "Pydantic 字段行为校准",
+  "source": {
+    "kind": "synthetic_calibration",
+    "repository": "local:upgrade-workbench",
+    "revision": "calibration-v1",
+    "license": "Local calibration fixture",
+    "description": "验证器校准，不是应用或Agent成果。"
+  },
+  "review": {
+    "status": "reviewed",
+    "note": "2026-09-15 Codex静态审阅固定源码及有断言的冻结检查；只授权此快照的受限Docker执行。旧Python3.12基线仍须实测。"
+  },
+  "snapshot_dir": "source",
+  "checks_dir": "checks",
+  "old_lock": "requirements/old.txt",
+  "new_lock": "requirements/new.txt",
+  "allowed_changes": [
+    "profile_model.py"
+  ],
+  "file_hashes": {
+    "SOURCE.json": "042e45a446339cd8031621ee10bf0a0943e17f3edddf37156d79395a6e2bfe52",
+    "checks/test_behavior.py": "3d43ef30c7b09f7f74b5620c8502c0c8693c64d5ad50a4548c3a2dca16945004",
+    "reference.patch": "ad70f5a20b99fc46d2c42ab6a84e2eaac9e57529e08b9e9a4146e15107590d23",
+    "requirements/new.in": "10369152f232b6db2b70bb1d2663ce1123a92c5512446af42c773b88c3234630",
+    "requirements/new.txt": "1a80cb2b2bfa9d50362d4c6c16ad39ba92b807ba174053ba8c35222299f2bb0c",
+    "requirements/old.in": "70044cf9607c6273d9212ff36f688c62eeb615f0b9e5da4e73f2389db70ee1ed",
+    "requirements/old.txt": "194a4f32833f0eb32fe76ad23187e8f683e7f52b0de8cc25d8a1d505d34f380c",
+    "source/profile_model.py": "eb4346b3efe3dc8d6a5dbb4d6c0ad70614ee5c96147df2f7d8a24610699670c6"
+  },
+  "expected_new_original": "failed",
+  "schema_version": 1
+}

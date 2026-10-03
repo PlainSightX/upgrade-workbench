@@ -1,0 +1,1493 @@
+{
+  "schema_version": 1,
+  "kind": "Selected projection of original task-report exports",
+  "limitations": [
+    "G is a simple tool Agent, not a bare model",
+    "Same model within each frozen comparison",
+    "No unseen/generalization or component-causality claim",
+    "Estimated costs, not provider bills",
+    "No measured manual working time",
+    "Historical candidates/cases are not distributed here for full reruns",
+    "Historical implementation identities differ from the public release candidate"
+  ],
+  "rounds": [
+    {
+      "round": "A2",
+      "scope": "Seen/admitted development tasks; whole configuration comparison",
+      "original_summary_sha256": "fd6e0d3563a20ed14e0aab825d0ec2c2dd8992fe777db55b91f3a500b1c5699b",
+      "original_subjects_sha256": "e9abe650e0be7181141c2330dbfcc94fda8e269a63c4a996eedf89475d011743",
+      "protocol_sha256": "798c395a9292608b9939a32dc28096e4514a946f248ac989aa34e78c6aaa7af6",
+      "implementation_sha256": "1f87020de848a2c29837e6f4c4c363e65386c39eb76b62a3c97d6a1ce6615c15",
+      "historical_source_sha256": "1f87020de848a2c29837e6f4c4c363e65386c39eb76b62a3c97d6a1ce6615c15",
+      "totals": {
+        "G": {
+          "tasks": 6,
+          "verified": 6,
+          "calls": 47,
+          "input_tokens": 1800315,
+          "estimated_cost_usd": 1.190431
+        },
+        "W": {
+          "tasks": 6,
+          "verified": 6,
+          "calls": 41,
+          "input_tokens": 3242462,
+          "estimated_cost_usd": 1.745842
+        }
+      },
+      "tasks": [
+        {
+          "slot": "T1-G-r1",
+          "arm": "G",
+          "repetition": 1,
+          "task_id": "d38f394a81604334845cffb66774b6ea",
+          "case_id": "db-to-sqlite-sqlalchemy-2-r2",
+          "case_fingerprint": "616a292d31e5f230d3d1ffaaaac1f1ae7250878b46e03761a9e2b2d7c2f70f9b",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "81a7b6ffcf2167787b704bc5440a511adbd086ffad0ff07e702f4963a09bc300",
+          "candidate_revision": "96096f4894223eb5304586bfedb21c8ccafb371512d09c83ee2ec240a9947c44",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 5,
+            "reported_input_tokens": 116293,
+            "reported_output_tokens": 45864,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 187.61
+          },
+          "estimated_cost_usd": 0.089927,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 865.049,
+          "original_report_sha256": "94d576609a11f7f66b26b0d735e1d58576f9d91298c3433de3fc52ddd9c4b70c",
+          "original_task_sha256": "83bd3c98fe5664a84ccf7ab2a7e319877762791baa907b9b9ab49c4b65a97f77",
+          "original_subject_sha256": "79de53890478bfa044626966f118bdf3e59135fde8288a0e18acba3332bd831f",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "646a8ec2dcb216ec02c27f25226f321bb548eacc59c1dc15bab21befa6e357af"
+        },
+        {
+          "slot": "T1-W-r1",
+          "arm": "W",
+          "repetition": 1,
+          "task_id": "fbf4c8c649fc4f1d88c654dd43ae340c",
+          "case_id": "db-to-sqlite-sqlalchemy-2-r2",
+          "case_fingerprint": "616a292d31e5f230d3d1ffaaaac1f1ae7250878b46e03761a9e2b2d7c2f70f9b",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "7b2aeb9d4f9206145170a3388a83f87b6208c0914c674828d203ec189336e9da",
+          "candidate_revision": "0545111a8fead6c07ab77d1e70d835892c8bb7ddc4edaf4e283a3d990e922e28",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 8,
+            "reported_input_tokens": 206290,
+            "reported_output_tokens": 118906,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 491.421
+          },
+          "estimated_cost_usd": 0.204578,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 733.68,
+          "original_report_sha256": "a5bf83b25b2f9e620c2ad14c00d0df229e565983088d4c84c6346442d84c5c27",
+          "original_task_sha256": "b71d6dd3bae676596c07c7e34ea3f4ce6cc254b5ed59147cded3c1fa4f6f5a52",
+          "original_subject_sha256": "cdbd3b5120512ac14eb16e2b51b63f607a5135d2a224615117f3653edaeede87",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "47a53cb26a99db93346c7c15612966397203d271bbd62547557257420c6847a7"
+        },
+        {
+          "slot": "T1-W-r2",
+          "arm": "W",
+          "repetition": 2,
+          "task_id": "721f87c49e56470494a1e40aa7be4ba2",
+          "case_id": "db-to-sqlite-sqlalchemy-2-r2",
+          "case_fingerprint": "616a292d31e5f230d3d1ffaaaac1f1ae7250878b46e03761a9e2b2d7c2f70f9b",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "f0b0f959cf94896a23fd0c5be4c5ca9f5cb45e6cf76ec3557b4ddcbd4323b5a5",
+          "candidate_revision": "2c97467ee21ff1d575e9744f7c8ab5841df0ae670be4ee00ec858bd0344df7da",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 209131,
+            "reported_output_tokens": 84922,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 347.608
+          },
+          "estimated_cost_usd": 0.16465,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 684.686,
+          "original_report_sha256": "fc4869061e56443bf7cdc7324607814d226ea7817c55556539ef0418de93acc1",
+          "original_task_sha256": "b31813078a107b9583e0caa5bfd566e0d3cfe1d6caeefa756b156ed0effc9154",
+          "original_subject_sha256": "21bfafceb1dbc66c9d6f5c8d84d95f62bb5f436c68d177ed0bf580535a12f582",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "d75ec1c95c5d60744a8dc82a706caf52319e82fdcf5095d8b4604e0db8d3b3f8"
+        },
+        {
+          "slot": "T1-G-r2",
+          "arm": "G",
+          "repetition": 2,
+          "task_id": "c4de51d91a644cc6901ed5b38207c269",
+          "case_id": "db-to-sqlite-sqlalchemy-2-r2",
+          "case_fingerprint": "616a292d31e5f230d3d1ffaaaac1f1ae7250878b46e03761a9e2b2d7c2f70f9b",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "7a160c81c4d26fe707d8af5a16ca5368725b0fed8073a936d888aedddbc6d9c7",
+          "candidate_revision": "ae9c42a0922f13b922a36b7ab3060c657fe660d7a00a04b7c72c0d813bdef2ac",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 167159,
+            "reported_output_tokens": 66062,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 275.626
+          },
+          "estimated_cost_usd": 0.129425,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 719.413,
+          "original_report_sha256": "b213f025f9c4c401fc9a7aee399d30d8f2ee798c69bb11fdf6dc6ae80d8225fd",
+          "original_task_sha256": "ec116d9528c5a3dedaa82face567fe4ca162ac9082f5ad798ace4d5c153b1395",
+          "original_subject_sha256": "c4885a0ad3cade6ba5d212bd8d636877063717ddc5f8ef3f28abaf227ac0c501",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "5aef15c6c9199b0af83fa271e6b41e83b80a0da10e2dda282fcb14fd95688d3e"
+        },
+        {
+          "slot": "T2-W-r1",
+          "arm": "W",
+          "repetition": 1,
+          "task_id": "13c6cc61d0b04e8d8f85d0beee105a7e",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+          "case_fingerprint": "e8119621119bb65d8b210000f67a6f10a63e6c0c2e951f74d72ebe294a65d1f4",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "e23896bede9cc9db5be43ba0046751b6ccc291a7e259d354c18cca51565f1ed9",
+          "candidate_revision": "c4378626cc8b69c10e66b6f3f00f3b36721273be4086775fc7fa86a4e3c3f80a",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 6,
+            "reported_input_tokens": 231857,
+            "reported_output_tokens": 118340,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 503.032
+          },
+          "estimated_cost_usd": 0.211568,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 797.735,
+          "original_report_sha256": "688f573a29ccf1966a80e3777d15063006a96002a55410a83d62f70052a809de",
+          "original_task_sha256": "f601e21a4196009336fec742a4ea739a73ab4313573c32eb7a91907daf539ae5",
+          "original_subject_sha256": "978ff38c2f90f3eead3db2fd3c52b16ca2c589f2e364ae8fb4ee8ace5e1367db",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "b4fb2e5b96339b1c89e3bd0a1320dd716e203ffe6107004631c301539469051a"
+        },
+        {
+          "slot": "T2-G-r1",
+          "arm": "G",
+          "repetition": 1,
+          "task_id": "795fb825878941d9a4f57e3d2b542acc",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+          "case_fingerprint": "e8119621119bb65d8b210000f67a6f10a63e6c0c2e951f74d72ebe294a65d1f4",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "6d8e7aa8f71716bcc19da7199608645283ac161a449df25c2c2e4b237cd3096d",
+          "candidate_revision": "05e2fe0283afa172d44fa5615b6222a2bdfeba9a20b8099613703d562f0171f7",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 4,
+            "reported_input_tokens": 112273,
+            "reported_output_tokens": 44768,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 192.782
+          },
+          "estimated_cost_usd": 0.087405,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 401.471,
+          "original_report_sha256": "a6202fa2afacfef730dcc742411717ac701bc95f376fc01763f1e98110c900d0",
+          "original_task_sha256": "621a4275bbcb92d22feaafe7bf62768f903009fa6f8e24c7a921e302c2492cd6",
+          "original_subject_sha256": "2a7999c23a2f12d504c2f9051486e0f2970223e39abfc43c6f67b0e3f3056ead",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "e4e5fdaeb25faeeb2517d418bcead5641c7129cab68a2c67f062ec7222f549ed"
+        },
+        {
+          "slot": "T2-G-r2",
+          "arm": "G",
+          "repetition": 2,
+          "task_id": "08c0f45df3b644e8b6897533a5ee8c83",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+          "case_fingerprint": "e8119621119bb65d8b210000f67a6f10a63e6c0c2e951f74d72ebe294a65d1f4",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "68bad056f36d0bdbdada5b64f963b24aa016ed29af29792490624daad9728a23",
+          "candidate_revision": "ffd757582046c3f5acce33b2bbd3f65328e0e4d0ab7f5337adff8c274b5d2ecc",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 201138,
+            "reported_output_tokens": 60608,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 261.468
+          },
+          "estimated_cost_usd": 0.133074,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 569.947,
+          "original_report_sha256": "648fcbbf483256e2c5fc5d93e3fb4a12eb5c2a5db2077adfd264c5db91aac193",
+          "original_task_sha256": "e02d0fb770fd3ac9fa2b86291212ef9beab671f077811a0843c851c0dc9e3490",
+          "original_subject_sha256": "9c9890e5fae88ee003495b170912b41746ba414ee3b6370422092417935d6c3a",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "d09c123d2ea8f29b9214844981e680fde3ddce45c87938be4286f3b810944f6a"
+        },
+        {
+          "slot": "T2-W-r2",
+          "arm": "W",
+          "repetition": 2,
+          "task_id": "b9dfbc0d4ce1483dab33d9cf16480be2",
+          "case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+          "case_fingerprint": "e8119621119bb65d8b210000f67a6f10a63e6c0c2e951f74d72ebe294a65d1f4",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "68bad056f36d0bdbdada5b64f963b24aa016ed29af29792490624daad9728a23",
+          "candidate_revision": "ffd757582046c3f5acce33b2bbd3f65328e0e4d0ab7f5337adff8c274b5d2ecc",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 0,
+                "failed": 4,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 9,
+            "reported_input_tokens": 381893,
+            "reported_output_tokens": 97906,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 416.298
+          },
+          "estimated_cost_usd": 0.232059,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 735.363,
+          "original_report_sha256": "7d8f4a175ab1dee27b88a7dcad58230c5a1e3871e31f0854ec18f567b2951bc6",
+          "original_task_sha256": "8e2bc56933f8b680628c077e3989d56f6d95b58aac734b42f62aa94b352d6435",
+          "original_subject_sha256": "96abba68091266b5c135e3d22954f4f3ed9c8d29ba0e125b898e40019df493c3",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "ca08a74ac5953033f065cbc0b2998987bbb8a7e3f1fa987a25411264546ea61b"
+        },
+        {
+          "slot": "T3-G-r1",
+          "arm": "G",
+          "repetition": 1,
+          "task_id": "c11d5b75a46b44aaaf5483195e9a5d92",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "0dbb8a575b58f7fa72e24fd4e4fa95a6f7c0abb49223eb8f1f3088725bc5f6ec",
+          "candidate_revision": "4e3b6104dba2662d44eb0e2aff4028672ef1b70b0dd70471629917ae02ac893a",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 8,
+            "reported_input_tokens": 393284,
+            "reported_output_tokens": 97618,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 393.03
+          },
+          "estimated_cost_usd": 0.235131,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 667.072,
+          "original_report_sha256": "7b38f216c726077ce1efe05c2d24f48fb6341dfb37165683fb5a52e345f0acf3",
+          "original_task_sha256": "c92d00777c82c068d8507603211c7af7dd39bafb1aa275da834af4fe41707112",
+          "original_subject_sha256": "9914bbda883e0136742d4cc00e8e46f919ccc60122691f3e4f8f4040aaee231e",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "32a6507aea9ec23089c5be8f1df7b51bbf3c7c5c7083bcaa1c4949fe42a53a9c"
+        },
+        {
+          "slot": "T3-W-r1",
+          "arm": "W",
+          "repetition": 1,
+          "task_id": "a37db75d07934889baff7159d32bd1d4",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "94d5f2d3db092791ce95efe05d3da44e13c7a00deabeaaadbd3a60d0312d742e",
+          "candidate_revision": "1a36f0ac61ab3db42fbad5b47df32e62b17c7e4b0e0622aead7e5061665a9b8f",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 1410540,
+            "reported_output_tokens": 145695,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 588.891
+          },
+          "estimated_cost_usd": 0.597999,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 887.53,
+          "original_report_sha256": "9667e35ffb1e36bcfffa12b582ac355b5ebfc84db9fca1a0b9ff42ccbb9cc308",
+          "original_task_sha256": "bacd30e570681d56ab2149cd24147e30faa9e95ff231e0bc78b787575e8da7d7",
+          "original_subject_sha256": "68551225f02f9375418e8aa76851281bdc2f9d3220de4b6827a9bf04dbfdcced",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "433a6f0b0f31596d4c06dc56116385b784c902a4bbb410dd2c8ac26528f71f02"
+        },
+        {
+          "slot": "T3-W-r2",
+          "arm": "W",
+          "repetition": 2,
+          "task_id": "a3caafe1277c4bca976f28f196fda9c0",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "a5207854f77045c11980141775334c071c4d7731a481a018e57b176426fbf500",
+          "candidate_revision": "ca1de45cd85a58b4372f280961c36b75e9b86a3ba82c2109dc22545ee791d61a",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 4,
+            "reported_input_tokens": 802751,
+            "reported_output_tokens": 78467,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 317.015
+          },
+          "estimated_cost_usd": 0.334988,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 500.257,
+          "original_report_sha256": "791959892579d2da33fdd7505e6fb523266078d7352d3a9026e9282f71dece09",
+          "original_task_sha256": "7475959682fba334930ffac473923babf1a0f619cdb6c26fa1cfb6f3491faaea",
+          "original_subject_sha256": "12a492ae19a2581b3e0cf32898113451a6ead65eab3f728f9be6d86e34a85057",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "52e766231430c1bd227cab11e6d47afade20686853b637c03ce5eb08ea60bd3d"
+        },
+        {
+          "slot": "T3-G-r2",
+          "arm": "G",
+          "repetition": 2,
+          "task_id": "ac27507a1bb04f61b7e2651685e05efc",
+          "case_id": "fastapi-required-list-pydantic-2-r2",
+          "case_fingerprint": "9e2d52d7159aee8a23454988b7c9d57b0274f882d3fe4fb55f7659909dff7940",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "1f4057d482372a7f62eb732452957acb202b77d409e4fe095c1e4c07fcb21104",
+          "candidate_revision": "47cb34746d40185d303f0492336217a6a1e211ed0c69f2b6a205c36bdfbee8d8",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 4,
+                "passed": 2,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 4,
+                "passed": 4,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 16,
+            "reported_input_tokens": 810168,
+            "reported_output_tokens": 227009,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 889.373
+          },
+          "estimated_cost_usd": 0.515469,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 1270.559,
+          "original_report_sha256": "df7c1fea6cd737365bfd78b21ef3fd764591a8c42ff7af3f0545381f7ee57300",
+          "original_task_sha256": "5324f1affb165f95e3662749c10bd235c0d969cb64326305409a02b2d9043fd4",
+          "original_subject_sha256": "3ff034bf19129904f22c682c86e8a26c4f48363722410dde5effbbc632d72827",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "5c2f018142d98bef438a4a8af6a89ccb560bea6d032bc3fa83199c0f4237d0d1"
+        }
+      ]
+    },
+    {
+      "round": "A5",
+      "scope": "Seen/admitted development tasks; whole configuration comparison",
+      "original_summary_sha256": "4ed83b59e1f093c8e6e838ae20693e17731566d468b329838395c479fbb0557a",
+      "original_subjects_sha256": "653815efbfc585f6971cffe9a2f3fb5bcfbbc9f2a3e8de06f9247506949e0cef",
+      "protocol_sha256": "a650c9dbf0f0846e4683351117bf43af922fd8bf06833570689fb0c83a7f09d4",
+      "implementation_sha256": "27a8a0b05b842b4b02834fb95748ed49a406756fce8488884fa8492d2419cab3",
+      "historical_source_sha256": "27a8a0b05b842b4b02834fb95748ed49a406756fce8488884fa8492d2419cab3",
+      "totals": {
+        "G": {
+          "tasks": 2,
+          "verified": 2,
+          "calls": 58,
+          "input_tokens": 3443092,
+          "estimated_cost_usd": 1.708997
+        },
+        "W": {
+          "tasks": 2,
+          "verified": 2,
+          "calls": 16,
+          "input_tokens": 1490499,
+          "estimated_cost_usd": 0.933355
+        }
+      },
+      "tasks": [
+        {
+          "slot": "G-r1",
+          "arm": "G",
+          "repetition": 1,
+          "task_id": "67c246406de54233a0fd1020a6c7ff83",
+          "case_id": "sqlalchemy-continuum-sqlalchemy-2-a5",
+          "case_fingerprint": "342dcab39f94a24b4ba14359db85aa716058551b621cc38c36bf3b759e546e28",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "3c886e375a1293e16dad133316bd5c31644a49bfe11c18fc0f18f925c5201968",
+          "candidate_revision": "c956840a957e9e980c3408cdc786937baaf31cbd97328be21c1793eeba497870",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 2,
+                "passed": 0,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 29,
+            "reported_input_tokens": 1687665,
+            "reported_output_tokens": 289012,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 1281.453
+          },
+          "estimated_cost_usd": 0.853129,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 1815.918,
+          "original_report_sha256": "39082b1a36fba613d5b305bbce8b1d9a3772d641cbba15278b4f85df63f4d2ae",
+          "original_task_sha256": "d643a80ee54163890ebd1228fe5b9e4e1ab27fc6dacb5c34c45385789dea483d",
+          "original_subject_sha256": "e82bfeee7397c069a746cafed4e925dd71d56f6a9fd4d29de6e28d951fbde331",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "fdf688175850254bbe028d867c2a899151f85f3cff345650bf01b2c58ca8b0d4"
+        },
+        {
+          "slot": "W-r1",
+          "arm": "W",
+          "repetition": 1,
+          "task_id": "845d2e1cf97a47f7951a99f3016931f2",
+          "case_id": "sqlalchemy-continuum-sqlalchemy-2-a5",
+          "case_fingerprint": "342dcab39f94a24b4ba14359db85aa716058551b621cc38c36bf3b759e546e28",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "6ebae6caaedb4000aa59a39a0c25069fedbf6e1fb1f430781dc26f7bc110a4df",
+          "candidate_revision": "153699bfcd37901c56934d827cf6b14ae925f542d20a180e83613afb32a350fc",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 2,
+                "passed": 0,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 9,
+            "reported_input_tokens": 818427,
+            "reported_output_tokens": 195717,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 803.766
+          },
+          "estimated_cost_usd": 0.480391,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 1213.118,
+          "original_report_sha256": "d60abcb809906a3387a645a5b8adda34c32fd52bfa60b1027a364eed7a406975",
+          "original_task_sha256": "52614864374a3f6066e0ae6c789a38b668cccea9498f13b74f3d936fd1e5e286",
+          "original_subject_sha256": "8b560eb718edc4209ee9a916521c3019ec3a6109463756b36632f24387f908b2",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "312462ba08a4160bc42a16fd092a3c325ae1174407e5ea1f2a8f6ac0392c384a"
+        },
+        {
+          "slot": "W-r2",
+          "arm": "W",
+          "repetition": 2,
+          "task_id": "46324a79b80543cba853a433fedf019f",
+          "case_id": "sqlalchemy-continuum-sqlalchemy-2-a5",
+          "case_fingerprint": "342dcab39f94a24b4ba14359db85aa716058551b621cc38c36bf3b759e546e28",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "42eb2035d888192bedef6000c58ebf92edd3fe8f78a3aca4f3a62901f7864130",
+          "candidate_revision": "cbfd0ae1ad6020224abbbea21715ad42c2bcf5a379c4ec00f4d9f3c241c8b1f6",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 2,
+                "passed": 0,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 7,
+            "reported_input_tokens": 672072,
+            "reported_output_tokens": 209449,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 842.455
+          },
+          "estimated_cost_usd": 0.452964,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 1308.422,
+          "original_report_sha256": "c522458a5067685cbdb38f9210ee84c0254f6326434cbfa018a0cb63d065993c",
+          "original_task_sha256": "942dea7bf14281ac54de0e0c4b1d3305ba78038cceb0ca543ca6876e59a196e2",
+          "original_subject_sha256": "6f872f3649017eace5eabe27410b030d19c30ccde1b811acb065658d1c300ec8",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "workbench",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "full",
+            "navigation_assistance": "failure_guided"
+          },
+          "original_comparison_sha256": "d373f90936760756bd5e534566b13ced8f4b42ba078e2f0014819bc4e4b4a5c0"
+        },
+        {
+          "slot": "G-r2",
+          "arm": "G",
+          "repetition": 2,
+          "task_id": "73d1d360232447d8af8c032ea165feec",
+          "case_id": "sqlalchemy-continuum-sqlalchemy-2-a5",
+          "case_fingerprint": "342dcab39f94a24b4ba14359db85aa716058551b621cc38c36bf3b759e546e28",
+          "status": "submitted",
+          "result": "candidate_verified",
+          "final_evaluation": "completed",
+          "candidate_sha256": "e0c71530f69aaeeabb808d7d49a283e99229b6f26d188b05fc4a51b3a1773596",
+          "candidate_revision": "3a7b24c9f3e5ad0bfc5a18e87d2b3e03bd530826312d583883003c5175cbfd5b",
+          "stages": {
+            "old_original": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_original": {
+              "status": "failed",
+              "tests": {
+                "collected": 2,
+                "passed": 0,
+                "failed": 2,
+                "errors": 0,
+                "skipped": 0
+              }
+            },
+            "new_candidate": {
+              "status": "passed",
+              "tests": {
+                "collected": 2,
+                "passed": 2,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+              }
+            }
+          },
+          "usage": {
+            "calls": 29,
+            "reported_input_tokens": 1755427,
+            "reported_output_tokens": 274356,
+            "unknown_usage_calls": 0,
+            "provider_duration_seconds": 1206.045
+          },
+          "estimated_cost_usd": 0.855868,
+          "pricing": {
+            "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "pricing_checked_at": "2026-09-26",
+            "input_per_million_usd": "0.30",
+            "output_per_million_usd": "1.20"
+          },
+          "wall_seconds": 1869.673,
+          "original_report_sha256": "04d0f318e824eb2a4e2081e4c1df4ba91be48d100278e0558851cf117c33e571",
+          "original_task_sha256": "5332ddeb931ff1f77f89c0e309c532afc479b03ab71d471b9a4d15ac2d0245fd",
+          "original_subject_sha256": "59c780a539a08262f84265fcc0f8583cab2a2721d510d8cb73ec04ac8c3a0483",
+          "configuration": {
+            "generation": {
+              "model": "deepseek-flash",
+              "thinking_mode": "enabled",
+              "max_output_tokens": 131072,
+              "timeout_seconds": 1200,
+              "max_source_bytes": 1600000,
+              "max_request_bytes": 850000,
+              "endpoint": "https://api.deepseek.com/chat/completions"
+            },
+            "execution": {
+              "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+              "prepare_timeout": 600,
+              "test_timeout": 240
+            },
+            "max_calls": 30,
+            "workflow_profile": "simple_tools",
+            "source_policy": {
+              "mode": "focused",
+              "body_bytes": 96000,
+              "inventory_bytes": 64000
+            },
+            "context_assistance": "version_only",
+            "navigation_assistance": "baseline"
+          },
+          "original_comparison_sha256": "2aaa7c5a27a751b31b8a5762a876e6b0ed9c30b397168b9b6cd1e78f66756cc7"
+        }
+      ]
+    }
+  ]
+}

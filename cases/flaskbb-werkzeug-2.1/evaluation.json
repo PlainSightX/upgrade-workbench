@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "case_id": "flaskbb-werkzeug-2-1",
+  "split": "development",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_management_http.py"
+      ],
+      "nodeids": [
+        "feedback/test_management_http.py::test_ban_user",
+        "feedback/test_management_http.py::test_delete_group",
+        "feedback/test_management_http.py::test_delete_report",
+        "feedback/test_management_http.py::test_delete_user",
+        "feedback/test_management_http.py::test_mark_report_read",
+        "feedback/test_management_http.py::test_unban_user"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_management_regressions.py"
+      ],
+      "nodeids": [
+        "acceptance/test_management_regressions.py::test_batch_ban_user",
+        "acceptance/test_management_regressions.py::test_batch_delete_group",
+        "acceptance/test_management_regressions.py::test_batch_delete_report",
+        "acceptance/test_management_regressions.py::test_batch_delete_user",
+        "acceptance/test_management_regressions.py::test_batch_mark_report",
+        "acceptance/test_management_regressions.py::test_batch_unban_user",
+        "acceptance/test_management_regressions.py::test_empty_json_selection_changes_nothing",
+        "acceptance/test_management_regressions.py::test_explicit_mark_all_route_preserved",
+        "acceptance/test_management_regressions.py::test_malformed_json_stays_bad_request",
+        "acceptance/test_management_regressions.py::test_normal_user_cannot_manage",
+        "acceptance/test_management_regressions.py::test_self_batch_protection",
+        "acceptance/test_management_regressions.py::test_single_self_ban_protection",
+        "acceptance/test_management_regressions.py::test_standard_group_batch_protection",
+        "acceptance/test_management_regressions.py::test_unknown_single_objects_stay_not_found"
+      ],
+      "expected_count": 14
+    }
+  }
+}

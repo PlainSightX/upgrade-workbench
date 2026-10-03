@@ -1,0 +1,11 @@
+--- a/bumpversion/files.py
++++ b/bumpversion/files.py
+@@ -194,7 +194,7 @@
+     """
+     files = []
+     for filename_glob in glob.glob(file_cfg.glob, recursive=True):
+-        new_file_cfg = file_cfg.copy()
++        new_file_cfg = file_cfg
+         new_file_cfg.filename = filename_glob
+         files.append(ConfiguredFile(new_file_cfg, version_config))
+     return files

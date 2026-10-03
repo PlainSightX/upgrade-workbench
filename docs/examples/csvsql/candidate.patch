@@ -1,0 +1,37 @@
+--- a/csvkit/utilities/csvsql.py
++++ b/csvkit/utilities/csvsql.py
+@@ -191,7 +191,8 @@
+                 if self.connection:
+                     if self.args.before_insert:
+                         for query in self.args.before_insert.split(';'):
+-                            self.connection.execute(query)
++                            if query.strip():
++                                self.connection.exec_driver_sql(query)
+ 
+                     table.to_sql(
+                         self.connection,
+@@ -209,7 +210,8 @@
+ 
+                     if self.args.after_insert:
+                         for query in self.args.after_insert.split(';'):
+-                            self.connection.execute(query)
++                            if query.strip():
++                                self.connection.exec_driver_sql(query)
+ 
+                 # Output SQL statements
+                 else:
+@@ -237,12 +239,12 @@
+ 
+                 for query in queries:
+                     if query.strip():
+-                        rows = self.connection.execute(query)
++                        rows = self.connection.exec_driver_sql(query)
+ 
+                 # Output the result of the last query as CSV
+                 if rows.returns_rows:
+                     output = agate.csv.writer(self.output_file, **self.writer_kwargs)
+-                    output.writerow(rows._metadata.keys)
++                    output.writerow(rows.keys())
+                     for row in rows:
+                         output.writerow(row)
+ 

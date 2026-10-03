@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "case_id": "flaskbb-sqlalchemy-1-4-21",
+  "split": "development",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_upstream_forum_behavior.py"
+      ],
+      "nodeids": [
+        "feedback/test_upstream_forum_behavior.py::test_forum_update_last_post",
+        "feedback/test_upstream_forum_behavior.py::test_hiding_post_updates_counts",
+        "feedback/test_upstream_forum_behavior.py::test_hiding_topic_updates_counts",
+        "feedback/test_upstream_forum_behavior.py::test_post_save",
+        "feedback/test_upstream_forum_behavior.py::test_topic_save"
+      ],
+      "expected_count": 5
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_forum_persistence.py"
+      ],
+      "nodeids": [
+        "acceptance/test_forum_persistence.py::test_hidden_post_is_excluded_unless_query_explicitly_includes_it",
+        "acceptance/test_forum_persistence.py::test_hidden_topic_is_excluded_unless_query_explicitly_includes_it",
+        "acceptance/test_forum_persistence.py::test_relationship_setup_does_not_flush_incomplete_forum",
+        "acceptance/test_forum_persistence.py::test_second_post_updates_persisted_last_post_and_counts",
+        "acceptance/test_forum_persistence.py::test_topic_and_first_post_survive_session_reload"
+      ],
+      "expected_count": 5
+    }
+  }
+}

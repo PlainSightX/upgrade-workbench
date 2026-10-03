@@ -1,0 +1,1420 @@
+{
+  "repository": "https://github.com/flaskbb/flaskbb",
+  "revision": "be92f1dbc4747066f18456161976da6b59ed2249",
+  "license": "BSD-3-Clause",
+  "archive_url": "https://codeload.github.com/flaskbb/flaskbb/zip/be92f1dbc4747066f18456161976da6b59ed2249",
+  "archive_sha256": "a2a116cf9b695541bb7457e75d5f3318ba36a713e37e24fcbd43b3113ef1f76d",
+  "files": {
+    "source/.bumpversion.cfg": {
+      "upstream_path": ".bumpversion.cfg",
+      "sha256": "3c3e32a53e3efdf79b0b788c94fb75e2a1e7c44f0480e980de89b0030183c48f"
+    },
+    "source/.editorconfig": {
+      "upstream_path": ".editorconfig",
+      "sha256": "582dfb38bf74b9fe070318b53aaa8b6f7b85b82629e72dd5dba60cace00452de"
+    },
+    "source/.github/workflows/tests.yml": {
+      "upstream_path": ".github/workflows/tests.yml",
+      "sha256": "a7326f607b05883e36ce5c1f8e803996f5b405ae7fd2ab3bd7557ddacd56fa8a"
+    },
+    "source/.gitignore": {
+      "upstream_path": ".gitignore",
+      "sha256": "14d6db1c2e646c81b9a55bf2f9eb7c9a240a541a753219dfaaf2fb1a71270d5a"
+    },
+    "source/.gitmodules": {
+      "upstream_path": ".gitmodules",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/.tx/config": {
+      "upstream_path": ".tx/config",
+      "sha256": "8781edf07c1bd54877956ec4fe401cf199497d91dd74630dda098539100ccb18"
+    },
+    "source/AUTHORS": {
+      "upstream_path": "AUTHORS",
+      "sha256": "9c63b3ff96362f2fd14b2e23f59a852825b78232f1eb079feb39a40a57a64071"
+    },
+    "source/CHANGES": {
+      "upstream_path": "CHANGES",
+      "sha256": "39c1313ec281e61bf25de77fd77aa786efb94c21b8df8667e34211d8b4253451"
+    },
+    "source/CONTRIBUTING.md": {
+      "upstream_path": "CONTRIBUTING.md",
+      "sha256": "f72bb821ddb2bd4942709b2c2c72076c972526f0bb158cb0d71122a0e446a46d"
+    },
+    "source/LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "f9705e9cb6f0d253d425e1b9d28f7f05fc40f26a06b2a6f48dff38031672e3b9"
+    },
+    "source/MANIFEST.in": {
+      "upstream_path": "MANIFEST.in",
+      "sha256": "391fdfe7ddaae2ee9fe07815e916c152cce99ad969a1903d9842a27b1b11b49e"
+    },
+    "source/Makefile": {
+      "upstream_path": "Makefile",
+      "sha256": "1b1fad0ff0aba4c7aab8f9b9ed8bc30ecf4d167be96f1f5dae173330cc118d12"
+    },
+    "source/NOTICE": {
+      "upstream_path": "NOTICE",
+      "sha256": "85e0f51ed4eb7dbcc519e430884e026db90f64780af1739ae6ab5bd72d1640f0"
+    },
+    "source/README.md": {
+      "upstream_path": "README.md",
+      "sha256": "6da945dd622e10495e65ec03f5a0048dbe0cc8434ae76069f7e68bbe6834cd7b"
+    },
+    "source/babel.cfg": {
+      "upstream_path": "babel.cfg",
+      "sha256": "e88d4aa7aaf8865c2dd7e0f955e8bf92d503e3850f724a1b3ee810e698b92e39"
+    },
+    "source/celery_worker.py": {
+      "upstream_path": "celery_worker.py",
+      "sha256": "75b828bdee0ce4212759ee7a9075c0143155d6407dacf6a6ac659587541488aa"
+    },
+    "source/docs/.gitignore": {
+      "upstream_path": "docs/.gitignore",
+      "sha256": "fde6e46547307ef7e718427de6b7e3d65c6804d77a104f59bed39cec5b1b7c51"
+    },
+    "source/docs/Makefile": {
+      "upstream_path": "docs/Makefile",
+      "sha256": "5ac40d8d0804c016621346ceafa35aa27b4e695f67ef7bd13609ff4a2a7a7f2d"
+    },
+    "source/docs/_static/custom.css": {
+      "upstream_path": "docs/_static/custom.css",
+      "sha256": "deff6f8163956ca000f4a960bbdf0e13921d1e89e2000dcd3e77ed08a185d287"
+    },
+    "source/docs/_static/fontawesome-webfont.eot": {
+      "upstream_path": "docs/_static/fontawesome-webfont.eot",
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    "source/docs/_static/fontawesome-webfont.svg": {
+      "upstream_path": "docs/_static/fontawesome-webfont.svg",
+      "sha256": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4"
+    },
+    "source/docs/_static/fontawesome-webfont.ttf": {
+      "upstream_path": "docs/_static/fontawesome-webfont.ttf",
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    "source/docs/_static/logo-full.png": {
+      "upstream_path": "docs/_static/logo-full.png",
+      "sha256": "e3922304f4c04c8bfe905391f543e40ca77817eed0a910a2354ab0b809fd108b"
+    },
+    "source/docs/_static/vendor.css": {
+      "upstream_path": "docs/_static/vendor.css",
+      "sha256": "2a535d362e9e21f2351a28fa5e7bfde04ec04665f3647a2aca90476fbfd100b6"
+    },
+    "source/docs/_templates/layout.html": {
+      "upstream_path": "docs/_templates/layout.html",
+      "sha256": "775c5c4cbeffdd6b883fbc2f01bac4c15fe87119dad3b2cbf7deb685ed73f987"
+    },
+    "source/docs/_templates/relations.html": {
+      "upstream_path": "docs/_templates/relations.html",
+      "sha256": "84f3e4202088ed077579d4999cd6d13cbba87761728b2d341e4c1909f655110c"
+    },
+    "source/docs/_templates/searchbox.html": {
+      "upstream_path": "docs/_templates/searchbox.html",
+      "sha256": "889d1f1d676373eeab25561e68756c84d66f52e44891f963d9eb687b686e2fb2"
+    },
+    "source/docs/_templates/sidebarintro.html": {
+      "upstream_path": "docs/_templates/sidebarintro.html",
+      "sha256": "11f8eead05c0efe13fe484d6985c74061abe6b6fabb09dd63bda7f0446817238"
+    },
+    "source/docs/changelog.rst": {
+      "upstream_path": "docs/changelog.rst",
+      "sha256": "c892b6145b76029d132f303436c60d5e66d90cc8020a9fbe8c4ead7549e90be2"
+    },
+    "source/docs/cli.rst": {
+      "upstream_path": "docs/cli.rst",
+      "sha256": "ba54f85caaa3f7167d929dfca7a570c6cb80faf1eddcb2a26d9e5a5df366669a"
+    },
+    "source/docs/conf.py": {
+      "upstream_path": "docs/conf.py",
+      "sha256": "459e943916dc3cbef1ef0f779404881f350500e9088a3ab2fcebacd1a802d790"
+    },
+    "source/docs/contents.rst.inc": {
+      "upstream_path": "docs/contents.rst.inc",
+      "sha256": "9ab2aa7add1589aed28d2917c85091c247496db5ab18c737cbf792a111dad8ab"
+    },
+    "source/docs/development/api/accountmanagement.rst": {
+      "upstream_path": "docs/development/api/accountmanagement.rst",
+      "sha256": "72b8b657287f589f1757cac21bb0ef92ada5f56dcce55681112bbd17f368649d"
+    },
+    "source/docs/development/api/authentication.rst": {
+      "upstream_path": "docs/development/api/authentication.rst",
+      "sha256": "2941d56a5df94bcff67aea03c867faa9d5315792d0f1d0edd9dece8c96138627"
+    },
+    "source/docs/development/api/changesets.rst": {
+      "upstream_path": "docs/development/api/changesets.rst",
+      "sha256": "e0e38fe35f17be65c389f48147fe5954169eb4011b03b34a3f24fbad99ce7618"
+    },
+    "source/docs/development/api/coreexceptions.rst": {
+      "upstream_path": "docs/development/api/coreexceptions.rst",
+      "sha256": "a918584a51cce36e2895c6c65db7f76bb69e3f5afba7ddefe6992c7b7c7c8198"
+    },
+    "source/docs/development/api/deprecations.rst": {
+      "upstream_path": "docs/development/api/deprecations.rst",
+      "sha256": "960749d9bc5476ad4d4f6caebd9bbea7d27c352c0d4c6235996231730e30890c"
+    },
+    "source/docs/development/api/display.rst": {
+      "upstream_path": "docs/development/api/display.rst",
+      "sha256": "04a677e49013fc85605d8c4b96873e672ea4fab51600539ca8bc7618534a5e6a"
+    },
+    "source/docs/development/api/index.rst": {
+      "upstream_path": "docs/development/api/index.rst",
+      "sha256": "cd4c730a329ccd4a47284f40456e677346c3e19875a43db678d1249e89904869"
+    },
+    "source/docs/development/api/models.rst": {
+      "upstream_path": "docs/development/api/models.rst",
+      "sha256": "691f48ce1b6a3037032157e3b5da313dfcc342c1ed66f07de30aa3f0b1398aeb"
+    },
+    "source/docs/development/api/registration.rst": {
+      "upstream_path": "docs/development/api/registration.rst",
+      "sha256": "56c36dcaaeddd5f72964009dcf7582dc5bc8647a14df365959ee4e8aa265f9dc"
+    },
+    "source/docs/development/api/tokens.rst": {
+      "upstream_path": "docs/development/api/tokens.rst",
+      "sha256": "706dc07fe31f34b27395a9aa11d7a4fc303debde77232b36edfbdb3580bb0c5d"
+    },
+    "source/docs/development/api/userprofiles.rst": {
+      "upstream_path": "docs/development/api/userprofiles.rst",
+      "sha256": "39c500cdf77551c537fa129b18c326c7c5f821d363b3ccd92d3b7b0d9100dea2"
+    },
+    "source/docs/development/hooks/cli.rst": {
+      "upstream_path": "docs/development/hooks/cli.rst",
+      "sha256": "ca762573ba4b01ad9017c9ce40f172cdd47492e28c344c6d9b428247be67ce11"
+    },
+    "source/docs/development/hooks/event.rst": {
+      "upstream_path": "docs/development/hooks/event.rst",
+      "sha256": "6e0757eb8f4f97f5a460e8a4f5cd4aa4caa700145a42e96b638cee88a88c6236"
+    },
+    "source/docs/development/hooks/forms.rst": {
+      "upstream_path": "docs/development/hooks/forms.rst",
+      "sha256": "dc32a1bdfe893c2744d712d7dd3a2f7f3136e600656d90145507d3235cebb4fb"
+    },
+    "source/docs/development/hooks/index.rst": {
+      "upstream_path": "docs/development/hooks/index.rst",
+      "sha256": "2d89e9190c8af24947787b234b868b97bcd4ee60ce9219984da8712941b8a1b8"
+    },
+    "source/docs/development/hooks/startup.rst": {
+      "upstream_path": "docs/development/hooks/startup.rst",
+      "sha256": "0f0c19bc14b2b4b1fb3c53a4b04ed428ef420793cc79df99e65f9799f28dc89e"
+    },
+    "source/docs/development/hooks/template.rst": {
+      "upstream_path": "docs/development/hooks/template.rst",
+      "sha256": "f9d053ecdd96fb90eb9e9f5ec138bffc8919d08882841f92d6eb6e52a04c5b35"
+    },
+    "source/docs/development/plugin/developing.rst": {
+      "upstream_path": "docs/development/plugin/developing.rst",
+      "sha256": "39f2ec83e89943a7a994f69124554558e8e1c52320ab016449b0c04a75ca9f9c"
+    },
+    "source/docs/development/plugin/hooks.rst": {
+      "upstream_path": "docs/development/plugin/hooks.rst",
+      "sha256": "ea95d75a0791b8576acc0e08400b6af6fdc01dedfad2c2a141b0a0f91c9c8ce6"
+    },
+    "source/docs/development/plugin/index.rst": {
+      "upstream_path": "docs/development/plugin/index.rst",
+      "sha256": "e21060bee44b083726ab8ee50617e1c25b674d47871bde86cff749462a92b90d"
+    },
+    "source/docs/development/plugin/manager.rst": {
+      "upstream_path": "docs/development/plugin/manager.rst",
+      "sha256": "830f148f7baa86b1685aca5d85ee64e94393de02a1467cc9f8629afa51ea098d"
+    },
+    "source/docs/development/settings.rst": {
+      "upstream_path": "docs/development/settings.rst",
+      "sha256": "5c2cbb78d9a6fbb2ebc3d0286be47623a87334058c40b21e1fc6ef512a740b25"
+    },
+    "source/docs/development/theming.rst": {
+      "upstream_path": "docs/development/theming.rst",
+      "sha256": "ab60c23913319590499bcb875d0012d43eb2da0a1b8e2bb83eb4e3168f0ad6a4"
+    },
+    "source/docs/faq.rst": {
+      "upstream_path": "docs/faq.rst",
+      "sha256": "fd79aae66ca1d735f9dcd67a6b92aa7b1db2b4cc29649a377638761580acb8ac"
+    },
+    "source/docs/index.rst": {
+      "upstream_path": "docs/index.rst",
+      "sha256": "2094b0e9ba06c33e63051a6782def1d090823f892f7c930c715902fe3d8e1c3a"
+    },
+    "source/docs/installation.rst": {
+      "upstream_path": "docs/installation.rst",
+      "sha256": "9ecfc32393675d05b98c1b6a585dadb60acdf857f8e6d52f6b8216b5634b20cb"
+    },
+    "source/docs/license.rst": {
+      "upstream_path": "docs/license.rst",
+      "sha256": "506a88a1f9284732f1c45f4751ca4f338a9502217e1eab4fb571caebd5975bd9"
+    },
+    "source/docs/make.bat": {
+      "upstream_path": "docs/make.bat",
+      "sha256": "eeb5dcfe74a66d58b5d1ae8790158df409265f421cebabc32c6d69d3291ee69e"
+    },
+    "source/docs/plugins/index.rst": {
+      "upstream_path": "docs/plugins/index.rst",
+      "sha256": "d6b25ae0d977d0651b4b587f5eed035eb7f6383fab941a97d318a77deefb5b90"
+    },
+    "source/docs/releases.rst": {
+      "upstream_path": "docs/releases.rst",
+      "sha256": "01e642067c705680a6f5b4a740543faf9f37fb48a3de93ca9c66e2cd80c4861c"
+    },
+    "source/flaskbb/__init__.py": {
+      "upstream_path": "flaskbb/__init__.py",
+      "sha256": "430d5d2f2f44c4472392936ed4967001f189a336a077311f1f3cd0aa08904a79"
+    },
+    "source/flaskbb/app.py": {
+      "upstream_path": "flaskbb/app.py",
+      "sha256": "c73cc8e661137e32b9a190c156a3aee2501bdc45aaeadeeeb79ebb574f76bf8b"
+    },
+    "source/flaskbb/auth/__init__.py": {
+      "upstream_path": "flaskbb/auth/__init__.py",
+      "sha256": "85e4666df472e50125c9543266b1821a1827c5dce5a659d2a5b5f98c6ca63439"
+    },
+    "source/flaskbb/auth/forms.py": {
+      "upstream_path": "flaskbb/auth/forms.py",
+      "sha256": "ca0d49f3db36bb1148c7887e2f5e8be50d160b4dfa3bb9c52493043177ea89e7"
+    },
+    "source/flaskbb/auth/plugins.py": {
+      "upstream_path": "flaskbb/auth/plugins.py",
+      "sha256": "d41434a31ab309d536daaf6b123a1a288c9d9fce6ba6bf6118c40c19971f57ed"
+    },
+    "source/flaskbb/auth/services/__init__.py": {
+      "upstream_path": "flaskbb/auth/services/__init__.py",
+      "sha256": "4c81937c7e70438793c69a7d93ded8ba6dbf93621a3e193584935fba24dcab6b"
+    },
+    "source/flaskbb/auth/services/activation.py": {
+      "upstream_path": "flaskbb/auth/services/activation.py",
+      "sha256": "1edd4770b97114537b3682e0ef7a8d00e9714fcb24b916a15cdaeb852e3c4dcc"
+    },
+    "source/flaskbb/auth/services/authentication.py": {
+      "upstream_path": "flaskbb/auth/services/authentication.py",
+      "sha256": "2f8203643940367b48d633488f2b52e6bbe4606a339be9824c5d3684d140784a"
+    },
+    "source/flaskbb/auth/services/factories.py": {
+      "upstream_path": "flaskbb/auth/services/factories.py",
+      "sha256": "2b7a777506f5b50aab5e78702ddbed2e9a57fd2c9f7687a05ea3bd35dbb156e8"
+    },
+    "source/flaskbb/auth/services/password.py": {
+      "upstream_path": "flaskbb/auth/services/password.py",
+      "sha256": "929f458e63f1e75c64c084d5c4f410bef792d00ebe2bf98c30fa7d4f99ef8c4c"
+    },
+    "source/flaskbb/auth/services/reauthentication.py": {
+      "upstream_path": "flaskbb/auth/services/reauthentication.py",
+      "sha256": "f508aa579fcc7f715e79f4b4e75d48ea0c3007d33f381bef047de70ea9c3e85f"
+    },
+    "source/flaskbb/auth/services/registration.py": {
+      "upstream_path": "flaskbb/auth/services/registration.py",
+      "sha256": "6e4562b982e35f024b9de95f3c54e1639d6d7eae253e71621f807b8901871a5f"
+    },
+    "source/flaskbb/auth/views.py": {
+      "upstream_path": "flaskbb/auth/views.py",
+      "sha256": "cc2f2e7a12fb013e0c25475d20304068911bf0d91113b0ea3529980d87b76d75"
+    },
+    "source/flaskbb/cli/__init__.py": {
+      "upstream_path": "flaskbb/cli/__init__.py",
+      "sha256": "10fb6edc1c16501987160094e4f0b43ae4f6c3700acd1bcda0b25c7bd333650a"
+    },
+    "source/flaskbb/cli/main.py": {
+      "upstream_path": "flaskbb/cli/main.py",
+      "sha256": "a2b0afc2efbdbfd7bd2fbcf6ba446ab5bb573465aedbb3449dcd52debb390065"
+    },
+    "source/flaskbb/cli/plugins.py": {
+      "upstream_path": "flaskbb/cli/plugins.py",
+      "sha256": "4313d351a8bf9f742f9bf0dbebf529366f18519a24deaa435c0d2976c4f6bc6b"
+    },
+    "source/flaskbb/cli/themes.py": {
+      "upstream_path": "flaskbb/cli/themes.py",
+      "sha256": "0db47752bd900c793bd3822cf67bf0935405e66526deca593b1190d62f6fabc3"
+    },
+    "source/flaskbb/cli/translations.py": {
+      "upstream_path": "flaskbb/cli/translations.py",
+      "sha256": "e58d3ad3c596b09562f8ba22ecf7b48949247b7e04db9f9358f68fce39ae542b"
+    },
+    "source/flaskbb/cli/users.py": {
+      "upstream_path": "flaskbb/cli/users.py",
+      "sha256": "9d3e847285acfca9b3186708e3826d9338f3fbf06bd1e870d5ce917fb75117cb"
+    },
+    "source/flaskbb/cli/utils.py": {
+      "upstream_path": "flaskbb/cli/utils.py",
+      "sha256": "56c34889e9b8dc0ff834b2bdb75d336f7f7201d0d117a74799102cfdcad3c2b8"
+    },
+    "source/flaskbb/configs/__init__.py": {
+      "upstream_path": "flaskbb/configs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/configs/config.cfg.template": {
+      "upstream_path": "flaskbb/configs/config.cfg.template",
+      "sha256": "113cfcd6b7d4e3678bd7595ae21131ddb27390c473fb05d4feb56b8ad953cc41"
+    },
+    "source/flaskbb/configs/default.py": {
+      "upstream_path": "flaskbb/configs/default.py",
+      "sha256": "a2ff010abb6fcb7ddeef33e5a5838d3bcf3c1821f6cf847b6b6c50f37c461795"
+    },
+    "source/flaskbb/configs/testing.py": {
+      "upstream_path": "flaskbb/configs/testing.py",
+      "sha256": "273537977ba6c1436baaec773919c121cbd8134f3a25c4356f457a33d8620e69"
+    },
+    "source/flaskbb/core/__init__.py": {
+      "upstream_path": "flaskbb/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/core/auth/__init__.py": {
+      "upstream_path": "flaskbb/core/auth/__init__.py",
+      "sha256": "beeac9a905ab3e64cb2ab09099424701adcb89b7dc82c0afe94fabfee51fb14f"
+    },
+    "source/flaskbb/core/auth/activation.py": {
+      "upstream_path": "flaskbb/core/auth/activation.py",
+      "sha256": "c54d291455025412832bcacd3bb1cef9e9649a07cd37e1bedccf18fc4e4c6e60"
+    },
+    "source/flaskbb/core/auth/authentication.py": {
+      "upstream_path": "flaskbb/core/auth/authentication.py",
+      "sha256": "e1d819cd4813a48e22790ecfacc3ef1203717168c53eb3fea328d7f6943de3b3"
+    },
+    "source/flaskbb/core/auth/password.py": {
+      "upstream_path": "flaskbb/core/auth/password.py",
+      "sha256": "0b681b6a0982b17869fd41f1d9e9d7e6dda66e9e53bcb805b3fe7c28d07e941d"
+    },
+    "source/flaskbb/core/auth/registration.py": {
+      "upstream_path": "flaskbb/core/auth/registration.py",
+      "sha256": "9f1b10b779f1b93374f8d4a5165a910cb62dfbe9c7f9a6731517a81dc51fa59b"
+    },
+    "source/flaskbb/core/changesets.py": {
+      "upstream_path": "flaskbb/core/changesets.py",
+      "sha256": "fbe5c4da6ed1efefdd3788c6d333bc5c6c3f95713c95380addc25241a956eafe"
+    },
+    "source/flaskbb/core/exceptions.py": {
+      "upstream_path": "flaskbb/core/exceptions.py",
+      "sha256": "c596a4f6d30808442573413713dbcf0021d957c5685af0cebe27461f341b210a"
+    },
+    "source/flaskbb/core/tokens.py": {
+      "upstream_path": "flaskbb/core/tokens.py",
+      "sha256": "4951b5711af7a5771d9beb5cb4dbc6204d5c8c23b460ad85b5909adff9817a79"
+    },
+    "source/flaskbb/core/user/__init__.py": {
+      "upstream_path": "flaskbb/core/user/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/core/user/update.py": {
+      "upstream_path": "flaskbb/core/user/update.py",
+      "sha256": "2aa05dd4c2f2ff8c313e97c6644b5c4ad76a5e01d24e255af90278fab1f7907e"
+    },
+    "source/flaskbb/deprecation.py": {
+      "upstream_path": "flaskbb/deprecation.py",
+      "sha256": "aff4692813b78f689da657cbc02f083e98b647d61348312cbb5dd4161c73497e"
+    },
+    "source/flaskbb/display/__init__.py": {
+      "upstream_path": "flaskbb/display/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/display/navigation.py": {
+      "upstream_path": "flaskbb/display/navigation.py",
+      "sha256": "562a42a86afa6174d16009527fc5823857d4645d7b81607feab8fda9ff9954f9"
+    },
+    "source/flaskbb/email.py": {
+      "upstream_path": "flaskbb/email.py",
+      "sha256": "51b244620273614ba283d9122a80652d8980b03c9073ae11a76fc193d941b1da"
+    },
+    "source/flaskbb/exceptions.py": {
+      "upstream_path": "flaskbb/exceptions.py",
+      "sha256": "ef4cf09ffd41a9c50f8af7a79638ce27971d2457918c68d3090f2861f22a7dba"
+    },
+    "source/flaskbb/extensions.py": {
+      "upstream_path": "flaskbb/extensions.py",
+      "sha256": "410c766b1f284d73a1ab2908f564c2c7df6eee4aec16f4c843ad0ffdd169a95a"
+    },
+    "source/flaskbb/fixtures/__init__.py": {
+      "upstream_path": "flaskbb/fixtures/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/fixtures/groups.py": {
+      "upstream_path": "flaskbb/fixtures/groups.py",
+      "sha256": "8b69925f40c8b016d48c5fe17bc52b0c305f93ec5e4155bc516d02b4450d32d0"
+    },
+    "source/flaskbb/fixtures/settings.py": {
+      "upstream_path": "flaskbb/fixtures/settings.py",
+      "sha256": "b06307365afe954a70d232f49f2f12b5eb9c9ff3bf10f869d031ea52606adff2"
+    },
+    "source/flaskbb/forum/__init__.py": {
+      "upstream_path": "flaskbb/forum/__init__.py",
+      "sha256": "bd4ed08864b2fc026e245982954a1ca8827e2ed92effc0b6e1953c2fa7cb251d"
+    },
+    "source/flaskbb/forum/forms.py": {
+      "upstream_path": "flaskbb/forum/forms.py",
+      "sha256": "dd57b133a71ee2e12ef74e7cf7c551f49c7b470abeff700f2807617751784408"
+    },
+    "source/flaskbb/forum/locals.py": {
+      "upstream_path": "flaskbb/forum/locals.py",
+      "sha256": "287fdc5c7549f5e25e629f4387e80229522ca78493fdff2bd345a0a4f698d8ed"
+    },
+    "source/flaskbb/forum/models.py": {
+      "upstream_path": "flaskbb/forum/models.py",
+      "sha256": "a44579668539bc7f6abb234a4b62f8e9a20c6cf357f9c1326870515ad3ebd1ea"
+    },
+    "source/flaskbb/forum/utils.py": {
+      "upstream_path": "flaskbb/forum/utils.py",
+      "sha256": "f766298f889b20712101a503d2864fc7854483eaef2ffa76b0071721887fb856"
+    },
+    "source/flaskbb/forum/views.py": {
+      "upstream_path": "flaskbb/forum/views.py",
+      "sha256": "9276118ca8f7b1690666ed12e6fd7cdb9442f3a8de33595bae348e1cff4cc5d5"
+    },
+    "source/flaskbb/management/__init__.py": {
+      "upstream_path": "flaskbb/management/__init__.py",
+      "sha256": "9c8b31ccf101118be9b49a8c74e506e6ad685a483949642dbd9f820313d1c685"
+    },
+    "source/flaskbb/management/forms.py": {
+      "upstream_path": "flaskbb/management/forms.py",
+      "sha256": "4d6c8b69682a87f2f409af2116c1321adaddcad4ab15b26b974df21de7bc16e9"
+    },
+    "source/flaskbb/management/models.py": {
+      "upstream_path": "flaskbb/management/models.py",
+      "sha256": "7cc2e15fb32b87fef2b72392cb431707e1249e83b587b0c178649775f80c51ac"
+    },
+    "source/flaskbb/management/plugins.py": {
+      "upstream_path": "flaskbb/management/plugins.py",
+      "sha256": "16fa2647c5133d7fa232ee17c78888168bd33caf6a8b55cca75990ee0e9d263c"
+    },
+    "source/flaskbb/management/views.py": {
+      "upstream_path": "flaskbb/management/views.py",
+      "sha256": "e81abdcc4fba17b92fc3eb41320c20696124a9b51c36610df7549adc6313fd94"
+    },
+    "source/flaskbb/markup.py": {
+      "upstream_path": "flaskbb/markup.py",
+      "sha256": "5410808f9c7401b149ac73f7e9ba8c82f3f6cfecb91a4d54faeaac4718f5ed34"
+    },
+    "source/flaskbb/migrations/201501082314_8ad96e49dc6_init.py": {
+      "upstream_path": "flaskbb/migrations/201501082314_8ad96e49dc6_init.py",
+      "sha256": "1d366bed21cb98c1c23e5fc61e60f1ad7fa1cc8f60797f10ff00fd7d3de61eca"
+    },
+    "source/flaskbb/migrations/201503222157_514ca0a3282c_private_messages.py": {
+      "upstream_path": "flaskbb/migrations/201503222157_514ca0a3282c_private_messages.py",
+      "sha256": "8e2e7b9b07d18ab9e6e24741f9cce05d44bae3a4fa2bb95d091cfa10e1329686"
+    },
+    "source/flaskbb/migrations/201504082225_127be3fb000_added_m2m_forumgroups_table.py": {
+      "upstream_path": "flaskbb/migrations/201504082225_127be3fb000_added_m2m_forumgroups_table.py",
+      "sha256": "d441abe22022e0a770e6abb197238053b678ce040ce5127e904e07a29b868c2d"
+    },
+    "source/flaskbb/migrations/201606061345_221d918aa9f0_add_user_authentication_infos.py": {
+      "upstream_path": "flaskbb/migrations/201606061345_221d918aa9f0_add_user_authentication_infos.py",
+      "sha256": "7c508bdf8366d9a05e70ac289c04dc92259f0ef643b42a0fbed853e276591022"
+    },
+    "source/flaskbb/migrations/201606210939_d9530a529b3f_add_timezone_awareness_for_datetime.py": {
+      "upstream_path": "flaskbb/migrations/201606210939_d9530a529b3f_add_timezone_awareness_for_datetime.py",
+      "sha256": "a84817e6c16e619669ca153ade1f1a8b2631afd6b590385ee3a950ae084ece28"
+    },
+    "source/flaskbb/migrations/201611190919_d87cea4e995d_remove_timezone_info_from_birthday_field.py": {
+      "upstream_path": "flaskbb/migrations/201611190919_d87cea4e995d_remove_timezone_info_from_birthday_field.py",
+      "sha256": "5f079fc4a907347826b358dec250371eed1a7a07de1373ea4c4f976aaaff31ce"
+    },
+    "source/flaskbb/migrations/201705041144_933bd7d807c4_add_more_non_nullables.py": {
+      "upstream_path": "flaskbb/migrations/201705041144_933bd7d807c4_add_more_non_nullables.py",
+      "sha256": "6de668cc9dd7a598286a243c8dffa792befcc2d1b2a2cca245f0eb2a6e5f5c35"
+    },
+    "source/flaskbb/migrations/201706300917_881dd22cab94_add_date_modified_to_conversations.py": {
+      "upstream_path": "flaskbb/migrations/201706300917_881dd22cab94_add_date_modified_to_conversations.py",
+      "sha256": "6b85939a7ec7f411d53aa0b396f6dfe9f76fdaedf226cee3752e202f8e166427"
+    },
+    "source/flaskbb/migrations/201709041519_d0ffadc3ea48_add_hidden_columns.py": {
+      "upstream_path": "flaskbb/migrations/201709041519_d0ffadc3ea48_add_hidden_columns.py",
+      "sha256": "08da01402d2945666d66b1c04d185b75b5f24be5fad076f26b4964c46c1d561f"
+    },
+    "source/flaskbb/migrations/201711180953_7c3fcf8a3335_add_plugin_tables.py": {
+      "upstream_path": "flaskbb/migrations/201711180953_7c3fcf8a3335_add_plugin_tables.py",
+      "sha256": "1e5c2eb1f97b7fb281e13a9075137d83040a164d779f68f6842a92cd1b4ca2c6"
+    },
+    "source/flaskbb/migrations/201802021027_af3f5579c84d_add_cascades.py": {
+      "upstream_path": "flaskbb/migrations/201802021027_af3f5579c84d_add_cascades.py",
+      "sha256": "a92008ecebd066c372c3c8ff83c62b85d4ade03ec0465f44da752aa89952ba44"
+    },
+    "source/flaskbb/migrations/201802282131_232e68a03aa2_change_emoji_shortcodes_to_characters.py": {
+      "upstream_path": "flaskbb/migrations/201802282131_232e68a03aa2_change_emoji_shortcodes_to_characters.py",
+      "sha256": "f0702a5f12f4c3ca4aa5f5a1d6f6b620ad6aab7d07083a7e56b810ac882fcd9d"
+    },
+    "source/flaskbb/migrations/201803012138_5945d8081a95_remove_conversations.py": {
+      "upstream_path": "flaskbb/migrations/201803012138_5945d8081a95_remove_conversations.py",
+      "sha256": "9e0fc7587b0e3bd7371eab532f2bc68c7cbc1135158d516c59c16674494d382b"
+    },
+    "source/flaskbb/migrations/__init__.py": {
+      "upstream_path": "flaskbb/migrations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/migrations/script.py.mako": {
+      "upstream_path": "flaskbb/migrations/script.py.mako",
+      "sha256": "f3fc6003e826fce85e8673bb0a22228d68279b4d1996ccc41ed207ac0605265d"
+    },
+    "source/flaskbb/plugins/__init__.py": {
+      "upstream_path": "flaskbb/plugins/__init__.py",
+      "sha256": "404cf3d684acbccb6024c3076e0b4150977310673d8cb5ccac0bc9d8345bfb33"
+    },
+    "source/flaskbb/plugins/manager.py": {
+      "upstream_path": "flaskbb/plugins/manager.py",
+      "sha256": "afeb8d6c20142cf0e15564379c671e91bba7a0b9f7dcebc4de3bf47e292717b3"
+    },
+    "source/flaskbb/plugins/models.py": {
+      "upstream_path": "flaskbb/plugins/models.py",
+      "sha256": "66ca7dffe9d87e9e761179b20b04889d2b5d5c35a31aa532b20fd9d6b24fa613"
+    },
+    "source/flaskbb/plugins/spec.py": {
+      "upstream_path": "flaskbb/plugins/spec.py",
+      "sha256": "b77d938c9569447aaca7e19c2a2b930c1cd0c7c7877aeae443e5864a9c9c6757"
+    },
+    "source/flaskbb/plugins/utils.py": {
+      "upstream_path": "flaskbb/plugins/utils.py",
+      "sha256": "cfb60a9963beed618d0118386e483d6383f49be6de31db671b03643bde76a265"
+    },
+    "source/flaskbb/static/app.css": {
+      "upstream_path": "flaskbb/static/app.css",
+      "sha256": "f88f9217e49f2aa787e4e1d92c88c28aa8504b7f2c316b5ea4ecd62439922aa9"
+    },
+    "source/flaskbb/static/app.css.map": {
+      "upstream_path": "flaskbb/static/app.css.map",
+      "sha256": "5dc6c5525fe3e8cc2cf9158647654b2c27256a40a70b5a135a062f44b4b9df4a"
+    },
+    "source/flaskbb/static/app.js": {
+      "upstream_path": "flaskbb/static/app.js",
+      "sha256": "26e60058165cc81103bfb9124199529f627e10f9c6cb6150bb462e560ca1407c"
+    },
+    "source/flaskbb/static/app.js.map": {
+      "upstream_path": "flaskbb/static/app.js.map",
+      "sha256": "4951c6ed32727da4953a27d8e0c3d521ccc771ae7fab80a7b13621fdba481908"
+    },
+    "source/flaskbb/static/avatar.svg": {
+      "upstream_path": "flaskbb/static/avatar.svg",
+      "sha256": "ef7d6b4ffc45540e71b7fd59618052f2686083080cea346e209f02e46e1b7e13"
+    },
+    "source/flaskbb/static/avatar100x100.png": {
+      "upstream_path": "flaskbb/static/avatar100x100.png",
+      "sha256": "9e0ce0f03f9d60fe44f4c4219fc5ee99a8eb0dd671076a5412261873ddf74dfa"
+    },
+    "source/flaskbb/static/avatar150x150.png": {
+      "upstream_path": "flaskbb/static/avatar150x150.png",
+      "sha256": "3adb627cbe2728a805b1d45663b867c4d33fa8f90cdaf3bf8542b51748c90829"
+    },
+    "source/flaskbb/static/avatar400x400.png": {
+      "upstream_path": "flaskbb/static/avatar400x400.png",
+      "sha256": "d59a4b3f90e78283d7872398ca64318710b2c1accb1fab6a750df71082e97453"
+    },
+    "source/flaskbb/static/avatar80x80.png": {
+      "upstream_path": "flaskbb/static/avatar80x80.png",
+      "sha256": "01cd3584a670536dfbad0ecc83462fe6ffe29c2207e6ac44163ffb5d4f368dd8"
+    },
+    "source/flaskbb/static/favicon.ico": {
+      "upstream_path": "flaskbb/static/favicon.ico",
+      "sha256": "cb17da3702317a4328ba6c5bb424211d9f119c2d47426919ef29b189df97f895"
+    },
+    "source/flaskbb/static/fontawesome-webfont.eot": {
+      "upstream_path": "flaskbb/static/fontawesome-webfont.eot",
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    "source/flaskbb/static/fontawesome-webfont.svg": {
+      "upstream_path": "flaskbb/static/fontawesome-webfont.svg",
+      "sha256": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4"
+    },
+    "source/flaskbb/static/fontawesome-webfont.ttf": {
+      "upstream_path": "flaskbb/static/fontawesome-webfont.ttf",
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    "source/flaskbb/static/fontawesome-webfont.woff": {
+      "upstream_path": "flaskbb/static/fontawesome-webfont.woff",
+      "sha256": "ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07"
+    },
+    "source/flaskbb/static/fontawesome-webfont.woff2": {
+      "upstream_path": "flaskbb/static/fontawesome-webfont.woff2",
+      "sha256": "2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe"
+    },
+    "source/flaskbb/static/glyphicons-halflings-regular.eot": {
+      "upstream_path": "flaskbb/static/glyphicons-halflings-regular.eot",
+      "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+    },
+    "source/flaskbb/static/glyphicons-halflings-regular.svg": {
+      "upstream_path": "flaskbb/static/glyphicons-halflings-regular.svg",
+      "sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5"
+    },
+    "source/flaskbb/static/glyphicons-halflings-regular.ttf": {
+      "upstream_path": "flaskbb/static/glyphicons-halflings-regular.ttf",
+      "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456"
+    },
+    "source/flaskbb/static/glyphicons-halflings-regular.woff": {
+      "upstream_path": "flaskbb/static/glyphicons-halflings-regular.woff",
+      "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742"
+    },
+    "source/flaskbb/static/glyphicons-halflings-regular.woff2": {
+      "upstream_path": "flaskbb/static/glyphicons-halflings-regular.woff2",
+      "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c"
+    },
+    "source/flaskbb/static/vendors.js": {
+      "upstream_path": "flaskbb/static/vendors.js",
+      "sha256": "5d7a76066420c92619131d08e1d41a6283a3ebc7702364d8122574cc73fa2862"
+    },
+    "source/flaskbb/static/vendors.js.LICENSE.txt": {
+      "upstream_path": "flaskbb/static/vendors.js.LICENSE.txt",
+      "sha256": "285b390abb8da6e41f95e7ade77952904bc117b7d0a95289e2baf3c0db2c9a97"
+    },
+    "source/flaskbb/static/vendors.js.map": {
+      "upstream_path": "flaskbb/static/vendors.js.map",
+      "sha256": "b47e0dc38cb80d44872ca097c2480b1abac063cabc567028a4602a2f66094ce7"
+    },
+    "source/flaskbb/templates/auth/account_activation.html": {
+      "upstream_path": "flaskbb/templates/auth/account_activation.html",
+      "sha256": "e67b7353e6469ce4a164a2818313c801fe26b1e45bad0868f80be4c47416be1f"
+    },
+    "source/flaskbb/templates/auth/forgot_password.html": {
+      "upstream_path": "flaskbb/templates/auth/forgot_password.html",
+      "sha256": "d2a81e350c84e797a4fad88337989faa8b9dcbbe1c9c295ebabcfd3cac899593"
+    },
+    "source/flaskbb/templates/auth/login.html": {
+      "upstream_path": "flaskbb/templates/auth/login.html",
+      "sha256": "75d589418e85173668948ef40cf2bf6d28d472b8060c5eb432f6db99b04cfda7"
+    },
+    "source/flaskbb/templates/auth/reauth.html": {
+      "upstream_path": "flaskbb/templates/auth/reauth.html",
+      "sha256": "976743258387924a049ee429d94ae290db4a3104d01ae5b8a41c96e385c409ca"
+    },
+    "source/flaskbb/templates/auth/register.html": {
+      "upstream_path": "flaskbb/templates/auth/register.html",
+      "sha256": "37fd109fa7f92164f4c72ad1e51d8d82275bebdf8cee0ab7ad601766c8e36772"
+    },
+    "source/flaskbb/templates/auth/request_account_activation.html": {
+      "upstream_path": "flaskbb/templates/auth/request_account_activation.html",
+      "sha256": "4ef4c961f40373f00317505add86ccbc715edcf74b8f4cfc7ca2a493f6b35e7a"
+    },
+    "source/flaskbb/templates/auth/reset_password.html": {
+      "upstream_path": "flaskbb/templates/auth/reset_password.html",
+      "sha256": "842f3af686eb82f80db536a4eb91579a393c49c5991af5c704d95faca64b0b16"
+    },
+    "source/flaskbb/templates/confirm_dialog.html": {
+      "upstream_path": "flaskbb/templates/confirm_dialog.html",
+      "sha256": "2607a19079c051dfb8c4dd6888b37feb01c9adc99779d39d5230bb499552eb45"
+    },
+    "source/flaskbb/templates/editor_help.html": {
+      "upstream_path": "flaskbb/templates/editor_help.html",
+      "sha256": "3bc26ce5ad4b9e7001068f1c1ac53f3a13e4ac5e0cf5eb635b17eec948b7c05e"
+    },
+    "source/flaskbb/templates/email/activate_account.html": {
+      "upstream_path": "flaskbb/templates/email/activate_account.html",
+      "sha256": "1431b8692f2a9b6630079719bbf2ff5a0cb1acbba8c8b7523606025d29114418"
+    },
+    "source/flaskbb/templates/email/activate_account.txt": {
+      "upstream_path": "flaskbb/templates/email/activate_account.txt",
+      "sha256": "4a375ca9ef7f2fdc9021e6c4657d04cd40d926d47c99b2841c7053942248328f"
+    },
+    "source/flaskbb/templates/email/reset_password.html": {
+      "upstream_path": "flaskbb/templates/email/reset_password.html",
+      "sha256": "94a0e24e3525c716ddbe243175f726b6bde913afd19245c66dea33dfb588d215"
+    },
+    "source/flaskbb/templates/email/reset_password.txt": {
+      "upstream_path": "flaskbb/templates/email/reset_password.txt",
+      "sha256": "c08b9930af94c5aa4a4fe00e335ebf4cc83b4650fa482717725ef9e6f458b81a"
+    },
+    "source/flaskbb/templates/errors/forbidden_page.html": {
+      "upstream_path": "flaskbb/templates/errors/forbidden_page.html",
+      "sha256": "ab7224fbec0d5203374913f0c503712908019910407f051f504edc45e5c9e155"
+    },
+    "source/flaskbb/templates/errors/page_not_found.html": {
+      "upstream_path": "flaskbb/templates/errors/page_not_found.html",
+      "sha256": "77f3d65d5699e80669be42e554724c1a402f0fa4b0e0d0828f3c185e4e4761cd"
+    },
+    "source/flaskbb/templates/errors/server_error.html": {
+      "upstream_path": "flaskbb/templates/errors/server_error.html",
+      "sha256": "efcb4368c2c763a47fa53ee53236e16ce0334133d9c48b1dd781d17f4a6da2d5"
+    },
+    "source/flaskbb/templates/errors/too_many_logins.html": {
+      "upstream_path": "flaskbb/templates/errors/too_many_logins.html",
+      "sha256": "9be63c99632b7e28b537cf5747f41a689d2bc00700fd607b2d6b869240f55ad6"
+    },
+    "source/flaskbb/templates/flashed_messages.html": {
+      "upstream_path": "flaskbb/templates/flashed_messages.html",
+      "sha256": "c88ee7cfcdf06fd721dac4705d54ab0273bd6842536163599086b6d57fdbe7a8"
+    },
+    "source/flaskbb/templates/forum/category.html": {
+      "upstream_path": "flaskbb/templates/forum/category.html",
+      "sha256": "a59c90f4b56c23c367382a1cd7b7b01bf7ae4de09ef3d886e0048171eae7565a"
+    },
+    "source/flaskbb/templates/forum/category_layout.html": {
+      "upstream_path": "flaskbb/templates/forum/category_layout.html",
+      "sha256": "e4207b67d4bb0d5bb5af6414c210f7f10d217eef4473370483091972314e1434"
+    },
+    "source/flaskbb/templates/forum/edit_forum.html": {
+      "upstream_path": "flaskbb/templates/forum/edit_forum.html",
+      "sha256": "7941c86c1cbe52291c93ca9399650ad660a9a3209ae423c989b9175886422bc2"
+    },
+    "source/flaskbb/templates/forum/forum.html": {
+      "upstream_path": "flaskbb/templates/forum/forum.html",
+      "sha256": "6b2bb4da99852a54d9623a9dc76aa37f7b5a38838130571a73edeed3c354918e"
+    },
+    "source/flaskbb/templates/forum/index.html": {
+      "upstream_path": "flaskbb/templates/forum/index.html",
+      "sha256": "575a435a0547da0d9eafc328bdae75b8688ab5d96349635e0244932bda108ec0"
+    },
+    "source/flaskbb/templates/forum/memberlist.html": {
+      "upstream_path": "flaskbb/templates/forum/memberlist.html",
+      "sha256": "1e50c3052b6ed45f051c0af53cef405ffdd8b4f1a152cc0d1acc46b7e572b619"
+    },
+    "source/flaskbb/templates/forum/new_post.html": {
+      "upstream_path": "flaskbb/templates/forum/new_post.html",
+      "sha256": "4cba9d1d8c3b0e664150c7b3335f60aa06b3b59ccc9b2cf80cc8ee08215d4bab"
+    },
+    "source/flaskbb/templates/forum/new_topic.html": {
+      "upstream_path": "flaskbb/templates/forum/new_topic.html",
+      "sha256": "c602e74ff0c96d63d2954b27a45372eb79dc9e1f3a42dc8ef3b2a44b0b3fa703"
+    },
+    "source/flaskbb/templates/forum/online_users.html": {
+      "upstream_path": "flaskbb/templates/forum/online_users.html",
+      "sha256": "037163c0d06aa379ee9cfb5087a81d60122c824056bb906ea162477118b0d76f"
+    },
+    "source/flaskbb/templates/forum/report_post.html": {
+      "upstream_path": "flaskbb/templates/forum/report_post.html",
+      "sha256": "2a269bba4cdbe8b312e9e258928d0bd8ab49cd19b18dd2992ef40f6e22b9ca30"
+    },
+    "source/flaskbb/templates/forum/search_form.html": {
+      "upstream_path": "flaskbb/templates/forum/search_form.html",
+      "sha256": "6e9f4ecaeaf01417b16ccd04ed4cbde2f0342a7856aebe55ed1ac91c9f81060a"
+    },
+    "source/flaskbb/templates/forum/search_result.html": {
+      "upstream_path": "flaskbb/templates/forum/search_result.html",
+      "sha256": "42214f25a2f12123001793aba1cb94948ac8c6f71ee0a09ee869f3eae667af7b"
+    },
+    "source/flaskbb/templates/forum/topic.html": {
+      "upstream_path": "flaskbb/templates/forum/topic.html",
+      "sha256": "7a5e5a6570252485f251af52bd40f1df25fe58e749b5cbfcb09dc0853ba2eb20"
+    },
+    "source/flaskbb/templates/forum/topic_controls.html": {
+      "upstream_path": "flaskbb/templates/forum/topic_controls.html",
+      "sha256": "f42f9fc12c0c02ebbd689ca7688b9ffd42a66b3980f0ed95aa07dc6db4efef5f"
+    },
+    "source/flaskbb/templates/forum/topic_horizontal.html": {
+      "upstream_path": "flaskbb/templates/forum/topic_horizontal.html",
+      "sha256": "43b110b6debbd5a0afc400784895c494b15e5b4ff556d84fef2368a5acfee424"
+    },
+    "source/flaskbb/templates/forum/topictracker.html": {
+      "upstream_path": "flaskbb/templates/forum/topictracker.html",
+      "sha256": "aecd1356c2df3ec51efe6aad328677905b296ce060e392ed19c6b39f8c592952"
+    },
+    "source/flaskbb/templates/layout.html": {
+      "upstream_path": "flaskbb/templates/layout.html",
+      "sha256": "beb20a9982b196ef7d919e2f1300a524dc5c686c81a70fcbf42d7651d429c1d2"
+    },
+    "source/flaskbb/templates/macros.html": {
+      "upstream_path": "flaskbb/templates/macros.html",
+      "sha256": "a9e90b9b53d935ff5aa9df865179107efbffd2de3bc5f05d4221f8e0f671ed04"
+    },
+    "source/flaskbb/templates/management/banned_users.html": {
+      "upstream_path": "flaskbb/templates/management/banned_users.html",
+      "sha256": "4d698a359723a5ebcd35fc0b7ffdcaeb1eb91164241b7781a64086eb987b9aea"
+    },
+    "source/flaskbb/templates/management/category_form.html": {
+      "upstream_path": "flaskbb/templates/management/category_form.html",
+      "sha256": "fc72d0c6b7dad6ae17c6456893f34ea4ac2c7345ee9565bf8a09361db5a13fc3"
+    },
+    "source/flaskbb/templates/management/forum_form.html": {
+      "upstream_path": "flaskbb/templates/management/forum_form.html",
+      "sha256": "a5169f8329c8e4a57941d0cc2248434180f2af4ee9056bb5128b50971adfe996"
+    },
+    "source/flaskbb/templates/management/forums.html": {
+      "upstream_path": "flaskbb/templates/management/forums.html",
+      "sha256": "f8bf4b16596d7bbe972127c9e703ed7f2b6c46cc85da71348f2913291b661341"
+    },
+    "source/flaskbb/templates/management/group_form.html": {
+      "upstream_path": "flaskbb/templates/management/group_form.html",
+      "sha256": "5429bea90337f4944489c574691086999e6b0e6690eca9ada1c3c56e33f040d4"
+    },
+    "source/flaskbb/templates/management/groups.html": {
+      "upstream_path": "flaskbb/templates/management/groups.html",
+      "sha256": "fb8f02e5fd4b5a151a5da37b2cc2ad427a1d9e3e5bcfd85eeb0409b7ed52f0d5"
+    },
+    "source/flaskbb/templates/management/management_layout.html": {
+      "upstream_path": "flaskbb/templates/management/management_layout.html",
+      "sha256": "2cf62c59709987b30d123dbb6bbd6ccccd2bd99834cd9a368ba78d684b0c1e29"
+    },
+    "source/flaskbb/templates/management/overview.html": {
+      "upstream_path": "flaskbb/templates/management/overview.html",
+      "sha256": "8e9120de0c7d39c0783e532eea4eeb0f9a8b9db60ee24e6ad282faa1ab8e3cf1"
+    },
+    "source/flaskbb/templates/management/plugins.html": {
+      "upstream_path": "flaskbb/templates/management/plugins.html",
+      "sha256": "b0dc3b065983acd15652a84b4d5bbcfe055ebaf5f69f13ac4bcbff9e70972402"
+    },
+    "source/flaskbb/templates/management/reports.html": {
+      "upstream_path": "flaskbb/templates/management/reports.html",
+      "sha256": "3ed50ca4e93cd48a463f6e46ce846a5d52b725443af46abcb57c16855f13f4d9"
+    },
+    "source/flaskbb/templates/management/settings.html": {
+      "upstream_path": "flaskbb/templates/management/settings.html",
+      "sha256": "daa9c287c8f85a2f7c8ce274c3ba4c292e3ae8496009fe72be4c565deab0c8d6"
+    },
+    "source/flaskbb/templates/management/user_form.html": {
+      "upstream_path": "flaskbb/templates/management/user_form.html",
+      "sha256": "f8e9d92a2cbde4d64bf07c89e05c0b50f91775fae8e0f596b877c26d2a66ae0e"
+    },
+    "source/flaskbb/templates/management/users.html": {
+      "upstream_path": "flaskbb/templates/management/users.html",
+      "sha256": "8d1faef066af8a0b89f4dd9da2e6831aeb8e2322adfa4eaa01c11989948ef8fe"
+    },
+    "source/flaskbb/templates/user/all_posts.html": {
+      "upstream_path": "flaskbb/templates/user/all_posts.html",
+      "sha256": "0b5f555b4c14e1a3316bbbb56080725563911af9d4dc2ccc89df9e1d5e1e600a"
+    },
+    "source/flaskbb/templates/user/all_topics.html": {
+      "upstream_path": "flaskbb/templates/user/all_topics.html",
+      "sha256": "f1006e7c760cae35b38a16ae06b821a272a2ec4525f26e5d7a3dcb6694f191c6"
+    },
+    "source/flaskbb/templates/user/change_email.html": {
+      "upstream_path": "flaskbb/templates/user/change_email.html",
+      "sha256": "e8a1354bd98673ea0248f3d4ed1ff692ab585609dc1fd0bb146a87c4380d5457"
+    },
+    "source/flaskbb/templates/user/change_password.html": {
+      "upstream_path": "flaskbb/templates/user/change_password.html",
+      "sha256": "2ca38324b803853b87b3362a4002a642eaf4737f34a15ca6521d0d4120a4bfce"
+    },
+    "source/flaskbb/templates/user/change_user_details.html": {
+      "upstream_path": "flaskbb/templates/user/change_user_details.html",
+      "sha256": "6776f14bdb8104364eb4cc322a8fe7c346b59ed4c8b9f5c13c83286b19154ad4"
+    },
+    "source/flaskbb/templates/user/general_settings.html": {
+      "upstream_path": "flaskbb/templates/user/general_settings.html",
+      "sha256": "0249953a46e8a42ea7fb49843456ba3cc2d3d293bce933dc522bbce6b7bc0cfc"
+    },
+    "source/flaskbb/templates/user/profile.html": {
+      "upstream_path": "flaskbb/templates/user/profile.html",
+      "sha256": "cec7b0ffeec784ec040ffa366d9a023911397b4601ccf71b5560264f8b57a5c5"
+    },
+    "source/flaskbb/templates/user/profile_layout.html": {
+      "upstream_path": "flaskbb/templates/user/profile_layout.html",
+      "sha256": "27e537ff37e16a3a6383f9ec46c65de3b82b7a2f59ab89d7e54d08c672f522cd"
+    },
+    "source/flaskbb/templates/user/settings_layout.html": {
+      "upstream_path": "flaskbb/templates/user/settings_layout.html",
+      "sha256": "ca13461247bc8a9b4f0a85f4ff4c3713728b1ce0e01a0af48c123bdafda4c5c8"
+    },
+    "source/flaskbb/themes/aurora/README.md": {
+      "upstream_path": "flaskbb/themes/aurora/README.md",
+      "sha256": "79b8182e9a2b8691f3b7ad5e9e115f4118d7e265d421f3f01f26f20f372ecf13"
+    },
+    "source/flaskbb/themes/aurora/build_emoji_set.py": {
+      "upstream_path": "flaskbb/themes/aurora/build_emoji_set.py",
+      "sha256": "364a8c7fc7c7b7608baec56e11034aa580d957a19aaf146ed454467f2c15e091"
+    },
+    "source/flaskbb/themes/aurora/info.json": {
+      "upstream_path": "flaskbb/themes/aurora/info.json",
+      "sha256": "ff51e545a74b4308c319e4792365cc2af21983df05a5857bb8fd1c76a18973f9"
+    },
+    "source/flaskbb/themes/aurora/package-lock.json": {
+      "upstream_path": "flaskbb/themes/aurora/package-lock.json",
+      "sha256": "038afb9fb32d6f9addbf26a62a4787b75e9e3c8327f9e3137d84b354b1028ce0"
+    },
+    "source/flaskbb/themes/aurora/package.json": {
+      "upstream_path": "flaskbb/themes/aurora/package.json",
+      "sha256": "b1fa6b06d3d54c0575b6c198c312ac3644609039930d0abbcf5d089a0ee83087"
+    },
+    "source/flaskbb/themes/aurora/preview.png": {
+      "upstream_path": "flaskbb/themes/aurora/preview.png",
+      "sha256": "be17953794bb09c5c9fe5ff584d44d53b19c04c76a5e7cf7c69ca9bdbeba119d"
+    },
+    "source/flaskbb/themes/aurora/src/app.js": {
+      "upstream_path": "flaskbb/themes/aurora/src/app.js",
+      "sha256": "7c6917ab5a5a2c3d8e254b2173d47d0ed3df5fc9c4d6e7aa02b8babc6a63b477"
+    },
+    "source/flaskbb/themes/aurora/src/assets/avatar.svg": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/avatar.svg",
+      "sha256": "ef7d6b4ffc45540e71b7fd59618052f2686083080cea346e209f02e46e1b7e13"
+    },
+    "source/flaskbb/themes/aurora/src/assets/avatar100x100.png": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/avatar100x100.png",
+      "sha256": "9e0ce0f03f9d60fe44f4c4219fc5ee99a8eb0dd671076a5412261873ddf74dfa"
+    },
+    "source/flaskbb/themes/aurora/src/assets/avatar150x150.png": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/avatar150x150.png",
+      "sha256": "3adb627cbe2728a805b1d45663b867c4d33fa8f90cdaf3bf8542b51748c90829"
+    },
+    "source/flaskbb/themes/aurora/src/assets/avatar400x400.png": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/avatar400x400.png",
+      "sha256": "d59a4b3f90e78283d7872398ca64318710b2c1accb1fab6a750df71082e97453"
+    },
+    "source/flaskbb/themes/aurora/src/assets/avatar80x80.png": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/avatar80x80.png",
+      "sha256": "01cd3584a670536dfbad0ecc83462fe6ffe29c2207e6ac44163ffb5d4f368dd8"
+    },
+    "source/flaskbb/themes/aurora/src/assets/favicon.ico": {
+      "upstream_path": "flaskbb/themes/aurora/src/assets/favicon.ico",
+      "sha256": "cb17da3702317a4328ba6c5bb424211d9f119c2d47426919ef29b189df97f895"
+    },
+    "source/flaskbb/themes/aurora/src/js/editor.js": {
+      "upstream_path": "flaskbb/themes/aurora/src/js/editor.js",
+      "sha256": "100b0d56ce9eecf6fc3131d163fb2dbd510947ac894ddb5e4a271337f24f0bbc"
+    },
+    "source/flaskbb/themes/aurora/src/js/emoji.js": {
+      "upstream_path": "flaskbb/themes/aurora/src/js/emoji.js",
+      "sha256": "aee7ccb66fc03f0e1f67062f48ff66d2be69ac1103a3c40242e375207128a2da"
+    },
+    "source/flaskbb/themes/aurora/src/js/flaskbb.js": {
+      "upstream_path": "flaskbb/themes/aurora/src/js/flaskbb.js",
+      "sha256": "a6da255651a9d2b194a00b8d75fec275170fc20585a7d693f5413b1607431405"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_aurora.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_aurora.scss",
+      "sha256": "0fd1015ce6d1f790140cbffe7e1091041d1b3e872d64a390827166cca2684454"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_bootstrap-variables.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_bootstrap-variables.scss",
+      "sha256": "51e3a3732cc6826e25f0e93e93e5f8925ea3dffaede0f21d09f572a155d1cc07"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_button.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_button.scss",
+      "sha256": "0cf987de34fb3e3333f081b52934967427221747a5a2dd2eedc417887cd95d5e"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_category.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_category.scss",
+      "sha256": "3c24b7c7564361f04f515be427f84c7744176e112e38d84551a94c6301e382b4"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_editor.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_editor.scss",
+      "sha256": "9b6b3ce9bae9b6c9a5ea17fa761a05a26d9c8a51170b3277aaabb4b6e84ee419"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_fixes.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_fixes.scss",
+      "sha256": "b1c7aa5d06580ecda3327d6ae08f142865963131d44a41f1868ef3fd4f3fb9e4"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_forum.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_forum.scss",
+      "sha256": "3d826694824f543c1180e7c161294e2e96236aa0e25bdbf3dd885c28ed8db530"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_management.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_management.scss",
+      "sha256": "b7304173332e410ec1d582c79a6c9945c855bb29ce8abaec2fe19e9ebe4943d5"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_misc.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_misc.scss",
+      "sha256": "1bdef003d4b0c3d00eb539e59d18d7f3f180b3fcba70e3100a7eb8fb5ffa5bd0"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_mixins.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_mixins.scss",
+      "sha256": "34bfcdd80ba169af850b83c0e39df0c6548d1ef8449e51169ca07478d036881d"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_navigation.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_navigation.scss",
+      "sha256": "cd90b5695a204861f9eb1e71ec494ca6d2be3b05c7297ad74f462b23c56176d8"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_panel.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_panel.scss",
+      "sha256": "03ed4b5b440f2058fdc40d7a2950cf285528b3fc4f0281738c5cddadea357a75"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_profile.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_profile.scss",
+      "sha256": "ce686fb84ad58f3b8c852e46be80690944b2ab77d1aa22e4ddd0c098d8d1594d"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_pygments.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_pygments.scss",
+      "sha256": "c5bbd19bf008344443fc6d90c265d5c17da50978859b8eb9cf8ffb9a7bb928a2"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_topic.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_topic.scss",
+      "sha256": "c6c1ab4895b4329adc932511dcf3064fdea75ca19243ec97885ecf7d18415fe9"
+    },
+    "source/flaskbb/themes/aurora/src/scss/_variables.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/_variables.scss",
+      "sha256": "875453cb909e118f2b400291c7525d42139f43ad65ab647eb3f4deeac6379073"
+    },
+    "source/flaskbb/themes/aurora/src/scss/styles.scss": {
+      "upstream_path": "flaskbb/themes/aurora/src/scss/styles.scss",
+      "sha256": "f28c258e1ddffb13317db6e969f4067ca5d0d4cec5249ecefdd2771604ed781c"
+    },
+    "source/flaskbb/themes/aurora/static": {
+      "upstream_path": "flaskbb/themes/aurora/static",
+      "sha256": "aeacdb19ac847b84539c3b8c02dbff5ca85c98cab1816a17c581fa4282a8d4c3"
+    },
+    "source/flaskbb/themes/aurora/webpack.common.js": {
+      "upstream_path": "flaskbb/themes/aurora/webpack.common.js",
+      "sha256": "38f113d00d98651aff011a23ac40b77b72d99f75f439b36abcf1233a8edf888a"
+    },
+    "source/flaskbb/themes/aurora/webpack.dev.js": {
+      "upstream_path": "flaskbb/themes/aurora/webpack.dev.js",
+      "sha256": "ccdfe0a6f02e19dda0410b43108a53ba825cc16a0200d983975d20b58c657fd0"
+    },
+    "source/flaskbb/themes/aurora/webpack.prod.js": {
+      "upstream_path": "flaskbb/themes/aurora/webpack.prod.js",
+      "sha256": "f7c608ab4f02ee286fc3a6e6b06afa2cbb04e82c960cdb37a504c0e3af6390bc"
+    },
+    "source/flaskbb/tokens/__init__.py": {
+      "upstream_path": "flaskbb/tokens/__init__.py",
+      "sha256": "f76e71ad3a911d3ac11d52db25da70ca47bad873dbe1790c5bc83bd4f02f5038"
+    },
+    "source/flaskbb/tokens/serializer.py": {
+      "upstream_path": "flaskbb/tokens/serializer.py",
+      "sha256": "4007ac6ab5925db9289186a9bc06ca302a691632979118ea07a5b9bd0a23f5df"
+    },
+    "source/flaskbb/tokens/verifiers.py": {
+      "upstream_path": "flaskbb/tokens/verifiers.py",
+      "sha256": "660dc8448ce6a4d0012af21f06cc5e407d1d960c206901849507282f724c2b7d"
+    },
+    "source/flaskbb/translations/da/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/da/LC_MESSAGES/messages.po",
+      "sha256": "d80f198cbdafdad53469e6d7eace9060bfa98f68c36c76d79e6f3e48aca64862"
+    },
+    "source/flaskbb/translations/de/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/de/LC_MESSAGES/messages.po",
+      "sha256": "ca4a89923a963e5c16ee8c0513070b7386c103c6ca87c33c7c0b03639b2da547"
+    },
+    "source/flaskbb/translations/en/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/en/LC_MESSAGES/messages.po",
+      "sha256": "b67ace73f1604d8282569ddac60c2cf99481e993835d249ba8e0f8329e0b836f"
+    },
+    "source/flaskbb/translations/es/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/es/LC_MESSAGES/messages.po",
+      "sha256": "19a391a8cc3794cb3bb831be6860346a369b929d2a989d06b79772d2e7082566"
+    },
+    "source/flaskbb/translations/fr/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/fr/LC_MESSAGES/messages.po",
+      "sha256": "02ca2ba4e3948e5aee288867c19b14dad89f174e5db1f523fe7f5f502904ae7d"
+    },
+    "source/flaskbb/translations/messages.pot": {
+      "upstream_path": "flaskbb/translations/messages.pot",
+      "sha256": "bcb7ee762c1d9d87fd76f7c1b13e660c9a80f23ad66c975e0d422717e962193f"
+    },
+    "source/flaskbb/translations/pl/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/pl/LC_MESSAGES/messages.po",
+      "sha256": "d4ac6eb28ff928d6e55f0f0ca2697ac5123c22b33a64f4e83e0d4f23442ee3d5"
+    },
+    "source/flaskbb/translations/pt_BR/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/pt_BR/LC_MESSAGES/messages.po",
+      "sha256": "20f5ccaf215ab12abac7e7901268a35f0279f4f131db75b1ba2f27e4f37a48ea"
+    },
+    "source/flaskbb/translations/ru/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/ru/LC_MESSAGES/messages.po",
+      "sha256": "3ff30a54702dc78896fd5021cd2e164fa3c3f8e76d7f15a0dac7b0099941bdf9"
+    },
+    "source/flaskbb/translations/sv_SE/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/sv_SE/LC_MESSAGES/messages.po",
+      "sha256": "5ba14a5051b33c73423316cb59548ccdac6a3a6fb1bb14361b25d334a79695a6"
+    },
+    "source/flaskbb/translations/zh_CN/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/zh_CN/LC_MESSAGES/messages.po",
+      "sha256": "9c5edd61b90151b981a2e5a2ffe97e720111b90cf8f61030035b874852724667"
+    },
+    "source/flaskbb/translations/zh_TW/LC_MESSAGES/messages.po": {
+      "upstream_path": "flaskbb/translations/zh_TW/LC_MESSAGES/messages.po",
+      "sha256": "5a70a350de79d852d1c286788abd497a5c1c6371f69b9687e22222eb029a08b9"
+    },
+    "source/flaskbb/user/__init__.py": {
+      "upstream_path": "flaskbb/user/__init__.py",
+      "sha256": "566d326a47f1a322e1324e5cd14affb6968fd836ef9e5c039ac01e1183b0b179"
+    },
+    "source/flaskbb/user/forms.py": {
+      "upstream_path": "flaskbb/user/forms.py",
+      "sha256": "32a88ec0b079b7ed2ee51218e8ebbf767559c044cf29772d9e22930da56de3bb"
+    },
+    "source/flaskbb/user/models.py": {
+      "upstream_path": "flaskbb/user/models.py",
+      "sha256": "873dc9cdd3aeac842debed3cd79a4a9f19c56d5c2c5580f812891d5f6dfde4f9"
+    },
+    "source/flaskbb/user/plugins.py": {
+      "upstream_path": "flaskbb/user/plugins.py",
+      "sha256": "59ff1fd70bc35177aba4cb2bab79f05781896aa75cd893f56e92dec3c73671a5"
+    },
+    "source/flaskbb/user/services/__init__.py": {
+      "upstream_path": "flaskbb/user/services/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/flaskbb/user/services/factories.py": {
+      "upstream_path": "flaskbb/user/services/factories.py",
+      "sha256": "72b437a4642bf121986504f04e6302db9529f5d767b1e837621b2d97b26320de"
+    },
+    "source/flaskbb/user/services/update.py": {
+      "upstream_path": "flaskbb/user/services/update.py",
+      "sha256": "d0676c3a55377b5375ad178053b9954e715e31ac67617d164699e742b80378bb"
+    },
+    "source/flaskbb/user/services/validators.py": {
+      "upstream_path": "flaskbb/user/services/validators.py",
+      "sha256": "7cb3acea7e76606c9547cd31165d06a511e2b1a059288937cb0e40fe9057887e"
+    },
+    "source/flaskbb/user/views.py": {
+      "upstream_path": "flaskbb/user/views.py",
+      "sha256": "e7344335253e55599ff0a7fcbcfcb197089e18f5c5a1eba16331bef9053f90dc"
+    },
+    "source/flaskbb/utils/__init__.py": {
+      "upstream_path": "flaskbb/utils/__init__.py",
+      "sha256": "bd4ed08864b2fc026e245982954a1ca8827e2ed92effc0b6e1953c2fa7cb251d"
+    },
+    "source/flaskbb/utils/database.py": {
+      "upstream_path": "flaskbb/utils/database.py",
+      "sha256": "00ad7ed82404ce499be27635ec9b29502c3c8341a5b869bd5e0797b9df8b741e"
+    },
+    "source/flaskbb/utils/datastructures.py": {
+      "upstream_path": "flaskbb/utils/datastructures.py",
+      "sha256": "6d994edb92647a973fb76986927f025f95efe6f3ee1823fbcbab640ee2732821"
+    },
+    "source/flaskbb/utils/fields.py": {
+      "upstream_path": "flaskbb/utils/fields.py",
+      "sha256": "1ddb2af55678fd6cdfa6ad1a393bf4014ede8b0318fc672d7e8e5a8270ac13e4"
+    },
+    "source/flaskbb/utils/forms.py": {
+      "upstream_path": "flaskbb/utils/forms.py",
+      "sha256": "1e853567abf2d4e94985daa8e3226c579307da882c5245517f2eae3fdca9452e"
+    },
+    "source/flaskbb/utils/helpers.py": {
+      "upstream_path": "flaskbb/utils/helpers.py",
+      "sha256": "dba67f03adc0bdc1f1c72ccd41a85ff0523c9c98e69ee3f8fcd8b958523d0c48"
+    },
+    "source/flaskbb/utils/http.py": {
+      "upstream_path": "flaskbb/utils/http.py",
+      "sha256": "3579aaca3d3bab8c80b047fdb9a952820ffd2e5816ec3cc7c393e11f32c56988"
+    },
+    "source/flaskbb/utils/populate.py": {
+      "upstream_path": "flaskbb/utils/populate.py",
+      "sha256": "6d7418eded1a4cab77e3ccdc48508211c9f79a372000209494eb5aa50a13e695"
+    },
+    "source/flaskbb/utils/requirements.py": {
+      "upstream_path": "flaskbb/utils/requirements.py",
+      "sha256": "a975d9737bd0099261f3f7bd9005dbff9838213153941408a572be84b83110d5"
+    },
+    "source/flaskbb/utils/search.py": {
+      "upstream_path": "flaskbb/utils/search.py",
+      "sha256": "da42efb7ca515996b276dac7ed6d66abc45fb0d8ffccefe42b63f4be78c66e3f"
+    },
+    "source/flaskbb/utils/settings.py": {
+      "upstream_path": "flaskbb/utils/settings.py",
+      "sha256": "caa06362005d5707ab5982435074a000af2827ddeecb19c5e5022504a430dbea"
+    },
+    "source/flaskbb/utils/translations.py": {
+      "upstream_path": "flaskbb/utils/translations.py",
+      "sha256": "88c080f020d535c158c7e28d81b72d54f49db75b4348d4797025150200f44f8c"
+    },
+    "source/flaskbb/utils/views.py": {
+      "upstream_path": "flaskbb/utils/views.py",
+      "sha256": "67a9a0528b4bdced6420fce0833a0631f797f88fa86ecac7032d067cf078d47b"
+    },
+    "source/logs/.gitkeep": {
+      "upstream_path": "logs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/requirements-dev.txt": {
+      "upstream_path": "requirements-dev.txt",
+      "sha256": "bd4f6649bc9ef6a0b10d125590551bc9ca13d4ebffc5c9fbc009937ec78449a0"
+    },
+    "source/requirements.txt": {
+      "upstream_path": "requirements.txt",
+      "sha256": "5affb0fad63d483df598d158bd6a19c16ae50762b7029d693effed29b9f881bb"
+    },
+    "source/setup.cfg": {
+      "upstream_path": "setup.cfg",
+      "sha256": "4e3e273fa04f4803a1f1cd80833ef14a0e377e784bf57a445fa78fa037890869"
+    },
+    "source/setup.py": {
+      "upstream_path": "setup.py",
+      "sha256": "ceb1947aa4652048865d1aa4c358af1b1d4fe2ead6ffb7d7fbc891e9fcfb0653"
+    },
+    "source/tests/__init__.py": {
+      "upstream_path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/tests/conftest.py": {
+      "upstream_path": "tests/conftest.py",
+      "sha256": "0d8f5b3a1ba821eb389b479cc2e230c13dcf0e76fb306972e35ead15384254b9"
+    },
+    "source/tests/endtoend/test_auth_views.py": {
+      "upstream_path": "tests/endtoend/test_auth_views.py",
+      "sha256": "4a406162399e9f6eaf351459fc843d19f8169388a26fcb968069db72321e9a16"
+    },
+    "source/tests/fixtures/__init__.py": {
+      "upstream_path": "tests/fixtures/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/tests/fixtures/app.py": {
+      "upstream_path": "tests/fixtures/app.py",
+      "sha256": "3992f34851bbf8da20fe5c94fa3c845c6d68768a2bad88c3364f62f351eed13b"
+    },
+    "source/tests/fixtures/auth.py": {
+      "upstream_path": "tests/fixtures/auth.py",
+      "sha256": "75afe5d5ed24017385ea95dbdfe3853919b8d54df84b529b0620bb415fc5d20f"
+    },
+    "source/tests/fixtures/forum.py": {
+      "upstream_path": "tests/fixtures/forum.py",
+      "sha256": "7a9ade47d0ac693d62373648ef17276e8654a6d94d357870b625bca87648f113"
+    },
+    "source/tests/fixtures/helpers.py": {
+      "upstream_path": "tests/fixtures/helpers.py",
+      "sha256": "8a0faf399cbfb78375622d0414f738b9d29156a4bc785e71a337fdee42ab70a4"
+    },
+    "source/tests/fixtures/images/good_image.png": {
+      "upstream_path": "tests/fixtures/images/good_image.png",
+      "sha256": "4a465eff243772e5cf978a066d95a57afbdc1375bec4beb2320151177bf2345f"
+    },
+    "source/tests/fixtures/images/image.gif": {
+      "upstream_path": "tests/fixtures/images/image.gif",
+      "sha256": "273b864da92ef95a9d84f8e37eb009441705eb3ec1d88c654e9b56f3432e8963"
+    },
+    "source/tests/fixtures/images/image.jpg": {
+      "upstream_path": "tests/fixtures/images/image.jpg",
+      "sha256": "ebc4f9077a3c1203206cbae2c5817ed3ca5fb33fa611ac9088226780d247a24b"
+    },
+    "source/tests/fixtures/images/image.png": {
+      "upstream_path": "tests/fixtures/images/image.png",
+      "sha256": "f849da0f68c8400cf9765d46fb2dd57683aa49abac98d5add13b5f4e18f6890f"
+    },
+    "source/tests/fixtures/images/too_big.gif": {
+      "upstream_path": "tests/fixtures/images/too_big.gif",
+      "sha256": "273b864da92ef95a9d84f8e37eb009441705eb3ec1d88c654e9b56f3432e8963"
+    },
+    "source/tests/fixtures/images/too_tall.png": {
+      "upstream_path": "tests/fixtures/images/too_tall.png",
+      "sha256": "4d7db0ff0f61d89e8eedcdd13eb22f31432d51dd81281469346c5feac95a5aaf"
+    },
+    "source/tests/fixtures/images/too_wide.png": {
+      "upstream_path": "tests/fixtures/images/too_wide.png",
+      "sha256": "2b68274d61132176a10eda4007adfb2825118d348789bd6d00c3274ae6ad99f9"
+    },
+    "source/tests/fixtures/images/wrong_mime.svg": {
+      "upstream_path": "tests/fixtures/images/wrong_mime.svg",
+      "sha256": "921609e7327796c22594f30429ce7ed353d2ff4805c3dce7b577a38be2709bed"
+    },
+    "source/tests/fixtures/plugin.py": {
+      "upstream_path": "tests/fixtures/plugin.py",
+      "sha256": "3e74714b48d1b715045e3073b6b56c8736ea40a381d3bb8c45e93d78b66f0ffb"
+    },
+    "source/tests/fixtures/settings_fixture.py": {
+      "upstream_path": "tests/fixtures/settings_fixture.py",
+      "sha256": "69338673256d93b7a6d7fc7a7907b5b0a11238791c35ffdf26120452ac9376f0"
+    },
+    "source/tests/fixtures/user.py": {
+      "upstream_path": "tests/fixtures/user.py",
+      "sha256": "a90d3bc5c1d89a0ad0bfdfd73e793778576f566f2bb5a21e8b8dff25d91e56a3"
+    },
+    "source/tests/unit/__init__.py": {
+      "upstream_path": "tests/unit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/tests/unit/auth/test_activation.py": {
+      "upstream_path": "tests/unit/auth/test_activation.py",
+      "sha256": "f85101af81ce44183b0996266486806745729e647b8501bcf6ce6a0254372274"
+    },
+    "source/tests/unit/auth/test_authentication.py": {
+      "upstream_path": "tests/unit/auth/test_authentication.py",
+      "sha256": "ee035d3877bd351a1b9f2532d7c9bfd3f60e9df7a012bd21d724eb1255573ff4"
+    },
+    "source/tests/unit/auth/test_password.py": {
+      "upstream_path": "tests/unit/auth/test_password.py",
+      "sha256": "f6ffff40adfe3a554527c70f66272c55d8e23631300693cfb73838adf197725e"
+    },
+    "source/tests/unit/auth/test_reauthentication.py": {
+      "upstream_path": "tests/unit/auth/test_reauthentication.py",
+      "sha256": "14366fc80b27075330c5ea7a3910e70029d2d255a9a2fc4e058c33790a30e6c2"
+    },
+    "source/tests/unit/auth/test_registration.py": {
+      "upstream_path": "tests/unit/auth/test_registration.py",
+      "sha256": "f4bbe45872a835f7c6da47c738b885140ccfbe631d18ac7c85c303bf4721db05"
+    },
+    "source/tests/unit/auth/test_registration_processors.py": {
+      "upstream_path": "tests/unit/auth/test_registration_processors.py",
+      "sha256": "b8f59eb4bd723e2c74abf80bc4d5215e9aab9ced172df27f5031937b016b954f"
+    },
+    "source/tests/unit/auth/test_validators.py": {
+      "upstream_path": "tests/unit/auth/test_validators.py",
+      "sha256": "2aba2db0c202bc78321cc986ac824df88e71916dbdda266df5ad63581c2383aa"
+    },
+    "source/tests/unit/forum/test_forum_utils.py": {
+      "upstream_path": "tests/unit/forum/test_forum_utils.py",
+      "sha256": "af17b69ce9ef553d21ae4c0485fb33e6640bd985957de766835af52df80e5326"
+    },
+    "source/tests/unit/test_deprecation.py": {
+      "upstream_path": "tests/unit/test_deprecation.py",
+      "sha256": "47898d0da2f00ed63eafd3eeea56a5827b2d19de37a3207857cef07aad540fea"
+    },
+    "source/tests/unit/test_email.py": {
+      "upstream_path": "tests/unit/test_email.py",
+      "sha256": "32f9e89f8f67f7e6cedab41f66b70f110bad99b977a8d0c7c789fff2d1cd6176"
+    },
+    "source/tests/unit/test_forum_models.py": {
+      "upstream_path": "tests/unit/test_forum_models.py",
+      "sha256": "4c3e2b9e4a7b488315801d97d97fcae027a341cf4af08e9561cc05fb532e6a0f"
+    },
+    "source/tests/unit/test_hideable_query.py": {
+      "upstream_path": "tests/unit/test_hideable_query.py",
+      "sha256": "7601347167c9a99dc764639ebd53a7a6baab0c9133cb93996201e17d58754e22"
+    },
+    "source/tests/unit/test_pluginmanager.py": {
+      "upstream_path": "tests/unit/test_pluginmanager.py",
+      "sha256": "a1bfadbbd1bc3444e7df124f85fdad38d9a8ba40d772877a2d4f06d78ca1fc93"
+    },
+    "source/tests/unit/test_requirements.py": {
+      "upstream_path": "tests/unit/test_requirements.py",
+      "sha256": "3bafd5dee7fba8d2c0d221532d3305770b31d5f15687c36cb30f86e75662e2b7"
+    },
+    "source/tests/unit/tokens/test_serializer.py": {
+      "upstream_path": "tests/unit/tokens/test_serializer.py",
+      "sha256": "419a92e9e7d86a25dd3e47014f10dc7e3d4aebd26d1c2818a69793c5672bce40"
+    },
+    "source/tests/unit/tokens/test_verifiers.py": {
+      "upstream_path": "tests/unit/tokens/test_verifiers.py",
+      "sha256": "e258ba353f387611599c0d7d51cb5f7f3550aede0383516c08a28d6fd88eadd3"
+    },
+    "source/tests/unit/user/test_controllers.py": {
+      "upstream_path": "tests/unit/user/test_controllers.py",
+      "sha256": "90751002cb116b12885a55cf2ec44b396dd5dbd830da505d44913e7c29c6c247"
+    },
+    "source/tests/unit/user/test_forms.py": {
+      "upstream_path": "tests/unit/user/test_forms.py",
+      "sha256": "93eb0ab7e0fd9a9c12f0a66c79e7e5eb8a11a84c0f744cf56d5696412a0f5a10"
+    },
+    "source/tests/unit/user/test_update_details_handler.py": {
+      "upstream_path": "tests/unit/user/test_update_details_handler.py",
+      "sha256": "bed85b14200f0263ce031f8594c7618af20d9c14e36f554830c8bbbf66d79799"
+    },
+    "source/tests/unit/user/test_update_email_handler.py": {
+      "upstream_path": "tests/unit/user/test_update_email_handler.py",
+      "sha256": "e24561f2430d56fc8a8259442bc62b0f2cc65ea792592fc814c11ccaf8145c9d"
+    },
+    "source/tests/unit/user/test_update_password_handler.py": {
+      "upstream_path": "tests/unit/user/test_update_password_handler.py",
+      "sha256": "5d16161530bd25b9576bd219ed7904cec3d5950cce4dc2480e75f28ec9492f67"
+    },
+    "source/tests/unit/user/test_update_settings.py": {
+      "upstream_path": "tests/unit/user/test_update_settings.py",
+      "sha256": "2a99661e4f3ed410032181905845a8e6d55b721687c5166a1e081de79058a1b1"
+    },
+    "source/tests/unit/user/test_update_validator.py": {
+      "upstream_path": "tests/unit/user/test_update_validator.py",
+      "sha256": "1e323486dcd6364553be5e16c07111e2ffd768c98fd2e5e53b8c7bf3d70dc88e"
+    },
+    "source/tests/unit/utils/__init__.py": {
+      "upstream_path": "tests/unit/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/tests/unit/utils/test_fields.py": {
+      "upstream_path": "tests/unit/utils/test_fields.py",
+      "sha256": "eda65f29bd487b224cb635c5d2cc77697d9ddce27d74efb656451b1b1755c8f6"
+    },
+    "source/tests/unit/utils/test_helpers.py": {
+      "upstream_path": "tests/unit/utils/test_helpers.py",
+      "sha256": "e4bbc74ca95fb2cc983b17ed5253b9c0ad941d7909822e24842c024dd9142036"
+    },
+    "source/tests/unit/utils/test_http.py": {
+      "upstream_path": "tests/unit/utils/test_http.py",
+      "sha256": "ab361ab5ace0b88192228371da7cbdfbffc268052e248ad4714b9e481515736c"
+    },
+    "source/tests/unit/utils/test_markup.py": {
+      "upstream_path": "tests/unit/utils/test_markup.py",
+      "sha256": "e21e201333fcd7685a95189e470cc0631aad8da37c6a1d60152c6d843cfe8a8b"
+    },
+    "source/tests/unit/utils/test_populate.py": {
+      "upstream_path": "tests/unit/utils/test_populate.py",
+      "sha256": "efbfbb5648f92802429343d879e14bdf115acc7e0e026cbc993bcd860c657f73"
+    },
+    "source/tests/unit/utils/test_settings.py": {
+      "upstream_path": "tests/unit/utils/test_settings.py",
+      "sha256": "ef1e080244a82ae3fd45fba76d8ae424f728e3c2589cbbe2d220a2d7449f9e67"
+    },
+    "source/tests/unit/utils/test_translations.py": {
+      "upstream_path": "tests/unit/utils/test_translations.py",
+      "sha256": "fbad987beeb117603a9784776750ed617e01c16e60735a454e5a199d98339f09"
+    },
+    "source/tox.ini": {
+      "upstream_path": "tox.ini",
+      "sha256": "e585102931bde0dc915eb40bd96febcff23b75183d0c1a48a2ceeb27cf955170"
+    },
+    "source/wsgi.py": {
+      "upstream_path": "wsgi.py",
+      "sha256": "767050afe3ea85167b3a5b0d7f0e8b08073af72f49ea3be895e5d45350cf037d"
+    }
+  },
+  "reference_migration": {
+    "pull_request": "https://github.com/flaskbb/flaskbb/pull/593",
+    "reference_head": "37806f4ad2e6496dc686361217408ef7493590c2",
+    "included_in_case_or_model_context": false
+  },
+  "classification": "real_application_sqlalchemy_migration_development_case",
+  "target_code_executed_on_host": false
+}

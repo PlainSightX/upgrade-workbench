@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+  "python_version": "3.9",
+  "local_wheels": []
+}

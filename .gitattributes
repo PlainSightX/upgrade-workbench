@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+# 案例按原始字节封存；第三方原文和测试数据的空白由哈希核对，不自动修整。
+/cases/** -text -whitespace
+
+# 评价报告和候选也是按摘要追溯的原件，提交/检出均保留原字节。
+/docs/results/** -text whitespace=cr-at-eol
+/docs/results/**/*.patch -whitespace
+/docs/remediation-*.json -text whitespace=cr-at-eol
+
+# 自有公开派生JSON由生成器写LF，Git按原字节保存发布摘要。
+/PUBLICATION.json -text
+/docs/examples/**/*.json -text
+/docs/third-party-assets.json -text
+/tests/fixtures/flaskbb-navigation/SOURCE.json -text
+/tests/fixtures/flaskbb-navigation/source/** -text

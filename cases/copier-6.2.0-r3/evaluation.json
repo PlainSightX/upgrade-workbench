@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "case_id": "copier-6-2-0-r3",
+  "split": "development",
+  "purpose": "behavior_preservation_coverage",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_behavior_preservation.py",
+        "feedback/test_copy_flow.py",
+        "feedback/test_question_conversion.py"
+      ],
+      "nodeids": [
+        "feedback/test_behavior_preservation.py::test_declared_default_type_survives_answer_override",
+        "feedback/test_behavior_preservation.py::test_null_default_keeps_yaml_question_type",
+        "feedback/test_behavior_preservation.py::test_to_json_supports_worker_config",
+        "feedback/test_copy_flow.py::test_answer_file_must_be_relative",
+        "feedback/test_copy_flow.py::test_explicit_answers_drive_typed_rendering",
+        "feedback/test_copy_flow.py::test_explicit_strings_bypass_question_casting",
+        "feedback/test_copy_flow.py::test_local_template_renders_default_answers",
+        "feedback/test_copy_flow.py::test_missing_template_is_rejected",
+        "feedback/test_question_conversion.py::test_question_filter_casts_declared_integer_and_boolean"
+      ],
+      "expected_count": 9
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_behavior_preservation.py",
+        "acceptance/test_question_contract.py",
+        "acceptance/test_render_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_behavior_preservation.py::test_absolute_answer_file_string_is_rejected",
+        "acceptance/test_behavior_preservation.py::test_answer_precedence_and_explicit_type_are_preserved",
+        "acceptance/test_behavior_preservation.py::test_last_answer_does_not_redefine_boolean_type",
+        "acceptance/test_behavior_preservation.py::test_omitted_default_preserves_yaml_conversion",
+        "acceptance/test_behavior_preservation.py::test_relative_answer_file_string_is_accepted",
+        "acceptance/test_behavior_preservation.py::test_to_json_keeps_nested_dataclass_path_and_options",
+        "acceptance/test_behavior_preservation.py::test_user_default_does_not_redefine_empty_string_type",
+        "acceptance/test_question_contract.py::test_defaults_cast_text_before_rendering",
+        "acceptance/test_question_contract.py::test_question_rejects_invalid_numeric_answer",
+        "acceptance/test_question_contract.py::test_question_type_is_inferred_from_default",
+        "acceptance/test_render_contract.py::test_exclusion_leaves_other_rendered_files",
+        "acceptance/test_render_contract.py::test_filename_content_and_answer_record_agree",
+        "acceptance/test_render_contract.py::test_pretend_makes_no_output_directory",
+        "acceptance/test_render_contract.py::test_skip_if_exists_preserves_user_file"
+      ],
+      "expected_count": 14
+    }
+  },
+  "note": "已见开发案例；新增检查不回写r2历史评分，不是独立留出。"
+}

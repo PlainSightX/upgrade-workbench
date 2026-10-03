@@ -1,0 +1,24 @@
+{
+  "scope": "Portable product-test fixture; not the original frozen evaluation input",
+  "original_manifests": {
+    "manifest.json": {
+      "sha256": "6fb617e95e77194daa4ed59fb9b719d3c32a7076c270b14042be5b9871cacd16",
+      "case_fingerprint": "23801e148c7139a58cf646fd5b3182395bea8205629c37b7e7ed9fc7e8d45085"
+    }
+  },
+  "omitted": {},
+  "altered": {
+    "requirements/new.txt": {
+      "original_sha256": "fb9f7c8b45bc8b041fe17c9ae5e881b29ad086b26bbb10dbbd4d24688eed5ef3",
+      "public_sha256": "67f6bf101f8da40a54c80aa182282b866797d463624babc83e5ea0ba69363756",
+      "change": "Remove host-only lock compilation comment; requirements/hashes unchanged"
+    },
+    "requirements/old.txt": {
+      "original_sha256": "598a24904603f056e095ec01d114d538118ab9f321663d8f49299b53682c13a5",
+      "public_sha256": "06c92ffc927abf5f2bbb36eb9bb522e8025fa4f87df65a10f271753629b50169",
+      "change": "Remove host-only lock compilation comment; requirements/hashes unchanged"
+    }
+  },
+  "source_bytes": "Every retained source and check file preserves its original bytes",
+  "limits": "FlaskBB static/docs assets omitted; these fixtures do not reproduce full site rendering. Original cases remain privately recoverable."
+}

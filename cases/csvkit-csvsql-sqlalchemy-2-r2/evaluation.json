@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "case_id": "csvkit-csvsql-sqlalchemy-2-r2",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_csvsql_flow.py"
+      ],
+      "nodeids": [
+        "feedback/test_csvsql_flow.py::test_file_database_query_and_commit",
+        "feedback/test_csvsql_flow.py::test_query_filters_csv_rows"
+      ],
+      "expected_count": 2
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_csvsql_behavior.py"
+      ],
+      "nodeids": [
+        "acceptance/test_csvsql_behavior.py::test_before_after_insert_effects_are_committed",
+        "acceptance/test_csvsql_behavior.py::test_query_joins_distinct_csv_sources"
+      ],
+      "expected_count": 2
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "parent_case": "apscheduler-3-9-1-pg",
+  "parent_fingerprint": "1f80d9d080bf8018765323d3d6755cd12d279130d6120d9c497f3e15d2c9ea48",
+  "reason": "Baseline check fixture constructed Job with scheduler=None; Job._modify requires scheduler.timezone even for an aware datetime.",
+  "correction": "Use an unstarted real BackgroundScheduler(timezone=pytz.utc) in both Job factories. No source, dependency, test expectation or business contract changed.",
+  "prior_old_result": {"collected": 18, "passed": 3, "failed": 15, "errors": 0, "skipped": 0},
+  "prior_comparison_id": "95ca4ef876574697862d2f5a0aaf0b59",
+  "model_calls_before_revision": 0,
+  "split": "development",
+  "independent_repository_increment": 0
+}

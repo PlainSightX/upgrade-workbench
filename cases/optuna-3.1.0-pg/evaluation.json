@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "case_id": "optuna-3-1-0-pg",
+  "split": "development",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_orm.py"
+      ],
+      "nodeids": [
+        "feedback/test_orm.py::test_best_trial_uses_join_and_excludes_unfinished_trials",
+        "feedback/test_orm.py::test_completion_and_values_visible_to_independent_connection",
+        "feedback/test_orm.py::test_duplicate_study_rolls_back_and_next_write_works",
+        "feedback/test_orm.py::test_schema_revision_is_committed_and_reopenable",
+        "feedback/test_orm.py::test_session_exception_rolls_back_whole_unit_and_can_continue",
+        "feedback/test_orm.py::test_study_delete_cascades_but_preserves_other_study",
+        "feedback/test_orm.py::test_study_directions_and_attributes_are_durable",
+        "feedback/test_orm.py::test_trial_numbers_are_sequential_and_scoped_to_study",
+        "feedback/test_orm.py::test_trial_relationships_are_loaded_and_persisted"
+      ],
+      "expected_count": 9
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_contract.py::test_attribute_update_replaces_value_without_duplicate_rows",
+        "acceptance/test_contract.py::test_completed_trial_is_immutable",
+        "acceptance/test_contract.py::test_constraint_failure_rolls_back_and_returns_connection",
+        "acceptance/test_contract.py::test_frozen_graph_survives_closed_session_and_reopen",
+        "acceptance/test_contract.py::test_future_schema_revision_is_rejected_not_silently_stamped",
+        "acceptance/test_contract.py::test_heartbeat_relationship_keeps_trial_identity",
+        "acceptance/test_contract.py::test_high_level_ask_tell_and_resume_use_real_storage",
+        "acceptance/test_contract.py::test_incompatible_distribution_rolls_back_without_corruption",
+        "acceptance/test_contract.py::test_multiobjective_direction_and_value_order_survive_reopen",
+        "acceptance/test_contract.py::test_repeated_queries_do_not_exhaust_pool",
+        "acceptance/test_contract.py::test_state_filter_and_study_isolation",
+        "acceptance/test_contract.py::test_valid_legacy_query_and_relationship_not_removed"
+      ],
+      "expected_count": 12
+    }
+  }
+}

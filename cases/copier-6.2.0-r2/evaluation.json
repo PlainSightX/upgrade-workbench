@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "case_id": "copier-6-2-0-r2",
+  "split": "development",
+  "purpose": "baseline_oracle_correction_and_answer_path_coverage",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_copy_flow.py",
+        "feedback/test_question_conversion.py"
+      ],
+      "nodeids": [
+        "feedback/test_copy_flow.py::test_answer_file_must_be_relative",
+        "feedback/test_copy_flow.py::test_explicit_answers_drive_typed_rendering",
+        "feedback/test_copy_flow.py::test_explicit_strings_bypass_question_casting",
+        "feedback/test_copy_flow.py::test_local_template_renders_default_answers",
+        "feedback/test_copy_flow.py::test_missing_template_is_rejected",
+        "feedback/test_question_conversion.py::test_question_filter_casts_declared_integer_and_boolean"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_question_contract.py",
+        "acceptance/test_render_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_question_contract.py::test_defaults_cast_text_before_rendering",
+        "acceptance/test_question_contract.py::test_question_rejects_invalid_numeric_answer",
+        "acceptance/test_question_contract.py::test_question_type_is_inferred_from_default",
+        "acceptance/test_render_contract.py::test_exclusion_leaves_other_rendered_files",
+        "acceptance/test_render_contract.py::test_filename_content_and_answer_record_agree",
+        "acceptance/test_render_contract.py::test_pretend_makes_no_output_directory",
+        "acceptance/test_render_contract.py::test_skip_if_exists_preserves_user_file"
+      ],
+      "expected_count": 7
+    }
+  },
+  "note": "公开与最终检查冻结分离；本修订不增加独立项目数量。"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "apscheduler-3-9-1-pg-r2",
+  "split": "development",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_persistence.py"
+      ],
+      "nodeids": [
+        "feedback/test_persistence.py::test_add_is_committed_and_restores_callable",
+        "feedback/test_persistence.py::test_due_order_and_paused_last",
+        "feedback/test_persistence.py::test_duplicate_is_rolled_back_and_next_write_works",
+        "feedback/test_persistence.py::test_missing_delete_preserves_error_contract",
+        "feedback/test_persistence.py::test_missing_lookup_is_none",
+        "feedback/test_persistence.py::test_remove_all_is_durable",
+        "feedback/test_persistence.py::test_remove_is_committed_without_removing_other_jobs",
+        "feedback/test_persistence.py::test_update_is_visible_to_another_connection"
+      ],
+      "expected_count": 8
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_contract.py"
+      ],
+      "nodeids": [
+        "acceptance/test_contract.py::test_compatibility_control_legacy_query_is_still_supported",
+        "acceptance/test_contract.py::test_corrupt_row_cleanup_is_durable_and_preserves_valid_job",
+        "acceptance/test_contract.py::test_database_constraint_failure_does_not_poison_next_operation",
+        "acceptance/test_contract.py::test_error_paths_return_pool_connections",
+        "acceptance/test_contract.py::test_pause_update_and_remove_all_survive_reopen",
+        "acceptance/test_contract.py::test_paused_scheduler_restart_modify_remove",
+        "acceptance/test_contract.py::test_reads_and_writes_return_pool_connections",
+        "acceptance/test_contract.py::test_reopen_recovers_committed_job",
+        "acceptance/test_contract.py::test_subsecond_due_boundary_and_parameterized_identity",
+        "acceptance/test_contract.py::test_unrelated_memory_store_contract_remains_valid"
+      ],
+      "expected_count": 10
+    }
+  }
+}

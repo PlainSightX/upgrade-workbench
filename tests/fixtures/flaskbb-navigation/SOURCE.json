@@ -1,0 +1,15 @@
+{
+  "scope": "Static navigation fixture only; not an executable migration case",
+  "repository": "https://github.com/flaskbb/flaskbb",
+  "revision": "566389cce4d37df294743a52606ddf9b4a76a75f",
+  "source_case_fingerprint": "8e1b988b4ad4d2191284b3d2018ae89a5529115401fdefdcdd6c6a86101f8622",
+  "source_manifest_sha256": "27f2409453aae139b48301d2b60b61fd614526e5dca60b6ab567df1e50442e52",
+  "source_kind": "Reviewed historical candidate excerpts; not pristine upstream bytes",
+  "files": {
+    "flaskbb/app.py": "fbc1898b51abf415081ea1bfa74747a0dec50a0de80940deba7a1c0d3744a3b4",
+    "flaskbb/extensions.py": "25892036e0faa0eade998b1be88935421a41f0564d4608130a6d2c7c5a2b9ec2",
+    "flaskbb/cli/main.py": "3a058570c562b7cdcf7130c6256142a7c747e9a1c4e2faf48f26b5c2de7a2417",
+    "flaskbb/__init__.py": "dca91610f470816343b89b1910acc04696c163264c2e0151345e82a530aa2b2d"
+  },
+  "license": "BSD-3-Clause with the retained source/NOTICE"
+}

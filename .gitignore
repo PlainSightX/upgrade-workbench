@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+!cases/splink-sqlalchemy-2/wheels/
+!cases/splink-sqlalchemy-2/wheels/phonetics-1.0.5-py2.py3-none-any.whl
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 本机环境、执行上下文与原始运行日志
+.local/
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "151f0d173fed6767084652e061c33bec5331f335ed52b5d4d14bdb6e3c88d204",
+  "requirements": [
+    {
+      "id": "record.named-positional-access",
+      "statement": "Core query records preserve field-name, positional and _mapping access for the same values.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_core_crud_preserves_named_and_positional_access"
+      ]
+    },
+    {
+      "id": "record.raw-query-mapping",
+      "statement": "Raw SQL results expose documented attribute and _mapping access without losing column names.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_raw_query_exposes_mapping"
+      ]
+    },
+    {
+      "id": "query.fetch-val-column",
+      "statement": "fetch_val can select values by numeric position and by a documented column name.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_fetch_val_accepts_position_and_name"
+      ]
+    },
+    {
+      "id": "types.custom-processor",
+      "statement": "A custom SQLAlchemy TypeDecorator keeps its bind and result conversion through the async SQLite backend.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_custom_type_processor_is_applied"
+      ]
+    },
+    {
+      "id": "record.iteration-interface",
+      "statement": "Streaming iteration yields records with the same named and positional access as fetch operations.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_iterate_preserves_record_interface"
+      ]
+    },
+    {
+      "id": "transaction.force-rollback",
+      "statement": "A force-rollback transaction does not persist inserted rows after the transaction closes.",
+      "public_check_nodeids": [
+        "feedback/test_sqlite_public.py::test_force_rollback_does_not_persist"
+      ]
+    },
+    {
+      "id": "record.column-object-access",
+      "statement": "A multi-table result remains addressable by the originating SQLAlchemy Column objects."
+    },
+    {
+      "id": "record.labels-and-text",
+      "statement": "Labeled Core columns and textual SQL columns remain addressable by their exposed names."
+    },
+    {
+      "id": "record.mapping-shape",
+      "statement": "The _mapping view reports stable keys and values without changing positional sequence behavior."
+    },
+    {
+      "id": "query.execute-many-order",
+      "statement": "execute_many preserves inserted boolean values and ordered retrieval through the public record interface."
+    },
+    {
+      "id": "transaction.nested-savepoint",
+      "statement": "Rolling back an inner transaction leaves the outer transaction usable and does not persist inner writes."
+    },
+    {
+      "id": "error.connection-reusable",
+      "statement": "A failed statement does not prevent a later valid query on the same acquired connection."
+    },
+    {
+      "id": "record.missing-key-rejected",
+      "statement": "Record sequence length and iteration remain correct, and a missing field name raises instead of selecting another value."
+    },
+    {
+      "id": "migration.native-bounded",
+      "statement": "The candidate stays inside the two allowed modules and does not use dependency downgrade, global monkeypatching or test imports."
+    }
+  ]
+}

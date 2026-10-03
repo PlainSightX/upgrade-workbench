@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+  "python_version": "3.9",
+  "local_wheels": [
+    "wheels/Babel-2.9.1-py2.py3-none-any.whl",
+    "wheels/Flask_Login-0.6.0-py3-none-any.whl",
+    "wheels/Pillow-8.3.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
+    "wheels/SQLAlchemy-1.4.21-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "wheels/blinker-1.4-py3-none-any.whl",
+    "wheels/celery-5.1.2-py3-none-any.whl",
+    "wheels/click_didyoumean-0.0.3-py3-none-any.whl",
+    "wheels/flask_allows-0.7.1-py3-none-any.whl",
+    "wheels/flask_mail-0.9.1-py3-none-any.whl",
+    "wheels/flask_themes2-0.1.5-py3-none-any.whl",
+    "wheels/flask_whooshee-0.8.1-py2.py3-none-any.whl",
+    "wheels/future-0.18.2-py3-none-any.whl",
+    "wheels/greenlet-3.2.5-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+    "wheels/limits-1.5.1-py3-none-any.whl",
+    "wheels/olefile-0.46-py2.py3-none-any.whl",
+    "wheels/setuptools-80.9.0-py3-none-any.whl",
+    "wheels/speaklater-1.3-py3-none-any.whl"
+  ]
+}
