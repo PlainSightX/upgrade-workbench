@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "kind": "P review candidate; no remote publication",
-  "source_base_commit": "6f3a5d10cdeb08d9fa5c95cc1e12ca980df717e0",
+  "kind": "R3 review candidate; no remote publication",
+  "source_base_commit": "e60c214a471f6cea863abf1d381810ff04ffd64b",
   "license_status": "MIT proposed; final owner confirmation pending",
   "private_test_exclusions": [
     "cases/test_copier_revision.py",
@@ -1877,7 +1877,7 @@
     "docs/licenses/flask-themes2-0.1.5-LICENSE": "7b7a91d88f076131bb3bbf50de7879541d2202f490651b5c29767400308792f8",
     "docs/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
     "docs/licenses/LGPL-3.0.txt": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
-    "docs/public-install.md": "e72f0fcea4fd561b5da8aa144bfccde51acc9d70170eaa2cc03c3f47900d02a5",
+    "docs/public-install.md": "ade9f672e04124956da7e07c78efa8ffc42d8f832a8ed09a9407bd5e2126ac26",
     "docs/public-tests.md": "52bc2824abe80ac6ddb4d2c2b68c3f905b4e2fefe98773b215c35c0d2eef33fc",
     "docs/third-party-assets.json": "ae4de474dedf16ffbc3f44edc941885614f5d75c13642908cb1762802d663c41",
     "LICENSE.candidate": "3ea7f6d5633303a67c62ee93018f13d7860c6963e8e70cf3aa7a363d166f22de",
@@ -1952,7 +1952,7 @@
     "src/upgrade_workbench/semantic.py": "3ad4ecb87217d6cc4704566fef4bcd630c1ad2542f29e11e02e6b30f24227f31",
     "src/upgrade_workbench/service/__init__.py": "5b6955641575af50e353c15f25044ca3557f673bcaf1751c82dce607c087fcfd",
     "src/upgrade_workbench/service/api.py": "7f7aec38beb03702b940d912a7eabda3aefda4290a160d80dca3bf6afcd685b7",
-    "src/upgrade_workbench/service/bootstrap.py": "359204337a45f093f2011a3c2ca7455e8cca9238f60e7ba8721e5206d553c707",
+    "src/upgrade_workbench/service/bootstrap.py": "971374ac819dff9192ba98d7aa8d702b4e5c31b3832ba5198dfb94b99e109d6f",
     "src/upgrade_workbench/service/cli.py": "fbebeb1cd3e235797ccec9bc7a9c076e746aff8028bae852a8ed37f45b9c5a56",
     "src/upgrade_workbench/service/config.py": "9061e82d165d02dbe88a64deee32b67650f2dfc5740c9ef818c4f0e10a2bde66",
     "src/upgrade_workbench/service/engine.py": "b18b5e157bb354a43d40e14018fa9c56ec6246bae796207768008b07bf65ade4",
@@ -2019,7 +2019,7 @@
     "tests/unit/generation/test_single_patch_initial.py": "8f327905becf1ffd5bc2fcc55a7ca530c0a7771b146ddb0fc0c17bf89b777aad",
     "tests/unit/generation/test_source_context.py": "d599f4ba9b980c8f2fdf3d0b06853e5cd5048b2318dc6442b796b9d861080580",
     "tests/unit/generation/test_static_feedback.py": "1dcb108b2ce7730b2ae74651de485021a8cf771efc0bb6ca087ea51e3380f2a9",
-    "tests/unit/service/test_bootstrap.py": "c25b187e7082a7e1da0c7b8523dc981fa3bf19d0a0f39102d1efb018a58f83ee",
+    "tests/unit/service/test_bootstrap.py": "6eaa586515ca34d791e712d703e01420aad2f04fe014914d075a03b61041c7bb",
     "tests/unit/service/test_config.py": "eed3fb3f48849839f36718b9376ee67a51e85735758c723c5bab305e11602755",
     "tests/unit/service/test_dependency_query_recovery.py": "e4525c3004a21ec496bbac4b57d55100e94d96f2163fb6bc0629d7bb1a3cb694",
     "tests/unit/service/test_implementation_install.py": "d96d3003e0a5c2044aa1c4cc51dd2e3d21226089e966b2d5717dad2664c02d50",
@@ -2072,5 +2072,5 @@
     "tools/release/summarize_replay.py": "2221e3f2d95c18ea2327790e1b40f4e231c30921f514bf0eb9b6e8f3e2d230b0",
     "uv.lock": "ffdab56c237cbc681a2c5e14365a4625cf8706e3cd3b750aa06b5f80e87242b5"
   },
-  "source_state": "Selected public bytes plus reviewed P source increments"
+  "source_state": "Reviewed R3 source increments on retained public P seed"
 }
