@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "kind": "R3 review candidate; no remote publication",
+  "kind": "Release source; remote availability verified separately",
   "source_base_commit": "e60c214a471f6cea863abf1d381810ff04ffd64b",
-  "license_status": "MIT proposed; final owner confirmation pending",
+  "license_status": "MIT for owned code; third-party licenses retained",
   "private_test_exclusions": [
     "cases/test_copier_revision.py",
     "cases/test_revision.py",
@@ -1878,11 +1878,11 @@
     "docs/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
     "docs/licenses/LGPL-3.0.txt": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
     "docs/public-install.md": "ade9f672e04124956da7e07c78efa8ffc42d8f832a8ed09a9407bd5e2126ac26",
-    "docs/public-tests.md": "52bc2824abe80ac6ddb4d2c2b68c3f905b4e2fefe98773b215c35c0d2eef33fc",
+    "docs/public-tests.md": "667d634f1ba0781cfeb5276450ea9b9319ebc78dab97aecc7383158edb020355",
     "docs/third-party-assets.json": "ae4de474dedf16ffbc3f44edc941885614f5d75c13642908cb1762802d663c41",
-    "LICENSE.candidate": "3ea7f6d5633303a67c62ee93018f13d7860c6963e8e70cf3aa7a363d166f22de",
+    "LICENSE": "3ea7f6d5633303a67c62ee93018f13d7860c6963e8e70cf3aa7a363d166f22de",
     "pyproject.toml": "0e5d639d8585bd5484e93dc6e1873599253a74c21419bdd8d7b9d942a3df9d43",
-    "README.md": "3f1ff8628ac4c01ca5bf70bb6b5d036a0616c68fb170604553d9ead6716adfae",
+    "README.md": "f1b97843018c369330eb354ea91cc2d68027642c4c4d59656be93e2046341a19",
     "src/upgrade_workbench/__init__.py": "23274a3ded4521cfb9e457e21ed8499abf18bc70c7461d2bf1eebd1b5d5feb45",
     "src/upgrade_workbench/analysis/__init__.py": "2ed4fcaa73c65a02a564bfb63f28e00f4e7f25351f44905675a9edaac333a448",
     "src/upgrade_workbench/analysis/dependencies.py": "d6787728abe344770e3c424734c83402a8eed6d4106d9eef85a3b1e58c365686",
@@ -2064,7 +2064,7 @@
     "tests/unit/test_tasks.py": "dae33b0ed7265ed9e5e165e477dad0d91558552e89c71974e33bcc8ef8108026",
     "tests/unit/test_werkzeug_followup.py": "8dc330ddc86915ee7432545176135de651ddd588da139b8f34e3b3102aed2a75",
     "tests/unit/workflow/test_comparison.py": "d24af38d35cda5775418c07ff307599f0b9e92395ad8970d9df1b2cbd0dd6549",
-    "THIRD_PARTY_NOTICES.md": "20d3edf5e7cb6de87c7a9608dbc976975dac0a128e1deb1af5847774b7eb6aa7",
+    "THIRD_PARTY_NOTICES.md": "46ea4c1522b1029b38680963a0168adbb135701957aec09d705712a9503e55a0",
     "tools/dev/download_public_artifact.py": "6bd56fcdb346c924c5d2eb08cc1a8678f4ece36affc09e4dc8ac8f631c3c25bd",
     "tools/dev/fetch_retrieval_models.py": "888a63a1aeb3df97d76b28e411ae8489df42b5abc562fd3352a9be54b33d3a9d",
     "tools/dev/run_registered_tasks.py": "2f890c34faaf96fe0db780df4f08f44e140694339c94b3d53884dad60487b51a",
@@ -2072,5 +2072,7 @@
     "tools/release/summarize_replay.py": "2221e3f2d95c18ea2327790e1b40f4e231c30921f514bf0eb9b6e8f3e2d230b0",
     "uv.lock": "ffdab56c237cbc681a2c5e14365a4625cf8706e3cd3b750aa06b5f80e87242b5"
   },
-  "source_state": "Reviewed R3 source increments on retained public P seed"
+  "source_state": "Reviewed R3 source increments on retained public P seed",
+  "repository": "PlainSightX/upgrade-workbench",
+  "release_version": "v0.0.1"
 }
