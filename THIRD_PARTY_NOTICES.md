@@ -31,6 +31,18 @@ blinker、celery、flask-allows、flask-mail、flask-whooshee、future、limits�
 speaklater 的完整许可在 wheel 内；future 的附加上游声明保留原样。
 click-didyoumean 与 Flask-Themes2 的缺失条款由版本来源中的原许可作为外置文件保留。
 
+Babel、Flask-Login、SQLAlchemy 的许可同样保存在原 wheel 中；greenlet 保留 MIT/PSF，
+Pillow 保留 HPND 及其附加通知。不要将整个依赖集合概括为 MIT。
+
+`setuptools-80.9.0` 含多种许可的 vendored 组件，包括 Apache、BSD、MIT、PSF 和 MPL。
+其中 `setuptools/_vendor/autocommand` 的 Python 源码按 LGPL-3.0-or-later 分发；
+源码、版权头和原 LGPL 文件在未修改的 wheel 内，外置补充完整
+[GNU GPLv3](docs/licenses/GPL-3.0.txt) 与 [GNU LGPLv3](docs/licenses/LGPL-3.0.txt)。
+可将 wheel 当作 ZIP 查看和修改这些 `.py` 源文件；项目没有额外限制修改或替换该组件，
+案例中的哈希仅用于复现固定实验输入，不限制许可授予的再分发权利。
+vendored `validate-pyproject` 的 MPL 通知及其原官方许可链接也原样保留。
+自有代码的 MIT 草案不重新授权上述第三方组件。补充文本的原始网址与哈希归入资产索引。
+
 ## 不随候选分发
 
 FlaskBB 的 docs/static/aurora 前端资产、字体、source map 与未核明的前端许可集合不分发。
