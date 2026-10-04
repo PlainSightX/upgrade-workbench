@@ -1,6 +1,21 @@
 {
   "schema_version": 1,
   "scope": "Actual selected candidate case inputs and bundled wheel notices",
+  "supplemental_notices": [
+    {
+      "component": "setuptools 80.9.0 vendored autocommand 2.2.2",
+      "license": "LGPL-3.0-or-later",
+      "files": {
+        "docs/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "docs/licenses/LGPL-3.0.txt": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+      },
+      "sources": [
+        "https://www.gnu.org/licenses/gpl-3.0.txt",
+        "https://www.gnu.org/licenses/lgpl-3.0.txt"
+      ],
+      "scope": "Complete supplemental notices; original bundled wheels and source bytes remain unchanged"
+    }
+  ],
   "cases": [
     {
       "case": "pydantic-field-contract",

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "kind": "Local review candidate; not yet GitHub published",
-  "source_base_commit": "82b09bae8de2c5d9eb0347bbea9b6d825822e31e",
-  "license_status": "MIT candidate awaiting final publication choice",
+  "kind": "P review candidate; no remote publication",
+  "source_base_commit": "6f3a5d10cdeb08d9fa5c95cc1e12ca980df717e0",
+  "license_status": "MIT proposed; final owner confirmation pending",
   "private_test_exclusions": [
     "cases/test_copier_revision.py",
     "cases/test_revision.py",
@@ -164,7 +164,7 @@
   },
   "files": {
     ".gitattributes": "b2b4c9727af6eb55310666da5f23ae6c03d61769bb3d20cb109e48ba7cb1fd86",
-    ".github/workflows/ci.yml": "01239394be4aec0c698495389bdff3292822f06c948179d7f8dd7a3cf6cbd2f0",
+    ".github/workflows/ci.yml": "5106dae0d43f663c8a4a12e4fb6e855e347583233a7c4ed3e83960d5fa3ae311",
     ".gitignore": "c69d94a2c37323871e9a3bf0edef4a438db791779937848ed241bc7057decc3f",
     ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
     "cases/apscheduler-3.9.1-pg-r2/business-contract.md": "ee002effcc92d94b27decf2f6896ead6561c1ffa92f2cffae5baef661461f36e",
@@ -1875,9 +1875,11 @@
     "docs/joint-r2-agent.md": "2edb3cdd7a118bf4c9fa4feb7abccf8f6e86b69af3549626824b95914efb4995",
     "docs/licenses/click-didyoumean-0.0.3-LICENSE": "efc74f255dd6fd4289363b1bfe71cd0ed70b2926c8258d6152204e6a89041c0a",
     "docs/licenses/flask-themes2-0.1.5-LICENSE": "7b7a91d88f076131bb3bbf50de7879541d2202f490651b5c29767400308792f8",
+    "docs/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "docs/licenses/LGPL-3.0.txt": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
     "docs/public-install.md": "e72f0fcea4fd561b5da8aa144bfccde51acc9d70170eaa2cc03c3f47900d02a5",
-    "docs/public-tests.md": "c1509227880a93e870fa2341383f7390e3152adf0a457bd80a63bfab2d6f1bb7",
-    "docs/third-party-assets.json": "a7b587533bc867d66407418d207a89aa5a55c318063ffd8f26b5bd046d627527",
+    "docs/public-tests.md": "52bc2824abe80ac6ddb4d2c2b68c3f905b4e2fefe98773b215c35c0d2eef33fc",
+    "docs/third-party-assets.json": "ae4de474dedf16ffbc3f44edc941885614f5d75c13642908cb1762802d663c41",
     "LICENSE.candidate": "3ea7f6d5633303a67c62ee93018f13d7860c6963e8e70cf3aa7a363d166f22de",
     "pyproject.toml": "0e5d639d8585bd5484e93dc6e1873599253a74c21419bdd8d7b9d942a3df9d43",
     "README.md": "3f1ff8628ac4c01ca5bf70bb6b5d036a0616c68fb170604553d9ead6716adfae",
@@ -2062,12 +2064,13 @@
     "tests/unit/test_tasks.py": "dae33b0ed7265ed9e5e165e477dad0d91558552e89c71974e33bcc8ef8108026",
     "tests/unit/test_werkzeug_followup.py": "8dc330ddc86915ee7432545176135de651ddd588da139b8f34e3b3102aed2a75",
     "tests/unit/workflow/test_comparison.py": "d24af38d35cda5775418c07ff307599f0b9e92395ad8970d9df1b2cbd0dd6549",
-    "THIRD_PARTY_NOTICES.md": "9c031237bba6a0886e716d6e754e931df2395648bb2e607daa6674cfbee361a2",
+    "THIRD_PARTY_NOTICES.md": "20d3edf5e7cb6de87c7a9608dbc976975dac0a128e1deb1af5847774b7eb6aa7",
     "tools/dev/download_public_artifact.py": "6bd56fcdb346c924c5d2eb08cc1a8678f4ece36affc09e4dc8ac8f631c3c25bd",
     "tools/dev/fetch_retrieval_models.py": "888a63a1aeb3df97d76b28e411ae8489df42b5abc562fd3352a9be54b33d3a9d",
     "tools/dev/run_registered_tasks.py": "2f890c34faaf96fe0db780df4f08f44e140694339c94b3d53884dad60487b51a",
     "tools/release/check_public_tree.py": "d62f81f91961d65dbde587bc0c255043b1717f62ed716fa8813655988acb5c3d",
+    "tools/release/summarize_replay.py": "2221e3f2d95c18ea2327790e1b40f4e231c30921f514bf0eb9b6e8f3e2d230b0",
     "uv.lock": "ffdab56c237cbc681a2c5e14365a4625cf8706e3cd3b750aa06b5f80e87242b5"
   },
-  "source_state": "Approved R2 working-tree bytes; final scoped commit bound in private closeout"
+  "source_state": "Selected public bytes plus reviewed P source increments"
 }
