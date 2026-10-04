@@ -74,5 +74,8 @@ A2 三任务比较中 W 估算费用高 46.7%；A5 Continuum 单案例中，相�
 
 [开发指南](CONTRIBUTING.md)说明验证与代码约定；[公开测试](docs/public-tests.md)区分
 产品测试和私有历史现场。[第三方归因](THIRD_PARTY_NOTICES.md)列出实际分发材料。
-当前是本地公开发布候选，MIT 为待确认许可草案；尚未发布 GitHub，历史评估的实现身份
-与本次候选分开。公开候选采用新初始历史，不包含私人旧 Git 历史、原模型请求、账本或大量日志。
+自有代码采用 [MIT](LICENSE)，第三方材料保持各自许可。仓库为
+[PlainSightX/upgrade-workbench](https://github.com/PlainSightX/upgrade-workbench)，
+首发版本为 `v0.0.1`；各提交的远端检查结果以对应 Actions 运行记录为准。
+历史评估的实现身份与本次发行分开。公开源码采用精选初始历史，不包含私人旧 Git 历史、
+原模型请求、账本或大量日志；[文件与来源清单](PUBLICATION.json)可核对发行内容。
