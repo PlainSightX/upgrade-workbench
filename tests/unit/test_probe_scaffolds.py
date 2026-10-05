@@ -5,10 +5,40 @@ import json
 from dataclasses import replace
 from pathlib import Path
 
+import pytest
+
 from upgrade_workbench.cases import load_case
 from upgrade_workbench.probe_scaffolds import scaffold_for
 
 CASE = Path(__file__).resolve().parents[2] / "cases/flaskbb-sqlalchemy-1.4.21-r2"
+
+
+@pytest.mark.parametrize("directory,filename,original,public", [
+    ("flaskbb-sqlalchemy-1.4.21-r2", "manifest.json",
+     "b1e69a715e9076be2d1d875efb8b1aba79214cbc08348ac10aca49e8db5a2f5f",
+     "3d4ba2509b46bf5d283726922b9f0d609160ed507e9b8fe4d9fbb2eeb611a6f7"),
+    ("flaskbb-sqlalchemy-1.4.21-r2", "manifest-v3.json",
+     "8bbe842cd9faf54d26f9efed32bc5497ec57de1aee2d785f0e9009523ea831dc",
+     "54167b665adb7a2071195fbda6dde5eb04b014ef94cec3a6410caaaa287ffaaa"),
+    ("flaskbb-sqlalchemy-1.4.21-r2", "manifest-v4.json",
+     "a9a9891ff212e2fc0391f4d3eab7ccf50625a07fe99d433ada76d736f3fecab4",
+     "5a1629585a0679c279718cb80b65291b6eaaf2da3906b3297120775b116c0b21"),
+    ("flaskbb-werkzeug-2.1", "manifest.json",
+     "be4cd0df52e971e9ed56fcc8aa1f069a25664353edcd07735fde82891c3d476a",
+     "45df1510d27a934c829623469d0f5bc282873d4f263e19aa56657c7471235d2d"),
+])
+def test_current_public_fixture_alias_preserves_payload_and_identity_gate(
+    directory, filename, original, public,
+):
+    case = load_case(CASE.parent / directory / filename)
+    assert case.fingerprint in {original, public}
+    scaffold = scaffold_for(case)
+    assert scaffold is not None
+    assert scaffold.case_fingerprint == case.fingerprint
+    assert scaffold.public() == scaffold_for(replace(case, fingerprint=original)).public()
+    assert scaffold_for(replace(case, fingerprint="f" * 64)) is None
+    renamed = case.manifest.model_copy(update={"case_id": "unreviewed-flaskbb"})
+    assert scaffold_for(replace(case, manifest=renamed)) is None
 
 
 def test_reviewed_thin_manifest_reuses_exact_public_scaffold():

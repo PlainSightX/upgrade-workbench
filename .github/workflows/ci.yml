@@ -16,7 +16,14 @@ permissions:
 
 jobs:
   unit:
+    # main 的 push 完整跑单测；手动 Docker 回放不重复同提交的六组单测。
+    if: github.event_name != 'workflow_dispatch' || !inputs.run_docker
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -24,7 +31,23 @@ jobs:
           python-version: '3.12'
       - run: uv sync --locked --extra service
       - run: uv run --no-sync ruff check src tests
-      - run: uv run --no-sync pytest tests/unit
+      - name: Run every unit-test module in one deterministic shard
+        run: |
+          uv run --no-sync python - <<'PY'
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          files = sorted(Path('tests/unit').rglob('test_*.py'))
+          selected = files[${{ matrix.shard }}::6]
+          if not selected:
+              raise SystemExit('Empty unit-test shard')
+          print(f'Shard ${{ matrix.shard }}/6: {len(selected)} of {len(files)} modules', flush=True)
+          raise SystemExit(subprocess.run(
+              [sys.executable, '-m', 'pytest', *map(str, selected), '--durations=10'],
+              check=False,
+          ).returncode)
+          PY
       - run: git diff --exit-code -- uv.lock
 
   reviewed-snapshot:
