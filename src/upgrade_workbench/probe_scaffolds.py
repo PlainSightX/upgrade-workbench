@@ -187,6 +187,15 @@ def scaffold_for(case: LoadedCase) -> ProbeScaffold | None:
     """身份变化时默认拒绝复用，避免旧启动假设静默漂移。"""
     # 公开测试输入剔除未消费的前端资产；只认可逐项审阅的完整指纹，不按名称猜测。
     public_aliases = {
+        # 发布来源说明改变完整指纹；只认可已逐项核对的新公开夹具身份。
+        ("flaskbb-sqlalchemy-1-4-21-r2", "3d4ba2509b46bf5d283726922b9f0d609160ed507e9b8fe4d9fbb2eeb611a6f7"):
+            "b1e69a715e9076be2d1d875efb8b1aba79214cbc08348ac10aca49e8db5a2f5f",
+        ("flaskbb-sqlalchemy-1-4-21-r2", "54167b665adb7a2071195fbda6dde5eb04b014ef94cec3a6410caaaa287ffaaa"):
+            "8bbe842cd9faf54d26f9efed32bc5497ec57de1aee2d785f0e9009523ea831dc",
+        ("flaskbb-sqlalchemy-1-4-21-r2", "5a1629585a0679c279718cb80b65291b6eaaf2da3906b3297120775b116c0b21"):
+            "a9a9891ff212e2fc0391f4d3eab7ccf50625a07fe99d433ada76d736f3fecab4",
+        ("flaskbb-werkzeug-2-1", "45df1510d27a934c829623469d0f5bc282873d4f263e19aa56657c7471235d2d"):
+            "be4cd0df52e971e9ed56fcc8aa1f069a25664353edcd07735fde82891c3d476a",
         ("flaskbb-sqlalchemy-1-4-21-r2", "03eb1110c4bc4ef7ebdfc29250712cbf5faa987536d0e3a28528a62e7ec8f3f7"):
             "b1e69a715e9076be2d1d875efb8b1aba79214cbc08348ac10aca49e8db5a2f5f",
         ("flaskbb-sqlalchemy-1-4-21-r2", "9395969ead691dab3b040a5e0534b146f5333d558c0b2d254e79ef54f6c7b072"):
