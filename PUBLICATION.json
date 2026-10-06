@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "kind": "Local maintenance candidate; remote publication and CI not performed",
+  "kind": "Reviewed public maintenance source; CI and release availability verified separately",
   "source_base_commit": "2a57c021d86dcb9a8cc2f2396e3df5ad5e45adca",
   "license_status": "MIT for owned code; third-party licenses retained",
   "repository": "PlainSightX/upgrade-workbench",
@@ -2080,5 +2080,6 @@
     "tools/release/check_public_tree.py": "d76f969bdf8ef48d98a124e88ead4c0c16b5730248442a1f0c65651ad060ca28",
     "tools/release/summarize_replay.py": "2221e3f2d95c18ea2327790e1b40f4e231c30921f514bf0eb9b6e8f3e2d230b0"
   },
-  "public_base_commit": "b2905e116271b04fb2e76ed2ae7f89a732b4db59"
+  "public_base_commit": "b2905e116271b04fb2e76ed2ae7f89a732b4db59",
+  "release_version": "v0.0.2"
 }
