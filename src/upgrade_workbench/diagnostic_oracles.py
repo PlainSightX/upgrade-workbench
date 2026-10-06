@@ -48,14 +48,21 @@ def measurement(stdout):
     if len(records) != 1:
         return {"status": "ambiguous_measurement"}
     try:
-        if len(records[0]) > 1000:
+        if len(records[0].encode("utf-8")) > 2048:
             raise ValueError("measurement too large")
         value = json.loads(records[0], object_pairs_hook=_unique_object)
-        if (not isinstance(value, dict) or set(value) != {"before", "after", "path_completed"}
+        fields = {"before", "after", "path_completed"}
+        if (not isinstance(value, dict) or set(value) not in (fields, fields | {"input", "output"})
                 or type(value["path_completed"]) is not bool
                 or not all(_number(value[key]) for key in ("before", "after"))):
             raise ValueError("invalid measurement")
-    except (ValueError, TypeError, RecursionError):
+        if "input" not in value and len(records[0]) > 1000:
+            raise ValueError("legacy measurement too large")
+        if "input" in value:
+            from .probe_comparisons import validate_sample
+
+            validate_sample({key: value[key] for key in ("input", "output", "path_completed")})
+    except (ValueError, TypeError, RecursionError, OverflowError):
         return {"status": "invalid_measurement"}
     return {"status": "measured" if value["path_completed"] else "path_not_completed", **value}
 

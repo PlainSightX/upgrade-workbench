@@ -1665,9 +1665,14 @@ def context_from_reference(reference, case, snapshot) -> dict:
             "remaining_probes": task["policy"]["max_probes"]
                                 - sum(not p.get("parent_probe_id") for p in probes)}
     if task.get("semantic_risk_policy") is not None:
+        from .generation.semantic_risk import COMPARISON_POLICY
         from .generation.semantic_risk import validate_policy as risk_policy
 
         result["semantic_risk_policy"] = risk_policy(task["semantic_risk_policy"])
+        if task["semantic_risk_policy"] == COMPARISON_POLICY and task.get("context_role", "solver") == "solver":
+            from .probe_comparisons import project as compare_probes
+
+            result["probe_comparisons"] = compare_probes(display_items, snapshot.revision)
     if task.get("delivery_review_policy") is not None:
         from .generation.delivery_review import EVIDENCE_POLICY, POLICIES, draft, public_outputs
 
@@ -2553,12 +2558,14 @@ def _diagnostic_excerpt(text, *, failure_details=None, critical_evidence=None):
     return _bounded(prefix + cleaned, 2500)[0], True
 
 
-def summarize(report, *, probe=False, oracle=None, observation_scope=None):
+def summarize(report, *, probe=False, oracle=None, observation_scope=None, include_probe_samples=False):
     from .diagnostic_output import output_cursor
     from .workflow import _fully_passed
 
     if observation_scope is not None and (not probe or oracle is not None):
         raise ValueError("Observation-only scope cannot be combined with a numeric oracle or public checks")
+    if include_probe_samples and not probe:
+        raise ValueError("Probe samples require a reviewed probe")
     stages = {}
     stdout = {}
     dependencies = []
@@ -2647,6 +2654,10 @@ def summarize(report, *, probe=False, oracle=None, observation_scope=None):
                            "objects do not establish the broader requirement or clear a prior counterexample."}
     if probe and report.get("probe_scaffold"):
         result["probe_scaffold"] = report["probe_scaffold"]
+    if include_probe_samples:
+        from .probe_comparisons import readings
+
+        result["probe_samples"] = readings(report, stdout)
     # 按整个UTF-8产物预算逐级投影；测试计数和判定来自完整报告，不受摘要裁剪影响。
     for width, count in ((1200, 8), (600, 4), (300, 2), (120, 1), (80, 0)):
         if len(encoded(result)) <= 20_000:
@@ -2688,11 +2699,13 @@ def run_probe(case, snapshot, code: str, directory: Path, execution: dict, *, ex
     """同一探针跨版本执行；只物化探针，不挂载或复制最终检查。"""
     from .execution.docker import DockerExecutor
     from .execution.postgres import load_postgres_spec
+    from .probe_comparisons import identity as probe_identity
     from .probe_scaffolds import scaffold_for
     from .workflow import _check_snapshots, _snapshot_hashes
 
     report = {"kind": "probe", "check_group": "probe", "case_fingerprint": case.fingerprint,
               "revision": snapshot.revision, "stages": {}, "environments": {}, "status": "running",
+              "probe_sample_identity": probe_identity(case, snapshot, code),
               "phase": "started", "current_action": "materialize", "outcome": "unknown"}
     directory.mkdir(parents=True, exist_ok=False)
     report_path = directory / "report.json"
@@ -2864,10 +2877,14 @@ def review_diagnostic(task, case, *, request_id, reviewer, note, decision, compa
         run["last_action"] = report.get("last_action", "report_returned")
         _save(task, Path(task["task_path"]))
         try:
+            from .generation.semantic_risk import COMPARISON_POLICY
+
             public, dependencies = summarize(report, probe=bool(request["probe_id"]),
                                              oracle=probe.get("oracle") if request["probe_id"] else None,
                                              observation_scope={key: probe[key] for key in ("purpose", "expected_observation")}
-                                             if request["probe_id"] and "oracle" in probe and probe["oracle"] is None else None)
+                                             if request["probe_id"] and "oracle" in probe and probe["oracle"] is None else None,
+                                             include_probe_samples=bool(request["probe_id"])
+                                             and task["protocol"].get("semantic_risk_policy") == COMPARISON_POLICY)
         except ValueError as error:
             raise DiagnosticContractError("Diagnostic report cannot produce a bounded public summary") from error
         if "assessment" in public:

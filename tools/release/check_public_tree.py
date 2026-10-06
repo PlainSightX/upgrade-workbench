@@ -56,7 +56,9 @@ def check(root: Path) -> dict:
     # 仅检查自有入口文档；第三方保留 README 的上游站内链接不是本仓库承诺。
     for name in ["README.md", "CONTRIBUTING.md", "THIRD_PARTY_NOTICES.md",
                  "docs/public-install.md", "docs/public-tests.md", "docs/joint-r2-agent.md", "docs/examples/csvsql/README.md",
-                 "docs/examples/comparison/README.md", "docs/examples/semantic-risk/README.md"]:
+                 "docs/examples/comparison/README.md", "docs/examples/semantic-risk/README.md",
+                 "docs/probe-comparisons.md", "docs/probe-input-generation.md",
+                 "docs/results/semantic-boundaries-a1/README.md"]:
         document = root / name
         for target in re.findall(r"\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
             if target.startswith(("https://", "http://", "#")):

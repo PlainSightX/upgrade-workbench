@@ -16,7 +16,12 @@ from upgrade_workbench.generation.request import (
     _instructions,
     _json_bytes,
 )
-from upgrade_workbench.generation.semantic_risk import INSTRUCTIONS, POLICY
+from upgrade_workbench.generation.semantic_risk import (
+    COMPARISON_INSTRUCTIONS,
+    COMPARISON_POLICY,
+    INSTRUCTIONS,
+    POLICY,
+)
 from upgrade_workbench.planning import prepare_case_proposal
 from upgrade_workbench.reporting import _public_protocol
 from upgrade_workbench.tasks import (
@@ -36,18 +41,19 @@ def profile(**updates):
 
 @pytest.mark.parametrize("revision,format_name", [(4, "diagnostic_actions"), (5, "contract_actions"),
                                                  (6, "protocol_v6_actions")])
-def test_policy_is_consumed_from_frozen_task_through_request(tmp_path, revision, format_name):
+@pytest.mark.parametrize("selected_policy", [POLICY, COMPARISON_POLICY])
+def test_policy_is_consumed_from_frozen_task_through_request(tmp_path, revision, format_name, selected_policy):
     BudgetLedger(tmp_path / "ledger.sqlite", {
         "mode": "user_managed", "limit_usd": None, "model": "owned-model",
         "input_per_million": "1", "output_per_million": "1",
         "pricing_source": "https://example.test/pricing", "pricing_checked_at": "2026-10-03",
     })
     task = create_operation(CASE, tmp_path / "work", budget_path=tmp_path / "ledger.sqlite",
-                            **profile(semantic_risk_policy=POLICY, protocol_revision=revision))
+                            **profile(semantic_risk_policy=selected_policy, protocol_revision=revision))
     case = load_case(CASE)
     snapshot = load_candidate(case)
     reference = freeze_context(task)
-    assert context_from_reference(reference, case, snapshot)["semantic_risk_policy"] == POLICY
+    assert context_from_reference(reference, case, snapshot)["semantic_risk_policy"] == selected_policy
     receipt = prepare_case_proposal(CASE, tmp_path / "request", public_source_ack=True,
                                    output_format=format_name, diagnostic_context_reference=reference,
                                    candidate_reference=snapshot.reference, max_source_bytes=1600000,
@@ -57,8 +63,10 @@ def test_policy_is_consumed_from_frozen_task_through_request(tmp_path, revision,
     payload = json.loads(Path(receipt["request_path"]).read_bytes())
     assert INSTRUCTIONS in payload["messages"][0]["content"]
     context = json.loads(payload["messages"][1]["content"])
-    assert context["diagnostic_state"]["semantic_risk_policy"] == POLICY
-    assert receipt["semantic_risk_policy"] == POLICY
+    assert context["diagnostic_state"]["semantic_risk_policy"] == selected_policy
+    assert receipt["semantic_risk_policy"] == selected_policy
+    assert (COMPARISON_INSTRUCTIONS in payload["messages"][0]["content"]) == (selected_policy == COMPARISON_POLICY)
+    assert ("probe_comparisons" in context["diagnostic_state"]) == (selected_policy == COMPARISON_POLICY)
     assert "checks/acceptance" not in json.dumps(context)
     # 改写请求收据不能从已冻结的策略中移除自查。
     receipt.pop("semantic_risk_policy")
@@ -72,7 +80,7 @@ def test_policy_is_consumed_from_frozen_task_through_request(tmp_path, revision,
     Path(receipt["report_path"]).write_bytes(_json_bytes(receipt))
     with pytest.raises(ProposalInputError, match="Semantic risk policy differs"):
         _load_prepared(receipt)
-    assert _public_protocol(task["protocol"])["semantic_risk_policy"] == POLICY
+    assert _public_protocol(task["protocol"])["semantic_risk_policy"] == selected_policy
 
 
 def test_default_has_no_policy_and_role_permissions_are_unchanged():
@@ -84,6 +92,18 @@ def test_default_has_no_policy_and_role_permissions_are_unchanged():
     assert INSTRUCTIONS not in _instructions("investigator_actions", semantic_risk_policy=POLICY)
     assert INSTRUCTIONS not in _instructions("contract_audit", semantic_risk_policy=POLICY)
     assert "exec_driver_sql" not in INSTRUCTIONS and "colon" not in INSTRUCTIONS
+
+
+def test_typed_partition_guidance_is_optional_and_does_not_supply_case_answers():
+    assert "omitted keys, explicit null" in COMPARISON_INSTRUCTIONS
+    assert "resulting values" in COMPARISON_INSTRUCTIONS
+    assert "targeted boundary examples" in COMPARISON_INSTRUCTIONS
+    assert "Never catch import/setup failures" in COMPARISON_INSTRUCTIONS
+    assert "VersionPartConfig" not in COMPARISON_INSTRUCTIONS
+    assert "optional_value" not in COMPARISON_INSTRUCTIONS
+    assert "= None" not in COMPARISON_INSTRUCTIONS
+    assert COMPARISON_INSTRUCTIONS not in _instructions("diagnostic_actions", semantic_risk_policy=POLICY)
+    assert COMPARISON_INSTRUCTIONS not in _instructions("diagnostic_actions")
 
 
 def test_isolated_investigator_keeps_policy_identity_without_solver_instructions():
