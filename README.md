@@ -66,6 +66,13 @@ A2 三任务比较中 W 估算费用高 46.7%；A5 Continuum 单案例中，相�
 [版本语义自查比较](docs/joint-r2-agent.md)单列一个可选Solver机制的首次结果与限制，
 不与历史整套工作台的费用结论合并；具体难点仍可沿csvsql案例、补丁和独立检查复核。
 
+维护增量提供[可选语义差分诊断](docs/probe-comparisons.md)及
+[有界输入生成组件](docs/probe-input-generation.md)，旧版、候选的具体观察严格区分
+`same/different/incomplete`；默认策略与独立验收不变。
+[可选值案例](docs/results/semantic-boundaries-a1/README.md)已有有效读数进入真实模型后继动作，
+但候选在此前已经生成，两臂验收相同；定向输入与穷举也没有检出差异。
+因此不宣称新接口提高修复质量或稳定降本，自动生成仍未接入普通Agent。
+
 源码分析不是完整调用图，动态导入、包装与复杂绑定存在未知边界。
 合同并不穷尽全部业务行为：csvsql 的原四项检查曾漏掉冒号字面量。
 当前没有生产用户、人工节省工时、广泛未见迁移成功率或生产 SLA 的主张。

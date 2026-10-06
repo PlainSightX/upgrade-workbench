@@ -63,6 +63,18 @@ def test_unusable_measurement_never_proves_success(text, status):
                     {"new_original": text})["conclusion"] == "inconclusive"
 
 
+@pytest.mark.parametrize("changes", [{"input": "actual"}, {"output": "actual"},
+    {"input": "actual", "output": float("nan")},
+    {"input": "actual", "output": "x" * 2100},
+    {"input": "actual", "output": {"bad": "\x00"}},
+])
+def test_incomplete_or_invalid_unified_sample_cannot_pass_numeric_assessment(changes):
+    stdout = MARKER + json.dumps({"before": 0, "after": 0, "path_completed": True, **changes})
+    assert measurement(stdout)["status"] == "invalid_measurement"
+    assert evaluate(ORACLE, {"new_original": {"status": "passed"}},
+                    {"new_original": stdout})["conclusion"] == "inconclusive"
+
+
 def test_failed_test_with_satisfying_readout_is_not_positive_evidence():
     result = evaluate(ORACLE, {"new_original": {"status": "failed"}}, {"new_original": output(0, 0)})
     assert result["conclusion"] == "inconclusive"

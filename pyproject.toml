@@ -21,6 +21,7 @@ upgrade-workbench = "upgrade_workbench.cli:main"
 upgrade-service = "upgrade_workbench.service.cli:main"
 
 [project.optional-dependencies]
+probe-generation = ["hypothesis==6.142.4"]
 service = [
     "fastapi>=0.120,<1",
     "uvicorn>=0.35,<1",
