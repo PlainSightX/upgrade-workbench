@@ -1,0 +1,822 @@
+{
+  "schema_version": 4,
+  "task_id": "944f43f42a19494abe383cffac544d50",
+  "case_id": "sqlalchemy-mixins-sqlalchemy-2",
+  "case_fingerprint": "862caaa6d0b448b7a1b553841a34a60f09c56461155383251dd144e5fed940de",
+  "status": "submitted",
+  "stop_reason": null,
+  "seed_strategy": "none",
+  "seed_status": null,
+  "candidate_revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+  "candidate_sha256": "7098ddcd4d5df0bcbee8c92acc1b1e8d8dfdcb54a83ab6b2d509b754a5f8cdbc",
+  "candidate_exported": true,
+  "final_evaluation": "completed",
+  "result": "candidate_verified",
+  "stages": {
+    "old_original": {
+      "status": "passed",
+      "tests": {
+        "collected": 19,
+        "passed": 19,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_original": {
+      "status": "failed",
+      "tests": {
+        "collected": 19,
+        "passed": 9,
+        "failed": 10,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_candidate": {
+      "status": "passed",
+      "tests": {
+        "collected": 19,
+        "passed": 19,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "usage": {
+    "calls": 24,
+    "reported_input_tokens": 1407680,
+    "reported_output_tokens": 351466,
+    "unknown_usage_calls": 0,
+    "provider_duration_seconds": 1517.875
+  },
+  "cost": {
+    "ledger": ".local/remediation-budget.sqlite3",
+    "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+    "pricing_checked_at": "2026-09-16",
+    "input_per_million_usd": "0.30",
+    "output_per_million_usd": "1.20",
+    "estimated_or_reserved_usd": 0.844074,
+    "calls": [
+      {
+        "request_id": "511905c185ea496aa162fe851935df9f",
+        "reserved_usd": 0.189791,
+        "estimated_usage_usd": 0.008739,
+        "state": "settled"
+      },
+      {
+        "request_id": "b5062edefcc7479e9a1fce11dcaf6575",
+        "reserved_usd": 0.192408,
+        "estimated_usage_usd": 0.011325,
+        "state": "settled"
+      },
+      {
+        "request_id": "8c33bf80ea314d3390bd2d0411c8d59b",
+        "reserved_usd": 0.193624,
+        "estimated_usage_usd": 0.015859,
+        "state": "settled"
+      },
+      {
+        "request_id": "e0d3ef806f4547238fffdc243cae93db",
+        "reserved_usd": 0.208995,
+        "estimated_usage_usd": 0.018333,
+        "state": "settled"
+      },
+      {
+        "request_id": "76e84fd07e9244e286b98c839ee5bd65",
+        "reserved_usd": 0.212043,
+        "estimated_usage_usd": 0.031552,
+        "state": "settled"
+      },
+      {
+        "request_id": "e7502702ad414b5c9f17361b57a01a3a",
+        "reserved_usd": 0.211623,
+        "estimated_usage_usd": 0.029327,
+        "state": "settled"
+      },
+      {
+        "request_id": "46e02d35e6884df384198a8ee2b9923f",
+        "reserved_usd": 0.211871,
+        "estimated_usage_usd": 0.034662,
+        "state": "settled"
+      },
+      {
+        "request_id": "7da8e16da30f4a1dbedd49df6ec09756",
+        "reserved_usd": 0.20998,
+        "estimated_usage_usd": 0.021175,
+        "state": "settled"
+      },
+      {
+        "request_id": "6c6420296952424a949d2edd130a9ed4",
+        "reserved_usd": 0.212029,
+        "estimated_usage_usd": 0.023992,
+        "state": "settled"
+      },
+      {
+        "request_id": "92e6555c10d04a87a2f3766d7e5ba1ea",
+        "reserved_usd": 0.213318,
+        "estimated_usage_usd": 0.070921,
+        "state": "settled"
+      },
+      {
+        "request_id": "7a64924f63484bf780e501fad74e2f37",
+        "reserved_usd": 0.213429,
+        "estimated_usage_usd": 0.022839,
+        "state": "settled"
+      },
+      {
+        "request_id": "a0be066e2583402086d52ddb82a8f333",
+        "reserved_usd": 0.221214,
+        "estimated_usage_usd": 0.069554,
+        "state": "settled"
+      },
+      {
+        "request_id": "86fce7d81d9a4667b9bd84090913e29b",
+        "reserved_usd": 0.229761,
+        "estimated_usage_usd": 0.034901,
+        "state": "settled"
+      },
+      {
+        "request_id": "41036ca0cff543678f14d84b2acef834",
+        "reserved_usd": 0.22902,
+        "estimated_usage_usd": 0.041217,
+        "state": "settled"
+      },
+      {
+        "request_id": "8980f44b490b4cc79f72ab58dae86dfa",
+        "reserved_usd": 0.234639,
+        "estimated_usage_usd": 0.036154,
+        "state": "settled"
+      },
+      {
+        "request_id": "6b88812bdf904d3c8ded3fa377348cab",
+        "reserved_usd": 0.22994,
+        "estimated_usage_usd": 0.055007,
+        "state": "settled"
+      },
+      {
+        "request_id": "6aa91e67601f4b289a507bd1bf970140",
+        "reserved_usd": 0.237436,
+        "estimated_usage_usd": 0.035026,
+        "state": "settled"
+      },
+      {
+        "request_id": "a2270c42fe2b49a290aa6eb235dae4fa",
+        "reserved_usd": 0.241623,
+        "estimated_usage_usd": 0.048187,
+        "state": "settled"
+      },
+      {
+        "request_id": "44474ead23c64a43ba103256e0c474e5",
+        "reserved_usd": 0.236925,
+        "estimated_usage_usd": 0.044273,
+        "state": "settled"
+      },
+      {
+        "request_id": "be953a1d28dc43b08e8e08b30f0da5da",
+        "reserved_usd": 0.244808,
+        "estimated_usage_usd": 0.050645,
+        "state": "settled"
+      },
+      {
+        "request_id": "48f22ad8a64b42ab826ced71c12ecf95",
+        "reserved_usd": 0.249578,
+        "estimated_usage_usd": 0.055075,
+        "state": "settled"
+      },
+      {
+        "request_id": "17309b1875b54a309ebbb8187e43daa5",
+        "reserved_usd": 0.253483,
+        "estimated_usage_usd": 0.026814,
+        "state": "settled"
+      },
+      {
+        "request_id": "79c69c7763164a81a6e7c3e3c3435c59",
+        "reserved_usd": 0.25082,
+        "estimated_usage_usd": 0.030926,
+        "state": "settled"
+      },
+      {
+        "request_id": "c10cbf3b857545068f786e496b2ab5ef",
+        "reserved_usd": 0.244959,
+        "estimated_usage_usd": 0.027571,
+        "state": "settled"
+      }
+    ],
+    "actual_billing": "not_claimed"
+  },
+  "protocol": {
+    "max_calls": 24,
+    "generation": {
+      "model": "deepseek-flash",
+      "thinking_mode": "enabled",
+      "max_output_tokens": 131072,
+      "timeout_seconds": 1200,
+      "max_source_bytes": 1600000,
+      "max_request_bytes": 850000,
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "execution": {
+      "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+      "prepare_timeout": 600,
+      "test_timeout": 240
+    },
+    "implementation_identity_sha256": "cb86a5d300f95be16feecc0e9d02c7ac708e4728bd4a3eb0474701291b57dd9e",
+    "protocol_revision": 6,
+    "source_policy": {
+      "mode": "focused",
+      "body_bytes": 96000,
+      "inventory_bytes": 64000
+    },
+    "diagnostic_policy": {
+      "max_runs": 8,
+      "max_probes": 3,
+      "max_revisions_per_probe": 2,
+      "max_observation_revisits": 4
+    },
+    "contract_audit_policy": "bounded",
+    "investigator_policy": "disabled",
+    "dependency_query_policy": {
+      "max_queries": 8,
+      "max_result_bytes": 24000
+    },
+    "role_budget": {
+      "investigator_max_calls": 3,
+      "solver_reserved_calls": 2
+    },
+    "context_assistance": "full",
+    "navigation_assistance": "failure_guided",
+    "project_context_policy": {
+      "version": "project-context-v2",
+      "context_tokens": 1000000,
+      "framing_reserve_tokens": 4096
+    },
+    "workflow_profile": "workbench",
+    "finish_policy": "probe-lineage-v1",
+    "investigation_policy": {
+      "version": "investigation-budget-v1",
+      "diagnostic_limits": {
+        "max_runs": 8,
+        "max_probes": 3,
+        "max_revisions_per_probe": 2,
+        "max_observation_revisits": 4
+      },
+      "finish_limits": {
+        "explanation_max_characters": 4000,
+        "evidence_refs_max_items": 16
+      },
+      "finish_notice_calls": 4
+    }
+  },
+  "candidate_revisions": 3,
+  "review_decisions": 3,
+  "provider_payloads_exported": false,
+  "origin_note": "Official seed and model increments are distinct; review is not personal implementation.",
+  "comparison": {
+    "path": "external/report.json",
+    "sha256": "d19d16c8ea1a2f98ecbada10b611cea6bb396a5c38037ca2a189af6eaf40103d",
+    "recoverability": "resolve_via_original_local_batch"
+  },
+  "finish": {
+    "type": "finish",
+    "reason": "candidate_ready",
+    "explanation": "Candidate ff00b9e9 (patch 7098ddcd) edits only sqlalchemy_mixins/eagerload.py and sqlalchemy_mixins/smartquery.py. SQLAlchemy 2.0 removed string relationship names in loader options, so _resolve_attrs walks a dotted path to class-bound mapped attributes, _eager_option chains joinedload/subqueryload per level, _eager_expr_from_flat_schema emits one maximal chain per schema path (avoiding the loader-strategy conflict that a parent subqueryload plus separate top-level child joinedload produced), and _contains_eager_option builds an of_type() alias chain over the aliases created for relation filters and sorts. Standalone smart_query converts an AppenderQuery (lazy='dynamic') to a plain Query when the removed legacy state is unavailable. All six visible public checks pass on 2.0.38 on this revision (observation:34d71d8f), while the unmodified source fails three of the same checks on 2.0.38 and passes them on 1.4.54, so the string-loader-path failure is a real version regression, not a test artifact. The documented nested schema form {'posts': (SUBQUERY, {'comments': JOINED})} was measured on this revision against the plain {'posts': SUBQUERY} form: both emit 2 statements, delta 0 (observation:75375508). That oracle is a same-environment delta, so it does not establish an absolute query count. Standalone smart_query on a bare lazy='dynamic' relationship query returns the same row count as the equivalent plain Query, delta 0 (observation:fff4c301). Known limitation for review: applying smart_query to a dynamic query that already carries limit/offset raises InvalidRequestError ('Query.filter() being called on a Query which already has LIMIT or OFFSET applied'); the unmodified 1.4.54 source raises the same error class, so this is a pre-existing library limitation rather than a candidate-introduced regression, and the earlier limit probe is inconclusive as a numeric oracle. Remaining unobserved for independent final acceptance: inspection.attribute-names (columns, primary_keys, relations, settable_relations without viewonly, hybrid_properties, hybrid_methods, settable_attributes; inspection.py is unchanged and exercised only indirectly through fill()) and the full cross-version migration statement. No counterexamples are open. No files were added, removed or renamed; no tests or dependencies were edited; the library still only flushes and never commits on the caller's behalf. Submitting for review is not a claim of final acceptance.",
+    "evidence_refs": [
+      "business_contract",
+      "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be",
+      "observation:75375508d034e6456089932f3055fdbea17405eb7de15815e150302e8cb55b4a",
+      "observation:fff4c301529fb6ed7d14e285880c0ce1ec0d3fa4b421ea7df16f922bfe3a4a4a",
+      "source:sqlalchemy_mixins/eagerload.py",
+      "source:sqlalchemy_mixins/smartquery.py",
+      "version:retrieved-0a226b62100c50e7d99b8dc3"
+    ],
+    "contract_coverage": [
+      {
+        "requirement_id": "activerecord.crud-flush",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "activerecord.lookup",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "eagerload.paths-and-schema",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be",
+          "observation:75375508d034e6456089932f3055fdbea17405eb7de15815e150302e8cb55b4a"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "smartquery.filters-sort",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "smartquery.auto-eager-dynamic",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:fff4c301529fb6ed7d14e285880c0ce1ec0d3fa4b421ea7df16f922bfe3a4a4a"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "inspection.attribute-names",
+        "state": "unobserved",
+        "evidence_refs": [
+          "source:sqlalchemy_mixins/inspection.py"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "output.repr-dict-timestamps",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "migration.sqlalchemy2",
+        "state": "unobserved",
+        "evidence_refs": [
+          "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be",
+          "version:retrieved-0a226b62100c50e7d99b8dc3"
+        ],
+        "tool_limitation": null
+      }
+    ],
+    "diagnostic_scope": {
+      "finish_requirements": {
+        "policy": "probe-lineage-v1",
+        "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+        "blocking_counterexample_refs": [],
+        "required_evidence_refs": [],
+        "probe_history": [
+          {
+            "observation_ref": "observation:f8996e7f8797eab853ef14a01e68662cf6c0b5b7569e89f607ce86a8f670544b",
+            "probe_id": "36721dea6ac82796f5a76b0ba89c5aea249134cbe4c1c3aa3bd593e5be7416e0",
+            "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:f89f5d4ac54c6b32e253912d5d5d1d59905b02eebe2a7370b6306af5e512ab18",
+            "probe_id": "5e327f40e5d349a957fae3167f009b4e8beac5909384e8931da6a902028ae122",
+            "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+            "execution_status": "failed",
+            "conclusion": "inconclusive",
+            "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:8f9de2bb7c4314b94bc50aa47e4c590016714e75e3afda7c348252dc67feccd1",
+            "probe_id": "277031aabe6c9928616143422b2cd502d9333708af08a0e8b989131744337272",
+            "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+            "execution_status": "failed",
+            "conclusion": "inconclusive",
+            "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:75375508d034e6456089932f3055fdbea17405eb7de15815e150302e8cb55b4a",
+            "probe_id": "277031aabe6c9928616143422b2cd502d9333708af08a0e8b989131744337272",
+            "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline.",
+            "disposition": "current_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:fff4c301529fb6ed7d14e285880c0ce1ec0d3fa4b421ea7df16f922bfe3a4a4a",
+            "probe_id": "36721dea6ac82796f5a76b0ba89c5aea249134cbe4c1c3aa3bd593e5be7416e0",
+            "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline.",
+            "disposition": "current_observation",
+            "resolved_by": null
+          }
+        ],
+        "format_limits": {
+          "explanation_max_characters": 4000,
+          "evidence_refs_max_items": 16
+        },
+        "instructions": "For candidate_ready/no_change_claimed, resolve blocking_counterexample_refs and include required_evidence_refs in finish.evidence_refs. Explain current limitations briefly. finish.explanation allows at most 4000 characters; each finish evidence_refs list at most 16 items. The host attaches complete probe_history, including resolved setup failures: do not repeat those historical references merely to submit. This view covers probe obligations only; current public checks, reviewed candidate, complete contract_coverage where required, and separate independent acceptance still apply. Unobserved behavior is not a pass."
+      },
+      "runtime_findings": [
+        {
+          "observation_id": "61dfcc447b018487e5579e4d676c760605a150f46ef136231597ec7102123d30",
+          "kind": "public_checks",
+          "revision": "205a9f1c8d37fa076f01040eb5f8cc46770f1f287e7397a2e63941ecbb40d807",
+          "stale": true,
+          "execution_status": "failed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "48e3349238f69b627aade13753e4af2285361a3565acd902772b73b27f653f86",
+          "kind": "public_checks",
+          "revision": "b1f7e4356e66eadcc0540c8506806546ce28b7bd7fce62f4b902f0a16bab5361",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "9436565195ef1033997b5cee8e0e8532fe6bfed06264acbf591db4d4fb80f8a2",
+          "kind": "public_checks",
+          "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "f8996e7f8797eab853ef14a01e68662cf6c0b5b7569e89f607ce86a8f670544b",
+          "kind": "probe",
+          "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "36721dea6ac82796f5a76b0ba89c5aea249134cbe4c1c3aa3bd593e5be7416e0",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline."
+        },
+        {
+          "observation_id": "f89f5d4ac54c6b32e253912d5d5d1d59905b02eebe2a7370b6306af5e512ab18",
+          "kind": "probe",
+          "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+          "stale": true,
+          "execution_status": "failed",
+          "probe_id": "5e327f40e5d349a957fae3167f009b4e8beac5909384e8931da6a902028ae122",
+          "conclusion": "inconclusive",
+          "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline."
+        },
+        {
+          "observation_id": "8f9de2bb7c4314b94bc50aa47e4c590016714e75e3afda7c348252dc67feccd1",
+          "kind": "probe",
+          "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+          "stale": true,
+          "execution_status": "failed",
+          "probe_id": "277031aabe6c9928616143422b2cd502d9333708af08a0e8b989131744337272",
+          "conclusion": "inconclusive",
+          "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline."
+        },
+        {
+          "observation_id": "34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be",
+          "kind": "public_checks",
+          "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "75375508d034e6456089932f3055fdbea17405eb7de15815e150302e8cb55b4a",
+          "kind": "probe",
+          "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": "277031aabe6c9928616143422b2cd502d9333708af08a0e8b989131744337272",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline."
+        },
+        {
+          "observation_id": "fff4c301529fb6ed7d14e285880c0ce1ec0d3fa4b421ea7df16f922bfe3a4a4a",
+          "kind": "probe",
+          "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": "36721dea6ac82796f5a76b0ba89c5aea249134cbe4c1c3aa3bd593e5be7416e0",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only change from the measured baseline; does NOT establish an absolute requirement or a valid baseline."
+        }
+      ],
+      "unestablished_oracles": [],
+      "contract_coverage_gate": {
+        "catalog_requirement_ids": [
+          "activerecord.crud-flush",
+          "activerecord.lookup",
+          "eagerload.paths-and-schema",
+          "smartquery.filters-sort",
+          "smartquery.auto-eager-dynamic",
+          "inspection.attribute-names",
+          "output.repr-dict-timestamps",
+          "migration.sqlalchemy2"
+        ],
+        "catalog_sha256": "ac37ccac20a9a0edd44620abc6e8c35f7b9ff1b9e23d5e9c9724c7089da302c6",
+        "effective_coverage": [
+          {
+            "requirement_id": "activerecord.crud-flush",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "activerecord.lookup",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "eagerload.paths-and-schema",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "smartquery.filters-sort",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "smartquery.auto-eager-dynamic",
+            "declared_state": "supported",
+            "effective_state": "unobserved",
+            "reason": "insufficient_evidence_scope",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "inspection.attribute-names",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "output.repr-dict-timestamps",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "migration.sqlalchemy2",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          }
+        ],
+        "unobserved_requirement_ids": [
+          "smartquery.auto-eager-dynamic",
+          "inspection.attribute-names",
+          "migration.sqlalchemy2"
+        ],
+        "unobserved_development_requirement_ids": [],
+        "unobserved_final_acceptance_requirement_ids": [
+          "smartquery.auto-eager-dynamic",
+          "inspection.attribute-names",
+          "migration.sqlalchemy2"
+        ],
+        "counterexample_requirement_ids": [],
+        "remaining_diagnostic_runs": 2,
+        "available_routes": {
+          "new_probe_definition_available": false,
+          "revisable_probe_ids": [
+            "5e327f40e5d349a957fae3167f009b4e8beac5909384e8931da6a902028ae122"
+          ],
+          "reusable_probe_ids": [
+            "5e327f40e5d349a957fae3167f009b4e8beac5909384e8931da6a902028ae122"
+          ]
+        },
+        "scope_limit": "Requirement identity and evidence binding do not prove semantic entailment; final acceptance is separate.",
+        "accepted": true,
+        "code": "development_requirements_structurally_supported"
+      },
+      "acceptance": "Separate independent final checks required; diagnostics do not establish general correctness."
+    }
+  },
+  "verification_subject": {
+    "kind": "candidate",
+    "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+    "patch_sha256": "7098ddcd4d5df0bcbee8c92acc1b1e8d8dfdcb54a83ab6b2d509b754a5f8cdbc"
+  },
+  "source_changes": true,
+  "diagnostic_runs": 6,
+  "probes": 3,
+  "diagnostics": {
+    "counts": {
+      "registered": 6,
+      "running": 0,
+      "completed": 6,
+      "failed": 0,
+      "unknown": 0,
+      "historical": 0,
+      "target_completed": 6
+    },
+    "latest": {
+      "status": "completed",
+      "phase": "completed",
+      "last_phase": "target_completed",
+      "outcome": "passed",
+      "last_action": "target_completed",
+      "reconciliation_required": false,
+      "request_id": "292f70f1b648652cc4ac80787df9bb9dd0f57f0c04c589c842c5d8f6376aa628",
+      "failure_receipt_id": null
+    },
+    "runs": [
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "semantic_failed",
+        "last_action": "new_original",
+        "reconciliation_required": false,
+        "request_id": "3cbbc422490cb59ad9076f3a5beb1780f2ba2e04a831687bc5744035e861ccd9",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "c6ea4c475266a8e5d6b173d7bf16fd7b1d3625f012420ca6823f5b9fd4e84c88",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "semantic_failed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "cc224484da7096152d03c3993b0fe361a8ebceb103993cad0b5f3608b100743f",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "semantic_failed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "36c7509c4fc6128ed0fc0a7343098469dd3cd6fd88867ff3839ccd66b0290da1",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "4a669c2d8896283d6093c9d43dfd3b349111a613fa797e2bb284dd309407a5a2",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "292f70f1b648652cc4ac80787df9bb9dd0f57f0c04c589c842c5d8f6376aa628",
+        "failure_receipt_id": null
+      }
+    ],
+    "runs_truncated": false
+  },
+  "observations": [
+    {
+      "id": "61dfcc447b018487e5579e4d676c760605a150f46ef136231597ec7102123d30",
+      "kind": "public_checks",
+      "revision": "205a9f1c8d37fa076f01040eb5f8cc46770f1f287e7397a2e63941ecbb40d807",
+      "status": "failed"
+    },
+    {
+      "id": "9f0dd3220814fa31e22a160fd8283d92f4ce25ff8f029813e4805296433cb916",
+      "kind": "project_context",
+      "revision": "205a9f1c8d37fa076f01040eb5f8cc46770f1f287e7397a2e63941ecbb40d807",
+      "status": null
+    },
+    {
+      "id": "48e3349238f69b627aade13753e4af2285361a3565acd902772b73b27f653f86",
+      "kind": "public_checks",
+      "revision": "b1f7e4356e66eadcc0540c8506806546ce28b7bd7fce62f4b902f0a16bab5361",
+      "status": "passed"
+    },
+    {
+      "id": "9436565195ef1033997b5cee8e0e8532fe6bfed06264acbf591db4d4fb80f8a2",
+      "kind": "public_checks",
+      "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+      "status": "passed"
+    },
+    {
+      "id": "f8996e7f8797eab853ef14a01e68662cf6c0b5b7569e89f607ce86a8f670544b",
+      "kind": "probe",
+      "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+      "status": "passed"
+    },
+    {
+      "id": "f89f5d4ac54c6b32e253912d5d5d1d59905b02eebe2a7370b6306af5e512ab18",
+      "kind": "probe",
+      "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+      "status": "failed"
+    },
+    {
+      "id": "8f9de2bb7c4314b94bc50aa47e4c590016714e75e3afda7c348252dc67feccd1",
+      "kind": "probe",
+      "revision": "932ca1b3dd35fbc855424aeea626e087adcbef74f8284ca9f6f2a47ba7e41974",
+      "status": "failed"
+    },
+    {
+      "id": "34d71d8f9c2778c9d63ba7cb991f8ba6518ba976b945506f28805533832af6be",
+      "kind": "public_checks",
+      "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+      "status": "passed"
+    },
+    {
+      "id": "75375508d034e6456089932f3055fdbea17405eb7de15815e150302e8cb55b4a",
+      "kind": "probe",
+      "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+      "status": "passed"
+    },
+    {
+      "id": "fff4c301529fb6ed7d14e285880c0ce1ec0d3fa4b421ea7df16f922bfe3a4a4a",
+      "kind": "probe",
+      "revision": "ff00b9e9c2a549e2ede9a494629284d009b49cb15da1ebd3710ee96ca4118bdb",
+      "status": "passed"
+    }
+  ],
+  "contract_requirements": {
+    "path": "contract-requirements.json",
+    "sha256": "ac37ccac20a9a0edd44620abc6e8c35f7b9ff1b9e23d5e9c9724c7089da302c6",
+    "requirement_ids": [
+      "activerecord.crud-flush",
+      "activerecord.lookup",
+      "eagerload.paths-and-schema",
+      "smartquery.filters-sort",
+      "smartquery.auto-eager-dynamic",
+      "inspection.attribute-names",
+      "output.repr-dict-timestamps",
+      "migration.sqlalchemy2"
+    ]
+  },
+  "contract_audits": 2,
+  "dependency_queries": 7,
+  "dependency_facts": 7,
+  "role_calls": {
+    "solver": 22,
+    "contract_auditor": 2
+  },
+  "investigator_sessions": [],
+  "investigator_handoffs": 0,
+  "historical_inputs": []
+}

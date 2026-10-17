@@ -1,0 +1,233 @@
+--- a/sqlalchemy_mixins/eagerload.py
++++ b/sqlalchemy_mixins/eagerload.py
+@@ -13,12 +13,13 @@
+ SUBQUERY = 'subquery'
+ 
+ 
+-def eager_expr(schema):
++def eager_expr(schema, root_cls=None):
+     """
+     :type schema: dict
++    :type root_cls: type | None
+     """
+     flat_schema = _flatten_schema(schema)
+-    return _eager_expr_from_flat_schema(flat_schema)
++    return _eager_expr_from_flat_schema(flat_schema, root_cls)
+ 
+ 
+ def _flatten_schema(schema):
+@@ -53,16 +54,88 @@
+     return result
+ 
+ 
+-def _eager_expr_from_flat_schema(flat_schema):
++def _resolve_attrs(root_cls, path):
++    """Resolve a dotted relationship path to class-bound ORM attributes.
++
++    SQLAlchemy 2.0 does not accept strings as loader option paths anymore,
++    so paths such as ``'posts.comments'`` have to be resolved to the mapped
++    attributes (``User.posts``, ``Post.comments``) before use.
++    """
++    if isinstance(path, str):
++        parts = path.split('.')
++    else:
++        parts = [path]
++    attrs = []
++    cls = root_cls
++    for part in parts:
++        attr = part
++        if isinstance(part, str):
++            if cls is None:
++                raise ValueError('Cannot resolve `{}` without a root class'
++                                 .format(path))
++            attr = getattr(cls, part)
++        attrs.append(attr)
++        try:
++            cls = attr.property.mapper.class_
++        except AttributeError:
++            cls = None
++    return attrs
++
++
++def _eager_option(loader, root_cls, path, flat_schema=None):
++    """Build a loader option for a (possibly nested) relationship path.
++
++    When ``flat_schema`` is given, the strategy of every intermediate level is
++    taken from it, so a nested schema such as
++    ``{'posts': (SUBQUERY, {'comments': JOINED})}`` becomes a single loader
++    chain (``subqueryload(User.posts).joinedload(Post.comments)``) instead of
++    a parent option plus a conflicting top-level child option.
++    """
++    attrs = _resolve_attrs(root_cls, path)
++    if flat_schema and isinstance(path, str):
++        parts = path.split('.')
++        option = None
++        prefix = ''
++        for part, attr in zip(parts, attrs):
++            prefix = prefix + '.' + part if prefix else part
++            method = flat_schema.get(prefix, JOINED)
++            if method not in (JOINED, SUBQUERY):
++                raise ValueError('Bad join method `{}` in `{}`'
++                                 .format(method, prefix))
++            if option is None:
++                if method == JOINED:
++                    option = joinedload(attr)
++                else:
++                    option = subqueryload(attr)
++            else:
++                if method == JOINED:
++                    option = option.joinedload(attr)
++                else:
++                    option = option.subqueryload(attr)
++        return option
++    option = loader(attrs[0])
++    for attr in attrs[1:]:
++        option = getattr(option, loader.__name__)(attr)
++    return option
++
++
++def _eager_expr_from_flat_schema(flat_schema, root_cls=None):
+     """
+     :type flat_schema: dict
++    :type root_cls: type | None
+     """
+     result = []
+-    for path, join_method in flat_schema.items():
++    paths = [p for p in flat_schema
++             if not any(isinstance(q, str) and isinstance(p, str)
++                        and q.startswith(p + '.') for q in flat_schema)]
++    for path in paths:
++        join_method = flat_schema[path]
+         if join_method == JOINED:
+-            result.append(joinedload(path))
++            result.append(_eager_option(joinedload, root_cls, path,
++                                        flat_schema))
+         elif join_method == SUBQUERY:
+-            result.append(subqueryload(path))
++            result.append(_eager_option(subqueryload, root_cls, path,
++                                        flat_schema))
+         else:
+             raise ValueError('Bad join method `{}` in `{}`'
+                              .format(join_method, path))
+@@ -94,7 +167,7 @@
+             }
+             User.with_(schema).first()
+         """
+-        return cls.query.options(*eager_expr(schema or {}))
++        return cls.query.options(*eager_expr(schema or {}, cls))
+ 
+     @classmethod
+     def with_joined(cls, *paths):
+@@ -112,7 +185,7 @@
+         Example 2:
+             Comment.with_joined(Comment.user, Comment.post).first()
+         """
+-        options = [joinedload(path) for path in paths]
++        options = [_eager_option(joinedload, cls, path) for path in paths]
+         return cls.query.options(*options)
+ 
+     @classmethod
+@@ -131,5 +204,5 @@
+         Example 2:
+             User.with_subquery(User.posts, User.comments).all()
+         """
+-        options = [subqueryload(path) for path in paths]
++        options = [_eager_option(subqueryload, cls, path) for path in paths]
+         return cls.query.options(*options)
+--- a/sqlalchemy_mixins/smartquery.py
++++ b/sqlalchemy_mixins/smartquery.py
+@@ -8,7 +8,7 @@
+ 
+ 
+ from sqlalchemy import asc, desc, inspect
+-from sqlalchemy.orm import aliased, contains_eager
++from sqlalchemy.orm import Query, aliased, contains_eager
+ from sqlalchemy.orm.util import AliasedClass
+ from sqlalchemy.sql import operators, extract
+ 
+@@ -108,6 +108,26 @@
+         aliases[path] = alias, relationship
+         _parse_path_and_make_aliases(alias, path, nested_attrs, aliases)
+ 
++def _contains_eager_option(root_cls, path, aliases):
++    """Build a ``contains_eager`` option for an aliased relationship path.
++
++    SQLAlchemy 2.0 no longer accepts strings as loader option paths, so the
++    path is expressed as a chain of mapped attributes, each narrowed to its
++    alias with ``of_type()``.
++    """
++    parts = path.split(RELATION_SPLITTER)
++    option = None
++    for index in range(len(parts)):
++        prefix = RELATION_SPLITTER.join(parts[:index + 1])
++        alias, relationship = aliases[prefix]
++        attribute = relationship.of_type(alias)
++        if option is None:
++            option = contains_eager(attribute)
++        else:
++            option = option.contains_eager(attribute)
++    return option
++
++
+ def _get_root_cls(query):
+     # sqlalchemy < 1.4.0
+     if hasattr(query, '_entity_zero'):
+@@ -141,18 +161,28 @@
+     #  Load schema early since we need it to check whether we should eager load a relationship
+     if schema:
+         flat_schema = _flatten_schema(schema)
+-        print(flat_schema)
+     else:
+         flat_schema = {}
+ 
+-    # sqlalchemy >= 1.4.0, should probably a. check something else to determine if we need to convert
+-    # AppenderQuery to a query, b. probably not hack it like this
+-    # noinspection PyProtectedMember
+-    if type(query).__name__ == 'AppenderQuery' and query._statement:
+-        sess = query.session
+-        # noinspection PyProtectedMember
+-        query = query._statement
+-        query.session = sess
++    # `lazy='dynamic'` relationships return an AppenderQuery; it has no
++    # join/filter/options API of its own, so work on a plain Query instead.
++    if type(query).__name__ == 'AppenderQuery':
++        sess = getattr(query, 'session', None)
++        # SQLAlchemy 1.4 exposed `_statement`, SQLAlchemy 2.0 removed it.
++        statement = getattr(query, '_statement', None)
++        if not isinstance(statement, Query):
++            statement = None
++        if statement is None:
++            generator = getattr(query, '_generate', None)
++            if generator is not None:
++                try:
++                    statement = generator(sess)
++                except Exception:
++                    statement = None
++        if isinstance(statement, Query) and statement is not query:
++            query = statement
++            if sess is not None and getattr(query, 'session', None) is None:
++                query.session = sess
+ 
+     root_cls = _get_root_cls(query)  # for example, User or Post
+     attrs = list(_flatten_filter_keys(filters)) + \
+@@ -164,8 +194,9 @@
+     for path, al in aliases.items():
+         relationship_path = path.replace(RELATION_SPLITTER, '.')
+         if not (relationship_path in flat_schema and flat_schema[relationship_path] == SUBQUERY):
+-            query = query.outerjoin(al[0], al[1]) \
+-                .options(contains_eager(relationship_path, alias=al[0]))
++            query = query.outerjoin(al[0], al[1])
++            query = query.options(
++                _contains_eager_option(root_cls, path, aliases))
+             loaded_paths.append(relationship_path)
+ 
+     def recurse_filters(_filters):
+@@ -210,7 +241,7 @@
+         not_loaded_part = {path: v for path, v in flat_schema.items()
+                            if path not in loaded_paths}
+         query = query.options(*_eager_expr_from_flat_schema(
+-            not_loaded_part))
++            not_loaded_part, root_cls))
+ 
+     return query
+ 
