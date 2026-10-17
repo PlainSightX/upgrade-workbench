@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import zipfile
 from pathlib import Path
@@ -12,9 +13,11 @@ from pathlib import Path
 from upgrade_workbench.cases import load_case
 
 FORBIDDEN_PARTS = {".git", ".idea", ".venv", ".local", "__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache"}
-# 由片段拼接已知机器模式，避免检查器把自己的规则正文误判成泄露。
-PRIVATE_TEXT = re.compile("fu" + "xia" + r"|(?:D:)[/\\]+(?:Codex" + "Workspace|uwsvc)"
-                          + "|/home/" + "peter/Development" + r"|sk-[A-Za-z0-9]{24,}")
+# 上游作者本机路径与 API key 形态。维护者用 UW_PRIVATE_PATTERN 追加自己的本机路径或用户名，
+# 不把私人信息写进公开规则本身。
+_EXTRA = os.environ.get("UW_PRIVATE_PATTERN")
+PRIVATE_TEXT = re.compile(r"/home/" + "peter/Development" + r"|sk-[A-Za-z0-9]{24,}"
+                          + (f"|{_EXTRA}" if _EXTRA else ""))
 
 
 def sha(raw: bytes) -> str:
@@ -55,10 +58,11 @@ def check(root: Path) -> dict:
             manifests += 1
     # 仅检查自有入口文档；第三方保留 README 的上游站内链接不是本仓库承诺。
     for name in ["README.md", "CONTRIBUTING.md", "THIRD_PARTY_NOTICES.md",
-                 "docs/public-install.md", "docs/public-tests.md", "docs/joint-r2-agent.md", "docs/examples/csvsql/README.md",
+                 "docs/public-install.md", "docs/public-tests.md", "docs/semantic-risk-comparison.md", "docs/examples/csvsql/README.md",
                  "docs/examples/comparison/README.md", "docs/examples/semantic-risk/README.md",
                  "docs/probe-comparisons.md", "docs/probe-input-generation.md",
-                 "docs/results/semantic-boundaries-a1/README.md"]:
+                 "docs/results/semantic-boundaries-a1/README.md",
+                 "docs/results/retrieval-pydantic-2026-09-16/README.md"]:
         document = root / name
         for target in re.findall(r"\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
             if target.startswith(("https://", "http://", "#")):

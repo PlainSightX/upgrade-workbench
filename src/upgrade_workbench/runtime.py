@@ -72,18 +72,3 @@ def short_test_root(layout: RuntimeLayout):
         if owned.resolve().parent != layout.tests.resolve():
             raise RuntimeError("refusing_to_remove_unowned_test_root")
         shutil.rmtree(owned)
-
-
-def remove_empty_legacy_roots(layout: RuntimeLayout) -> list[str]:
-    removed = []
-    for name in ("uwit", "uw-service-it"):
-        path = Path(layout.root.anchor) / name
-        assert_no_links(path)
-        if not path.exists():
-            continue
-        if path.resolve() != path.absolute() or not path.is_dir():
-            raise ValueError("legacy_root_identity_conflict")
-        # rmdir 为非递归，目录非空或竞争写入均失败，不扩大删除范围。
-        path.rmdir()
-        removed.append(str(path))
-    return removed

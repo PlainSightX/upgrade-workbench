@@ -2009,11 +2009,13 @@ def advance_task(
                 task["status"] = "verifying"
                 _save(task, task_path)
                 if task["arm"] != "no_feedback":
+                    # 空补丁表示“不改源码”的候选：反馈仍运行，但不传补丁与来源。
+                    has_patch = bool(Path(candidate["patch_path"]).stat().st_size)
                     comparison = comparator(
                         Path(task["manifest_path"]), Path(task["work_root"]),
-                        candidate_patch=Path(candidate["patch_path"]) if Path(candidate["patch_path"]).stat().st_size else None,
-                        candidate_origin=candidate.get("origin", "agent_candidate") if Path(candidate["patch_path"]).stat().st_size else None,
-                        **({"expected_candidate_sha256": actual} if incremental and Path(candidate["patch_path"]).stat().st_size else {}),
+                        candidate_patch=Path(candidate["patch_path"]) if has_patch else None,
+                        candidate_origin=candidate.get("origin", "agent_candidate") if has_patch else None,
+                        **({"expected_candidate_sha256": actual} if incremental and has_patch else {}),
                         check_group="feedback", **protocol.get("execution", {}),
                     )
                     if incremental:
