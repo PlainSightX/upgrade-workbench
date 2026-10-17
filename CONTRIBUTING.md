@@ -9,6 +9,9 @@ uv run --no-sync pytest tests/unit
 uv run --no-sync python tools/release/check_public_tree.py
 ```
 
+发布前检查会拒绝 API key 形态和已知上游本机路径。维护者可以设置 `UW_PRIVATE_PATTERN`
+（正则表达式），追加自己的本机路径或用户名，不必把这些私人信息写进仓库。
+
 单测不运行第三方目标、不调用真实模型；Docker 行为验证和模型新任务分别显式启动，
 见 [首次安装](docs/public-install.md)。第一次联网安装依赖不等于离线安装。
 

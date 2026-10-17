@@ -1,88 +1,98 @@
 # Upgrade Workbench
 
-面向 Python 依赖迁移的可验证 Agent 工作台。模型调查受影响代码、查询版本依据并生成补丁，
-程序管理候选身份、工具隔离、费用与恢复状态；最终用旧版、直接升级和修复候选执行同一合同。
-主要验证范围是 Pydantic v1→v2 与 SQLAlchemy 1.4→2.0 的已登记 Python 案例。
+[![CI](https://github.com/PlainSightX/upgrade-workbench/actions/workflows/ci.yml/badge.svg)](https://github.com/PlainSightX/upgrade-workbench/actions/workflows/ci.yml)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## 第一次运行
+**依赖升级后测试通过，不等于行为没变。** 这是一个面向 Python 依赖迁移的 Agent 工作台：
+模型调查受影响代码、查询对应版本的官方迁移说明并生成补丁；程序负责工具隔离、候选身份、
+费用和中断恢复；最后在 Docker 中对「旧版 / 直接升级 / 修复候选」执行同一组行为检查，独立判定是否通过。
+已验证范围主要是 Pydantic v1→v2 与 SQLAlchemy 1.x→2.0 的已登记案例。
 
-需要 Python 3.12 和 uv。行为验证另需已运行的 Docker；服务模式另需自己管理的 PostgreSQL。
+## 一个例子：测试全绿，SQL 却被改坏
+
+csvkit 的 `csvsql` 升级到 SQLAlchemy 2.0 后，字符串执行接口失效。把查询改成 `text(query)`
+能通过原有的 4 项检查，却会把 SQL 中的 `:name` 冒号文本当成绑定参数。
+补充跨连接可见性与冒号字面量检查后，正确修复是改用 `exec_driver_sql()`。
+
+| 环境 | 同一组 6 项检查 |
+| --- | --- |
+| 原源码 + 旧依赖 | 6/6 |
+| 原源码 + 新依赖（直接升级） | 0/6 |
+| 修复候选 + 新依赖 | 6/6 |
+
+不需要模型密钥即可复验：[csvsql 案例](docs/examples/csvsql/README.md)。
+同一案例里也保留了一次模型新任务的失败（4/6，遗漏两项冒号检查），没有重跑到成功。
+
+## 结果一览
+
+| 对照 | 结论 | 说明 |
+| --- | --- | --- |
+| SQLAlchemy-Continuum 审计历史迁移（每臂 2 次） | 工作台与简单工具 Agent 都通过；工作台请求数 **−72.4%**、估算费用 **−45.4%** | [历史比较](docs/examples/comparison/README.md) |
+| 三项历史迁移（每臂 2 次） | 两边都 6/6 通过；工作台估算费用 **+46.7%** | 同上，反向结果一并保留 |
+| 版本文档检索（16 条 Pydantic 开发查询） | 目标章节进入前五：BM25 11/16 → BM25+向量 RRF **15/16** | [检索结果](docs/results/retrieval-pydantic-2026-09-16/README.md) |
+
+「简单工具 Agent」是同模型、可读源码和调用工具的基线，不是只发一次提示的裸模型。
+这些都是已见开发案例上的小样本对照，不代表未见仓库上的成功率。
+
+## 快速开始
+
+需要 Python 3.12 和 [uv](https://docs.astral.sh/uv/)；行为验证另需 Docker。
 
 ```powershell
 uv sync --locked --extra service
-uv run --no-sync upgrade-workbench --help
-uv run --no-sync pytest tests/unit
+uv run --no-sync pytest tests/unit          # 单测不调用模型、不运行第三方代码
+uv run --no-sync upgrade-workbench inspect cases/csvkit-csvsql-sqlalchemy-2-a3
 ```
 
-先尝试 [csvsql 固定补丁复验](docs/examples/csvsql/README.md)：无需模型密钥，
-能查看 SQL 字面量遗漏、修复及旧 6/6、直接升级 0/6、候选 6/6 的独立检查。
-配置模型、账本和新服务的步骤见 [安装与首次使用](docs/public-install.md)。
-完整测试需要 service extra，基础 CLI 可只装 core；BGE 混合检索的 Torch extra 按需安装。
+配置模型、预算账本和服务模式见 [安装与首次使用](docs/public-install.md)。
 
-## 一次任务得到什么
-
-用户提供经过审查的源码快照、旧/新依赖锁、可修改范围、版本文档和行为合同；
-这不是输入任意仓库即保证完成升级的工具。现有业务测试、旧环境行为与官方迁移说明用于
-确定检查要求，有冲突时需要明确取舍，不能让补丁同时改自己的验收标准。
-
-模型选择读取代码、查询依赖、运行受控诊断、修改候选或结束任务。
-程序校验修改范围与候选修订，第三方代码仅在 Docker 中运行；候选需要明确审阅，
-最终验收在冻结后独立执行。输出包括补丁、验证配置、结构化行为差异报告和任务状态。
-失败、预算耗尽、未知远端结果和验收不通过分别保留。
+## 架构
 
 ```mermaid
 flowchart LR
-    A[Reviewed case + version evidence] --> B[Impact analysis and retrieval]
-    B --> C[Model decisions + controlled tools]
-    C --> D[Candidate + explicit review]
-    D --> C
-    D --> E[Freeze final candidate]
-    E --> F[Old / direct / candidate verification]
-    F --> G[Patch + behavior report]
+    A[已审查的案例快照<br/>源码 + 旧/新依赖锁 + 行为检查] --> B[影响分析<br/>analysis/]
+    B --> C[版本文档检索<br/>retrieval.py · semantic.py]
+    C --> D[模型多轮决策<br/>tasks.py · generation/]
+    D -->|读源码 / 查文档 / 跑诊断| E[受控工具<br/>diagnostics.py · execution/docker.py]
+    E --> D
+    D --> F[冻结最终候选]
+    F --> G[三环境独立验收<br/>workflow.py]
+    G --> H[补丁 + 行为差异报告<br/>reporting.py]
 ```
 
-## 模块与可靠性
-
-| 模块 | 主要职责 |
+| 模块 | 职责 |
 | --- | --- |
-| `analysis` / `evidence` / `semantic` | AST 影响点、别名与未知边界；固定版本原文；BM25 / 可选 BGE-M3、RRF 与 reranker |
-| `generation` | 请求准备、源码导航、工具动作；可选调查/知识复核角色、跨修订原文重读与知识修订 |
-| `tasks` / `candidates` / `diagnostics` | 多轮状态、候选身份、审阅、诊断与停止规则 |
-| `execution` / `workflow` | Docker 隔离、三环境比较、通过/失败/无效测量分类 |
-| `budget` / `reporting` | SQLite 事务费用预留、请求收据和精选报告导出 |
-| `service` | FastAPI 接口、PostgreSQL 作业与互斥、LangGraph 检查点、恢复协调 |
+| `analysis/` | AST 导入、别名、再导出与继承索引，定位受影响的调用点及未知边界 |
+| `evidence.py` / `retrieval.py` / `semantic.py` | 按依赖版本过滤官方原文；BM25，可选 BGE-M3 向量 + RRF 融合与重排 |
+| `generation/` | 构造请求、源码导航与工具动作；可选只读调查与知识复核角色 |
+| `tasks.py` / `candidates.py` / `diagnostics.py` | 多轮状态推进、候选修订与审阅、诊断测量绑定到具体修订、停止规则 |
+| `execution/` / `workflow.py` | Docker 隔离执行，三环境比较，通过 / 失败 / 无效测量分类 |
+| `budget.py` | SQLite 事务化费用预留与核销 |
+| `service/` | FastAPI 接口、PostgreSQL 作业与互斥、LangGraph interrupt/resume + PostgresSaver 检查点 |
 
-请求发送前先持久化身份。远端可能已执行而本地没有完整回执时，状态进入
-`outcome_unknown`，恢复不盲目重发。任务文件、账本、PG 作业与检查点分别保存不同对象，
-不存在靠一张表推断所有外部副作用都“恰好一次”的保证。
+## 关键设计
 
-## 现有结果与限制
+- **先落盘再发送。** 每次模型请求前先持久化身份并预留费用。远端可能已执行而本地没有完整回执时，
+  任务进入 `outcome_unknown`，恢复时不盲目重发。
+- **候选不能改自己的考卷。** 补丁只能改登记范围内的文件；最终验收在冻结候选后独立运行，
+  结果不回传给模型继续修补。
+- **第三方代码只在 Docker 中运行。** 案例固定镜像摘要和带哈希的依赖锁，宿主机不执行目标源码。
+- **案例按内容寻址。** manifest、依赖锁、检查文件都有 SHA-256，结果绑定到确切的输入和实现身份。
 
-[精选正反比较](docs/examples/comparison/README.md)同时保留两轮历史结果：
-A2 三任务比较中 W 估算费用高 46.7%；A5 Continuum 单案例中，相同验收下 W
-请求少 72.4%、估算费用低 45.4%。简单工具 Agent 基线可以补读源码与调用工具。
-这是已见/准入开发案例、每臂两次的整套配置比较，不能推出通用优势或组件因果。
+## 局限
 
-[版本语义自查比较](docs/joint-r2-agent.md)单列一个可选Solver机制的首次结果与限制，
-不与历史整套工作台的费用结论合并；具体难点仍可沿csvsql案例、补丁和独立检查复核。
+- 结果来自已登记的开发案例，每臂 2 次，不是未见仓库的成功率，也没有统计显著性。
+- 源码分析不是完整调用图，动态导入、包装和复杂绑定存在未知边界。
+- 行为检查不穷尽所有业务行为：csvsql 原有 4 项检查就漏掉了冒号字面量。
+- 费用是按登记单价的估算，不是供应商账单；没有测量人工节省时间，也没有生产用户。
 
-维护增量提供[可选语义差分诊断](docs/probe-comparisons.md)及
-[有界输入生成组件](docs/probe-input-generation.md)，旧版、候选的具体观察严格区分
-`same/different/incomplete`；默认策略与独立验收不变。
-[可选值案例](docs/results/semantic-boundaries-a1/README.md)已有有效读数进入真实模型后继动作，
-但候选在此前已经生成，两臂验收相同；定向输入与穷举也没有检出差异。
-因此不宣称新接口提高修复质量或稳定降本，自动生成仍未接入普通Agent。
+## 文档
 
-源码分析不是完整调用图，动态导入、包装与复杂绑定存在未知边界。
-合同并不穷尽全部业务行为：csvsql 的原四项检查曾漏掉冒号字面量。
-当前没有生产用户、人工节省工时、广泛未见迁移成功率或生产 SLA 的主张。
+- [安装与首次使用](docs/public-install.md) · [开发与验证](CONTRIBUTING.md) · [测试与 CI 覆盖](docs/public-tests.md)
+- 案例与对照：[csvsql](docs/examples/csvsql/README.md) · [历史比较](docs/examples/comparison/README.md) ·
+  [版本语义自查](docs/semantic-risk-comparison.md) · [探针候选比较](docs/probe-comparisons.md) ·
+  [有界输入生成](docs/probe-input-generation.md) · [可选值语义案例](docs/results/semantic-boundaries-a1/README.md)
+- [第三方归因](THIRD_PARTY_NOTICES.md) · [公开文件清单](PUBLICATION.json)
 
-## 开发与发布状态
-
-[开发指南](CONTRIBUTING.md)说明验证与代码约定；[公开测试](docs/public-tests.md)区分
-产品测试和私有历史现场。[第三方归因](THIRD_PARTY_NOTICES.md)列出实际分发材料。
-自有代码采用 [MIT](LICENSE)，第三方材料保持各自许可。仓库为
-[PlainSightX/upgrade-workbench](https://github.com/PlainSightX/upgrade-workbench)，
-首发版本为 `v0.0.1`；各提交的远端检查结果以对应 Actions 运行记录为准。
-历史评估的实现身份与本次发行分开。公开源码采用精选初始历史，不包含私人旧 Git 历史、
-原模型请求、账本或大量日志；[文件与来源清单](PUBLICATION.json)可核对发行内容。
+自有代码采用 [MIT](LICENSE)，第三方材料保持各自许可。

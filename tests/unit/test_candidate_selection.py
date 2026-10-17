@@ -37,7 +37,7 @@ def task(*candidates: dict, status: str = "ready") -> dict:
             {
                 "revision": item["revision"],
                 "sha256": item["sha256"],
-                "reviewer": "codex",
+                "reviewer": "maintainer",
                 "note": "Bounded candidate review.",
             }
             for item in candidates

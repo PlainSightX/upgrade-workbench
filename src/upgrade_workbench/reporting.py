@@ -169,7 +169,7 @@ def export_task_report(task_path: Path, output_dir: Path) -> dict:
         execution = result["protocol"]["execution"]
         extra = f" --base-image '{execution['base_image']}'" if "base_image" in execution else ""
         extra += f" --prepare-timeout {execution.get('prepare_timeout', 600)} --test-timeout {execution.get('test_timeout', 60)}"
-        lines += ["", "复现已审补丁，无需模型API。沿用已准备的项目环境；新机器由环境负责人按 docs/USAGE.md 安装所需 extras，再运行：", "", "```powershell",
+        lines += ["", "复现已审补丁，无需模型API。沿用已准备的项目环境；新机器按 docs/public-install.md 安装所需 extras，再运行：", "", "```powershell",
                   f"uv run --no-sync upgrade-workbench verify '{manifest}' --candidate '<导出包>/candidate.patch' --candidate-origin {candidate['origin']} --check-group all{extra}", "```"]
     if task.get("schema_version") in {3, 4, 5}:
         counts = result["diagnostics"]["counts"]
@@ -558,7 +558,7 @@ def _markdown(report: dict) -> str:
     lines += ["", "## 成本与时间", "",
               f"登记尝试 {totals['registered_attempts']} 次，实际尝试模型请求 {totals['model_calls_attempted']} 次；报告输入 {totals['input_tokens']} token、输出 {totals['output_tokens']} token，另有 {totals['unknown_usage_calls']} 次用量未知。",
               f"模型请求累计耗时 {totals['provider_duration_seconds']:.3f} 秒，最终隔离验收累计耗时 {totals['verification_duration_seconds']:.3f} 秒；两者相加不是端到端墙钟耗时。",
-              f"仅归属于本批请求的单价估算及未知请求预留合计 **{totals['estimated_or_reserved_usd']:.6f} USD**，不是供应商账单，也不包含其他批次或Codex会话费用。", ""]
+              f"仅归属于本批请求的单价估算及未知请求预留合计 **{totals['estimated_or_reserved_usd']:.6f} USD**，不是供应商账单，也不包含其他批次或开发工具费用。", ""]
     lines += ["| 案例/实验臂/重复 | 请求次数 | 输入/输出token | 模型耗时秒 | 验收耗时秒 | 估算/预留USD |",
               "| --- | --- | --- | --- | --- | --- |"]
     for row in report["tasks"]:
@@ -574,7 +574,7 @@ def _markdown(report: dict) -> str:
     lines += ["", "## 人工参与与限制", "",
               f"记录到 {sum(row['human_review_decisions'] for row in report['tasks'])} 次候选审阅决定。审阅记录不等于人工独立实现；额外协助程度未从代码或成功结果倒推。自由审阅笔记、模型请求、原始回复和日志没有复制进导出包。",
               "无候选、预算耗尽、环境未完成均保留在任务分母中。环境失败单列，不能据此断言迁移方法失败。最终验收没有返回模型继续修补。", "", "## 复现与证据", "",
-              "将导出包放在任意位置，从保存了对应案例的仓库根目录执行；先核对 JSON 中的案例指纹、锁摘要、协议和补丁摘要。沿用已准备的项目环境；新机器由环境负责人按 docs/USAGE.md 安装所需 extras。所有下列命令不调用模型：", "", "```powershell"]
+              "将导出包放在任意位置，从保存了对应案例的仓库根目录执行；先核对 JSON 中的案例指纹、锁摘要、协议和补丁摘要。沿用已准备的项目环境；新机器按 docs/public-install.md 安装所需 extras。所有下列命令不调用模型：", "", "```powershell"]
     by_id = {case["case_id"]: case for case in report["cases"]}
     execution = report["protocol"]["execution"]
     for row in report["tasks"]:

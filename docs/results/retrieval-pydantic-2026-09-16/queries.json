@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_first_model_ranking",
+  "scope": "development_queries_not_unseen_repository_or_end_to_end_acceptance",
+  "case": "copier-6.2.0-r2",
+  "queries": [
+    {"id": "api-1", "kind": "named_api", "query": "dataclasses", "expected_start": 296},
+    {"id": "api-2", "kind": "named_api", "query": "__get_validators__", "expected_start": 771},
+    {"id": "api-3", "kind": "named_api", "query": "required optional nullable", "expected_start": 647},
+    {"id": "api-4", "kind": "named_api", "query": "update_forward_refs", "expected_start": 129},
+    {"id": "api-5", "kind": "named_api", "query": "parse_obj_as TypeAdapter", "expected_start": 737},
+    {"id": "api-6", "kind": "named_api", "query": "BaseSettings", "expected_start": 827},
+    {"id": "meaning-1", "kind": "semantic_english", "query": "Why does leaving out a nullable field now raise an error even though passing null is allowed?", "expected_start": 647},
+    {"id": "meaning-2", "kind": "semantic_english", "query": "A data class runs post initialization at a different point relative to validating its inputs after the upgrade.", "expected_start": 296},
+    {"id": "meaning-3", "kind": "semantic_english", "query": "How do I validate a list of typed values without defining a wrapper model class?", "expected_start": 737},
+    {"id": "meaning-4", "kind": "semantic_english", "query": "A wrong argument in my validation callback raises an ordinary programming exception instead of becoming a validation failure.", "expected_start": 438},
+    {"id": "meaning-5", "kind": "semantic_english", "query": "The upgraded string pattern engine rejects look around expressions and backreferences.", "expected_start": 698},
+    {"id": "meaning-6", "kind": "semantic_english", "query": "Our extension type needs a new way to provide validation rules and generated schema hooks.", "expected_start": 771},
+    {"id": "zh-1", "kind": "semantic_chinese", "query": "字段允许为空但不提供这个字段时为什么会报必填错误？", "expected_start": 647},
+    {"id": "zh-2", "kind": "semantic_chinese", "query": "数据类的初始化后处理现在是在输入校验之前还是之后执行？", "expected_start": 296},
+    {"id": "zh-3", "kind": "semantic_chinese", "query": "升级后字符串正则为什么不再支持前后向断言和反向引用？", "expected_start": 698},
+    {"id": "zh-4", "kind": "semantic_chinese", "query": "怎样直接验证一个有类型约束的列表，而不为它创建一个模型包装类？", "expected_start": 737}
+  ]
+}

@@ -1,0 +1,1104 @@
+{
+  "schema_version": 1,
+  "scope": "development_queries_not_unseen_repository_or_end_to_end_acceptance",
+  "queries_sha256": "e1dd42882d395695a87f22d6f1de88ec446224ecc63d30cb22ae017c49435e70",
+  "corpus_sha256": "aaacedd2e296b49c40941d17307d4d42026510b779141d9336e736b4890467bf",
+  "models": {
+    "dense": "28c29afd77ff8cddac05e1d8680ada9da141d2f12a5a09186e83b52baa93d46a",
+    "reranker": "f334bbf3706defa9514814f2a094ca2fc19c2cd040aa27553c6629f61e1ce997",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "max_tokens": 8192,
+    "batch_size": 2,
+    "cpu_threads": 8,
+    "sentence_transformers": "5.7.0",
+    "torch": "2.8.0",
+    "transformers": "5.17.0"
+  },
+  "rows": [
+    {
+      "id": "api-1",
+      "kind": "named_api",
+      "query": "dataclasses",
+      "expected_start": 296,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        296,
+        500,
+        980,
+        647,
+        129
+      ]
+    },
+    {
+      "id": "api-1",
+      "kind": "named_api",
+      "query": "dataclasses",
+      "expected_start": 296,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 35.156,
+      "returned_sections": [
+        296,
+        500,
+        129,
+        872,
+        980
+      ]
+    },
+    {
+      "id": "api-1",
+      "kind": "named_api",
+      "query": "dataclasses",
+      "expected_start": 296,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.015,
+      "returned_sections": [
+        296,
+        500,
+        980,
+        129,
+        872
+      ]
+    },
+    {
+      "id": "api-1",
+      "kind": "named_api",
+      "query": "dataclasses",
+      "expected_start": 296,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 21.563,
+      "returned_sections": [
+        296,
+        129,
+        500,
+        980,
+        647
+      ]
+    },
+    {
+      "id": "api-2",
+      "kind": "named_api",
+      "query": "__get_validators__",
+      "expected_start": 771,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        771
+      ]
+    },
+    {
+      "id": "api-2",
+      "kind": "named_api",
+      "query": "__get_validators__",
+      "expected_start": 771,
+      "mode": "dense",
+      "expected_rank": null,
+      "seconds": 0.093,
+      "returned_sections": [
+        359,
+        361,
+        491,
+        406,
+        468
+      ]
+    },
+    {
+      "id": "api-2",
+      "kind": "named_api",
+      "query": "__get_validators__",
+      "expected_start": 771,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        771,
+        359,
+        361,
+        491,
+        406
+      ]
+    },
+    {
+      "id": "api-2",
+      "kind": "named_api",
+      "query": "__get_validators__",
+      "expected_start": 771,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 9.219,
+      "returned_sections": [
+        771,
+        129,
+        361,
+        406,
+        491
+      ]
+    },
+    {
+      "id": "api-3",
+      "kind": "named_api",
+      "query": "required optional nullable",
+      "expected_start": 647,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        647,
+        129,
+        907,
+        468,
+        406
+      ]
+    },
+    {
+      "id": "api-3",
+      "kind": "named_api",
+      "query": "required optional nullable",
+      "expected_start": 647,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.078,
+      "returned_sections": [
+        647,
+        468,
+        617,
+        980,
+        361
+      ]
+    },
+    {
+      "id": "api-3",
+      "kind": "named_api",
+      "query": "required optional nullable",
+      "expected_start": 647,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        647,
+        468,
+        907,
+        980,
+        296
+      ]
+    },
+    {
+      "id": "api-3",
+      "kind": "named_api",
+      "query": "required optional nullable",
+      "expected_start": 647,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 21.063,
+      "returned_sections": [
+        647,
+        980,
+        129,
+        794,
+        468
+      ]
+    },
+    {
+      "id": "api-4",
+      "kind": "named_api",
+      "query": "update_forward_refs",
+      "expected_start": 129,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        129
+      ]
+    },
+    {
+      "id": "api-4",
+      "kind": "named_api",
+      "query": "update_forward_refs",
+      "expected_start": 129,
+      "mode": "dense",
+      "expected_rank": 3,
+      "seconds": 0.109,
+      "returned_sections": [
+        794,
+        500,
+        129,
+        320,
+        359
+      ]
+    },
+    {
+      "id": "api-4",
+      "kind": "named_api",
+      "query": "update_forward_refs",
+      "expected_start": 129,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        129,
+        794,
+        500,
+        320,
+        359
+      ]
+    },
+    {
+      "id": "api-4",
+      "kind": "named_api",
+      "query": "update_forward_refs",
+      "expected_start": 129,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 8.437,
+      "returned_sections": [
+        129,
+        953,
+        361,
+        827,
+        939
+      ]
+    },
+    {
+      "id": "api-5",
+      "kind": "named_api",
+      "query": "parse_obj_as TypeAdapter",
+      "expected_start": 737,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        737,
+        953,
+        500,
+        296,
+        794
+      ]
+    },
+    {
+      "id": "api-5",
+      "kind": "named_api",
+      "query": "parse_obj_as TypeAdapter",
+      "expected_start": 737,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.094,
+      "returned_sections": [
+        737,
+        500,
+        129,
+        794,
+        872
+      ]
+    },
+    {
+      "id": "api-5",
+      "kind": "named_api",
+      "query": "parse_obj_as TypeAdapter",
+      "expected_start": 737,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        737,
+        500,
+        794,
+        296,
+        953
+      ]
+    },
+    {
+      "id": "api-5",
+      "kind": "named_api",
+      "query": "parse_obj_as TypeAdapter",
+      "expected_start": 737,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 8.687,
+      "returned_sections": [
+        737,
+        953,
+        296,
+        794,
+        500
+      ]
+    },
+    {
+      "id": "api-6",
+      "kind": "named_api",
+      "query": "BaseSettings",
+      "expected_start": 827,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        827,
+        939
+      ]
+    },
+    {
+      "id": "api-6",
+      "kind": "named_api",
+      "query": "BaseSettings",
+      "expected_start": 827,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.063,
+      "returned_sections": [
+        827,
+        129,
+        939,
+        256,
+        320
+      ]
+    },
+    {
+      "id": "api-6",
+      "kind": "named_api",
+      "query": "BaseSettings",
+      "expected_start": 827,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.015,
+      "returned_sections": [
+        827,
+        939,
+        129,
+        256,
+        320
+      ]
+    },
+    {
+      "id": "api-6",
+      "kind": "named_api",
+      "query": "BaseSettings",
+      "expected_start": 827,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 22.125,
+      "returned_sections": [
+        827,
+        939,
+        320,
+        129,
+        980
+      ]
+    },
+    {
+      "id": "meaning-1",
+      "kind": "semantic_english",
+      "query": "Why does leaving out a nullable field now raise an error even though passing null is allowed?",
+      "expected_start": 647,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        647,
+        361,
+        256,
+        296,
+        621
+      ]
+    },
+    {
+      "id": "meaning-1",
+      "kind": "semantic_english",
+      "query": "Why does leaving out a nullable field now raise an error even though passing null is allowed?",
+      "expected_start": 647,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.11,
+      "returned_sections": [
+        647,
+        617,
+        276,
+        710,
+        296
+      ]
+    },
+    {
+      "id": "meaning-1",
+      "kind": "semantic_english",
+      "query": "Why does leaving out a nullable field now raise an error even though passing null is allowed?",
+      "expected_start": 647,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.015,
+      "returned_sections": [
+        647,
+        361,
+        296,
+        276,
+        794
+      ]
+    },
+    {
+      "id": "meaning-1",
+      "kind": "semantic_english",
+      "query": "Why does leaving out a nullable field now raise an error even though passing null is allowed?",
+      "expected_start": 647,
+      "mode": "rerank",
+      "expected_rank": 2,
+      "seconds": 21.579,
+      "returned_sections": [
+        794,
+        647,
+        980,
+        129,
+        361
+      ]
+    },
+    {
+      "id": "meaning-2",
+      "kind": "semantic_english",
+      "query": "A data class runs post initialization at a different point relative to validating its inputs after the upgrade.",
+      "expected_start": 296,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        296,
+        49,
+        698,
+        500,
+        846
+      ]
+    },
+    {
+      "id": "meaning-2",
+      "kind": "semantic_english",
+      "query": "A data class runs post initialization at a different point relative to validating its inputs after the upgrade.",
+      "expected_start": 296,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.093,
+      "returned_sections": [
+        296,
+        500,
+        129,
+        361,
+        359
+      ]
+    },
+    {
+      "id": "meaning-2",
+      "kind": "semantic_english",
+      "query": "A data class runs post initialization at a different point relative to validating its inputs after the upgrade.",
+      "expected_start": 296,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        296,
+        500,
+        129,
+        361,
+        698
+      ]
+    },
+    {
+      "id": "meaning-2",
+      "kind": "semantic_english",
+      "query": "A data class runs post initialization at a different point relative to validating its inputs after the upgrade.",
+      "expected_start": 296,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 11.484,
+      "returned_sections": [
+        296,
+        129,
+        500,
+        621,
+        361
+      ]
+    },
+    {
+      "id": "meaning-3",
+      "kind": "semantic_english",
+      "query": "How do I validate a list of typed values without defining a wrapper model class?",
+      "expected_start": 737,
+      "mode": "bm25",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": [
+        256,
+        129,
+        647,
+        296,
+        320
+      ]
+    },
+    {
+      "id": "meaning-3",
+      "kind": "semantic_english",
+      "query": "How do I validate a list of typed values without defining a wrapper model class?",
+      "expected_start": 737,
+      "mode": "dense",
+      "expected_rank": 2,
+      "seconds": 0.11,
+      "returned_sections": [
+        647,
+        737,
+        438,
+        296,
+        500
+      ]
+    },
+    {
+      "id": "meaning-3",
+      "kind": "semantic_english",
+      "query": "How do I validate a list of typed values without defining a wrapper model class?",
+      "expected_start": 737,
+      "mode": "hybrid",
+      "expected_rank": 2,
+      "seconds": 0.0,
+      "returned_sections": [
+        296,
+        737,
+        361,
+        621,
+        710
+      ]
+    },
+    {
+      "id": "meaning-3",
+      "kind": "semantic_english",
+      "query": "How do I validate a list of typed values without defining a wrapper model class?",
+      "expected_start": 737,
+      "mode": "rerank",
+      "expected_rank": 5,
+      "seconds": 13.078,
+      "returned_sections": [
+        129,
+        296,
+        320,
+        361,
+        737
+      ]
+    },
+    {
+      "id": "meaning-4",
+      "kind": "semantic_english",
+      "query": "A wrong argument in my validation callback raises an ordinary programming exception instead of becoming a validation failure.",
+      "expected_start": 438,
+      "mode": "bm25",
+      "expected_rank": 3,
+      "seconds": 0.0,
+      "returned_sections": [
+        256,
+        276,
+        438,
+        361,
+        296
+      ]
+    },
+    {
+      "id": "meaning-4",
+      "kind": "semantic_english",
+      "query": "A wrong argument in my validation callback raises an ordinary programming exception instead of becoming a validation failure.",
+      "expected_start": 438,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.109,
+      "returned_sections": [
+        438,
+        647,
+        478,
+        361,
+        491
+      ]
+    },
+    {
+      "id": "meaning-4",
+      "kind": "semantic_english",
+      "query": "A wrong argument in my validation callback raises an ordinary programming exception instead of becoming a validation failure.",
+      "expected_start": 438,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        438,
+        361,
+        647,
+        296,
+        478
+      ]
+    },
+    {
+      "id": "meaning-4",
+      "kind": "semantic_english",
+      "query": "A wrong argument in my validation callback raises an ordinary programming exception instead of becoming a validation failure.",
+      "expected_start": 438,
+      "mode": "rerank",
+      "expected_rank": 2,
+      "seconds": 11.359,
+      "returned_sections": [
+        361,
+        438,
+        129,
+        647,
+        296
+      ]
+    },
+    {
+      "id": "meaning-5",
+      "kind": "semantic_english",
+      "query": "The upgraded string pattern engine rejects look around expressions and backreferences.",
+      "expected_start": 698,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        698,
+        78,
+        49,
+        361,
+        276
+      ]
+    },
+    {
+      "id": "meaning-5",
+      "kind": "semantic_english",
+      "query": "The upgraded string pattern engine rejects look around expressions and backreferences.",
+      "expected_start": 698,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.094,
+      "returned_sections": [
+        698,
+        276,
+        478,
+        617,
+        468
+      ]
+    },
+    {
+      "id": "meaning-5",
+      "kind": "semantic_english",
+      "query": "The upgraded string pattern engine rejects look around expressions and backreferences.",
+      "expected_start": 698,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        698,
+        276,
+        468,
+        256,
+        872
+      ]
+    },
+    {
+      "id": "meaning-5",
+      "kind": "semantic_english",
+      "query": "The upgraded string pattern engine rejects look around expressions and backreferences.",
+      "expected_start": 698,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 13.609,
+      "returned_sections": [
+        698,
+        953,
+        129,
+        794,
+        49
+      ]
+    },
+    {
+      "id": "meaning-6",
+      "kind": "semantic_english",
+      "query": "Our extension type needs a new way to provide validation rules and generated schema hooks.",
+      "expected_start": 771,
+      "mode": "bm25",
+      "expected_rank": 1,
+      "seconds": 0.0,
+      "returned_sections": [
+        771,
+        794,
+        361,
+        276,
+        737
+      ]
+    },
+    {
+      "id": "meaning-6",
+      "kind": "semantic_english",
+      "query": "Our extension type needs a new way to provide validation rules and generated schema hooks.",
+      "expected_start": 771,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.094,
+      "returned_sections": [
+        771,
+        794,
+        737,
+        296,
+        276
+      ]
+    },
+    {
+      "id": "meaning-6",
+      "kind": "semantic_english",
+      "query": "Our extension type needs a new way to provide validation rules and generated schema hooks.",
+      "expected_start": 771,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        771,
+        794,
+        737,
+        276,
+        296
+      ]
+    },
+    {
+      "id": "meaning-6",
+      "kind": "semantic_english",
+      "query": "Our extension type needs a new way to provide validation rules and generated schema hooks.",
+      "expected_start": 771,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 14.859,
+      "returned_sections": [
+        771,
+        794,
+        296,
+        953,
+        129
+      ]
+    },
+    {
+      "id": "zh-1",
+      "kind": "semantic_chinese",
+      "query": "字段允许为空但不提供这个字段时为什么会报必填错误？",
+      "expected_start": 647,
+      "mode": "bm25",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": []
+    },
+    {
+      "id": "zh-1",
+      "kind": "semantic_chinese",
+      "query": "字段允许为空但不提供这个字段时为什么会报必填错误？",
+      "expected_start": 647,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.094,
+      "returned_sections": [
+        647,
+        617,
+        980,
+        276,
+        872
+      ]
+    },
+    {
+      "id": "zh-1",
+      "kind": "semantic_chinese",
+      "query": "字段允许为空但不提供这个字段时为什么会报必填错误？",
+      "expected_start": 647,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.015,
+      "returned_sections": [
+        647,
+        617,
+        980,
+        276,
+        872
+      ]
+    },
+    {
+      "id": "zh-1",
+      "kind": "semantic_chinese",
+      "query": "字段允许为空但不提供这个字段时为什么会报必填错误？",
+      "expected_start": 647,
+      "mode": "rerank",
+      "expected_rank": 2,
+      "seconds": 20.907,
+      "returned_sections": [
+        980,
+        647,
+        617,
+        794,
+        296
+      ]
+    },
+    {
+      "id": "zh-2",
+      "kind": "semantic_chinese",
+      "query": "数据类的初始化后处理现在是在输入校验之前还是之后执行？",
+      "expected_start": 296,
+      "mode": "bm25",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": []
+    },
+    {
+      "id": "zh-2",
+      "kind": "semantic_chinese",
+      "query": "数据类的初始化后处理现在是在输入校验之前还是之后执行？",
+      "expected_start": 296,
+      "mode": "dense",
+      "expected_rank": 1,
+      "seconds": 0.093,
+      "returned_sections": [
+        296,
+        500,
+        129,
+        737,
+        980
+      ]
+    },
+    {
+      "id": "zh-2",
+      "kind": "semantic_chinese",
+      "query": "数据类的初始化后处理现在是在输入校验之前还是之后执行？",
+      "expected_start": 296,
+      "mode": "hybrid",
+      "expected_rank": 1,
+      "seconds": 0.016,
+      "returned_sections": [
+        296,
+        500,
+        129,
+        737,
+        980
+      ]
+    },
+    {
+      "id": "zh-2",
+      "kind": "semantic_chinese",
+      "query": "数据类的初始化后处理现在是在输入校验之前还是之后执行？",
+      "expected_start": 296,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 20.703,
+      "returned_sections": [
+        296,
+        621,
+        980,
+        647,
+        129
+      ]
+    },
+    {
+      "id": "zh-3",
+      "kind": "semantic_chinese",
+      "query": "升级后字符串正则为什么不再支持前后向断言和反向引用？",
+      "expected_start": 698,
+      "mode": "bm25",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": []
+    },
+    {
+      "id": "zh-3",
+      "kind": "semantic_chinese",
+      "query": "升级后字符串正则为什么不再支持前后向断言和反向引用？",
+      "expected_start": 698,
+      "mode": "dense",
+      "expected_rank": null,
+      "seconds": 0.125,
+      "returned_sections": [
+        500,
+        617,
+        468,
+        478,
+        276
+      ]
+    },
+    {
+      "id": "zh-3",
+      "kind": "semantic_chinese",
+      "query": "升级后字符串正则为什么不再支持前后向断言和反向引用？",
+      "expected_start": 698,
+      "mode": "hybrid",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": [
+        500,
+        617,
+        468,
+        478,
+        276
+      ]
+    },
+    {
+      "id": "zh-3",
+      "kind": "semantic_chinese",
+      "query": "升级后字符串正则为什么不再支持前后向断言和反向引用？",
+      "expected_start": 698,
+      "mode": "rerank",
+      "expected_rank": 4,
+      "seconds": 23.11,
+      "returned_sections": [
+        980,
+        129,
+        953,
+        698,
+        406
+      ]
+    },
+    {
+      "id": "zh-4",
+      "kind": "semantic_chinese",
+      "query": "怎样直接验证一个有类型约束的列表，而不为它创建一个模型包装类？",
+      "expected_start": 737,
+      "mode": "bm25",
+      "expected_rank": null,
+      "seconds": 0.0,
+      "returned_sections": []
+    },
+    {
+      "id": "zh-4",
+      "kind": "semantic_chinese",
+      "query": "怎样直接验证一个有类型约束的列表，而不为它创建一个模型包装类？",
+      "expected_start": 737,
+      "mode": "dense",
+      "expected_rank": 2,
+      "seconds": 0.109,
+      "returned_sections": [
+        872,
+        737,
+        617,
+        647,
+        698
+      ]
+    },
+    {
+      "id": "zh-4",
+      "kind": "semantic_chinese",
+      "query": "怎样直接验证一个有类型约束的列表，而不为它创建一个模型包装类？",
+      "expected_start": 737,
+      "mode": "hybrid",
+      "expected_rank": 2,
+      "seconds": 0.0,
+      "returned_sections": [
+        872,
+        737,
+        617,
+        647,
+        698
+      ]
+    },
+    {
+      "id": "zh-4",
+      "kind": "semantic_chinese",
+      "query": "怎样直接验证一个有类型约束的列表，而不为它创建一个模型包装类？",
+      "expected_start": 737,
+      "mode": "rerank",
+      "expected_rank": 1,
+      "seconds": 9.609,
+      "returned_sections": [
+        737,
+        647,
+        256,
+        276,
+        500
+      ]
+    }
+  ],
+  "summary": {
+    "bm25": {
+      "count": 16,
+      "top1": 10,
+      "top5": 11,
+      "mrr5": 0.6458333333333334,
+      "seconds_total": 0.0,
+      "by_kind": {
+        "semantic_chinese": {
+          "top1": 0,
+          "count": 4
+        },
+        "semantic_english": {
+          "top1": 4,
+          "count": 6
+        },
+        "named_api": {
+          "top1": 6,
+          "count": 6
+        }
+      }
+    },
+    "dense": {
+      "count": 16,
+      "top1": 11,
+      "top5": 14,
+      "mrr5": 0.7708333333333334,
+      "seconds_total": 36.624,
+      "by_kind": {
+        "semantic_chinese": {
+          "top1": 2,
+          "count": 4
+        },
+        "semantic_english": {
+          "top1": 5,
+          "count": 6
+        },
+        "named_api": {
+          "top1": 4,
+          "count": 6
+        }
+      }
+    },
+    "hybrid": {
+      "count": 16,
+      "top1": 13,
+      "top5": 15,
+      "mrr5": 0.875,
+      "seconds_total": 0.172,
+      "by_kind": {
+        "semantic_chinese": {
+          "top1": 2,
+          "count": 4
+        },
+        "semantic_english": {
+          "top1": 5,
+          "count": 6
+        },
+        "named_api": {
+          "top1": 6,
+          "count": 6
+        }
+      }
+    },
+    "rerank": {
+      "count": 16,
+      "top1": 11,
+      "top5": 16,
+      "mrr5": 0.809375,
+      "seconds_total": 251.391,
+      "by_kind": {
+        "semantic_chinese": {
+          "top1": 2,
+          "count": 4
+        },
+        "semantic_english": {
+          "top1": 3,
+          "count": 6
+        },
+        "named_api": {
+          "top1": 6,
+          "count": 6
+        }
+      }
+    }
+  },
+  "provider_calls": 0,
+  "target_code_executed": false,
+  "source_report_sha256": "8ce8a3dd33b071787b44fb58b1fad379894aeb390971b0a93561c8c93b68006c",
+  "timing_limit": "Fixed strategy order, warm shared caches, coarse initial timer; not a latency comparison",
+  "component_hashes": {
+    "retrieval.py": "7ff9081af76a3a1057aef3b715256eeeaaf04647b095cebecc3b5ac10c360c45",
+    "semantic.py": "3ad4ecb87217d6cc4704566fef4bcd630c1ad2542f29e11e02e6b30f24227f31",
+    "analysis/dependencies.py": "d6787728abe344770e3c424734c83402a8eed6d4106d9eef85a3b1e58c365686"
+  }
+}
