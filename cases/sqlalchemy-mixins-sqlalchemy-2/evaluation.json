@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "case_id": "sqlalchemy-mixins-sqlalchemy-2",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_public_mixins.py"
+      ],
+      "nodeids": [
+        "feedback/test_public_mixins.py::test_create_update_delete_persist",
+        "feedback/test_public_mixins.py::test_find_and_find_or_fail",
+        "feedback/test_public_mixins.py::test_repr_and_flat_to_dict",
+        "feedback/test_public_mixins.py::test_sort_by_relation_and_descending",
+        "feedback/test_public_mixins.py::test_where_filters_through_relation",
+        "feedback/test_public_mixins.py::test_with_joined_string_path_loads_relation"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_independent_mixins.py"
+      ],
+      "nodeids": [
+        "acceptance/test_independent_mixins.py::test_active_record_collection_helpers",
+        "acceptance/test_independent_mixins.py::test_filter_and_order_expressions_on_alias",
+        "acceptance/test_independent_mixins.py::test_inspection_attributes",
+        "acceptance/test_independent_mixins.py::test_nested_logical_filters_and_hybrid_method",
+        "acceptance/test_independent_mixins.py::test_save_flushes_but_caller_owns_commit",
+        "acceptance/test_independent_mixins.py::test_smart_query_function_with_schema_and_sort",
+        "acceptance/test_independent_mixins.py::test_smart_query_on_dynamic_relationship",
+        "acceptance/test_independent_mixins.py::test_timestamps_are_populated",
+        "acceptance/test_independent_mixins.py::test_to_dict_nested_hybrid_and_exclude",
+        "acceptance/test_independent_mixins.py::test_where_auto_eager_loads_joined_relations",
+        "acceptance/test_independent_mixins.py::test_with_nested_schema_attribute_keys",
+        "acceptance/test_independent_mixins.py::test_with_nested_schema_string_keys",
+        "acceptance/test_independent_mixins.py::test_with_subquery_dotted_string_path"
+      ],
+      "expected_count": 13
+    }
+  },
+  "note": "Frozen before any model request; written from upstream README/tests and admitted in Docker before task creation."
+}

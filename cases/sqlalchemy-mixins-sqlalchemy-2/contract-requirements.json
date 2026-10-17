@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "d21aadb89a7ae58c1779b0c9206d05a25d36fa1741c7bc1dd4ffd0c2199cdad4",
+  "requirements": [
+    {
+      "id": "activerecord.crud-flush",
+      "statement": "create, fill, update, save, delete and destroy persist through the bound session with flush only; the caller's commit and rollback decide visibility to other connections; unknown attributes raise KeyError.",
+      "public_check_nodeids": [
+        "feedback/test_public_mixins.py::test_create_update_delete_persist"
+      ]
+    },
+    {
+      "id": "activerecord.lookup",
+      "statement": "all, first, find and find_or_fail keep their results; find returns None and find_or_fail raises ModelNotFoundError for a missing primary key.",
+      "public_check_nodeids": [
+        "feedback/test_public_mixins.py::test_find_and_find_or_fail"
+      ]
+    },
+    {
+      "id": "eagerload.paths-and-schema",
+      "statement": "with_, with_joined and with_subquery accept string paths, dotted nested string paths, class attributes and nested schema tuples, and loaded relations cause no additional SQL when accessed.",
+      "public_check_nodeids": [
+        "feedback/test_public_mixins.py::test_with_joined_string_path_loads_relation"
+      ]
+    },
+    {
+      "id": "smartquery.filters-sort",
+      "statement": "where, sort and smart_query keep Django-like relation filters, operators, descending sort, outer joins, nested or_/and_ structures, hybrid attributes and alias-aware filter_expr/order_expr; unknown names raise KeyError.",
+      "public_check_nodeids": [
+        "feedback/test_public_mixins.py::test_where_filters_through_relation",
+        "feedback/test_public_mixins.py::test_sort_by_relation_and_descending"
+      ]
+    },
+    {
+      "id": "smartquery.auto-eager-dynamic",
+      "statement": "Relations joined for filtering or sorting are eager loaded without extra SQL, schema-requested loads are honored, and the standalone smart_query works on a lazy=dynamic relationship query.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "inspection.attribute-names",
+      "statement": "columns, primary_keys, relations, settable_relations (without viewonly), hybrid_properties, hybrid_methods and settable_attributes keep their names.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "output.repr-dict-timestamps",
+      "statement": "ReprMixin output, to_dict with nested, hybrid_attributes and exclude, and TimestampsMixin columns keep their documented values.",
+      "public_check_nodeids": [
+        "feedback/test_public_mixins.py::test_repr_and_flat_to_dict"
+      ]
+    },
+    {
+      "id": "migration.sqlalchemy2",
+      "statement": "The same behavior holds when only SQLAlchemy moves from 1.4.54 to 2.0.38 with the rest of the lock unchanged; only Python modules under sqlalchemy_mixins/ change.",
+      "public_check_nodeids": []
+    }
+  ]
+}

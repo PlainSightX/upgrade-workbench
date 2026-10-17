@@ -1,0 +1,149 @@
+{
+  "repository": "https://github.com/absent1706/sqlalchemy-mixins",
+  "revision": "ce4badbc51f8049783fa3909615ccfc7c1198d98",
+  "tag": "v1.5.3",
+  "archive_url": "https://codeload.github.com/absent1706/sqlalchemy-mixins/tar.gz/ce4badbc51f8049783fa3909615ccfc7c1198d98",
+  "archive_sha256": "6410a63ab5312e8aa78dad7997e9cb4da3c73d3d224b51718db70e85f47a3d7b",
+  "license": "MIT",
+  "files": {
+    "source/LICENSE.txt": {
+      "upstream_path": "LICENSE.txt",
+      "sha256": "aeba2538c13744eb23783f2d9cb412fbab3f9a778e1969a0d75ad905f2a45bb6"
+    },
+    "source/README.md": {
+      "upstream_path": "README.md",
+      "sha256": "6dd1435bc76327d1cd47ab5fac7fc281cc90c54d7ce580fcd0b9d1961b93d739"
+    },
+    "source/sqlalchemy_mixins/__init__.py": {
+      "upstream_path": "sqlalchemy_mixins/__init__.py",
+      "sha256": "305ee00d04274c5d3b503cf7d4d71764b33cfbad0244047199355b8966dee0a9"
+    },
+    "source/sqlalchemy_mixins/__init__.pyi": {
+      "upstream_path": "sqlalchemy_mixins/__init__.pyi",
+      "sha256": "c41796b3f30ef1dd4950cd6bf00cb0061fc69c266b2ed11120c585d10c073139"
+    },
+    "source/sqlalchemy_mixins/activerecord.py": {
+      "upstream_path": "sqlalchemy_mixins/activerecord.py",
+      "sha256": "e0cb7ee8441576de432733c927503e45380b03df493598d51c4e82e362d15aa2"
+    },
+    "source/sqlalchemy_mixins/activerecord.pyi": {
+      "upstream_path": "sqlalchemy_mixins/activerecord.pyi",
+      "sha256": "d88f895c62fa97e3f495b6f401972a274425379a70536e1fb6c9672110e6a7cb"
+    },
+    "source/sqlalchemy_mixins/eagerload.py": {
+      "upstream_path": "sqlalchemy_mixins/eagerload.py",
+      "sha256": "b16b8cbdbfb1700fc0a0f695efa52d54aa369cfa1aa35961c8e11aee62400a60"
+    },
+    "source/sqlalchemy_mixins/eagerload.pyi": {
+      "upstream_path": "sqlalchemy_mixins/eagerload.pyi",
+      "sha256": "c04d1e7f59585b125930eead07218eac104cb9d5d265affb4d50ce667e780ca8"
+    },
+    "source/sqlalchemy_mixins/inspection.py": {
+      "upstream_path": "sqlalchemy_mixins/inspection.py",
+      "sha256": "c0d762a65829001b8bb965ffb933620c217d3f4333eb02bbe3c31210911b5877"
+    },
+    "source/sqlalchemy_mixins/inspection.pyi": {
+      "upstream_path": "sqlalchemy_mixins/inspection.pyi",
+      "sha256": "bf80ae7c01d1b5615123bda456ff645dce6c8e491cde4b5b50114830d95e1b1e"
+    },
+    "source/sqlalchemy_mixins/py.typed": {
+      "upstream_path": "sqlalchemy_mixins/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/sqlalchemy_mixins/repr.py": {
+      "upstream_path": "sqlalchemy_mixins/repr.py",
+      "sha256": "852af6025b29ae992fbf1f1e3be2b1fc1a077758c75c1eb04a66c45ce9cb3d6c"
+    },
+    "source/sqlalchemy_mixins/repr.pyi": {
+      "upstream_path": "sqlalchemy_mixins/repr.pyi",
+      "sha256": "6abdcc7038bb3cda7bdc2c8e00d4286a9776ce3564897acd41231ea0b239f84e"
+    },
+    "source/sqlalchemy_mixins/serialize.py": {
+      "upstream_path": "sqlalchemy_mixins/serialize.py",
+      "sha256": "c745c38998a2625fea87d1c1af14d3aeefd60b5edf44bd85ad389f5802362f0c"
+    },
+    "source/sqlalchemy_mixins/serialize.pyi": {
+      "upstream_path": "sqlalchemy_mixins/serialize.pyi",
+      "sha256": "03f2b75c9148669e1bb6ff4df0555f6b25426403c1cbc45478bc7094d1f918a0"
+    },
+    "source/sqlalchemy_mixins/session.py": {
+      "upstream_path": "sqlalchemy_mixins/session.py",
+      "sha256": "0718fc5c291603c4682ffa2edbc98ae91d5e625d5f8544db05a7bdfc889f76ab"
+    },
+    "source/sqlalchemy_mixins/session.pyi": {
+      "upstream_path": "sqlalchemy_mixins/session.pyi",
+      "sha256": "35c3ccc709fe2f9fee3513dc4d5c5a61b0b34e2cc8b71fa50c63419904d8846c"
+    },
+    "source/sqlalchemy_mixins/smartquery.py": {
+      "upstream_path": "sqlalchemy_mixins/smartquery.py",
+      "sha256": "e4a899094bca6d309fc34b7d44747fed478171e6b4ee2a9937b74778a74b1b76"
+    },
+    "source/sqlalchemy_mixins/smartquery.pyi": {
+      "upstream_path": "sqlalchemy_mixins/smartquery.pyi",
+      "sha256": "b63bac1d6b5eb9cd629628c85e1d00d72d844e220a39633324723c0ac1a6df8f"
+    },
+    "source/sqlalchemy_mixins/timestamp.py": {
+      "upstream_path": "sqlalchemy_mixins/timestamp.py",
+      "sha256": "0a0b04d6de45be613866d772258aa9c46fd1212d27d6a044d7f81818820b02d4"
+    },
+    "source/sqlalchemy_mixins/utils.py": {
+      "upstream_path": "sqlalchemy_mixins/utils.py",
+      "sha256": "fe2fc2d21055230521f02a90ad0dea0913604c318396961808f17c8dfae764db"
+    },
+    "source/sqlalchemy_mixins/utils.pyi": {
+      "upstream_path": "sqlalchemy_mixins/utils.pyi",
+      "sha256": "7b225f38a51817a0feb6ec8943f69fd481bb58fcf8e2c36c708f54e26406545d"
+    },
+    "upstream/.github/workflows/test-pr.yml": {
+      "upstream_path": ".github/workflows/test-pr.yml",
+      "sha256": "f07e673962ad502c45169c83de5ab2312e418c372a8d72aa02e5d6bcad74235f"
+    },
+    "upstream/requirements.txt": {
+      "upstream_path": "requirements.txt",
+      "sha256": "07b122853532812bcbe02c19c109351d1578c1afff1f94b5a181cff0e822df54"
+    },
+    "upstream/setup.py": {
+      "upstream_path": "setup.py",
+      "sha256": "e8d322db9df80594989888af538f5656fd7fa1b2aaa3807a85dcb04d123f5878"
+    },
+    "upstream/sqlalchemy_mixins/tests/__init__.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_activerecord.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_activerecord.py",
+      "sha256": "e247119d717ed67dd7b897144844c7635ce2886fa3215001aecfcc5f91e747e1"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_eagerload.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_eagerload.py",
+      "sha256": "8a752813a95065a3ab4d8e42b06e191942d9e1114bd05a75791427fdfa94e878"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_inspection.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_inspection.py",
+      "sha256": "2755d724d8ce6e46dbd0d441044c9d999f8a12738b3a155d11cbf9034141de0d"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_repr.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_repr.py",
+      "sha256": "2898213462f1d917aa4efb673545cdf8f2ef2743edba79a1c6fd47c7bec84ef7"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_serialize.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_serialize.py",
+      "sha256": "58973dcf9bc95c2376b072fac03136f1702fe20f006912d8618c3632fc7aeed7"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_session.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_session.py",
+      "sha256": "350ee8aa4e4cf81e4fe24f7a56396cda3f3f66d856d28d3641534063ed1eb89c"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_smartquery.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_smartquery.py",
+      "sha256": "f4510d3838d27c8b0c400a704448ab86bef0c2e4a842fcae81b7d8befdfddb3d"
+    },
+    "upstream/sqlalchemy_mixins/tests/test_timestamp.py": {
+      "upstream_path": "sqlalchemy_mixins/tests/test_timestamp.py",
+      "sha256": "7786cbaf134d869c3e2cf45d0e6f6476084a9ea3b15c0db05ff78be33157e97a"
+    }
+  },
+  "target_code_executed_on_host": false,
+  "classification": "unseen_public_repository_never_used_by_this_workbench",
+  "upstream_answer_patch_in_solver_input": false
+}

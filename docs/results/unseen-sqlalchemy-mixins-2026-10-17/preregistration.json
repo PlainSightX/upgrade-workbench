@@ -1,0 +1,89 @@
+{
+  "meaning": "Ordering evidence for the unseen-repository case: contract and checks frozen, then Docker admission, then task creation and first model request.",
+  "case_id": "sqlalchemy-mixins-sqlalchemy-2",
+  "case_fingerprint": "862caaa6d0b448b7a1b553841a34a60f09c56461155383251dd144e5fed940de",
+  "upstream": {
+    "repository": "https://github.com/absent1706/sqlalchemy-mixins",
+    "tag": "v1.5.3",
+    "revision": "ce4badbc51f8049783fa3909615ccfc7c1198d98",
+    "archive_sha256": "6410a63ab5312e8aa78dad7997e9cb4da3c73d3d224b51718db70e85f47a3d7b",
+    "license": "MIT"
+  },
+  "timeline_utc": [
+    {
+      "step": "contract_and_checks_hashed",
+      "at": "2026-10-17T13:25:34Z"
+    },
+    {
+      "step": "docker_admission_started",
+      "at": "2026-10-17T13:25:42.797421+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "task_created",
+      "at": "2026-10-17T13:29:26.089833+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "first_model_request_prepared",
+      "at": "2026-10-17T13:29:33.946615+00:00"
+    },
+    {
+      "step": "independent_acceptance_started",
+      "at": "2026-10-17T14:06:41.093944+00:00"
+    }
+  ],
+  "frozen_files_sha256": {
+    "checks/acceptance/test_independent_mixins.py": "f9f1a4bfe3634a3e19d6429ad80e2b76587cbb200c53e3db3343b96b29541f39",
+    "checks/feedback/test_public_mixins.py": "350792ae21aa606bfe990f08f239a6244829fd002d49eac5aac5b42ccc42cbc4",
+    "business-contract.md": "d21aadb89a7ae58c1779b0c9206d05a25d36fa1741c7bc1dd4ffd0c2199cdad4",
+    "contract-requirements.json": "ac37ccac20a9a0edd44620abc6e8c35f7b9ff1b9e23d5e9c9724c7089da302c6"
+  },
+  "frozen_bytes_equal_in_sealed_manifest": true,
+  "admission": {
+    "old": {
+      "status": "passed",
+      "tests": {
+        "collected": 19,
+        "passed": 19,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_upgrade": {
+      "status": "failed",
+      "tests": {
+        "collected": 19,
+        "passed": 9,
+        "failed": 10,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_failure_cause": "sqlalchemy.exc.ArgumentError: Strings are not accepted for attribute names in loader options"
+  },
+  "groups": {
+    "feedback": 6,
+    "acceptance": 13
+  },
+  "checks_modified_after_first_model_request": false,
+  "posthoc_not_part_of_result": {
+    "subject": "Agent revision 932ca1b3 (public checks 6/6), replayed after the task was terminal and the official result was frozen",
+    "patch_sha256": "fa828d91daff1934eb24c7efcc0d425337c17cc782772c12430d6ff27438be1b",
+    "new_candidate": {
+      "status": "failed",
+      "tests": {
+        "collected": 19,
+        "passed": 17,
+        "failed": 2,
+        "errors": 0,
+        "skipped": 0
+      },
+      "failed": [
+        "acceptance/test_independent_mixins.py::test_with_nested_schema_string_keys",
+        "acceptance/test_independent_mixins.py::test_with_nested_schema_attribute_keys"
+      ]
+    }
+  }
+}
