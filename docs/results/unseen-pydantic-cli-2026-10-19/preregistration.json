@@ -1,0 +1,123 @@
+{
+  "meaning": "Ordering evidence for the unseen-repository case: contract and checks frozen, then Docker admission, then task creation and first model request.",
+  "case_id": "pydantic-cli-pydantic-2",
+  "case_fingerprint": "3843c1fac0bc86b61ccb59faf894320b5baf6957e32b3d50ab335ab710b67fd6",
+  "upstream": {
+    "repository": "https://github.com/mpkocher/pydantic-cli",
+    "tag": "v4.3.0",
+    "revision": "50d1edaa239a9b1d16e4f089f5151bd0930d1329",
+    "archive_sha256": "99d9ca068bd0820399abe99caf50da5bb7cb65d193ff73fe8b5e8d875dda1ce9",
+    "license": "MIT"
+  },
+  "timeline_utc": [
+    {
+      "step": "contract_and_checks_hashed",
+      "at": "2026-10-19T02:52:20Z"
+    },
+    {
+      "step": "docker_admission_started",
+      "at": "2026-10-19T02:52:27.327087+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "task_created",
+      "at": "2026-10-19T02:55:51.760574+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "first_model_request_prepared",
+      "at": "2026-10-19T02:56:51.085532+00:00"
+    },
+    {
+      "step": "independent_acceptance_started",
+      "at": "2026-10-19T04:16:33Z"
+    }
+  ],
+  "frozen_files_sha256": {
+    "checks/acceptance/test_independent_cli.py": "9ba4d8409ec3fbffb17260662f6d7da3b9608ffb3076aebb13f10822df85a77c",
+    "checks/feedback/test_public_cli.py": "14c90cd6deb908e5e72c245dd63078c987360deda11ce46d32e4a11754ff617a",
+    "business-contract.md": "040d4752c2060d11b219e1253c1756e484de29b2ce3b8155bfa65e2de456bfc7",
+    "contract-requirements.json": "d3e2bcdf24b0aec89cce1d902f8ae45515fd415c8fd5bbb75198648bfd2f6b53"
+  },
+  "frozen_bytes_equal_in_sealed_manifest": true,
+  "admission": {
+    "old": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_upgrade": {
+      "status": "failed",
+      "tests": {
+        "collected": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 2,
+        "skipped": 0
+      }
+    },
+    "direct_failure_cause": "AttributeError: module 'pydantic.fields' has no attribute 'ModelField' (both check modules fail to import)"
+  },
+  "groups": {
+    "feedback": 6,
+    "acceptance": 11
+  },
+  "checks_modified_after_first_model_request": false,
+  "authoring_dry_runs_before_freeze": {
+    "count": 2,
+    "model_requests_before": 0,
+    "note": "Two pre-freeze Docker dry runs calibrated the checks against the old environment; see README."
+  },
+  "posthoc_not_part_of_result": {
+    "subject": "Earlier Agent revisions replayed with all checks after the task was terminal and the official result was frozen",
+    "replays": [
+      {
+        "revision": "f4f06594",
+        "patch_sha256": "617292c0b382bb0739f0c733f767be3ade4a763089fb41e6726972a86bbe3c34",
+        "new_candidate": {
+          "status": "passed",
+          "tests": {
+            "collected": 17,
+            "passed": 17,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        }
+      },
+      {
+        "revision": "d9b1e42e",
+        "patch_sha256": "5f56df57df4f374cf7430ba52d5cfe544c9c2187123a81d15a9ff66ae3822f96",
+        "new_candidate": {
+          "status": "passed",
+          "tests": {
+            "collected": 17,
+            "passed": 17,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        }
+      },
+      {
+        "revision": "5564947c",
+        "patch_sha256": "47893ddfc8c9fc4b7f3b5042d3cdd502f1b9349d54aad67ef2a3a40c9e0cc2f7",
+        "new_candidate": {
+          "status": "passed",
+          "tests": {
+            "collected": 17,
+            "passed": 17,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        }
+      }
+    ]
+  }
+}

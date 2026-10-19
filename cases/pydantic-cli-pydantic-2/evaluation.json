@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "pydantic-cli-pydantic-2",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_public_cli.py"
+      ],
+      "nodeids": [
+        "feedback/test_public_cli.py::test_bool_default_false_gets_enable_flag",
+        "feedback/test_public_cli.py::test_custom_short_and_long_flags_from_field",
+        "feedback/test_public_cli.py::test_json_config_supplies_values_and_cli_overrides",
+        "feedback/test_public_cli.py::test_missing_required_option_fails_without_running",
+        "feedback/test_public_cli.py::test_required_typed_options_reach_runner",
+        "feedback/test_public_cli.py::test_subparser_dispatches_to_selected_model"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_independent_cli.py"
+      ],
+      "nodeids": [
+        "acceptance/test_independent_cli.py::test_bool_default_true_flag_negates",
+        "acceptance/test_independent_cli.py::test_config_bool_prefix_is_respected",
+        "acceptance/test_independent_cli.py::test_help_and_version_are_eager",
+        "acceptance/test_independent_cli.py::test_json_preset_from_env_var_and_custom_key",
+        "acceptance/test_independent_cli.py::test_list_set_and_enum_values",
+        "acceptance/test_independent_cli.py::test_missing_json_preset_fails",
+        "acceptance/test_independent_cli.py::test_optional_bool_defaults_to_none_and_accepts_custom_pair",
+        "acceptance/test_independent_cli.py::test_prologue_and_epilogue_hooks_run",
+        "acceptance/test_independent_cli.py::test_required_bool_uses_enable_disable_pair",
+        "acceptance/test_independent_cli.py::test_runner_exit_code_and_exception_mapping",
+        "acceptance/test_independent_cli.py::test_validation_failure_reports_nonzero_without_running"
+      ],
+      "expected_count": 11
+    }
+  },
+  "note": "Frozen before any model request; written from upstream README/docstrings/tests and admitted in Docker before task creation."
+}

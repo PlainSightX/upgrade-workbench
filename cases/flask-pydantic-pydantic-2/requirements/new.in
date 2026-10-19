@@ -1,0 +1,5 @@
+flask==2.3.3
+pydantic==2.6.4
+pytest==7.4.4
+typing-extensions==4.12.2
+werkzeug==2.3.8

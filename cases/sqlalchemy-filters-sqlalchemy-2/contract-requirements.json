@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "e7faa4bc3c374bdf071626747af5dc316af96c19c7f5ab450c1f4ba93ffddb3a",
+  "requirements": [
+    {
+      "id": "filters.operators-and-hybrids",
+      "statement": "apply_filters accepts one or many specs with field, optional model, optional op (default ==) and value; listed operators work on columns, hybrid properties and hybrid methods; nested and/or/not forms are validated and applied.",
+      "public_check_nodeids": [
+        "feedback/test_public_filters.py::test_single_model_filter_with_operators",
+        "feedback/test_public_filters.py::test_hybrid_property_and_method_filters"
+      ]
+    },
+    {
+      "id": "models.resolution-and-auto-join",
+      "statement": "Models are found from entities, columns, aggregates, select_from and joins; a missing named model is auto-joined when the join can be inferred unless do_auto_join=False; ambiguous or absent models raise BadSpec and model-less queries raise BadQuery.",
+      "public_check_nodeids": [
+        "feedback/test_public_filters.py::test_filters_on_explicit_join"
+      ]
+    },
+    {
+      "id": "sort.directions-nulls",
+      "statement": "apply_sort applies asc/desc with nullsfirst/nullslast on columns and hybrids, with the same model resolution and automatic join.",
+      "public_check_nodeids": [
+        "feedback/test_public_filters.py::test_sort_by_field_and_direction",
+        "feedback/test_public_filters.py::test_sort_on_explicit_join"
+      ]
+    },
+    {
+      "id": "loads.restricted-columns",
+      "statement": "apply_loads restricts loaded columns per named model, accepts the field-name list shorthand, auto-joins missing models, and restricted columns are not selected.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "pagination.metadata",
+      "statement": "apply_pagination returns the limited/offset query and the (page_number, page_size, num_pages, total_results) tuple with documented defaults, raising InvalidPage for invalid input.",
+      "public_check_nodeids": [
+        "feedback/test_public_filters.py::test_pagination_metadata"
+      ]
+    },
+    {
+      "id": "errors.types",
+      "statement": "BadFilterFormat, BadSortFormat, BadLoadFormat, BadSpec, FieldNotFound, BadQuery and InvalidPage keep their meaning.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.sqlalchemy2",
+      "statement": "The same behavior holds when only SQLAlchemy moves from 1.4.54 to 2.0.38 with the rest of the lock unchanged; only Python modules under sqlalchemy_filters/ change.",
+      "public_check_nodeids": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "b5490718538278b342370f4b0ca98c07016b89557d794def1491a535ab4bae9e",
+  "requirements": [
+    {
+      "id": "inputs.query-path-body-form",
+      "statement": "Query, JSON body and form models given to validate() or as view annotations are parsed and exposed on request and as keyword arguments; annotated path parameters are converted.",
+      "public_check_nodeids": [
+        "feedback/test_public_validate.py::test_query_model_parses_and_serializes_response",
+        "feedback/test_public_validate.py::test_path_parameter_is_converted",
+        "feedback/test_public_validate.py::test_json_body_model",
+        "feedback/test_public_validate.py::test_form_model",
+        "feedback/test_public_validate.py::test_decorator_models_and_success_status"
+      ]
+    },
+    {
+      "id": "inputs.lists-many-json-params",
+      "statement": "Repeated query keys fill List fields; request_body_many validates an array into models and rejects a non-array body with a root error; get_json_params is passed to request.get_json.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "errors.envelope-and-config",
+      "statement": "Validation failures return {validation_error: {<group>: [...]}} with status 400 or the configured status; each item has a loc list, msg and type, and custom validator messages appear in msg; the raise option raises flask_pydantic.ValidationError with the same groups.",
+      "public_check_nodeids": [
+        "feedback/test_public_validate.py::test_query_validation_errors_return_400"
+      ]
+    },
+    {
+      "id": "responses.serialization",
+      "statement": "Returned models are serialized with on_success_status and application/json; exclude_none and response_by_alias are honored; response_many serializes iterables and raises InvalidIterableOfModelsException otherwise; status/header tuples apply; other values pass through.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "migration.pydantic2",
+      "statement": "The same behavior holds when only Pydantic moves from 1.10.15 to 2.6.4 with the rest of the lock unchanged; only Python modules under flask_pydantic/ change.",
+      "public_check_nodeids": []
+    }
+  ]
+}

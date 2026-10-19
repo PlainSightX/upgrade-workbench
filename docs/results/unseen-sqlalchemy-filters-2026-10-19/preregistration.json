@@ -1,0 +1,76 @@
+{
+  "meaning": "Ordering evidence for the unseen-repository case: contract and checks frozen, then Docker admission, then task creation and first model request.",
+  "case_id": "sqlalchemy-filters-sqlalchemy-2",
+  "case_fingerprint": "e2fff6009e9cc94742e6ab25a46197314fdb4703fc518f80ee7275ce41f453c1",
+  "upstream": {
+    "repository": "https://github.com/juliotrigo/sqlalchemy-filters",
+    "tag": "v0.13.0",
+    "revision": "e182378a7a53f05b8c11f9889787bd5b12579a5c",
+    "archive_sha256": "45844a5500b1e0aafc4e2b7a40a555cc15caa88a532dc05b3af8b9af311f01d3",
+    "license": "Apache-2.0"
+  },
+  "timeline_utc": [
+    {
+      "step": "contract_and_checks_hashed",
+      "at": "2026-10-19T02:52:21Z"
+    },
+    {
+      "step": "docker_admission_started",
+      "at": "2026-10-19T02:52:27.400940+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "task_created",
+      "at": "2026-10-19T02:55:53.383844+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "first_model_request_prepared",
+      "at": "2026-10-19T02:56:51.253837+00:00"
+    },
+    {
+      "step": "independent_acceptance_started",
+      "at": "2026-10-19T03:25:32Z"
+    }
+  ],
+  "frozen_files_sha256": {
+    "checks/acceptance/test_independent_filters.py": "f43189cc47cad34debc6c71c4ecc8835bf9e19de4d803cffe6e0f4a1c2fd9f50",
+    "checks/feedback/test_public_filters.py": "e32b1c5b1c1d01fbd4e2e00321c8d13744610355104ed0cbba5cb36e325c4988",
+    "business-contract.md": "e7faa4bc3c374bdf071626747af5dc316af96c19c7f5ab450c1f4ba93ffddb3a",
+    "contract-requirements.json": "54ee10a6f505ebee16c56d0bb4cb83fe339043c03ae854cf806d8b0b4c898deb"
+  },
+  "frozen_bytes_equal_in_sealed_manifest": true,
+  "admission": {
+    "old": {
+      "status": "passed",
+      "tests": {
+        "collected": 18,
+        "passed": 18,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_upgrade": {
+      "status": "failed",
+      "tests": {
+        "collected": 18,
+        "passed": 15,
+        "failed": 3,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_failure_cause": "FieldNotFound for hybrid attributes; AttributeError: 'Query' object has no attribute '_legacy_setup_joins'"
+  },
+  "groups": {
+    "feedback": 6,
+    "acceptance": 12
+  },
+  "checks_modified_after_first_model_request": false,
+  "authoring_dry_runs_before_freeze": {
+    "count": 2,
+    "model_requests_before": 0,
+    "note": "Two pre-freeze Docker dry runs calibrated the checks against the old environment; see README."
+  }
+}

@@ -1,0 +1,349 @@
+--- a/pydantic_cli/__init__.py
++++ b/pydantic_cli/__init__.py
+@@ -6,6 +6,8 @@
+ from enum import Enum
+ from typing import Callable as F
+ import pydantic.fields
++from pydantic.fields import PydanticUndefined
++from typing import get_args, get_origin
+ 
+ from ._version import __version__
+ 
+@@ -142,6 +144,57 @@
+         )
+ 
+ 
++def __get_field_extra(field: pydantic.fields.FieldInfo) -> T.Dict[str, T.Any]:
++    """
++    Return the extra keyword arguments supplied to ``pydantic.Field``.
++
++    Pydantic 2 stores unknown ``Field`` keywords (e.g. ``cli=...``) inside
++    ``json_schema_extra``; Pydantic 1 exposed them through ``field_info.extra``.
++    """
++    extra = getattr(field, "json_schema_extra", None)
++    if isinstance(extra, dict):
++        return extra
++
++    field_info = getattr(field, "field_info", None)
++    if field_info is not None:
++        return getattr(field_info, "extra", None) or {}
++
++    return {}
++
++
++def __unwrap_optional(annotation: T.Any) -> T.Tuple[T.Any, bool]:
++    """Split ``Optional[X]`` (``Union[X, None]``) into ``(X, True)``."""
++    if get_origin(annotation) is not T.Union:
++        return annotation, False
++
++    inner = [a for a in get_args(annotation) if a is not type(None)]
++    if len(inner) == 1:
++        return inner[0], True
++    return annotation, False
++
++
++def __is_multi_value(annotation: T.Any) -> bool:
++    """True for ``List``/``Set`` style annotations, which take several values."""
++    if get_origin(annotation) in {list, set, frozenset}:
++        return True
++    return annotation in {list, set, frozenset}
++
++
++def __is_multi_value_field(field: pydantic.fields.FieldInfo) -> bool:
++    annotation, _ = __unwrap_optional(field.annotation)
++    return __is_multi_value(annotation)
++
++
++def __get_field_type(field: pydantic.fields.FieldInfo) -> T.Tuple[T.Any, bool]:
++    """Return the CLI facing type of the field and whether ``None`` is allowed."""
++    annotation, allow_none = __unwrap_optional(field.annotation)
++    if __is_multi_value(annotation):
++        args = get_args(annotation)
++        if args:
++            annotation = args[0]
++    return annotation, allow_none
++
++
+ def __add_boolean_arg_negate_to_parser(
+     parser: CustomArgumentParser,
+     field_id: str,
+@@ -224,7 +277,7 @@
+ def _add_pydantic_field_to_parser(
+     parser: CustomArgumentParser,
+     field_id: str,
+-    field: pydantic.fields.ModelField,
++    field: pydantic.fields.FieldInfo,
+     override_value: T.Any = ...,
+     override_cli: T.Optional[CustomOptsType] = None,
+     long_prefix: str = "--",
+@@ -238,15 +291,18 @@
+     :param override_cli: Custom format of the CLI argument
+     """
+ 
+-    # field is Field from Pydantic
+-    description = field.field_info.description
+-    extra: T.Dict[str, T.Any] = field.field_info.extra
++    # field is a Pydantic 2 FieldInfo
++    description = field.description
++    extra: T.Dict[str, T.Any] = __get_field_extra(field)
+     default_long_arg = "".join([long_prefix, field_id])
+ 
+     # If a default value is provided, it's not necessarily required?
+-    is_required = field.required is True  # required is UndefinedBool
+-
++    is_required = field.is_required()
++
++    # Pydantic 2 uses a sentinel (instead of None) for "no default provided"
+     default_value = field.default
++    if default_value is PydanticUndefined:
++        default_value = None
+     if override_value is not NOT_PROVIDED:
+         default_value = override_value
+         is_required = False
+@@ -266,10 +322,12 @@
+     # to negate the default value. E.g., debug:bool = False, will generate a CLI flag of
+     # --enable-debug to set the value to True. Very common to set this to (-d, --debug) to True
+     # avoid using in with a Set {True,False} to avoid assumptions that default_value is hashable
++    field_type, allow_none = __get_field_type(field)
++
+     is_bool_with_non_null_default = all(
+         (
+             not is_required,
+-            not field.allow_none,
++            not allow_none,
+             default_value is True or default_value is False,
+         )
+     )
+@@ -281,7 +339,7 @@
+         )
+     except KeyError:
+         if override_cli is None:
+-            if field.type_ == bool:
++            if field_type is bool:
+                 if is_bool_with_non_null_default:
+                     # flipped to negate
+                     prefix = {True: bool_prefix[1], False: bool_prefix[0]}
+@@ -299,15 +357,15 @@
+     # log.debug(f"Creating Argument Field={field_id} opts:{cli_custom}, allow_none={field.allow_none} default={default_value} type={field.type_} required={is_required} dest={field_id} desc={description}")
+ 
+     type_desc = __to_type_description(
+-        default_value, field.type_, field.allow_none, is_required
+-    )
+-
+-    if field.shape in {pydantic.fields.SHAPE_LIST, pydantic.fields.SHAPE_SET}:
++        default_value, field_type, allow_none, is_required
++    )
++
++    if __is_multi_value_field(field):
+         shape_kwargs = {"nargs": "+"}
+     else:
+         shape_kwargs = {}
+ 
+-    if field.type_ == bool:
++    if field_type is bool:
+         # see comments above
+         # case #1 and has different semantic meaning with how the tuple[str,str] is
+         # interpreted and added to the parser
+@@ -342,17 +400,20 @@
+ 
+ 
+ def _add_pydantic_class_to_parser(
+-    p: CustomArgumentParser, cls: T.Type[M], default_overrides: T.Dict[str, T.Any]
++    p: CustomArgumentParser, cls: T.Type[M], default_overrides: T.Any
+ ) -> CustomArgumentParser:
+ 
+-    for ix, field in cls.__fields__.items():
++    for ix, field in cls.model_fields.items():
+ 
+         cli_config = _get_cli_config_from_model(cls)
+         default_cli_opts: T.Optional[CustomOptsType] = cli_config.custom_opts.get(
+             ix, None
+         )
+ 
+-        override_value = default_overrides.get(ix, ...)
++        if default_overrides is NOT_PROVIDED:
++            override_value = NOT_PROVIDED
++        else:
++            override_value = default_overrides.get(ix, NOT_PROVIDED)
+         _add_pydantic_field_to_parser(
+             p,
+             ix,
+@@ -492,7 +553,7 @@
+ 
+         # This is a bit sloppy. There's some fields that are added
+         # to the argparse namespace to get around some of argparse's thorny design
+-        pure_keys = cls.schema()["properties"].keys()
++        pure_keys = cls.model_fields.keys()
+ 
+         # Remove the items that may have
+         # polluted the namespace (e.g., func, cls, json_config)
+@@ -501,9 +562,6 @@
+ 
+         opts = cls(**pure_d)
+ 
+-        # this validation interface is a bit odd
+-        # and the errors aren't particularly pretty in the console
+-        cls.validate(opts)
+         prologue_handler(opts)
+         exit_code = runner_func(opts)
+     except TerminalEagerCommand:
+@@ -603,7 +661,7 @@
+     if cli_config.json_config_enable:
+ 
+         def __setup(args_):
+-            c = cli_config.copy()
++            c = cli_config.model_copy()
+             c.json_config_path_validate = False
+             return setup_hook_to_load_json(args_, c)
+ 
+@@ -685,7 +743,9 @@
+ ) -> CustomArgumentParser:
+ 
+     p = CustomArgumentParser(
+-        description=description, formatter_class=ArgumentDefaultsHelpFormatter
++        description=description,
++        formatter_class=ArgumentDefaultsHelpFormatter,
++        add_help=False,
+     )
+ 
+     # log.debug(f"Creating parser from models {models}")
+@@ -717,6 +777,12 @@
+         _parser_add_help(spx)
+ 
+         spx.set_defaults(func=sbm.runner_func, cls=sbm.model_class)
++
++    # --help must terminate parsing here too. Argparse's default help action
++    # calls parser.exit(0); CustomArgumentParser cannot turn that into control
++    # flow, so parsing would continue and the required sub-command check would
++    # report a non-zero exit code instead of the documented zero.
++    p.add_argument("-h", "--help", help="Print Help and Exit", action=EagerHelpAction)
+ 
+     if version is not None:
+         _parser_add_version(p, version)
+@@ -745,9 +811,9 @@
+ 
+             def _setup_hook(args: T.List[str]) -> T.Dict[str, T.Any]:
+                 # We allow the setup to fail if the JSON config isn't found
+-                c = cli_config.copy()
++                c = cli_config.model_copy()
+                 c.json_config_path_validate = False
+-                return setup_hook_to_load_json(args, cli_config)
++                return setup_hook_to_load_json(args, c)
+ 
+         else:
+             _setup_hook = null_setup_hook
+--- a/pydantic_cli/core.py
++++ b/pydantic_cli/core.py
+@@ -1,5 +1,5 @@
+ import os
+-from pydantic import BaseModel
++from pydantic import BaseModel, ConfigDict
+ from typing import Callable as F
+ import typing as T
+ 
+@@ -52,10 +52,7 @@
+ class CliConfig(BaseModel):
+     """Internal Model for encapsulating the core configuration of the CLI model"""
+ 
+-    class Config:
+-        # allow_mutation: bool = False
+-        validate_all = True
+-        validate_assignment = True
++    model_config = ConfigDict(validate_assignment=True, validate_default=True)
+ 
+     json_config_key: str = DefaultConfig.CLI_JSON_KEY
+     json_config_enable: bool = DefaultConfig.CLI_JSON_ENABLE
+@@ -81,26 +78,48 @@
+ DEFAULT_CLI_CONFIG = CliConfig()
+ 
+ 
++def _get_model_config_attribute(
++    cls: T.Type[M], attr_name: str, default: T.Any
++) -> T.Any:
++    """
++    Read a CLI setting the user declared on the nested ``class Config``.
++
++    Pydantic 2 deprecated the inner ``Config`` class; depending on the
++    installed version the user settings are either still available as a plain
++    class attribute or are folded into the ``model_config`` dict, so both
++    spellings are accepted here.
++    """
++    config_class = cls.__dict__.get("Config", None)
++    if config_class is None:
++        config_class = getattr(cls, "Config", None)
++    if config_class is not None and hasattr(config_class, attr_name):
++        return getattr(config_class, attr_name)
++
++    model_config = getattr(cls, "model_config", None)
++    if isinstance(model_config, dict) and attr_name in model_config:
++        return model_config[attr_name]
++
++    return default
++
++
+ def _get_cli_config_from_model(cls: T.Type[M]) -> CliConfig:
+-    enable_json_config: bool = getattr(
+-        cls.Config, "CLI_JSON_ENABLE", DEFAULT_CLI_CONFIG.json_config_enable
++    enable_json_config: bool = _get_model_config_attribute(
++        cls, "CLI_JSON_ENABLE", DEFAULT_CLI_CONFIG.json_config_enable
+     )
+-    json_key_field_name: str = getattr(
+-        cls.Config, "CLI_JSON_KEY", DEFAULT_CLI_CONFIG.json_config_key
++    json_key_field_name: str = _get_model_config_attribute(
++        cls, "CLI_JSON_KEY", DEFAULT_CLI_CONFIG.json_config_key
+     )
+ 
+-    json_config_env_var: str = getattr(
+-        cls.Config, "CLI_JSON_CONFIG_ENV_VAR", DEFAULT_CLI_CONFIG.json_config_env_var
++    json_config_env_var: str = _get_model_config_attribute(
++        cls, "CLI_JSON_CONFIG_ENV_VAR", DEFAULT_CLI_CONFIG.json_config_env_var
+     )
+ 
+-    json_config_path: T.Optional[str] = getattr(
+-        cls.Config, "CLI_JSON_CONFIG_PATH", DEFAULT_CLI_CONFIG.json_config_path
++    json_config_path: T.Optional[str] = _get_model_config_attribute(
++        cls, "CLI_JSON_CONFIG_PATH", DEFAULT_CLI_CONFIG.json_config_path
+     )
+ 
+-    json_config_validate_path: bool = getattr(
+-        cls.Config,
+-        "CLI_JSON_VALIDATE_PATH",
+-        DEFAULT_CLI_CONFIG.json_config_path_validate,
++    json_config_validate_path: bool = _get_model_config_attribute(
++        cls, "CLI_JSON_VALIDATE_PATH", DEFAULT_CLI_CONFIG.json_config_path_validate
+     )
+ 
+     # there's an important prioritization to be clear about here.
+@@ -108,24 +127,20 @@
+     # and the value of othe commandline will override the ENV var
+     path: T.Optional[str] = os.environ.get(json_config_env_var, json_config_path)
+ 
+-    custom_opts: T.Dict[str, CustomOptsType] = getattr(
+-        cls.Config, "CLI_EXTRA_OPTIONS", DEFAULT_CLI_CONFIG.custom_opts
++    custom_opts: T.Dict[str, CustomOptsType] = _get_model_config_attribute(
++        cls, "CLI_EXTRA_OPTIONS", DEFAULT_CLI_CONFIG.custom_opts
+     )
+ 
+-    custom_bool_prefix: CustomOptsType = getattr(
+-        cls.Config, "CLI_BOOL_PREFIX", DEFAULT_CLI_CONFIG.bool_prefix
++    custom_bool_prefix: CustomOptsType = _get_model_config_attribute(
++        cls, "CLI_BOOL_PREFIX", DEFAULT_CLI_CONFIG.bool_prefix
+     )
+ 
+-    shell_compeltion_enable: bool = getattr(
+-        cls.Config,
+-        "CLI_SHELL_COMPLETION_ENABLE",
+-        DEFAULT_CLI_CONFIG.shell_completion_enable,
++    shell_compeltion_enable: bool = _get_model_config_attribute(
++        cls, "CLI_SHELL_COMPLETION_ENABLE", DEFAULT_CLI_CONFIG.shell_completion_enable
+     )
+ 
+-    shell_completion_flag: T.Optional[str] = getattr(
+-        cls.Config,
+-        "CLI_SHELL_COMPLETION_FLAG",
+-        DEFAULT_CLI_CONFIG.shell_completion_flag,
++    shell_completion_flag: T.Optional[str] = _get_model_config_attribute(
++        cls, "CLI_SHELL_COMPLETION_FLAG", DEFAULT_CLI_CONFIG.shell_completion_flag
+     )
+ 
+     return CliConfig(

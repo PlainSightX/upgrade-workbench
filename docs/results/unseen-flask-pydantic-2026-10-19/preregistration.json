@@ -1,0 +1,109 @@
+{
+  "meaning": "Ordering evidence for the unseen-repository case: contract and checks frozen, then Docker admission, then task creation and first model request.",
+  "case_id": "flask-pydantic-pydantic-2",
+  "case_fingerprint": "84e89541ad829e775de264feb9c5d4a23f8030af316ee683f41202d7a98af1e1",
+  "upstream": {
+    "repository": "https://github.com/pallets-eco/flask-pydantic",
+    "tag": "v0.11.0",
+    "revision": "ebb08fed208bcc478e286cbd195328cc6993bd28",
+    "archive_sha256": "a8407463c6e9aec163baf35a14a528234cc57c9983bb9f2f332394bf726d67fe",
+    "license": "MIT"
+  },
+  "timeline_utc": [
+    {
+      "step": "contract_and_checks_hashed",
+      "at": "2026-10-19T02:52:21Z"
+    },
+    {
+      "step": "docker_admission_started",
+      "at": "2026-10-19T02:52:27.375413+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "task_created",
+      "at": "2026-10-19T02:55:52.524940+00:00",
+      "model_requests_before": 0
+    },
+    {
+      "step": "first_model_request_prepared",
+      "at": "2026-10-19T02:56:50.900248+00:00"
+    },
+    {
+      "step": "independent_acceptance_started",
+      "at": "2026-10-19T04:07:20Z"
+    }
+  ],
+  "frozen_files_sha256": {
+    "checks/acceptance/test_independent_validate.py": "a05d37b72b0121c1a194ab394a3f66c0b18feebe68b80a19926836033be90f7b",
+    "checks/feedback/test_public_validate.py": "1172bf322ad57c108cb7db6c22596651897df890043cf79dcf5c0b0ef04ee434",
+    "business-contract.md": "b5490718538278b342370f4b0ca98c07016b89557d794def1491a535ab4bae9e",
+    "contract-requirements.json": "22c673eb6cc701bd6dc4e17411ea06c019d9329700e5211066d93548a6755dca"
+  },
+  "frozen_bytes_equal_in_sealed_manifest": true,
+  "admission": {
+    "old": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_upgrade": {
+      "status": "failed",
+      "tests": {
+        "collected": 17,
+        "passed": 12,
+        "failed": 5,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "direct_failure_cause": "AttributeError: 'FieldInfo' object has no attribute 'is_complex'"
+  },
+  "groups": {
+    "feedback": 6,
+    "acceptance": 11
+  },
+  "checks_modified_after_first_model_request": false,
+  "authoring_dry_runs_before_freeze": {
+    "count": 2,
+    "model_requests_before": 0,
+    "note": "Two pre-freeze Docker dry runs calibrated the checks against the old environment; see README."
+  },
+  "posthoc_not_part_of_result": {
+    "subject": "Earlier Agent revisions replayed with all checks after the task was terminal and the official result was frozen",
+    "replays": [
+      {
+        "revision": "0791f581",
+        "patch_sha256": "36b012dbe55aa4d683815efb6d9db4c187c1ab1a6729f29ab53e42a84299273f",
+        "new_candidate": {
+          "status": "passed",
+          "tests": {
+            "collected": 17,
+            "passed": 17,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        }
+      },
+      {
+        "revision": "b1455f42",
+        "patch_sha256": "50ffa5aa71942d67057f1804947888059c7e1db4602376f0e4054d6b1c47575e",
+        "new_candidate": {
+          "status": "passed",
+          "tests": {
+            "collected": 17,
+            "passed": 17,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0
+          }
+        }
+      }
+    ]
+  }
+}

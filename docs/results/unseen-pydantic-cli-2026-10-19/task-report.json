@@ -1,0 +1,481 @@
+{
+  "schema_version": 4,
+  "task_id": "a26ff42d7de84b7eb76f45ac4dae1c1e",
+  "case_id": "pydantic-cli-pydantic-2",
+  "case_fingerprint": "3843c1fac0bc86b61ccb59faf894320b5baf6957e32b3d50ab335ab710b67fd6",
+  "status": "budget_exhausted",
+  "stop_reason": "call_limit",
+  "seed_strategy": "none",
+  "seed_status": null,
+  "candidate_revision": "f4977ea7568f6f3bdf6470f2efd7d756bc2b3f89a56604f72a8dd31556170344",
+  "candidate_sha256": "89fd44774d21f01a4209f61d17782bd9455d3e2ce2516906292a6045fdff2488",
+  "candidate_exported": true,
+  "final_evaluation": "completed",
+  "result": "candidate_verified",
+  "stages": {
+    "old_original": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_original": {
+      "status": "failed",
+      "tests": {
+        "collected": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 2,
+        "skipped": 0
+      }
+    },
+    "new_candidate": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "usage": {
+    "calls": 24,
+    "reported_input_tokens": 1468584,
+    "reported_output_tokens": 308106,
+    "unknown_usage_calls": 0,
+    "provider_duration_seconds": 1287.499
+  },
+  "cost": {
+    "ledger": ".local/remediation-budget.sqlite3",
+    "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+    "pricing_checked_at": "2026-09-16",
+    "input_per_million_usd": "0.30",
+    "output_per_million_usd": "1.20",
+    "estimated_or_reserved_usd": 0.810312,
+    "calls": [
+      {
+        "request_id": "3160a5028b0c48cebeeac0b3cc5c9c99",
+        "reserved_usd": 0.191792,
+        "estimated_usage_usd": 0.01308,
+        "state": "settled"
+      },
+      {
+        "request_id": "90959bb521cd445f88d816c136413043",
+        "reserved_usd": 0.198505,
+        "estimated_usage_usd": 0.01743,
+        "state": "settled"
+      },
+      {
+        "request_id": "4f9ba7cfafcb46b6a4d22d50bb42bfa9",
+        "reserved_usd": 0.200063,
+        "estimated_usage_usd": 0.025454,
+        "state": "settled"
+      },
+      {
+        "request_id": "5952f648822c4f3a8d3a530145ff846d",
+        "reserved_usd": 0.201301,
+        "estimated_usage_usd": 0.025252,
+        "state": "settled"
+      },
+      {
+        "request_id": "682c9800d0f04d1ab2fc9ece03d0dfba",
+        "reserved_usd": 0.20475,
+        "estimated_usage_usd": 0.028177,
+        "state": "settled"
+      },
+      {
+        "request_id": "604a015949bb454380e335c6343fc850",
+        "reserved_usd": 0.204893,
+        "estimated_usage_usd": 0.039714,
+        "state": "settled"
+      },
+      {
+        "request_id": "18ba1eb000e7425e8fcdce5b1af2e5fe",
+        "reserved_usd": 0.208009,
+        "estimated_usage_usd": 0.055315,
+        "state": "settled"
+      },
+      {
+        "request_id": "afe87509d9b340c29646c639fe96e4e5",
+        "reserved_usd": 0.207998,
+        "estimated_usage_usd": 0.018534,
+        "state": "settled"
+      },
+      {
+        "request_id": "a927771a89da4b87b9a830f358b35814",
+        "reserved_usd": 0.206072,
+        "estimated_usage_usd": 0.059399,
+        "state": "settled"
+      },
+      {
+        "request_id": "4b7e76528002401ebca250615b93cb5e",
+        "reserved_usd": 0.224575,
+        "estimated_usage_usd": 0.033713,
+        "state": "settled"
+      },
+      {
+        "request_id": "0d561415c70a4ee4b6da8e497e517964",
+        "reserved_usd": 0.227056,
+        "estimated_usage_usd": 0.029642,
+        "state": "settled"
+      },
+      {
+        "request_id": "9007e3305e744f5b8f7e68d71661f55b",
+        "reserved_usd": 0.22707,
+        "estimated_usage_usd": 0.041997,
+        "state": "settled"
+      },
+      {
+        "request_id": "278f9d11980f49369a1169f76f929df9",
+        "reserved_usd": 0.230826,
+        "estimated_usage_usd": 0.035057,
+        "state": "settled"
+      },
+      {
+        "request_id": "637984cf4f0b4987ab8910a26d30765d",
+        "reserved_usd": 0.230939,
+        "estimated_usage_usd": 0.040388,
+        "state": "settled"
+      },
+      {
+        "request_id": "c74ef61ea1e441c9b5d8ba3fefe1db40",
+        "reserved_usd": 0.237661,
+        "estimated_usage_usd": 0.035363,
+        "state": "settled"
+      },
+      {
+        "request_id": "497266fb63f6407cadbdf6a1c82ca3a8",
+        "reserved_usd": 0.243587,
+        "estimated_usage_usd": 0.030447,
+        "state": "settled"
+      },
+      {
+        "request_id": "c9d5d06c74a04bda97043e0d096f9242",
+        "reserved_usd": 0.246078,
+        "estimated_usage_usd": 0.02841,
+        "state": "settled"
+      },
+      {
+        "request_id": "0b6e5ecb3bea421c8b1e69bc24c29830",
+        "reserved_usd": 0.247081,
+        "estimated_usage_usd": 0.046112,
+        "state": "settled"
+      },
+      {
+        "request_id": "9983e87bc4724782b276283f353c3cc1",
+        "reserved_usd": 0.243222,
+        "estimated_usage_usd": 0.041138,
+        "state": "settled"
+      },
+      {
+        "request_id": "24301035355c423e8fa38d680b21f4aa",
+        "reserved_usd": 0.247341,
+        "estimated_usage_usd": 0.033718,
+        "state": "settled"
+      },
+      {
+        "request_id": "6dabd92464ae4f129998f8a7a53ed644",
+        "reserved_usd": 0.247499,
+        "estimated_usage_usd": 0.028938,
+        "state": "settled"
+      },
+      {
+        "request_id": "2bb2d18ef9c843308ed475be211d126d",
+        "reserved_usd": 0.247909,
+        "estimated_usage_usd": 0.027036,
+        "state": "settled"
+      },
+      {
+        "request_id": "dfad007137aa42968c79c4211dfc5eab",
+        "reserved_usd": 0.247724,
+        "estimated_usage_usd": 0.028329,
+        "state": "settled"
+      },
+      {
+        "request_id": "92009dac7ca542e8b247074e5a839b0f",
+        "reserved_usd": 0.243406,
+        "estimated_usage_usd": 0.047669,
+        "state": "settled"
+      }
+    ],
+    "actual_billing": "not_claimed"
+  },
+  "protocol": {
+    "max_calls": 24,
+    "generation": {
+      "model": "deepseek-flash",
+      "thinking_mode": "enabled",
+      "max_output_tokens": 131072,
+      "timeout_seconds": 1200,
+      "max_source_bytes": 1600000,
+      "max_request_bytes": 850000,
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "execution": {
+      "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+      "prepare_timeout": 600,
+      "test_timeout": 240
+    },
+    "implementation_identity_sha256": "cb86a5d300f95be16feecc0e9d02c7ac708e4728bd4a3eb0474701291b57dd9e",
+    "protocol_revision": 6,
+    "source_policy": {
+      "mode": "focused",
+      "body_bytes": 96000,
+      "inventory_bytes": 64000
+    },
+    "diagnostic_policy": {
+      "max_runs": 8,
+      "max_probes": 3,
+      "max_revisions_per_probe": 2,
+      "max_observation_revisits": 4
+    },
+    "contract_audit_policy": "bounded",
+    "investigator_policy": "disabled",
+    "dependency_query_policy": {
+      "max_queries": 8,
+      "max_result_bytes": 24000
+    },
+    "role_budget": {
+      "investigator_max_calls": 3,
+      "solver_reserved_calls": 2
+    },
+    "context_assistance": "full",
+    "navigation_assistance": "failure_guided",
+    "project_context_policy": {
+      "version": "project-context-v2",
+      "context_tokens": 1000000,
+      "framing_reserve_tokens": 4096
+    },
+    "workflow_profile": "workbench",
+    "finish_policy": "probe-lineage-v1",
+    "investigation_policy": {
+      "version": "investigation-budget-v1",
+      "diagnostic_limits": {
+        "max_runs": 8,
+        "max_probes": 3,
+        "max_revisions_per_probe": 2,
+        "max_observation_revisits": 4
+      },
+      "finish_limits": {
+        "explanation_max_characters": 4000,
+        "evidence_refs_max_items": 16
+      },
+      "finish_notice_calls": 4
+    }
+  },
+  "candidate_revisions": 4,
+  "review_decisions": 4,
+  "provider_payloads_exported": false,
+  "origin_note": "Official seed and model increments are distinct; review is not personal implementation.",
+  "comparison": {
+    "path": "external/report.json",
+    "sha256": "d7727996f6e5d7b5078bd58c3e56735904934aab2a1ea6e83a39ae540df245f4",
+    "recoverability": "resolve_via_original_local_batch"
+  },
+  "finish": null,
+  "verification_subject": {
+    "kind": "candidate",
+    "revision": "f4977ea7568f6f3bdf6470f2efd7d756bc2b3f89a56604f72a8dd31556170344",
+    "patch_sha256": "89fd44774d21f01a4209f61d17782bd9455d3e2ce2516906292a6045fdff2488"
+  },
+  "source_changes": true,
+  "diagnostic_runs": 7,
+  "probes": 3,
+  "diagnostics": {
+    "counts": {
+      "registered": 7,
+      "running": 0,
+      "completed": 7,
+      "failed": 0,
+      "unknown": 0,
+      "historical": 0,
+      "target_completed": 7
+    },
+    "latest": {
+      "status": "completed",
+      "phase": "completed",
+      "last_phase": "target_completed",
+      "outcome": "passed",
+      "last_action": "target_completed",
+      "reconciliation_required": false,
+      "request_id": "db6685af8f815e2927360b18e46a73cab2e5d70e4644d00627bc9653cc31c286",
+      "failure_receipt_id": null
+    },
+    "runs": [
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "90bff337d939ea2ffbe72da492849db4dbc31189124ebac388956ad498a0f1e6",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "semantic_failed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "df0057b403a2e4cda8e85ed07431e8e1d1796199c33c74b4c8fb9b710e47aa21",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "6e61a06be63167c1bcbe6c958ac93d8969a9639e6a83a3f25d2122f3789d4794",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "31b9c6331d7d8dcd8f392b7421114064cf8dbe6e4e274f043e6b1cde352c05bc",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "91df36cb7597d41a6078debdd874bd5ba85f36c0070da4587f5f3515bbce8c7d",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "e1cdaa083c8d406f5a2cc4b98fa4627a3bdc2abc68827c32160644d771479070",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "db6685af8f815e2927360b18e46a73cab2e5d70e4644d00627bc9653cc31c286",
+        "failure_receipt_id": null
+      }
+    ],
+    "runs_truncated": false
+  },
+  "observations": [
+    {
+      "id": "a681238d507e1256d869302ed2107ff4ea40d940ed51bcaf3b0d470137acbdca",
+      "kind": "project_context",
+      "revision": "1a8c0dbf969453d7c87bc6a6a7d33bfa7ac6bade7df2402cb35ddd00fd5277da",
+      "status": null
+    },
+    {
+      "id": "e2fb40f4707c5c12086ed1b9a370107b8eb0eb04c75700093e4988e5d0570ddf",
+      "kind": "public_checks",
+      "revision": "f4f06594e78351a9730a6c85309872230f9e66a4541aa2b655ab954fc4e89601",
+      "status": "passed"
+    },
+    {
+      "id": "c81de9d0e6a9c0fe895e53892d017dfc47c5f57f78e173c3d79250e31aee7a80",
+      "kind": "public_checks",
+      "revision": "d9b1e42e1b8357afe567541e9aa5f6c799d95910d8091d5db19e45b49c32ddd9",
+      "status": "passed"
+    },
+    {
+      "id": "4ca581a6ec1f097e17af60280cd7aa47cd3ac21b4f4bf12081327135ca3bbca5",
+      "kind": "probe",
+      "revision": "d9b1e42e1b8357afe567541e9aa5f6c799d95910d8091d5db19e45b49c32ddd9",
+      "status": "passed"
+    },
+    {
+      "id": "839007af31883d8dba5112c5719288595a8bd4d66523670fe4369a2a7711f238",
+      "kind": "probe",
+      "revision": "d9b1e42e1b8357afe567541e9aa5f6c799d95910d8091d5db19e45b49c32ddd9",
+      "status": "failed"
+    },
+    {
+      "id": "53e62da1ed0ce451bd7ed4f40d4441b831610ad6f1f253eafb0d7e85f9bf08b4",
+      "kind": "public_checks",
+      "revision": "5564947c38513a4a03e72877d89e229206452217f822d421a9c079804db687ce",
+      "status": "passed"
+    },
+    {
+      "id": "d39e1d5333a3cd23eeed587537c9d3207244d78ded9002ccdc106a56879a0092",
+      "kind": "probe",
+      "revision": "5564947c38513a4a03e72877d89e229206452217f822d421a9c079804db687ce",
+      "status": "passed"
+    },
+    {
+      "id": "a00d769a40c7d3e6bc28a27eee2b87e19ff924afb834a6c42a668eb056d12e0f",
+      "kind": "probe",
+      "revision": "5564947c38513a4a03e72877d89e229206452217f822d421a9c079804db687ce",
+      "status": "passed"
+    },
+    {
+      "id": "d187b6314a14c7cfffd523df079516844521c22fa59b90f3b687158164b2d25c",
+      "kind": "probe",
+      "revision": "5564947c38513a4a03e72877d89e229206452217f822d421a9c079804db687ce",
+      "status": "passed"
+    },
+    {
+      "id": "33c86cad5e1a43ddae0ffa65aa18db5241d80758a2f5d15fbda253278228e589",
+      "kind": "public_checks",
+      "revision": "f4977ea7568f6f3bdf6470f2efd7d756bc2b3f89a56604f72a8dd31556170344",
+      "status": "passed"
+    },
+    {
+      "id": "4f332ec7e0cbc7293b66e72126014801ebbaf8ecd955583559acd993cc01a8f8",
+      "kind": "probe",
+      "revision": "f4977ea7568f6f3bdf6470f2efd7d756bc2b3f89a56604f72a8dd31556170344",
+      "status": "passed"
+    },
+    {
+      "id": "d50ccb351b52d8243e82d10c2b8719f56fb76dee34294e89f2aca53294365e1c",
+      "kind": "probe",
+      "revision": "f4977ea7568f6f3bdf6470f2efd7d756bc2b3f89a56604f72a8dd31556170344",
+      "status": "passed"
+    }
+  ],
+  "contract_requirements": {
+    "path": "contract-requirements.json",
+    "sha256": "d3e2bcdf24b0aec89cce1d902f8ae45515fd415c8fd5bbb75198648bfd2f6b53",
+    "requirement_ids": [
+      "runner.parse-and-call",
+      "runner.validation-hooks",
+      "flags.custom-and-shape",
+      "flags.boolean-semantics",
+      "config.json-presets",
+      "commands.help-version-subparsers",
+      "migration.pydantic2"
+    ]
+  },
+  "contract_audits": 1,
+  "dependency_queries": 6,
+  "dependency_facts": 6,
+  "role_calls": {
+    "solver": 23,
+    "contract_auditor": 1
+  },
+  "investigator_sessions": [],
+  "investigator_handoffs": 0,
+  "historical_inputs": []
+}

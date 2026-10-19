@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "package": "sqlalchemy",
+  "old_version": "1.4.54",
+  "new_version": "2.0.38",
+  "repository": "https://github.com/sqlalchemy/sqlalchemy",
+  "revision": "23f5f3350974d9452f3b844617c31eb5b41474ae",
+  "upstream_path": "doc/build/changelog/migration_20.rst",
+  "license_path": "evidence/LICENSE",
+  "entries": [
+    {
+      "evidence_key": "sqlalchemy-v2-loader-string-paths",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "ORM Query  - Joining / loading on relationships uses attributes, not strings",
+      "start_line": 1736,
+      "end_line": 1787
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-query-get",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "ORM Query - get() method moves to Session",
+      "start_line": 1700,
+      "end_line": 1734
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-query-unified-select",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "ORM Query Unified with Core Select",
+      "start_line": 1539,
+      "end_line": 1698
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-dynamic-relationship",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "\"Dynamic\" relationship loaders superseded by \"Write Only\"",
+      "start_line": 2161,
+      "end_line": 2256
+    },
+    {
+      "evidence_key": "sqlalchemy-v2-declarative-first-class",
+      "path": "evidence/migration.rst",
+      "sha256": "bf1440bc1715477f1bfd78140f6270d3d18a1aa0824d725be9c3a884c74d94ba",
+      "heading": "Declarative becomes a first class API",
+      "start_line": 1191,
+      "end_line": 1229
+    }
+  ]
+}

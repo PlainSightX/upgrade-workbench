@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "contract_path": "business-contract.md",
+  "contract_sha256": "040d4752c2060d11b219e1253c1756e484de29b2ce3b8155bfa65e2de456bfc7",
+  "requirements": [
+    {
+      "id": "runner.parse-and-call",
+      "statement": "to_runner and run_and_exit parse the argument list, build one model instance and call the runner with it, returning its integer exit code; missing or invalid values never call the runner and return non-zero.",
+      "public_check_nodeids": [
+        "feedback/test_public_cli.py::test_required_typed_options_reach_runner",
+        "feedback/test_public_cli.py::test_missing_required_option_fails_without_running"
+      ]
+    },
+    {
+      "id": "runner.validation-hooks",
+      "statement": "Field constraints and @validator checks still reject values before the runner; runner exceptions go through exception_handler; prologue runs before and epilogue after the runner.",
+      "public_check_nodeids": []
+    },
+    {
+      "id": "flags.custom-and-shape",
+      "statement": "Fields become --<name> flags; Field(cli=...) customizes short and long flags; description and default appear in help; List and Set fields accept several values; Enum fields accept member values.",
+      "public_check_nodeids": [
+        "feedback/test_public_cli.py::test_custom_short_and_long_flags_from_field"
+      ]
+    },
+    {
+      "id": "flags.boolean-semantics",
+      "statement": "bool fields with a default get one negating flag, required and Optional bool fields get an enable/disable pair or a custom pair, Optional[bool] = None stays None, and Config.CLI_BOOL_PREFIX replaces the prefixes.",
+      "public_check_nodeids": [
+        "feedback/test_public_cli.py::test_bool_default_false_gets_enable_flag"
+      ]
+    },
+    {
+      "id": "config.json-presets",
+      "statement": "CLI_JSON_ENABLE adds --json-config (renamed by CLI_JSON_KEY); file values satisfy required fields and are overridden by explicit options; CLI_JSON_CONFIG_ENV_VAR supplies the default path; a missing file fails without calling the runner.",
+      "public_check_nodeids": [
+        "feedback/test_public_cli.py::test_json_config_supplies_values_and_cli_overrides"
+      ]
+    },
+    {
+      "id": "commands.help-version-subparsers",
+      "statement": "--help and --version print and return 0 without the runner; pydantic_class_to_parser returns the parser; SubParser maps dispatch to the selected model and runner.",
+      "public_check_nodeids": [
+        "feedback/test_public_cli.py::test_subparser_dispatches_to_selected_model"
+      ]
+    },
+    {
+      "id": "migration.pydantic2",
+      "statement": "The same behavior holds when only Pydantic moves from 1.10.15 to 2.6.4 with the rest of the lock unchanged; user models keep class Config with CLI_* attributes and Field(cli=...); only Python modules under pydantic_cli/ change.",
+      "public_check_nodeids": []
+    }
+  ]
+}

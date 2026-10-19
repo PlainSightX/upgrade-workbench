@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "flask-pydantic-pydantic-2",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_public_validate.py"
+      ],
+      "nodeids": [
+        "feedback/test_public_validate.py::test_decorator_models_and_success_status",
+        "feedback/test_public_validate.py::test_form_model",
+        "feedback/test_public_validate.py::test_json_body_model",
+        "feedback/test_public_validate.py::test_path_parameter_is_converted",
+        "feedback/test_public_validate.py::test_query_model_parses_and_serializes_response",
+        "feedback/test_public_validate.py::test_query_validation_errors_return_400"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_independent_validate.py"
+      ],
+      "nodeids": [
+        "acceptance/test_independent_validate.py::test_configured_error_status_code",
+        "acceptance/test_independent_validate.py::test_configured_raise_exposes_error_groups",
+        "acceptance/test_independent_validate.py::test_custom_validator_error_is_reported_as_json",
+        "acceptance/test_independent_validate.py::test_exclude_none_and_alias_serialization",
+        "acceptance/test_independent_validate.py::test_non_model_return_passes_through_and_bad_many_raises",
+        "acceptance/test_independent_validate.py::test_path_param_validation_error",
+        "acceptance/test_independent_validate.py::test_repeated_query_params_become_list",
+        "acceptance/test_independent_validate.py::test_request_body_many_and_response_many",
+        "acceptance/test_independent_validate.py::test_request_body_many_rejects_non_array_and_invalid_item",
+        "acceptance/test_independent_validate.py::test_silent_get_json_params_treat_missing_body_as_empty",
+        "acceptance/test_independent_validate.py::test_tuple_returns_set_status_and_headers"
+      ],
+      "expected_count": 11
+    }
+  },
+  "note": "Frozen before any model request; written from upstream README/docstrings/tests and admitted in Docker before task creation."
+}

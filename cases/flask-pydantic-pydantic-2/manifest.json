@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "case_id": "flask-pydantic-pydantic-2",
+  "title": "Flask-Pydantic 0.11.0 request validation migration from Pydantic 1.10.15 to 2.6.4",
+  "source": {
+    "kind": "upstream_snapshot",
+    "repository": "https://github.com/pallets-eco/flask-pydantic",
+    "revision": "ebb08fed208bcc478e286cbd195328cc6993bd28",
+    "license": "MIT",
+    "description": "Pinned complete v0.11.0 library package; upstream tests kept as provenance only; the upstream 0.12.0 Pydantic 2 release is withheld."
+  },
+  "review": {
+    "status": "reviewed",
+    "note": "2026-10-19 reviewed pinned source, license, contract and checks; target code executed only in isolated Docker with network none."
+  },
+  "snapshot_dir": "source",
+  "checks_dir": "checks",
+  "old_lock": "requirements/old.txt",
+  "new_lock": "requirements/new.txt",
+  "requirements_path": "contract-requirements.json",
+  "allowed_changes": [
+    "flask_pydantic/__init__.py",
+    "flask_pydantic/converters.py",
+    "flask_pydantic/core.py",
+    "flask_pydantic/exceptions.py",
+    "flask_pydantic/version.py"
+  ],
+  "file_hashes": {
+    "SOURCE.json": "881c12d00656479017d412ab5ac362b2a4c9cfe89dcda845de9badc3ea1cf01a",
+    "business-contract.md": "b5490718538278b342370f4b0ca98c07016b89557d794def1491a535ab4bae9e",
+    "checks/acceptance/test_independent_validate.py": "a05d37b72b0121c1a194ab394a3f66c0b18feebe68b80a19926836033be90f7b",
+    "checks/feedback/test_public_validate.py": "1172bf322ad57c108cb7db6c22596651897df890043cf79dcf5c0b0ef04ee434",
+    "contract-requirements.json": "22c673eb6cc701bd6dc4e17411ea06c019d9329700e5211066d93548a6755dca",
+    "environment.json": "3cca7dbd7e377c00199108a9de455bd5bf81dc97a22c37713e22adfbf0ad0543",
+    "evaluation.json": "f4bf50f299ea5d93557c5486bfb5f40cbdd42c2ed9e2986d7cea065da482adb8",
+    "evidence/bundle.json": "84e9dd25f876d354cf7c15721985070bd97942e2b1361ee32a2c1585aa5d8ab4",
+    "evidence/migration.md": "c177355622f67b076ed810f586684eee1ee9ec5012258823ce53b2304bae0ec8",
+    "evidence/pydantic-LICENSE": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+    "oracle-sources.md": "add40f31a0c2e86e861465e7ebfd7278f3c68748a9c3ee5f510c7568e44648eb",
+    "requirements/new.in": "b1dcf440639a92d41334225a74deb9edeaf4914a53a728672806f79bf04a2ca6",
+    "requirements/new.txt": "ff8bdee9aab16eb995f9d3627b13dc70cfc35edb7bae98b644c1359106588e41",
+    "requirements/old.in": "3a83a12a95172c90bd1e8d380daa64d9a121a49ffa9c7e907a0c0bb08351d076",
+    "requirements/old.txt": "6b9ffcfd8d62045658def8059ad16f8299226d296b25a7bcd58ec698348df397",
+    "source/LICENSE": "036b92340248e1e789712955538339e5d24928a772a36080dfb5f9a5aa33b1ac",
+    "source/README.md": "dd0612024ef7f283e946ac2c71b293bea09dee4e49d400495161088cc2f51114",
+    "source/flask_pydantic/__init__.py": "20f114b7961ef055aff047a55cd06d67db3defcb02707637b3abafe3339dbf52",
+    "source/flask_pydantic/converters.py": "f0c9370c31b438c207497b21446583f38558418881d63d3849e077c41458ed5f",
+    "source/flask_pydantic/core.py": "5940733722b102d22028d64f4904ae85964c42c453dd181af74b01e8661d24f5",
+    "source/flask_pydantic/exceptions.py": "555195726c8718c0efaf2293e92c3c7b19bcd578b6453daaf9194c25cebd8200",
+    "source/flask_pydantic/version.py": "ada32ef5703d2448ef7684e616a70ec3baa1257db8ad80cfed7992e7d4c03be4",
+    "upstream/HISTORY.md": "c102ea241e647a4e8188d4f062411b48067045e43454e48acea159604dbe7396",
+    "upstream/requirements/base.pip": "88e675a9d9f5e2e76b2238a828162a14bdad9919c1c2545e80793b2422900f33",
+    "upstream/requirements/test.pip": "d651dd99fb1a57b5ca1aea7e0517fb510c3fe7f419f0aec5640ec56f90550c7e",
+    "upstream/setup.py": "dec11665b7b304bff4633583577567afc9a5e29bc9119eab7baeaf2909552fcf",
+    "upstream/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/tests/conftest.py": "38b4da80adb53276dfac8e2ef06edbc0563e6095a24ed5f87f95f3a6deff2940",
+    "upstream/tests/func/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/tests/func/test_app.py": "7eb4c42a91cff389b8c151c8de265ad5716b922d6a06e30668ba86610b40bd42",
+    "upstream/tests/unit/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/tests/unit/test_core.py": "76894e18c2b0117a618af9dd18f23f046f1e3153bf9abf0080b7b0926c03cfa7"
+  },
+  "expected_new_original": "failed"
+}

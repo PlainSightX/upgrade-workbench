@@ -1,0 +1,800 @@
+{
+  "schema_version": 4,
+  "task_id": "0b0ef818dc8049018387b3734fc2d8d4",
+  "case_id": "flask-pydantic-pydantic-2",
+  "case_fingerprint": "84e89541ad829e775de264feb9c5d4a23f8030af316ee683f41202d7a98af1e1",
+  "status": "submitted",
+  "stop_reason": null,
+  "seed_strategy": "none",
+  "seed_status": null,
+  "candidate_revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+  "candidate_sha256": "461ba40fd4960cacd4d8fa670823dc84e175f54d150e700e42c746aef144946f",
+  "candidate_exported": true,
+  "final_evaluation": "completed",
+  "result": "candidate_verified",
+  "stages": {
+    "old_original": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_original": {
+      "status": "failed",
+      "tests": {
+        "collected": 17,
+        "passed": 12,
+        "failed": 5,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_candidate": {
+      "status": "passed",
+      "tests": {
+        "collected": 17,
+        "passed": 17,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "usage": {
+    "calls": 18,
+    "reported_input_tokens": 840535,
+    "reported_output_tokens": 204992,
+    "unknown_usage_calls": 0,
+    "provider_duration_seconds": 838.064
+  },
+  "cost": {
+    "ledger": ".local/remediation-budget.sqlite3",
+    "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+    "pricing_checked_at": "2026-09-16",
+    "input_per_million_usd": "0.30",
+    "output_per_million_usd": "1.20",
+    "estimated_or_reserved_usd": 0.498157,
+    "calls": [
+      {
+        "request_id": "e2cce2a564a446ebb71bf4e381e33515",
+        "reserved_usd": 0.181687,
+        "estimated_usage_usd": 0.008553,
+        "state": "settled"
+      },
+      {
+        "request_id": "a9510e90fdf64ba48938e52d1f87fc08",
+        "reserved_usd": 0.18578,
+        "estimated_usage_usd": 0.049486,
+        "state": "settled"
+      },
+      {
+        "request_id": "50dd44fb8c78485d9f49c28fa509a6ba",
+        "reserved_usd": 0.196845,
+        "estimated_usage_usd": 0.020236,
+        "state": "settled"
+      },
+      {
+        "request_id": "be9affa51cc749968d6a31920db6cc61",
+        "reserved_usd": 0.197124,
+        "estimated_usage_usd": 0.036388,
+        "state": "settled"
+      },
+      {
+        "request_id": "71c554e3d60c4988bf602200e63bc6cc",
+        "reserved_usd": 0.203654,
+        "estimated_usage_usd": 0.031209,
+        "state": "settled"
+      },
+      {
+        "request_id": "338becb6c84141a4be8654babc225862",
+        "reserved_usd": 0.210547,
+        "estimated_usage_usd": 0.033908,
+        "state": "settled"
+      },
+      {
+        "request_id": "a91cf4cee1774406a0c692ece3fda72d",
+        "reserved_usd": 0.214214,
+        "estimated_usage_usd": 0.023856,
+        "state": "settled"
+      },
+      {
+        "request_id": "97cae184c3a643cdb3c9fa9a92d656c8",
+        "reserved_usd": 0.210681,
+        "estimated_usage_usd": 0.032697,
+        "state": "settled"
+      },
+      {
+        "request_id": "b207baa73c2645a49148fee5ac4cc97d",
+        "reserved_usd": 0.216956,
+        "estimated_usage_usd": 0.029957,
+        "state": "settled"
+      },
+      {
+        "request_id": "7717ac4b1c394a40b58e1784568c4373",
+        "reserved_usd": 0.221583,
+        "estimated_usage_usd": 0.027882,
+        "state": "settled"
+      },
+      {
+        "request_id": "88fdc7672b9a4bc68fd08125becda237",
+        "reserved_usd": 0.222824,
+        "estimated_usage_usd": 0.018499,
+        "state": "settled"
+      },
+      {
+        "request_id": "97d80c72ccec43deab2034b4595c9bd6",
+        "reserved_usd": 0.221391,
+        "estimated_usage_usd": 0.022497,
+        "state": "settled"
+      },
+      {
+        "request_id": "f4f7d87f6ff2418aa29d076dd5fcde94",
+        "reserved_usd": 0.219479,
+        "estimated_usage_usd": 0.033742,
+        "state": "settled"
+      },
+      {
+        "request_id": "d852b38993934256a7b1b48b744b0782",
+        "reserved_usd": 0.215947,
+        "estimated_usage_usd": 0.04133,
+        "state": "settled"
+      },
+      {
+        "request_id": "8ced36ea170440468b366de8887366f0",
+        "reserved_usd": 0.22136,
+        "estimated_usage_usd": 0.018538,
+        "state": "settled"
+      },
+      {
+        "request_id": "9ba04da8aa2f4554929bcdbfb37f3bcc",
+        "reserved_usd": 0.221639,
+        "estimated_usage_usd": 0.019457,
+        "state": "settled"
+      },
+      {
+        "request_id": "0c2fb0b773dd4e34924726f037e5f86d",
+        "reserved_usd": 0.222436,
+        "estimated_usage_usd": 0.018859,
+        "state": "settled"
+      },
+      {
+        "request_id": "576c9e785e5a48688104fb1b4e76743b",
+        "reserved_usd": 0.223372,
+        "estimated_usage_usd": 0.031063,
+        "state": "settled"
+      }
+    ],
+    "actual_billing": "not_claimed"
+  },
+  "protocol": {
+    "max_calls": 24,
+    "generation": {
+      "model": "deepseek-flash",
+      "thinking_mode": "enabled",
+      "max_output_tokens": 131072,
+      "timeout_seconds": 1200,
+      "max_source_bytes": 1600000,
+      "max_request_bytes": 850000,
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "execution": {
+      "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+      "prepare_timeout": 600,
+      "test_timeout": 240
+    },
+    "implementation_identity_sha256": "cb86a5d300f95be16feecc0e9d02c7ac708e4728bd4a3eb0474701291b57dd9e",
+    "protocol_revision": 6,
+    "source_policy": {
+      "mode": "focused",
+      "body_bytes": 96000,
+      "inventory_bytes": 64000
+    },
+    "diagnostic_policy": {
+      "max_runs": 8,
+      "max_probes": 3,
+      "max_revisions_per_probe": 2,
+      "max_observation_revisits": 4
+    },
+    "contract_audit_policy": "bounded",
+    "investigator_policy": "disabled",
+    "dependency_query_policy": {
+      "max_queries": 8,
+      "max_result_bytes": 24000
+    },
+    "role_budget": {
+      "investigator_max_calls": 3,
+      "solver_reserved_calls": 2
+    },
+    "context_assistance": "full",
+    "navigation_assistance": "failure_guided",
+    "project_context_policy": {
+      "version": "project-context-v2",
+      "context_tokens": 1000000,
+      "framing_reserve_tokens": 4096
+    },
+    "workflow_profile": "workbench",
+    "finish_policy": "probe-lineage-v1",
+    "investigation_policy": {
+      "version": "investigation-budget-v1",
+      "diagnostic_limits": {
+        "max_runs": 8,
+        "max_probes": 3,
+        "max_revisions_per_probe": 2,
+        "max_observation_revisits": 4
+      },
+      "finish_limits": {
+        "explanation_max_characters": 4000,
+        "evidence_refs_max_items": 16
+      },
+      "finish_notice_calls": 4
+    }
+  },
+  "candidate_revisions": 3,
+  "review_decisions": 3,
+  "provider_payloads_exported": false,
+  "origin_note": "Official seed and model increments are distinct; review is not personal implementation.",
+  "comparison": {
+    "path": "external/report.json",
+    "sha256": "d67036cd7ba58969b72ae2485e4b704f5dee5358dc71c11134e2878bba41b449",
+    "recoverability": "resolve_via_original_local_batch"
+  },
+  "finish": {
+    "type": "finish",
+    "reason": "candidate_ready",
+    "explanation": "Current revision a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea passes all six public checks (observation:a96275a5). Reviewed probe 03817db8 re-ran on these exact bytes and measured zero violations for repeated query List keys, request_body_many array validation, non-array root errors, and get_json_params forwarding (observation:90fe4c1b). Reviewed probe 89083889 re-ran on these exact bytes and measured zero violations for model serialization status/mimetype, exclude_none, response_by_alias, response_many, InvalidIterableOfModelsException, status/header tuples, and passthrough (observation:2278c260). Source review of flask_pydantic/core.py and flask_pydantic/converters.py shows Pydantic 2 APIs and normalized loc/msg/type errors; the only post-b1455f edit adds BaseModel to the response_many invalid-content guard, so a returned empty model can no longer be treated as an empty iterable of models. The error-envelope requirement is covered by the current passing public check. migration.pydantic2 remains unobserved: no reviewed probe carries that requirement id, and the new-probe and diagnostic-run budgets are exhausted, so the full cross-version lock condition is left to independent final acceptance. Public feedback is not final acceptance; this finish is a proposal.",
+    "evidence_refs": [
+      "observation:a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4",
+      "observation:90fe4c1b65892caee4e33fcfff94044c23a056c19f1796a17aa39408b09bed3f",
+      "observation:2278c2603e48f6c4cb4a9cf2b5743707664c5c54bd23aeef3bb9183a888fca1f",
+      "business_contract",
+      "source:flask_pydantic/core.py",
+      "source:flask_pydantic/converters.py"
+    ],
+    "contract_coverage": [
+      {
+        "requirement_id": "inputs.query-path-body-form",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "inputs.lists-many-json-params",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:90fe4c1b65892caee4e33fcfff94044c23a056c19f1796a17aa39408b09bed3f"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "errors.envelope-and-config",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "responses.serialization",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:2278c2603e48f6c4cb4a9cf2b5743707664c5c54bd23aeef3bb9183a888fca1f"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "migration.pydantic2",
+        "state": "unobserved",
+        "evidence_refs": [
+          "business_contract",
+          "source:flask_pydantic/core.py",
+          "source:flask_pydantic/converters.py"
+        ],
+        "tool_limitation": "No reviewed probe carries requirement_id migration.pydantic2; the new-probe definition and diagnostic-run budgets are exhausted, so the full cross-version lock condition cannot be measured through a reviewed route and is left to independent final acceptance."
+      }
+    ],
+    "diagnostic_scope": {
+      "finish_requirements": {
+        "policy": "probe-lineage-v1",
+        "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+        "blocking_counterexample_refs": [],
+        "required_evidence_refs": [],
+        "probe_history": [
+          {
+            "observation_ref": "observation:a9b7caa90c54f2555a90a4306938714cd848c4d045cfb4634f75876a148e6af0",
+            "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+            "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:12ea081be15b346b1d35eaac837705be446cd384ee63bee742f5409a74e816fe",
+            "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+            "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:d5e7eb826dc36f96f5ef07fc0e76c92df65fe8a555b0058a697c35cbee490a69",
+            "probe_id": "49e4bdd493c3d5f4aba4985b2b34c634404c4dea0a987910fb11fba90fefef28",
+            "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:56d8607812616fd6b28324bd6bca910052088f8d75c0904572cd3029d17a71a5",
+            "probe_id": "49e4bdd493c3d5f4aba4985b2b34c634404c4dea0a987910fb11fba90fefef28",
+            "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:e6256c234773a675739ceffcfdb1827d83896ab298e615dcba9d744fc1a38d12",
+            "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+            "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:f9134c9c4fc0a6ca64edcf03cc1c685da3e8197a2450a345e9f00bb4b38a9259",
+            "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+            "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "historical_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:2278c2603e48f6c4cb4a9cf2b5743707664c5c54bd23aeef3bb9183a888fca1f",
+            "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+            "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "current_observation",
+            "resolved_by": null
+          },
+          {
+            "observation_ref": "observation:90fe4c1b65892caee4e33fcfff94044c23a056c19f1796a17aa39408b09bed3f",
+            "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+            "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+            "execution_status": "passed",
+            "conclusion": "no_counterexample_observed",
+            "scope_limit": "Only the measured post-operation value; other paths remain untested.",
+            "disposition": "current_observation",
+            "resolved_by": null
+          }
+        ],
+        "format_limits": {
+          "explanation_max_characters": 4000,
+          "evidence_refs_max_items": 16
+        },
+        "instructions": "For candidate_ready/no_change_claimed, resolve blocking_counterexample_refs and include required_evidence_refs in finish.evidence_refs. Explain current limitations briefly. finish.explanation allows at most 4000 characters; each finish evidence_refs list at most 16 items. The host attaches complete probe_history, including resolved setup failures: do not repeat those historical references merely to submit. This view covers probe obligations only; current public checks, reviewed candidate, complete contract_coverage where required, and separate independent acceptance still apply. Unobserved behavior is not a pass."
+      },
+      "runtime_findings": [
+        {
+          "observation_id": "221b72eafc63a5251a4a31b405e5c1346547176bd3b0bcc0120be5f93573e330",
+          "kind": "public_checks",
+          "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "a9b7caa90c54f2555a90a4306938714cd848c4d045cfb4634f75876a148e6af0",
+          "kind": "probe",
+          "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "12ea081be15b346b1d35eaac837705be446cd384ee63bee742f5409a74e816fe",
+          "kind": "probe",
+          "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "d5e7eb826dc36f96f5ef07fc0e76c92df65fe8a555b0058a697c35cbee490a69",
+          "kind": "probe",
+          "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "49e4bdd493c3d5f4aba4985b2b34c634404c4dea0a987910fb11fba90fefef28",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "c61ba1bf1462e86dfd55516f8a674848571619edb205417057eeff74d33d10b9",
+          "kind": "public_checks",
+          "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "56d8607812616fd6b28324bd6bca910052088f8d75c0904572cd3029d17a71a5",
+          "kind": "probe",
+          "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "49e4bdd493c3d5f4aba4985b2b34c634404c4dea0a987910fb11fba90fefef28",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "e6256c234773a675739ceffcfdb1827d83896ab298e615dcba9d744fc1a38d12",
+          "kind": "probe",
+          "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "f9134c9c4fc0a6ca64edcf03cc1c685da3e8197a2450a345e9f00bb4b38a9259",
+          "kind": "probe",
+          "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+          "stale": true,
+          "execution_status": "passed",
+          "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4",
+          "kind": "public_checks",
+          "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "2278c2603e48f6c4cb4a9cf2b5743707664c5c54bd23aeef3bb9183a888fca1f",
+          "kind": "probe",
+          "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": "89083889f34f4fe22225c5fb1e0224129462b30ab73b283d0071c4ef3787baf4",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        },
+        {
+          "observation_id": "90fe4c1b65892caee4e33fcfff94044c23a056c19f1796a17aa39408b09bed3f",
+          "kind": "probe",
+          "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": "03817db80819b9af295765944755d6f80eb8a45ac4356699fc137532966a7154",
+          "conclusion": "no_counterexample_observed",
+          "scope_limit": "Only the measured post-operation value; other paths remain untested."
+        }
+      ],
+      "unestablished_oracles": [],
+      "contract_coverage_gate": {
+        "catalog_requirement_ids": [
+          "inputs.query-path-body-form",
+          "inputs.lists-many-json-params",
+          "errors.envelope-and-config",
+          "responses.serialization",
+          "migration.pydantic2"
+        ],
+        "catalog_sha256": "22c673eb6cc701bd6dc4e17411ea06c019d9329700e5211066d93548a6755dca",
+        "effective_coverage": [
+          {
+            "requirement_id": "inputs.query-path-body-form",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "inputs.lists-many-json-params",
+            "declared_state": "supported",
+            "effective_state": "unobserved",
+            "reason": "insufficient_evidence_scope",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "errors.envelope-and-config",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "responses.serialization",
+            "declared_state": "supported",
+            "effective_state": "unobserved",
+            "reason": "insufficient_evidence_scope",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "migration.pydantic2",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": "No reviewed probe carries requirement_id migration.pydantic2; the new-probe definition and diagnostic-run budgets are exhausted, so the full cross-version lock condition cannot be measured through a reviewed route and is left to independent final acceptance."
+          }
+        ],
+        "unobserved_requirement_ids": [
+          "inputs.lists-many-json-params",
+          "responses.serialization",
+          "migration.pydantic2"
+        ],
+        "unobserved_development_requirement_ids": [],
+        "unobserved_final_acceptance_requirement_ids": [
+          "inputs.lists-many-json-params",
+          "responses.serialization",
+          "migration.pydantic2"
+        ],
+        "counterexample_requirement_ids": [],
+        "remaining_diagnostic_runs": 0,
+        "available_routes": {
+          "new_probe_definition_available": false,
+          "revisable_probe_ids": [],
+          "reusable_probe_ids": []
+        },
+        "scope_limit": "Requirement identity and evidence binding do not prove semantic entailment; final acceptance is separate.",
+        "accepted": true,
+        "code": "development_requirements_structurally_supported"
+      },
+      "acceptance": "Separate independent final checks required; diagnostics do not establish general correctness."
+    }
+  },
+  "verification_subject": {
+    "kind": "candidate",
+    "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+    "patch_sha256": "461ba40fd4960cacd4d8fa670823dc84e175f54d150e700e42c746aef144946f"
+  },
+  "source_changes": true,
+  "diagnostic_runs": 8,
+  "probes": 3,
+  "diagnostics": {
+    "counts": {
+      "registered": 8,
+      "running": 0,
+      "completed": 8,
+      "failed": 0,
+      "unknown": 0,
+      "historical": 0,
+      "target_completed": 8
+    },
+    "latest": {
+      "status": "completed",
+      "phase": "completed",
+      "last_phase": "target_completed",
+      "outcome": "passed",
+      "last_action": "target_completed",
+      "reconciliation_required": false,
+      "request_id": "fbdcc3ef705b65c99c93bda1a10b7b717752a7314ac107dbf7bd9ab5c31296b1",
+      "failure_receipt_id": null
+    },
+    "runs": [
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "b440df6ebeeb2def23156eaaf6e71b8ceeea6cabb6d08c1cc50c451858b58da9",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "0dc2089c70f5a6a29c2761386dc02546a659931dbf0946ec2b0cef44df66921e",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "71d13d04977b6c4d570db88e38f7dfffb2169950c700ca694f4c888b8d5113d6",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "0eb74674ddf4f835bcf4bc8d24cdf976e05bee7104beb3bc8fee5827a3a0784d",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "9d35735a09c14a2b38107e7bf0f0006122c59c960858455df0cab57a3266ca52",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "e8fea56a08444ffeb0eb10acffb3654992ff893ede52821241d3dd6c4b1e6747",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "b6e5194ef1a53f39017bd8b394b7ce838738443777f19ac2150705287bef1d63",
+        "failure_receipt_id": null
+      },
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "passed",
+        "last_action": "target_completed",
+        "reconciliation_required": false,
+        "request_id": "fbdcc3ef705b65c99c93bda1a10b7b717752a7314ac107dbf7bd9ab5c31296b1",
+        "failure_receipt_id": null
+      }
+    ],
+    "runs_truncated": false
+  },
+  "observations": [
+    {
+      "id": "06729bd41d7eab2e3bf30bbc392a430ed9b22abf345f71e286ea01fce45e115c",
+      "kind": "project_context",
+      "revision": "985591d1a4568d364331ee5de5c5993b165d44b1af70cbc53c64499d8cd35dfa",
+      "status": null
+    },
+    {
+      "id": "221b72eafc63a5251a4a31b405e5c1346547176bd3b0bcc0120be5f93573e330",
+      "kind": "public_checks",
+      "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+      "status": "passed"
+    },
+    {
+      "id": "a9b7caa90c54f2555a90a4306938714cd848c4d045cfb4634f75876a148e6af0",
+      "kind": "probe",
+      "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+      "status": "passed"
+    },
+    {
+      "id": "12ea081be15b346b1d35eaac837705be446cd384ee63bee742f5409a74e816fe",
+      "kind": "probe",
+      "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+      "status": "passed"
+    },
+    {
+      "id": "d5e7eb826dc36f96f5ef07fc0e76c92df65fe8a555b0058a697c35cbee490a69",
+      "kind": "probe",
+      "revision": "0791f581f93a023aaf493f2201fd28a6021143527fe03ea76a256eb8f853f7b9",
+      "status": "passed"
+    },
+    {
+      "id": "c61ba1bf1462e86dfd55516f8a674848571619edb205417057eeff74d33d10b9",
+      "kind": "public_checks",
+      "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+      "status": "passed"
+    },
+    {
+      "id": "56d8607812616fd6b28324bd6bca910052088f8d75c0904572cd3029d17a71a5",
+      "kind": "probe",
+      "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+      "status": "passed"
+    },
+    {
+      "id": "e6256c234773a675739ceffcfdb1827d83896ab298e615dcba9d744fc1a38d12",
+      "kind": "probe",
+      "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+      "status": "passed"
+    },
+    {
+      "id": "f9134c9c4fc0a6ca64edcf03cc1c685da3e8197a2450a345e9f00bb4b38a9259",
+      "kind": "probe",
+      "revision": "b1455f425c22ad6cafe9b00a4fddbb6804f7d8f86a3783183487e5ff2ec7681c",
+      "status": "passed"
+    },
+    {
+      "id": "a96275a527676f164c7d32c5fed8b50afacdb1b921cdc635cafe658cad476cf4",
+      "kind": "public_checks",
+      "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+      "status": "passed"
+    },
+    {
+      "id": "2278c2603e48f6c4cb4a9cf2b5743707664c5c54bd23aeef3bb9183a888fca1f",
+      "kind": "probe",
+      "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+      "status": "passed"
+    },
+    {
+      "id": "90fe4c1b65892caee4e33fcfff94044c23a056c19f1796a17aa39408b09bed3f",
+      "kind": "probe",
+      "revision": "a2199fa263197c6867ab92f15a0854104e0baadfe16b5ac50b18ee0d44b9ceea",
+      "status": "passed"
+    }
+  ],
+  "contract_requirements": {
+    "path": "contract-requirements.json",
+    "sha256": "22c673eb6cc701bd6dc4e17411ea06c019d9329700e5211066d93548a6755dca",
+    "requirement_ids": [
+      "inputs.query-path-body-form",
+      "inputs.lists-many-json-params",
+      "errors.envelope-and-config",
+      "responses.serialization",
+      "migration.pydantic2"
+    ]
+  },
+  "contract_audits": 2,
+  "dependency_queries": 0,
+  "dependency_facts": 0,
+  "role_calls": {
+    "solver": 16,
+    "contract_auditor": 2
+  },
+  "investigator_sessions": [],
+  "investigator_handoffs": 0,
+  "historical_inputs": []
+}
