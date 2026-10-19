@@ -15,6 +15,10 @@
 | Optuna 源码 | [optuna/optuna](https://github.com/optuna/optuna)，3.1.0 | 案例 `upstream/LICENSE`，保留完整 MIT 与附加第三方通知 |
 | OpenAPI Python client 源码 | [openapi-generators/openapi-python-client](https://github.com/openapi-generators/openapi-python-client)，0.10.0 | 案例 `upstream/LICENSE`，MIT；嵌套 schema 的 Kuimono `source/openapi_python_client/schema/openapi_schema_pydantic/LICENSE` 另行保留 |
 | csvkit 源码 | [wireservice/csvkit](https://github.com/wireservice/csvkit)，1.1.1 | 案例 `source/COPYING`，MIT |
+| sqlalchemy-mixins 源码 | [absent1706/sqlalchemy-mixins](https://github.com/absent1706/sqlalchemy-mixins)，1.5.3 | 案例 `source/LICENSE.txt`，MIT |
+| pydantic-cli 源码 | [mpkocher/pydantic-cli](https://github.com/mpkocher/pydantic-cli)，4.3.0 | 案例 `source/LICENSE`，MIT |
+| Flask-Pydantic 源码 | [pallets-eco/flask-pydantic](https://github.com/pallets-eco/flask-pydantic)，0.11.0 | 案例 `source/LICENSE`，MIT |
+| sqlalchemy-filters 源码 | [juliotrigo/sqlalchemy-filters](https://github.com/juliotrigo/sqlalchemy-filters)，0.13.0 | 案例 `source/LICENSE`，Apache-2.0 |
 | SQLAlchemy 迁移原文 | [sqlalchemy/sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) | 案例 `evidence/LICENSE`，MIT；bundle 记录 revision 与 upstream_path |
 | Pydantic 迁移原文 | [pydantic/pydantic](https://github.com/pydantic/pydantic) | 案例 `evidence/LICENSE`，JWT 中为 `evidence/pydantic-LICENSE`，MIT |
 | Werkzeug 原文 | [pallets/werkzeug](https://github.com/pallets/werkzeug) | 案例 `evidence/LICENSE.rst`，BSD |

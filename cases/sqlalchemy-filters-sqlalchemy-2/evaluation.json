@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "case_id": "sqlalchemy-filters-sqlalchemy-2",
+  "split": "holdout",
+  "groups": {
+    "feedback": {
+      "paths": [
+        "feedback/test_public_filters.py"
+      ],
+      "nodeids": [
+        "feedback/test_public_filters.py::test_filters_on_explicit_join",
+        "feedback/test_public_filters.py::test_hybrid_property_and_method_filters",
+        "feedback/test_public_filters.py::test_pagination_metadata",
+        "feedback/test_public_filters.py::test_single_model_filter_with_operators",
+        "feedback/test_public_filters.py::test_sort_by_field_and_direction",
+        "feedback/test_public_filters.py::test_sort_on_explicit_join"
+      ],
+      "expected_count": 6
+    },
+    "acceptance": {
+      "paths": [
+        "acceptance/test_independent_filters.py"
+      ],
+      "nodeids": [
+        "acceptance/test_independent_filters.py::test_apply_loads_auto_joins_and_restricts_each_model",
+        "acceptance/test_independent_filters.py::test_apply_loads_restricts_loaded_columns",
+        "acceptance/test_independent_filters.py::test_auto_join_can_be_disabled",
+        "acceptance/test_independent_filters.py::test_auto_join_for_model_specific_filter",
+        "acceptance/test_independent_filters.py::test_auto_join_for_sort",
+        "acceptance/test_independent_filters.py::test_field_aggregate_and_select_from_queries",
+        "acceptance/test_independent_filters.py::test_hybrid_sort_and_nulls_ordering",
+        "acceptance/test_independent_filters.py::test_invalid_field_operator_and_sort_spec",
+        "acceptance/test_independent_filters.py::test_list_and_text_operators",
+        "acceptance/test_independent_filters.py::test_multiple_models_require_explicit_model",
+        "acceptance/test_independent_filters.py::test_nested_boolean_functions",
+        "acceptance/test_independent_filters.py::test_pagination_defaults_and_errors"
+      ],
+      "expected_count": 12
+    }
+  },
+  "note": "Frozen before any model request; written from upstream README/docstrings/tests and admitted in Docker before task creation."
+}

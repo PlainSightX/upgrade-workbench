@@ -1,0 +1,515 @@
+{
+  "schema_version": 4,
+  "task_id": "995e07364b504ea093db656c5f27285e",
+  "case_id": "sqlalchemy-filters-sqlalchemy-2",
+  "case_fingerprint": "e2fff6009e9cc94742e6ab25a46197314fdb4703fc518f80ee7275ce41f453c1",
+  "status": "submitted",
+  "stop_reason": null,
+  "seed_strategy": "none",
+  "seed_status": null,
+  "candidate_revision": "1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e",
+  "candidate_sha256": "46fb5258a6d5cdae761e7cbc1116278bcc498e9f4c98b8b836513a57f359cba5",
+  "candidate_exported": true,
+  "final_evaluation": "completed",
+  "result": "candidate_verified",
+  "stages": {
+    "old_original": {
+      "status": "passed",
+      "tests": {
+        "collected": 18,
+        "passed": 18,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_original": {
+      "status": "failed",
+      "tests": {
+        "collected": 18,
+        "passed": 15,
+        "failed": 3,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "new_candidate": {
+      "status": "passed",
+      "tests": {
+        "collected": 18,
+        "passed": 18,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "usage": {
+    "calls": 13,
+    "reported_input_tokens": 467497,
+    "reported_output_tokens": 145205,
+    "unknown_usage_calls": 0,
+    "provider_duration_seconds": 597.952
+  },
+  "cost": {
+    "ledger": ".local/remediation-budget.sqlite3",
+    "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing",
+    "pricing_checked_at": "2026-09-16",
+    "input_per_million_usd": "0.30",
+    "output_per_million_usd": "1.20",
+    "estimated_or_reserved_usd": 0.314502,
+    "calls": [
+      {
+        "request_id": "9a5f0f3bb22b4df3a409dc49de23ef67",
+        "reserved_usd": 0.183739,
+        "estimated_usage_usd": 0.011886,
+        "state": "settled"
+      },
+      {
+        "request_id": "d24ffab1780d4e5e9dda745c03380fb4",
+        "reserved_usd": 0.185512,
+        "estimated_usage_usd": 0.012174,
+        "state": "settled"
+      },
+      {
+        "request_id": "86ff5a88d01b40a2a75c48195cdb44b1",
+        "reserved_usd": 0.186634,
+        "estimated_usage_usd": 0.016247,
+        "state": "settled"
+      },
+      {
+        "request_id": "b863c926b3664e17bb25eaab953a491d",
+        "reserved_usd": 0.196259,
+        "estimated_usage_usd": 0.016496,
+        "state": "settled"
+      },
+      {
+        "request_id": "3b0ed042a2174a2fb47977cbd248113a",
+        "reserved_usd": 0.197612,
+        "estimated_usage_usd": 0.021971,
+        "state": "settled"
+      },
+      {
+        "request_id": "ea700b79478b4bdd9ea6e110056aa280",
+        "reserved_usd": 0.199274,
+        "estimated_usage_usd": 0.013031,
+        "state": "settled"
+      },
+      {
+        "request_id": "420ee3c546404486b7d805f3f6a13ab0",
+        "reserved_usd": 0.199984,
+        "estimated_usage_usd": 0.012888,
+        "state": "settled"
+      },
+      {
+        "request_id": "fb1d6dc2e86a4d4e9bb9c02cba74e03d",
+        "reserved_usd": 0.200838,
+        "estimated_usage_usd": 0.033274,
+        "state": "settled"
+      },
+      {
+        "request_id": "35f41c8977ad42a39b9f11058ed9c019",
+        "reserved_usd": 0.200197,
+        "estimated_usage_usd": 0.039839,
+        "state": "settled"
+      },
+      {
+        "request_id": "15e9aadbf9cb4bd0b29dc7d88e47c11d",
+        "reserved_usd": 0.206378,
+        "estimated_usage_usd": 0.03491,
+        "state": "settled"
+      },
+      {
+        "request_id": "a2b5ba26fe6448c6a08104a0f49501f2",
+        "reserved_usd": 0.206582,
+        "estimated_usage_usd": 0.026006,
+        "state": "settled"
+      },
+      {
+        "request_id": "85080ab6f44c4576a13b4816268b2643",
+        "reserved_usd": 0.213692,
+        "estimated_usage_usd": 0.04981,
+        "state": "settled"
+      },
+      {
+        "request_id": "acede435ab224f7dafc9957ac48ae678",
+        "reserved_usd": 0.21016,
+        "estimated_usage_usd": 0.02597,
+        "state": "settled"
+      }
+    ],
+    "actual_billing": "not_claimed"
+  },
+  "protocol": {
+    "max_calls": 24,
+    "generation": {
+      "model": "deepseek-flash",
+      "thinking_mode": "enabled",
+      "max_output_tokens": 131072,
+      "timeout_seconds": 1200,
+      "max_source_bytes": 1600000,
+      "max_request_bytes": 850000,
+      "endpoint": "https://api.deepseek.com/chat/completions"
+    },
+    "execution": {
+      "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+      "prepare_timeout": 600,
+      "test_timeout": 240
+    },
+    "implementation_identity_sha256": "cb86a5d300f95be16feecc0e9d02c7ac708e4728bd4a3eb0474701291b57dd9e",
+    "protocol_revision": 6,
+    "source_policy": {
+      "mode": "focused",
+      "body_bytes": 96000,
+      "inventory_bytes": 64000
+    },
+    "diagnostic_policy": {
+      "max_runs": 8,
+      "max_probes": 3,
+      "max_revisions_per_probe": 2,
+      "max_observation_revisits": 4
+    },
+    "contract_audit_policy": "bounded",
+    "investigator_policy": "disabled",
+    "dependency_query_policy": {
+      "max_queries": 8,
+      "max_result_bytes": 24000
+    },
+    "role_budget": {
+      "investigator_max_calls": 3,
+      "solver_reserved_calls": 2
+    },
+    "context_assistance": "full",
+    "navigation_assistance": "failure_guided",
+    "project_context_policy": {
+      "version": "project-context-v2",
+      "context_tokens": 1000000,
+      "framing_reserve_tokens": 4096
+    },
+    "workflow_profile": "workbench",
+    "finish_policy": "probe-lineage-v1",
+    "investigation_policy": {
+      "version": "investigation-budget-v1",
+      "diagnostic_limits": {
+        "max_runs": 8,
+        "max_probes": 3,
+        "max_revisions_per_probe": 2,
+        "max_observation_revisits": 4
+      },
+      "finish_limits": {
+        "explanation_max_characters": 4000,
+        "evidence_refs_max_items": 16
+      },
+      "finish_notice_calls": 4
+    }
+  },
+  "candidate_revisions": 1,
+  "review_decisions": 1,
+  "provider_payloads_exported": false,
+  "origin_note": "Official seed and model increments are distinct; review is not personal implementation.",
+  "comparison": {
+    "path": "external/report.json",
+    "sha256": "de914e87bc2d302f1c8a2f657ae82911fc110391fa00125e4e36db4b406f43e3",
+    "recoverability": "resolve_via_original_local_batch"
+  },
+  "finish": {
+    "type": "finish",
+    "reason": "candidate_ready",
+    "explanation": "Candidate revision 1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e passes all six visible public checks on SQLAlchemy 2.0.38, while the original revision failed only test_hybrid_property_and_method_filters with FieldNotFound for the hybrid method `count_square`. The repairs stay inside the allowed package modules and change no public name or signature: models._is_extension_type now also accepts the SQLAlchemy 2.0 HybridExtensionType enum through its name/value attributes and still matches 1.4 symbol values; _get_valid_field_names therefore keeps reporting hybrid properties and methods, and Field.get_sqlalchemy_field keeps calling hybrid-method expressions; get_query_models reads the join compile state defensively via getattr and falls back to _setup_joins/_legacy_setup_joins; auto_join validates a candidate join through getattr(tmp, '_compile_state') instead of assuming that attribute exists, so un-joinable models are still skipped and later surface as BadSpec; Sort.format_for_sqlalchemy prefers nulls_first()/nulls_last() and keeps the legacy nullsfirst()/nullslast() fallback. Exception classes, operator table and pagination metadata logic are untouched. Public checks do not exercise apply_loads restricted-column loading, the documented error paths, the full operator table, or general cross-version equivalence, so those final-acceptance requirements are reported unobserved rather than supported; no counterexample was observed on the exercised paths. Independent frozen acceptance remains outstanding.",
+    "evidence_refs": [
+      "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db",
+      "observation:4d8affecf0a49cdfe49e2a26b11825b033dcc43ae8747558b148c963a9e59390",
+      "source:sqlalchemy_filters/models.py",
+      "source:sqlalchemy_filters/sorting.py",
+      "source:sqlalchemy_filters/filters.py",
+      "source:sqlalchemy_filters/loads.py"
+    ],
+    "contract_coverage": [
+      {
+        "requirement_id": "filters.operators-and-hybrids",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "models.resolution-and-auto-join",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "sort.directions-nulls",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "loads.restricted-columns",
+        "state": "unobserved",
+        "evidence_refs": [
+          "source:sqlalchemy_filters/loads.py"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "pagination.metadata",
+        "state": "supported",
+        "evidence_refs": [
+          "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "errors.types",
+        "state": "unobserved",
+        "evidence_refs": [
+          "source:sqlalchemy_filters/exceptions.py"
+        ],
+        "tool_limitation": null
+      },
+      {
+        "requirement_id": "migration.sqlalchemy2",
+        "state": "unobserved",
+        "evidence_refs": [
+          "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+        ],
+        "tool_limitation": null
+      }
+    ],
+    "diagnostic_scope": {
+      "finish_requirements": {
+        "policy": "probe-lineage-v1",
+        "revision": "1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e",
+        "blocking_counterexample_refs": [],
+        "required_evidence_refs": [],
+        "probe_history": [],
+        "format_limits": {
+          "explanation_max_characters": 4000,
+          "evidence_refs_max_items": 16
+        },
+        "instructions": "For candidate_ready/no_change_claimed, resolve blocking_counterexample_refs and include required_evidence_refs in finish.evidence_refs. Explain current limitations briefly. finish.explanation allows at most 4000 characters; each finish evidence_refs list at most 16 items. The host attaches complete probe_history, including resolved setup failures: do not repeat those historical references merely to submit. This view covers probe obligations only; current public checks, reviewed candidate, complete contract_coverage where required, and separate independent acceptance still apply. Unobserved behavior is not a pass."
+      },
+      "runtime_findings": [
+        {
+          "observation_id": "4d8affecf0a49cdfe49e2a26b11825b033dcc43ae8747558b148c963a9e59390",
+          "kind": "public_checks",
+          "revision": "3c1f21b1c8528e04d137a82fa4ffbaff6ecf15a81bf4eb58e02468966f18fd35",
+          "stale": true,
+          "execution_status": "failed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        },
+        {
+          "observation_id": "849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db",
+          "kind": "public_checks",
+          "revision": "1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e",
+          "stale": false,
+          "execution_status": "passed",
+          "probe_id": null,
+          "conclusion": null,
+          "scope_limit": "Only these observations; not independent final acceptance"
+        }
+      ],
+      "unestablished_oracles": [],
+      "contract_coverage_gate": {
+        "catalog_requirement_ids": [
+          "filters.operators-and-hybrids",
+          "models.resolution-and-auto-join",
+          "sort.directions-nulls",
+          "loads.restricted-columns",
+          "pagination.metadata",
+          "errors.types",
+          "migration.sqlalchemy2"
+        ],
+        "catalog_sha256": "54ee10a6f505ebee16c56d0bb4cb83fe339043c03ae854cf806d8b0b4c898deb",
+        "effective_coverage": [
+          {
+            "requirement_id": "filters.operators-and-hybrids",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "models.resolution-and-auto-join",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "sort.directions-nulls",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "loads.restricted-columns",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "pagination.metadata",
+            "declared_state": "supported",
+            "effective_state": "structurally_supported",
+            "reason": "current_revision_bound_observation",
+            "supporting_observation_refs": [
+              "observation:849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db"
+            ],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "errors.types",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          },
+          {
+            "requirement_id": "migration.sqlalchemy2",
+            "declared_state": "unobserved",
+            "effective_state": "unobserved",
+            "reason": "solver_declared_unobserved",
+            "supporting_observation_refs": [],
+            "counterexample_observation_refs": [],
+            "tool_limitation": null
+          }
+        ],
+        "unobserved_requirement_ids": [
+          "loads.restricted-columns",
+          "errors.types",
+          "migration.sqlalchemy2"
+        ],
+        "unobserved_development_requirement_ids": [],
+        "unobserved_final_acceptance_requirement_ids": [
+          "loads.restricted-columns",
+          "errors.types",
+          "migration.sqlalchemy2"
+        ],
+        "counterexample_requirement_ids": [],
+        "remaining_diagnostic_runs": 7,
+        "available_routes": {
+          "new_probe_definition_available": true,
+          "revisable_probe_ids": [],
+          "reusable_probe_ids": []
+        },
+        "scope_limit": "Requirement identity and evidence binding do not prove semantic entailment; final acceptance is separate.",
+        "accepted": true,
+        "code": "development_requirements_structurally_supported"
+      },
+      "acceptance": "Separate independent final checks required; diagnostics do not establish general correctness."
+    }
+  },
+  "verification_subject": {
+    "kind": "candidate",
+    "revision": "1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e",
+    "patch_sha256": "46fb5258a6d5cdae761e7cbc1116278bcc498e9f4c98b8b836513a57f359cba5"
+  },
+  "source_changes": true,
+  "diagnostic_runs": 1,
+  "probes": 0,
+  "diagnostics": {
+    "counts": {
+      "registered": 1,
+      "running": 0,
+      "completed": 1,
+      "failed": 0,
+      "unknown": 0,
+      "historical": 0,
+      "target_completed": 1
+    },
+    "latest": {
+      "status": "completed",
+      "phase": "completed",
+      "last_phase": "target_completed",
+      "outcome": "semantic_failed",
+      "last_action": "new_original",
+      "reconciliation_required": false,
+      "request_id": "f705174e34b12c94761fcb5a0e18238b97c261a7d0b046e2cf9a7600cda97422",
+      "failure_receipt_id": null
+    },
+    "runs": [
+      {
+        "status": "completed",
+        "phase": "completed",
+        "last_phase": "target_completed",
+        "outcome": "semantic_failed",
+        "last_action": "new_original",
+        "reconciliation_required": false,
+        "request_id": "f705174e34b12c94761fcb5a0e18238b97c261a7d0b046e2cf9a7600cda97422",
+        "failure_receipt_id": null
+      }
+    ],
+    "runs_truncated": false
+  },
+  "observations": [
+    {
+      "id": "4d8affecf0a49cdfe49e2a26b11825b033dcc43ae8747558b148c963a9e59390",
+      "kind": "public_checks",
+      "revision": "3c1f21b1c8528e04d137a82fa4ffbaff6ecf15a81bf4eb58e02468966f18fd35",
+      "status": "failed"
+    },
+    {
+      "id": "19d68b215b76302355ffa4d7f2ead06aec975be17893f974e67469b1a3768d78",
+      "kind": "project_context",
+      "revision": "3c1f21b1c8528e04d137a82fa4ffbaff6ecf15a81bf4eb58e02468966f18fd35",
+      "status": null
+    },
+    {
+      "id": "849ec82b19663a3a0091c837da00ae2060567049bd57ca8c95a7caf1796396db",
+      "kind": "public_checks",
+      "revision": "1dbeb0c3163790c35c83505cd1b782a866b98f603bd810c6726449b6646ebe1e",
+      "status": "passed"
+    }
+  ],
+  "contract_requirements": {
+    "path": "contract-requirements.json",
+    "sha256": "54ee10a6f505ebee16c56d0bb4cb83fe339043c03ae854cf806d8b0b4c898deb",
+    "requirement_ids": [
+      "filters.operators-and-hybrids",
+      "models.resolution-and-auto-join",
+      "sort.directions-nulls",
+      "loads.restricted-columns",
+      "pagination.metadata",
+      "errors.types",
+      "migration.sqlalchemy2"
+    ]
+  },
+  "contract_audits": 1,
+  "dependency_queries": 8,
+  "dependency_facts": 8,
+  "role_calls": {
+    "solver": 12,
+    "contract_auditor": 1
+  },
+  "investigator_sessions": [],
+  "investigator_handoffs": 0,
+  "historical_inputs": []
+}

@@ -1,0 +1,219 @@
+--- a/flask_pydantic/converters.py
++++ b/flask_pydantic/converters.py
+@@ -1,7 +1,30 @@
+-from typing import Type
++from collections.abc import Mapping, Sequence, Set as AbstractSet
++from typing import Annotated, Any, Type, Union, get_args, get_origin
++
++try:
++    from types import UnionType
++except ImportError:  # pragma: no cover - Python < 3.10
++    UnionType = None
+ 
+ from pydantic import BaseModel
+ from werkzeug.datastructures import ImmutableMultiDict
++
++
++def _is_complex_annotation(annotation: Any) -> bool:
++    if get_origin(annotation) is Annotated or hasattr(annotation, "__metadata__"):
++        return _is_complex_annotation(get_args(annotation)[0])
++    origin = get_origin(annotation)
++    if origin is None:
++        return False
++    if origin is Union or (UnionType is not None and origin is UnionType):
++        return any(_is_complex_annotation(arg) for arg in get_args(annotation))
++    if origin in (list, tuple, set, frozenset, dict):
++        return True
++    return (
++        isinstance(origin, type)
++        and issubclass(origin, (Mapping, Sequence, AbstractSet))
++        and origin not in (str, bytes, bytearray)
++    )
+ 
+ 
+ def convert_query_params(
+@@ -14,11 +37,12 @@
+     :param model: query parameter's model
+     :return: resulting parameters
+     """
++    fields = model.model_fields
+     return {
+         **query_params.to_dict(),
+         **{
+             key: value
+             for key, value in query_params.to_dict(flat=False).items()
+-            if key in model.__fields__ and model.__fields__[key].is_complex()
++            if key in fields and _is_complex_annotation(fields[key].annotation)
+         },
+     }
+--- a/flask_pydantic/core.py
++++ b/flask_pydantic/core.py
+@@ -2,8 +2,7 @@
+ from typing import Any, Callable, Iterable, List, Optional, Tuple, Type, Union
+ 
+ from flask import Response, current_app, jsonify, make_response, request
+-from pydantic import BaseModel, ValidationError
+-from pydantic.tools import parse_obj_as
++from pydantic import BaseModel, RootModel, TypeAdapter, ValidationError
+ 
+ from .converters import convert_query_params
+ from .exceptions import (
+@@ -17,6 +16,22 @@
+     from flask_restful import original_flask_make_response as make_response
+ except ImportError:
+     pass
++
++
++def format_validation_errors(errors: Iterable[dict]) -> List[dict]:
++    formatted = []
++    for error in errors:
++        loc = error.get("loc", [])
++        if isinstance(loc, tuple):
++            loc = list(loc)
++        formatted.append(
++            {
++                "loc": loc,
++                "msg": error.get("msg", ""),
++                "type": error.get("type", ""),
++            }
++        )
++    return formatted
+ 
+ 
+ def make_json_response(
+@@ -28,9 +43,9 @@
+ ) -> Response:
+     """serializes model, creates JSON response with given status code"""
+     if many:
+-        js = f"[{', '.join([model.json(exclude_none=exclude_none, by_alias=by_alias) for model in content])}]"
++        js = f"[{', '.join([model.model_dump_json(exclude_none=exclude_none, by_alias=by_alias) for model in content])}]"
+     else:
+-        js = content.json(exclude_none=exclude_none, by_alias=by_alias)
++        js = content.model_dump_json(exclude_none=exclude_none, by_alias=by_alias)
+     response = make_response(js, status_code)
+     response.mimetype = "application/json"
+     return response
+@@ -51,7 +66,21 @@
+         return False
+ 
+ 
++def is_root_model(model: Type[BaseModel]) -> bool:
++    return issubclass(model, RootModel)
++
++
+ def validate_many_models(model: Type[BaseModel], content: Any) -> List[BaseModel]:
++    if not isinstance(content, (list, tuple)):
++        raise ManyModelValidationError(
++            [
++                {
++                    "loc": ["root"],
++                    "msg": "is not an array of objects",
++                    "type": "type_error.array",
++                }
++            ]
++        )
+     try:
+         return [model(**fields) for fields in content]
+     except TypeError:
+@@ -65,7 +94,7 @@
+         ]
+         raise ManyModelValidationError(err)
+     except ValidationError as ve:
+-        raise ManyModelValidationError(ve.errors())
++        raise ManyModelValidationError(format_validation_errors(ve.errors()))
+ 
+ 
+ def validate_path_params(func: Callable, kwargs: dict) -> Tuple[dict, list]:
+@@ -75,12 +104,17 @@
+         if name in {"query", "body", "form", "return"}:
+             continue
+         try:
+-            value = parse_obj_as(type_, kwargs.get(name))
++            value = TypeAdapter(type_).validate_python(kwargs.get(name))
+             validated[name] = value
+         except ValidationError as e:
+-            err = e.errors()[0]
+-            err["loc"] = [name]
+-            errors.append(err)
++            error = e.errors()[0]
++            errors.append(
++                {
++                    "loc": [name],
++                    "msg": error.get("msg", ""),
++                    "type": error.get("type", ""),
++                }
++            )
+     kwargs = {**kwargs, **validated}
+     return kwargs, errors
+ 
+@@ -177,16 +211,16 @@
+                 try:
+                     q = query_model(**query_params)
+                 except ValidationError as ve:
+-                    err["query_params"] = ve.errors()
++                    err["query_params"] = format_validation_errors(ve.errors())
+             body_in_kwargs = func.__annotations__.get("body")
+             body_model = body_in_kwargs or body
+             if body_model:
+                 body_params = get_body_dict(**(get_json_params or {}))
+-                if "__root__" in body_model.__fields__:
+-                    try:
+-                        b = body_model(__root__=body_params).__root__
++                if is_root_model(body_model):
++                    try:
++                        b = body_model.model_validate(body_params).root
+                     except ValidationError as ve:
+-                        err["body_params"] = ve.errors()
++                        err["body_params"] = format_validation_errors(ve.errors())
+                 elif request_body_many:
+                     try:
+                         b = validate_many_models(body_model, body_params)
+@@ -203,16 +237,16 @@
+                         else:
+                             raise JsonBodyParsingError()
+                     except ValidationError as ve:
+-                        err["body_params"] = ve.errors()
++                        err["body_params"] = format_validation_errors(ve.errors())
+             form_in_kwargs = func.__annotations__.get("form")
+             form_model = form_in_kwargs or form
+             if form_model:
+                 form_params = request.form
+-                if "__root__" in form_model.__fields__:
+-                    try:
+-                        f = form_model(__root__=form_params).__root__
++                if is_root_model(form_model):
++                    try:
++                        f = form_model.model_validate(form_params).root
+                     except ValidationError as ve:
+-                        err["form_params"] = ve.errors()
++                        err["form_params"] = format_validation_errors(ve.errors())
+                 else:
+                     try:
+                         f = form_model(**form_params)
+@@ -224,7 +258,7 @@
+                         else:
+                             raise JsonBodyParsingError
+                     except ValidationError as ve:
+-                        err["form_params"] = ve.errors()
++                        err["form_params"] = format_validation_errors(ve.errors())
+             request.query_params = q
+             request.body_params = b
+             request.form_params = f
+@@ -251,9 +285,15 @@
+             res = func(*args, **kwargs)
+ 
+             if response_many:
+-                if is_iterable_of_models(res):
++                if isinstance(res, (str, bytes, bytearray, dict, BaseModel)):
++                    raise InvalidIterableOfModelsException(res)
++                try:
++                    many_res = list(res)
++                except TypeError:
++                    raise InvalidIterableOfModelsException(res)
++                if is_iterable_of_models(many_res):
+                     return make_json_response(
+-                        res,
++                        many_res,
+                         on_success_status,
+                         by_alias=response_by_alias,
+                         exclude_none=exclude_none,

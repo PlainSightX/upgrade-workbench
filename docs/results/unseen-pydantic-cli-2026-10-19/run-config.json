@@ -1,0 +1,33 @@
+{
+  "protocol_revision": 6,
+  "max_calls": 24,
+  "contract_audit_policy": "bounded",
+  "investigator_policy": "disabled",
+  "workflow_profile": "workbench",
+  "context_assistance": "full",
+  "navigation_assistance": "failure_guided",
+  "source_policy": {"mode": "focused", "body_bytes": 96000, "inventory_bytes": 64000},
+  "project_context_policy": {"version": "project-context-v2", "context_tokens": 1000000, "framing_reserve_tokens": 4096},
+  "finish_policy": "probe-lineage-v1",
+  "investigation_policy": {
+    "version": "investigation-budget-v1",
+    "diagnostic_limits": {"max_runs": 8, "max_probes": 3, "max_revisions_per_probe": 2, "max_observation_revisits": 4},
+    "finish_limits": {"explanation_max_characters": 4000, "evidence_refs_max_items": 16},
+    "finish_notice_calls": 4
+  },
+  "generation": {
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "thinking_mode": "enabled",
+    "max_output_tokens": 131072,
+    "timeout_seconds": 1200,
+    "runtime_capacity": {"version": "generation-capacity-v1", "max_response_bytes": 4194304},
+    "max_source_bytes": 1600000,
+    "max_request_bytes": 850000
+  },
+  "execution": {
+    "base_image": "python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b",
+    "prepare_timeout": 600,
+    "test_timeout": 240
+  }
+}

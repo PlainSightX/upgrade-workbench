@@ -1,0 +1,75 @@
+--- a/sqlalchemy_filters/models.py
++++ b/sqlalchemy_filters/models.py
+@@ -51,11 +51,23 @@
+ 
+ 
+ def _is_hybrid_property(orm_descriptor):
+-    return orm_descriptor.extension_type == symbol('HYBRID_PROPERTY')
++    return _is_extension_type(orm_descriptor, 'HYBRID_PROPERTY')
+ 
+ 
+ def _is_hybrid_method(orm_descriptor):
+-    return orm_descriptor.extension_type == symbol('HYBRID_METHOD')
++    return _is_extension_type(orm_descriptor, 'HYBRID_METHOD')
++
++
++def _is_extension_type(orm_descriptor, name):
++    extension_type = getattr(orm_descriptor, 'extension_type', None)
++    if extension_type is None:
++        return False
++    return (
++        extension_type == symbol(name) or
++        extension_type == name or
++        getattr(extension_type, 'name', None) == name or
++        getattr(extension_type, 'value', None) == name
++    )
+ 
+ 
+ def get_model_from_table(table):  # pragma: no_cover_sqlalchemy_lt_1_4
+@@ -92,7 +104,11 @@
+         except InvalidRequestError:
+             # query might not contain columns yet, hence cannot be compiled
+             # try to infer the models from various internals
+-            for table_tuple in query._setup_joins + query._legacy_setup_joins:
++            setup_joins = getattr(query, '_setup_joins', ()) or ()
++            legacy_setup_joins = (
++                getattr(query, '_legacy_setup_joins', ()) or ()
++            )
++            for table_tuple in setup_joins + legacy_setup_joins:
+                 model_class = get_model_from_table(table_tuple[0])
+                 if model_class:
+                     models.append(model_class)
+@@ -206,7 +222,9 @@
+                     # Many Core and ORM statement objects now perform much of
+                     # their construction and validation in the compile phase
+                     tmp = query.join(model)
+-                    tmp._compile_state()
++                    compile_state = getattr(tmp, '_compile_state', None)
++                    if compile_state is not None:
++                        compile_state()
+                     query = tmp
+             except InvalidRequestError:
+                 pass  # can't be autojoined
+--- a/sqlalchemy_filters/sorting.py
++++ b/sqlalchemy_filters/sorting.py
+@@ -52,12 +52,17 @@
+         elif direction == SORT_DESCENDING:
+             sort_fnc = sqlalchemy_field.desc
+ 
++        expression = sort_fnc()
+         if self.nullsfirst:
+-            return sort_fnc().nullsfirst()
++            if hasattr(expression, 'nulls_first'):
++                return expression.nulls_first()
++            return expression.nullsfirst()
+         elif self.nullslast:
+-            return sort_fnc().nullslast()
++            if hasattr(expression, 'nulls_last'):
++                return expression.nulls_last()
++            return expression.nullslast()
+         else:
+-            return sort_fnc()
++            return expression
+ 
+ 
+ def get_named_models(sorts):
