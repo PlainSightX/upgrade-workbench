@@ -95,6 +95,7 @@ flowchart LR
 - 案例与对照：[csvsql](docs/examples/csvsql/README.md) · [历史比较](docs/examples/comparison/README.md) ·
   [版本语义自查](docs/semantic-risk-comparison.md) · [探针候选比较](docs/probe-comparisons.md) ·
   [有界输入生成](docs/probe-input-generation.md) · [可选值语义案例](docs/results/semantic-boundaries-a1/README.md)
+- 机制说明：[项目记忆](docs/results/project-memory-2026-10-19/README.md)（带源码引用的知识页；代码变化后重新定位引用、失配标记待复核，跨任务导入时重新校验输入）
 - [第三方归因](THIRD_PARTY_NOTICES.md) · [公开文件清单](PUBLICATION.json)
 
 自有代码采用 [MIT](LICENSE)，第三方材料保持各自许可。
