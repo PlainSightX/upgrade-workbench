@@ -198,7 +198,7 @@
     "CONTRIBUTING.md": "5df326d975715bba8c4074c109f4eb2261eb8ca4816c45d34e92ea41232dc248",
     "LICENSE": "3ea7f6d5633303a67c62ee93018f13d7860c6963e8e70cf3aa7a363d166f22de",
     "pyproject.toml": "b4c3005ec7288ac4a83ff621f0b34363db64edf31c420160940efef68eb86c38",
-    "README.md": "20984c51942b1dcba7ab1bad7fbc318adb8faafd7e8bef6072f53c7bfd316a1b",
+    "README.md": "0373e6b5b43c8eb3058bb4cd9ac7dc19886884850c5e840fed14c66fb454d23e",
     "THIRD_PARTY_NOTICES.md": "357ba4fdf78ef3c12e8c5d814039137c1abc7db61246c726ebbd2d8c2f28bf59",
     "uv.lock": "9dc8d51903b4d727ca4a1908af4241efcc48e6ce5b508efeb193164e68209650",
     "docs/probe-comparisons.md": "a22a76598d07c6a4740c8d306dd6faeb1c27b92c32c8e041c557dde9a987d497",
@@ -2104,7 +2104,7 @@
     "tools/dev/download_public_artifact.py": "6bd56fcdb346c924c5d2eb08cc1a8678f4ece36affc09e4dc8ac8f631c3c25bd",
     "tools/dev/fetch_retrieval_models.py": "888a63a1aeb3df97d76b28e411ae8489df42b5abc562fd3352a9be54b33d3a9d",
     "tools/dev/run_registered_tasks.py": "2f890c34faaf96fe0db780df4f08f44e140694339c94b3d53884dad60487b51a",
-    "tools/release/check_public_tree.py": "783528f97714182a96523ba9892b6dd95b3785e06b45b41c3f0464361a75bacf",
+    "tools/release/check_public_tree.py": "f6f30aaa359e884963a13768639a346b2d8e04b71858f97fa90d81eb1956fbee",
     "tools/release/summarize_replay.py": "2221e3f2d95c18ea2327790e1b40f4e231c30921f514bf0eb9b6e8f3e2d230b0",
     "docs/results/retrieval-pydantic-2026-09-16/README.md": "a6cfd56b6e5cd85d33e0e085d791c558583d46485a1b46daa493b3930ca89837",
     "docs/results/retrieval-pydantic-2026-09-16/queries.json": "e1dd42882d395695a87f22d6f1de88ec446224ecc63d30cb22ae017c49435e70",
@@ -2317,8 +2317,9 @@
     "docs/results/unseen-sqlalchemy-filters-2026-10-19/task-report.json": "b2221e0a87fc4e03517d512795ddea03340424d726df4b806c584dc6a0be321b",
     "docs/results/unseen-sqlalchemy-filters-2026-10-19/task-report.md": "9c156318e44f168d8951cf5e8754a2583a634ec3b65e95a03e19546278225c92",
     "docs/results/unseen-summary-2026-10-19/README.md": "8b61dfb652dd565ecbda79377edc8b60a663890d96dbf7f7503032917dcd043b",
-    "tools/dev/acquire_unseen_batch_cases.py": "d814431288da9eaea248e527b2de6b96217b592c4ae8141140ac93e255dfedff"
+    "tools/dev/acquire_unseen_batch_cases.py": "d814431288da9eaea248e527b2de6b96217b592c4ae8141140ac93e255dfedff",
+    "docs/results/project-memory-2026-10-19/README.md": "125b90e8d8e12003a05d1e618b44f42e0badb93f178f5f8cb1b9a65377b8412d"
   },
-  "public_base_commit": "8ad1cdd4200897cb96ff48543c3230a20f940c11",
+  "public_base_commit": "355ecafd293da5982e052f3b7e8eea50a05de03f",
   "release_version": "v0.0.2"
 }

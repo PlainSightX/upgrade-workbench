@@ -67,7 +67,8 @@ def check(root: Path) -> dict:
                  "docs/results/unseen-pydantic-cli-2026-10-19/README.md",
                  "docs/results/unseen-flask-pydantic-2026-10-19/README.md",
                  "docs/results/unseen-sqlalchemy-filters-2026-10-19/README.md",
-                 "docs/results/unseen-summary-2026-10-19/README.md"]:
+                 "docs/results/unseen-summary-2026-10-19/README.md",
+                 "docs/results/project-memory-2026-10-19/README.md"]:
         document = root / name
         for target in re.findall(r"\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
             if target.startswith(("https://", "http://", "#")):
